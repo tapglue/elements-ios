@@ -11,24 +11,20 @@ import elements
 import Tapglue
 
 class ViewController: UIViewController {
-
+    
+    let elements = TapglueUI()
+    
     let username = "john"
     let password = "qwert"
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(animated: Bool) {
         Tapglue.createAndLoginUserWithUsername(username, andPassword: password, withCompletionBlock:{ (success: Bool, error: NSError!) -> Void in
             if error != nil {
                 print("\nError loginWithUsernameOrEmail: \(error)")
             } else {
                 print("\nUser logged in: \(success)")
+                self.elements.performSegueToProfile(self)
             }
         })
     }
-    
-    override func viewDidAppear(animated: Bool) {
-        let elements = TapglueUI()
-        elements.performSegueToProfile(self)
-    }
 }
-

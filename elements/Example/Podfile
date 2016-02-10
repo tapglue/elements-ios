@@ -7,7 +7,7 @@ use_frameworks!
 
 target 'elements_Example', :exclusive => true do
   pod 'elements', :path => '../'
-  pod 'Tapglue'
+  pod 'Tapglue', :git => 'https://github.com/tapglue/ios_sdk.git', :commit => '858c594f86eebd24ec0133838eeca64d561e22a2'
 end
 
 target 'elements_Tests', :exclusive => true do
