@@ -1,0 +1,1 @@
+../../../Tapglue/Classes/TGUserManager.h

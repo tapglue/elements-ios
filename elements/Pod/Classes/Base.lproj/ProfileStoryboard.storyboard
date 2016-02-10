@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JqW-8o-hgu">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile-->
+        <scene sceneID="MGQ-Bz-dYH">
+            <objects>
+                <viewController id="FMg-bq-Uls" customClass="ProfileViewController" customModule="elements" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QK5-SP-R7M"/>
+                        <viewControllerLayoutGuide type="bottom" id="eKg-bl-QbF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Co3-qs-Lvm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PUa-Wd-mSl" customClass="ProfileBiographyView" customModule="elements" customModuleProvider="target">
+                                <rect key="frame" x="13" y="64" width="567" height="165"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="RhD-VK-Isj"/>
+                                    <constraint firstAttribute="height" constant="165" id="ygQ-QI-heL"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="RhD-VK-Isj"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PUa-Wd-mSl" firstAttribute="top" secondItem="QK5-SP-R7M" secondAttribute="bottom" constant="172" id="ADW-9D-8nQ"/>
+                            <constraint firstItem="PUa-Wd-mSl" firstAttribute="top" secondItem="QK5-SP-R7M" secondAttribute="bottom" id="BRT-yl-lW8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PUa-Wd-mSl" secondAttribute="trailing" constant="-4" id="N4C-6L-9I6"/>
+                            <constraint firstItem="PUa-Wd-mSl" firstAttribute="centerX" secondItem="Co3-qs-Lvm" secondAttribute="centerX" id="Q5h-lW-fRW"/>
+                            <constraint firstItem="PUa-Wd-mSl" firstAttribute="leading" secondItem="Co3-qs-Lvm" secondAttribute="leadingMargin" constant="-3" id="X0F-NQ-rHy"/>
+                            <constraint firstItem="PUa-Wd-mSl" firstAttribute="centerY" secondItem="Co3-qs-Lvm" secondAttribute="centerY" id="eGW-L9-jgG"/>
+                            <constraint firstItem="PUa-Wd-mSl" firstAttribute="leading" secondItem="Co3-qs-Lvm" secondAttribute="leadingMargin" constant="-7" id="i5A-4j-BsT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PUa-Wd-mSl" secondAttribute="trailing" id="plx-p0-NRj"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ADW-9D-8nQ"/>
+                                <exclude reference="N4C-6L-9I6"/>
+                                <exclude reference="Q5h-lW-fRW"/>
+                                <exclude reference="X0F-NQ-rHy"/>
+                                <exclude reference="eGW-L9-jgG"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Profile" id="0fP-Xt-EDT"/>
+                    <connections>
+                        <outlet property="profileBiographyView" destination="PUa-Wd-mSl" id="fQj-8s-gI4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PTa-lM-L4l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1165" y="14"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CoN-Z7-X3A">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JqW-8o-hgu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="366-Qf-Naz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="FMg-bq-Uls" kind="relationship" relationship="rootViewController" id="FSZ-XZ-pZZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ST8-ap-uWg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="353" y="14"/>
+        </scene>
+    </scenes>
+</document>

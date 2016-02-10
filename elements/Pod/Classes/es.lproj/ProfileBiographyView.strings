@@ -1,0 +1,15 @@
+
+/* Class = "UILabel"; text = "Following"; ObjectID = "8He-mZ-6AK"; */
+"8He-mZ-6AK.text" = "Siguiendo";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "DEq-7P-wcN"; */
+"DEq-7P-wcN.text" = "0";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "Rp4-OS-Ble"; */
+"Rp4-OS-Ble.text" = "0";
+
+/* Class = "UILabel"; text = "Username"; ObjectID = "c8g-xq-iJ6"; */
+"c8g-xq-iJ6.text" = "Nombre de usuario";
+
+/* Class = "UILabel"; text = "Followers"; ObjectID = "tmb-hi-RAt"; */
+"tmb-hi-RAt.text" = "Seguidores";

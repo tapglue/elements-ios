@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileBiographyView" customModule="elements" customModuleProvider="target">
+            <connections>
+                <outlet property="followerCount" destination="DEq-7P-wcN" id="0cv-QQ-o8z"/>
+                <outlet property="followingCount" destination="Rp4-OS-Ble" id="8s2-26-R86"/>
+                <outlet property="profilePicture" destination="9Pi-iQ-nkL" id="WUe-7s-f5b"/>
+                <outlet property="username" destination="c8g-xq-iJ6" id="pdm-Ca-MFl"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="461" height="170"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-user" translatesAutoresizingMaskIntoConstraints="NO" id="9Pi-iQ-nkL">
+                    <rect key="frame" x="8" y="24" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="2lC-wz-W9J"/>
+                        <constraint firstAttribute="width" constant="60" id="vUR-am-M07"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8g-xq-iJ6">
+                    <rect key="frame" x="83" y="44" width="370" height="21"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rp4-OS-Ble" userLabel="Following count">
+                    <rect key="frame" x="8" y="106" width="10" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Following" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8He-mZ-6AK">
+                    <rect key="frame" x="8" y="132" width="61" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.75" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DEq-7P-wcN" userLabel="Followers count">
+                    <rect key="frame" x="83" y="106" width="42" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="42" id="EQ1-1m-sbV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Followers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmb-hi-RAt">
+                    <rect key="frame" x="83" y="132" width="62" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.75" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="tmb-hi-RAt" firstAttribute="top" secondItem="DEq-7P-wcN" secondAttribute="bottom" constant="8" symbolic="YES" id="0UM-Tw-ue0"/>
+                <constraint firstItem="Rp4-OS-Ble" firstAttribute="top" secondItem="9Pi-iQ-nkL" secondAttribute="bottom" constant="22" id="GMP-s6-QQ4"/>
+                <constraint firstItem="DEq-7P-wcN" firstAttribute="leading" secondItem="tmb-hi-RAt" secondAttribute="leading" id="GxH-5z-j9K"/>
+                <constraint firstAttribute="trailing" secondItem="c8g-xq-iJ6" secondAttribute="trailing" constant="8" id="IUg-X3-tAQ"/>
+                <constraint firstItem="c8g-xq-iJ6" firstAttribute="centerY" secondItem="9Pi-iQ-nkL" secondAttribute="centerY" constant="-13.5" id="JLM-LZ-H0j"/>
+                <constraint firstItem="c8g-xq-iJ6" firstAttribute="centerY" secondItem="9Pi-iQ-nkL" secondAttribute="centerY" id="Kea-jJ-Z87"/>
+                <constraint firstItem="Rp4-OS-Ble" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="LMd-LI-6VS"/>
+                <constraint firstItem="DEq-7P-wcN" firstAttribute="leading" secondItem="c8g-xq-iJ6" secondAttribute="leading" id="On8-J7-DAK"/>
+                <constraint firstItem="8He-mZ-6AK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="OuN-PN-we4"/>
+                <constraint firstItem="c8g-xq-iJ6" firstAttribute="leading" secondItem="9Pi-iQ-nkL" secondAttribute="trailing" constant="15" id="S5x-xZ-VGc"/>
+                <constraint firstItem="8He-mZ-6AK" firstAttribute="top" secondItem="Rp4-OS-Ble" secondAttribute="bottom" constant="8" id="Spz-bM-tCR"/>
+                <constraint firstItem="9Pi-iQ-nkL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="T1b-kN-F39"/>
+                <constraint firstItem="DEq-7P-wcN" firstAttribute="baseline" secondItem="Rp4-OS-Ble" secondAttribute="baseline" id="Z2x-LI-IBx"/>
+                <constraint firstAttribute="trailing" secondItem="c8g-xq-iJ6" secondAttribute="trailing" constant="8" id="dTY-4o-9Oj"/>
+                <constraint firstItem="c8g-xq-iJ6" firstAttribute="leading" secondItem="9Pi-iQ-nkL" secondAttribute="trailing" constant="-20" id="fYW-MI-Xs0"/>
+                <constraint firstItem="tmb-hi-RAt" firstAttribute="baseline" secondItem="8He-mZ-6AK" secondAttribute="baseline" id="icT-fc-PyW"/>
+                <constraint firstItem="9Pi-iQ-nkL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="24" id="n0X-Bg-zne"/>
+                <constraint firstItem="DEq-7P-wcN" firstAttribute="firstBaseline" secondItem="Rp4-OS-Ble" secondAttribute="baseline" id="q9l-es-COK"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="JLM-LZ-H0j"/>
+                    <exclude reference="fYW-MI-Xs0"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="283.5" y="45"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="default-user" width="32" height="32"/>
+    </resources>
+</document>

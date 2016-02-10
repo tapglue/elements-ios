@@ -1,0 +1,20 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+#target 'elements' do
+#    pod 'Tapglue'
+#end
+
+target 'elements_Example', :exclusive => true do
+  pod 'elements', :path => '../'
+  pod 'Tapglue'
+end
+
+target 'elements_Tests', :exclusive => true do
+  pod 'elements', :path => '../'
+
+  pod 'Quick', '~> 0.8.0'
+  pod 'Nimble', '3.0.0'
+  pod 'FBSnapshotTestCase'
+  pod 'Nimble-Snapshots'
+end

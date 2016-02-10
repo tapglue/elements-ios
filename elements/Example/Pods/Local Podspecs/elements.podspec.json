@@ -1,0 +1,25 @@
+{
+  "name": "elements",
+  "version": "0.1.0",
+  "summary": "A short description of elements.",
+  "description": "",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/elements",
+  "license": "MIT",
+  "authors": {
+    "John Nilsen": "nilsen340@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/elements.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "elements": [
+      "Pod/Assets/*.png"
+    ]
+  }
+}
