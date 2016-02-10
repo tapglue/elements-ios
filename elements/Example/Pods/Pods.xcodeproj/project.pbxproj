@@ -41,7 +41,6 @@
 		218FD4EE1EC1F081D332FAC62A583A6F /* TGBaseManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 000FB1C0530C0B69691D791289C62B86 /* TGBaseManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		248E10D4B6489C660360E8E42BA17582 /* TGEventManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5218579E5900AC6C8B5FC686CD8DD149 /* TGEventManager.m */; };
 		28F2071FFF5C5B0E9DEB6C3FE43A30CC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 824E7E4508E1A8CC3DDFF89F639AA1A3 /* UIKit.framework */; };
-		29AE461FFC40B2CCF615E8A753710A43 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946BE4DB3ABDC0BF7AB89F670F9913D2 /* ReplaceMe.swift */; };
 		2C3B4357F3C609A2C26672FFEC39B661 /* TGUser.h in Headers */ = {isa = PBXBuildFile; fileRef = 884396B904768966A4B7DD2F2CA1748D /* TGUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2D3B916F7168E9412EDB95BA203A5BB4 /* ThrowError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAE0EB69A20190A12244966CF09E3CA /* ThrowError.swift */; };
 		2FF57241CA6528DEC9707E77FEF7DAA1 /* TGPostComment.h in Headers */ = {isa = PBXBuildFile; fileRef = E48B8C9AB7208C94BFA7D58592FF4F33 /* TGPostComment.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -447,7 +446,6 @@
 		906B8C9A48A3484F904F1ACCE7FC86CD /* TGObjectCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGObjectCache.h; path = Classes/Model/TGObjectCache.h; sourceTree = "<group>"; };
 		92C7B6C0C815B7D3B95E0FA8C1ECDF0C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92D384515B3FD9E66B42F04DC38A23B0 /* TGPostReaction+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TGPostReaction+Private.h"; path = "Classes/Model/TGPostReaction+Private.h"; sourceTree = "<group>"; };
-		946BE4DB3ABDC0BF7AB89F670F9913D2 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
 		94A2529C244A3B981820B367B28197D7 /* BeAnInstanceOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeAnInstanceOf.swift; path = Nimble/Matchers/BeAnInstanceOf.swift; sourceTree = "<group>"; };
 		9823197EA5904A9150FB0AD8B09841E6 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9884C5D3D90B62648AC8B7B309315657 /* NSThread+TGEnsureMainThread.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSThread+TGEnsureMainThread.m"; path = "Classes/NSThread+TGEnsureMainThread.m"; sourceTree = "<group>"; };
@@ -816,7 +814,6 @@
 			isa = PBXGroup;
 			children = (
 				65FB9B531C6A3F96001F4B72 /* Views */,
-				946BE4DB3ABDC0BF7AB89F670F9913D2 /* ReplaceMe.swift */,
 				65FB9B5B1C6B40D4001F4B72 /* ProfileStoryboard.storyboard */,
 				653A918F1C68FE5B00DD7158 /* ProfileViewController.swift */,
 				653A91941C69FE5200DD7158 /* Assets.xcassets */,
@@ -1565,7 +1562,6 @@
 				8C1376791C212F5B1292B55D4F8BCDFB /* elements-dummy.m in Sources */,
 				65FB9B551C6A43C3001F4B72 /* ProfileBiographyView.swift in Sources */,
 				653A91921C69F5B700DD7158 /* TapglueUI.swift in Sources */,
-				29AE461FFC40B2CCF615E8A753710A43 /* ReplaceMe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

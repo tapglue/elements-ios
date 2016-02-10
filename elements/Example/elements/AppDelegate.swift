@@ -7,15 +7,19 @@
 //
 
 import UIKit
+import Tapglue
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    let sampleToken = "1ecd50ce4700e0c8f501dee1fb271344"
     var window: UIWindow?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        let tgConfig = TGConfiguration.defaultConfiguration()
+        tgConfig.loggingEnabled = true
+        Tapglue.setUpWithAppToken(sampleToken, andConfig: tgConfig)
         return true
     }
 
