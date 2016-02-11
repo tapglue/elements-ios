@@ -1,16 +1,13 @@
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
-#target 'elements' do
-#    pod 'Tapglue'
-#end
-
-target 'elements_Example', :exclusive => true do
+target 'elements_Example' do
   pod 'elements', :path => '../'
-  pod 'Tapglue', :git => 'https://github.com/tapglue/ios_sdk.git', :commit => '858c594f86eebd24ec0133838eeca64d561e22a2'
+  pod 'Tapglue'
+#, :git => 'https://github.com/tapglue/ios_sdk.git', :commit => '858c594f86eebd24ec0133838eeca64d561e22a2'
 end
 
-target 'elements_Tests', :exclusive => true do
+target 'elements_Tests' do
   pod 'elements', :path => '../'
 
   pod 'Quick', '~> 0.8.0'
