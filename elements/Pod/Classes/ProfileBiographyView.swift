@@ -17,6 +17,10 @@ import Tapglue
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var followerCount: UILabel!
     @IBOutlet weak var followingCount: UILabel!
+    @IBOutlet weak var followingComboView: UIView!
+    @IBOutlet weak var followersComboView: UIView!
+    
+    var delegate: ProfileBiographyDelegate?
     
     var user: TGUser? {
         didSet{
@@ -31,11 +35,13 @@ import Tapglue
     override init(frame: CGRect) {
         super.init(frame: frame)
         xibSetup()
+        tapSetup()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         xibSetup()
+        tapSetup()
     }
     
     var view: UIView!
@@ -60,5 +66,22 @@ import Tapglue
         
         return view
     }
+    
+    func tapSetup() {
+        let followingTap = UITapGestureRecognizer(target: self, action: Selector("handleFollowingTap"))
+        followingComboView.addGestureRecognizer(followingTap)
+        
+        let followersTap = UITapGestureRecognizer(target: self, action: Selector("handleFollowersTap"))
+        followersComboView.addGestureRecognizer(followersTap)
+    }
 
+    func handleFollowingTap() {
+        delegate?.profileBiographyViewFollowingSelected()
+        print("following tap detected")
+    }
+    
+    func handleFollowersTap() {
+        delegate?.profileBiographyViewFollowersSelected()
+        print("followers tap detected")
+    }
 }

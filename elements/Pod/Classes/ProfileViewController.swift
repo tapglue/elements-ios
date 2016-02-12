@@ -9,29 +9,55 @@
 import UIKit
 import Tapglue
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, ProfileBiographyDelegate {
 
     @IBOutlet weak var profileBiographyView: ProfileBiographyView!
+    
+    var tapConnectionType: ConnectionType?
+    var userId: String?
+    var user: TGUser?
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     override func viewWillAppear(animated: Bool) {
-        print("displaying profile...")
-        if let user = TGUser.currentUser() {
-            profileBiographyView.user = user
+        profileBiographyView.delegate = self
+        if let userId = userId {
+            Tapglue.retrieveUserWithId(userId, withCompletionBlock:{(retrievedUser, error) -> Void in
+                if error != nil {
+                    print("could not retrieve user! Show error")
+                } else {
+                    dispatch_async(dispatch_get_main_queue(), {() -> Void in
+                        self.profileBiographyView.user = retrievedUser
+                        self.user = retrievedUser
+                    })
+                }
+            })
+        } else if let currentUser = TGUser.currentUser() {
+            user = currentUser
+            profileBiographyView.user = currentUser
         }
     }
+    
+    func profileBiographyViewFollowersSelected() {
+        tapConnectionType = ConnectionType.Followers
+        performSegueWithIdentifier("toConnections", sender: user)
+    }
+    
+    func profileBiographyViewFollowingSelected() {
+        tapConnectionType = ConnectionType.Following
+        performSegueWithIdentifier("toConnections", sender: user)
+    }
 
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "toConnections" {
+            let connectionsVC = segue.destinationViewController as! ConnectionsTableViewController
+            connectionsVC.type = tapConnectionType
+            connectionsVC.referenceUser = sender as? TGUser
+        }
     }
-    */
 
 }

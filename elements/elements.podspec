@@ -14,11 +14,13 @@ Pod::Spec.new do |s|
   s.author           = { "John Nilsen" => "nilsen340@gmail.com" }
   s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/elements.git", :tag => s.version.to_s }
 
+  s.homepage = 'https://github.com/nilsen340/'
   s.platform     = :ios, '8.0'
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
   s.resource_bundles = {
-    'elements' => ['Pod/Assets/*.png']
+    'elements' => ['Pod/Classes/**/*']
   }
+  s.dependency 'Tapglue', '1.1.0'
 end

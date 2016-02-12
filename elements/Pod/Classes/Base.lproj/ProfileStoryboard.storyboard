@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PUa-Wd-mSl" customClass="ProfileBiographyView" customModule="elements" customModuleProvider="target">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PUa-Wd-mSl" customClass="ProfileBiographyView" customModule="elements" customModuleProvider="target">
                                 <rect key="frame" x="13" y="64" width="567" height="165"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -56,11 +56,56 @@
                     <navigationItem key="navigationItem" title="Profile" id="0fP-Xt-EDT"/>
                     <connections>
                         <outlet property="profileBiographyView" destination="PUa-Wd-mSl" id="fQj-8s-gI4"/>
+                        <segue destination="jcC-O2-5SY" kind="show" identifier="toConnections" id="47D-th-yX3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PTa-lM-L4l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1165" y="14"/>
+        </scene>
+        <!--Connections Table View Controller-->
+        <scene sceneID="Lbr-M1-kvJ">
+            <objects>
+                <tableViewController id="jcC-O2-5SY" customClass="ConnectionsTableViewController" customModule="elements" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="yVJ-Sv-VQU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="followsCell" id="9jJ-uQ-ssX">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9jJ-uQ-ssX" id="JRr-RR-Zd4">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="userName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6V2-gi-RDd">
+                                            <rect key="frame" x="8" y="14" width="584" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="6V2-gi-RDd" secondAttribute="trailing" id="Cod-mJ-QhM"/>
+                                        <constraint firstItem="6V2-gi-RDd" firstAttribute="top" secondItem="JRr-RR-Zd4" secondAttribute="topMargin" constant="6" id="WfF-y0-UFQ"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="6V2-gi-RDd" secondAttribute="leading" id="hyR-gG-ncz"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="jcC-O2-5SY" id="o6W-9x-iRv"/>
+                            <outlet property="delegate" destination="jcC-O2-5SY" id="XLc-sQ-Vye"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="FMg-bq-Uls" kind="show" identifier="toProfile" id="O5e-Eq-xbw"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pVC-KZ-ygE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1967" y="14"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CoN-Z7-X3A">
@@ -81,4 +126,7 @@
             <point key="canvasLocation" x="353" y="14"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="O5e-Eq-xbw"/>
+    </inferredMetricsTieBreakers>
 </document>
