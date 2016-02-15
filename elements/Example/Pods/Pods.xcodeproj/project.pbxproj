@@ -84,6 +84,8 @@
 		5F3B38A493EC26AF577003B4E3D22CF0 /* TGConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 42A00919BBF5734752737ADF16FB02F3 /* TGConfiguration.m */; };
 		63F0EF2726AC4A9DED3287263F6BAEAC /* ExampleMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0842E642AC965E5A4D6C75527EC56A /* ExampleMetadata.swift */; };
 		642B2B053717A0AAD22BCE179D6A6C0F /* TGUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 84573EC30CB57ECB46179BC1B6D9D2CA /* TGUser.m */; };
+		652C454D1C72438000E48E92 /* UIImageView+UrlString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C454C1C72438000E48E92 /* UIImageView+UrlString.swift */; };
+		652C454F1C72462E00E48E92 /* UIImageView+TGUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C454E1C72462E00E48E92 /* UIImageView+TGUser.swift */; };
 		653A918C1C68F6D100DD7158 /* Tapglue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1190677D2597712691E7618880F540 /* Tapglue.framework */; };
 		653A91901C68FE5B00DD7158 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653A918F1C68FE5B00DD7158 /* ProfileViewController.swift */; };
 		653A91921C69F5B700DD7158 /* TapglueUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653A91911C69F5B700DD7158 /* TapglueUI.swift */; };
@@ -387,6 +389,8 @@
 		62833963B59FB211CF09FBD23395EF5A /* TGPostLike.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGPostLike.m; path = Classes/Model/TGPostLike.m; sourceTree = "<group>"; };
 		6360CE9DD5E7E66FF0AC9B2599CC5160 /* TGImage+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TGImage+Private.h"; path = "Classes/Model/TGImage+Private.h"; sourceTree = "<group>"; };
 		6527462185A04B827D6D63D7FF3E1B81 /* NimbleSnapshotsConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NimbleSnapshotsConfiguration.swift; sourceTree = "<group>"; };
+		652C454C1C72438000E48E92 /* UIImageView+UrlString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+UrlString.swift"; sourceTree = "<group>"; };
+		652C454E1C72462E00E48E92 /* UIImageView+TGUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+TGUser.swift"; sourceTree = "<group>"; };
 		653A918F1C68FE5B00DD7158 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		653A91911C69F5B700DD7158 /* TapglueUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapglueUI.swift; sourceTree = "<group>"; };
 		653A91941C69FE5200DD7158 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -814,9 +818,19 @@
 			path = "../Target Support Files/Tapglue";
 			sourceTree = "<group>";
 		};
+		652C454B1C72429500E48E92 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				652C454C1C72438000E48E92 /* UIImageView+UrlString.swift */,
+				652C454E1C72462E00E48E92 /* UIImageView+TGUser.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
 		653A34697446E5BC71E6714A7AB38D14 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				652C454B1C72429500E48E92 /* extensions */,
 				65FB9B581C6B40C8001F4B72 /* ProfileBiographyView.xib */,
 				65FB9B541C6A43C3001F4B72 /* ProfileBiographyView.swift */,
 				65FB9B5B1C6B40D4001F4B72 /* ProfileStoryboard.storyboard */,
@@ -1560,6 +1574,8 @@
 				8C1376791C212F5B1292B55D4F8BCDFB /* elements-dummy.m in Sources */,
 				657B36851C6CEB9200578E5E /* ProfileBiographyViewDelegate.swift in Sources */,
 				65FB9B551C6A43C3001F4B72 /* ProfileBiographyView.swift in Sources */,
+				652C454F1C72462E00E48E92 /* UIImageView+TGUser.swift in Sources */,
+				652C454D1C72438000E48E92 /* UIImageView+UrlString.swift in Sources */,
 				657B36871C6CF5F500578E5E /* ConnectionsTableViewController.swift in Sources */,
 				653A91921C69F5B700DD7158 /* TapglueUI.swift in Sources */,
 			);

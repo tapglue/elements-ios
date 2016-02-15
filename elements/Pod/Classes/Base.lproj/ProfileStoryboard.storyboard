@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -79,19 +80,60 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <button opaque="NO" tag="2000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgE-Nb-yhb">
+                                            <rect key="frame" x="517" y="10" width="75" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="KBy-xC-Uch"/>
+                                                <constraint firstAttribute="width" constant="75" id="zV6-rx-1Pp"/>
+                                            </constraints>
+                                            <state key="normal" title="Follow"/>
+                                        </button>
+                                        <imageView userInteractionEnabled="NO" tag="3000" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="imf-4p-2Tq">
+                                            <rect key="frame" x="8" y="2" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="AXH-4z-Vme"/>
+                                                <constraint firstAttribute="width" secondItem="imf-4p-2Tq" secondAttribute="height" multiplier="1:1" id="jG8-7s-dg0"/>
+                                            </constraints>
+                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="userName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6V2-gi-RDd">
-                                            <rect key="frame" x="8" y="14" width="584" height="21"/>
+                                            <rect key="frame" x="56" y="14" width="453" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="leadingMargin" secondItem="imf-4p-2Tq" secondAttribute="leading" id="1Du-jP-r59"/>
+                                        <constraint firstItem="tgE-Nb-yhb" firstAttribute="leading" secondItem="6V2-gi-RDd" secondAttribute="trailing" constant="8" id="4qD-qn-gl0"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="6V2-gi-RDd" secondAttribute="trailing" id="Cod-mJ-QhM"/>
+                                        <constraint firstItem="imf-4p-2Tq" firstAttribute="centerY" secondItem="JRr-RR-Zd4" secondAttribute="centerY" id="JFx-4h-3vr"/>
+                                        <constraint firstItem="imf-4p-2Tq" firstAttribute="centerY" secondItem="6V2-gi-RDd" secondAttribute="centerY" id="Lyd-nf-7pp"/>
+                                        <constraint firstItem="imf-4p-2Tq" firstAttribute="centerY" secondItem="JRr-RR-Zd4" secondAttribute="centerY" id="MKe-W8-IVR"/>
                                         <constraint firstItem="6V2-gi-RDd" firstAttribute="top" secondItem="JRr-RR-Zd4" secondAttribute="topMargin" constant="6" id="WfF-y0-UFQ"/>
+                                        <constraint firstItem="tgE-Nb-yhb" firstAttribute="baseline" secondItem="6V2-gi-RDd" secondAttribute="baseline" id="ac9-OA-EFP"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="tgE-Nb-yhb" secondAttribute="trailing" id="eiZ-0y-vgx"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="6V2-gi-RDd" secondAttribute="leading" id="hyR-gG-ncz"/>
+                                        <constraint firstItem="6V2-gi-RDd" firstAttribute="leading" secondItem="imf-4p-2Tq" secondAttribute="trailing" constant="8" id="j9E-rb-bRt"/>
+                                        <constraint firstItem="tgE-Nb-yhb" firstAttribute="baseline" secondItem="6V2-gi-RDd" secondAttribute="baseline" id="q3T-z1-6tT"/>
+                                        <constraint firstItem="tgE-Nb-yhb" firstAttribute="baseline" secondItem="6V2-gi-RDd" secondAttribute="baseline" id="tcf-4s-rNR"/>
                                     </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="JFx-4h-3vr"/>
+                                            <exclude reference="Lyd-nf-7pp"/>
+                                            <exclude reference="Cod-mJ-QhM"/>
+                                            <exclude reference="hyR-gG-ncz"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
+                                <constraints>
+                                    <constraint firstItem="imf-4p-2Tq" firstAttribute="centerY" secondItem="9jJ-uQ-ssX" secondAttribute="centerY" id="6Hk-rn-Osf"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="6Hk-rn-Osf"/>
+                                    </mask>
+                                </variation>
                             </tableViewCell>
                         </prototypes>
                         <connections>

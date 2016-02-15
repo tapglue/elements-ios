@@ -17,8 +17,8 @@ import Tapglue
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var followerCount: UILabel!
     @IBOutlet weak var followingCount: UILabel!
-    @IBOutlet weak var followingComboView: UIView!
-    @IBOutlet weak var followersComboView: UIView!
+    @IBOutlet weak var followingLabel: UILabel!
+    @IBOutlet weak var followerLabel: UILabel!
     
     var delegate: ProfileBiographyDelegate?
     
@@ -28,6 +28,7 @@ import Tapglue
                 username.text = user.username
                 followerCount.text = String(user.followersCount)
                 followingCount.text = String(user.followingCount)
+                loadImage()
             }
         }
     }
@@ -69,19 +70,23 @@ import Tapglue
     
     func tapSetup() {
         let followingTap = UITapGestureRecognizer(target: self, action: Selector("handleFollowingTap"))
-        followingComboView.addGestureRecognizer(followingTap)
+        followingCount.addGestureRecognizer(followingTap)
+        followingCount.userInteractionEnabled = true
         
         let followersTap = UITapGestureRecognizer(target: self, action: Selector("handleFollowersTap"))
-        followersComboView.addGestureRecognizer(followersTap)
+        followerCount.addGestureRecognizer(followersTap)
+        followerCount.userInteractionEnabled = true
+    }
+    
+    func loadImage() {
+        profilePicture.setUserPicture(user!)
     }
 
     func handleFollowingTap() {
         delegate?.profileBiographyViewFollowingSelected()
-        print("following tap detected")
     }
     
     func handleFollowersTap() {
         delegate?.profileBiographyViewFollowersSelected()
-        print("followers tap detected")
     }
 }
