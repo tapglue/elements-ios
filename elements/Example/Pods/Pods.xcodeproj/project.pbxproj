@@ -86,15 +86,17 @@
 		642B2B053717A0AAD22BCE179D6A6C0F /* TGUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 84573EC30CB57ECB46179BC1B6D9D2CA /* TGUser.m */; };
 		652C454D1C72438000E48E92 /* UIImageView+UrlString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C454C1C72438000E48E92 /* UIImageView+UrlString.swift */; };
 		652C454F1C72462E00E48E92 /* UIImageView+TGUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C454E1C72462E00E48E92 /* UIImageView+TGUser.swift */; };
+		65312D3D1C7338DF00491966 /* ConnectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65312D3C1C7338DF00491966 /* ConnectionCell.xib */; };
+		65312D3F1C733BB300491966 /* ConnectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65312D3E1C733BB300491966 /* ConnectionCell.swift */; };
 		653A918C1C68F6D100DD7158 /* Tapglue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1190677D2597712691E7618880F540 /* Tapglue.framework */; };
 		653A91901C68FE5B00DD7158 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653A918F1C68FE5B00DD7158 /* ProfileViewController.swift */; };
 		653A91921C69F5B700DD7158 /* TapglueUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653A91911C69F5B700DD7158 /* TapglueUI.swift */; };
 		653A91951C69FE5200DD7158 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 653A91941C69FE5200DD7158 /* Assets.xcassets */; };
-		657B36851C6CEB9200578E5E /* ProfileBiographyViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657B36841C6CEB9200578E5E /* ProfileBiographyViewDelegate.swift */; };
 		657B36871C6CF5F500578E5E /* ConnectionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657B36861C6CF5F500578E5E /* ConnectionsTableViewController.swift */; };
-		65FB9B551C6A43C3001F4B72 /* ProfileBiographyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FB9B541C6A43C3001F4B72 /* ProfileBiographyView.swift */; };
-		65FB9B561C6B40C8001F4B72 /* ProfileBiographyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65FB9B581C6B40C8001F4B72 /* ProfileBiographyView.xib */; };
 		65FB9B591C6B40D4001F4B72 /* ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65FB9B5B1C6B40D4001F4B72 /* ProfileStoryboard.storyboard */; };
+		65FC51E41C733C2F007BC5D5 /* ProfileBiographyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FC51E11C733C2F007BC5D5 /* ProfileBiographyView.swift */; };
+		65FC51E51C733C2F007BC5D5 /* ProfileBiographyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65FC51E21C733C2F007BC5D5 /* ProfileBiographyView.xib */; };
+		65FC51E61C733C2F007BC5D5 /* ProfileBiographyViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FC51E31C733C2F007BC5D5 /* ProfileBiographyViewDelegate.swift */; };
 		676B8F8A10C3B0F50170294DE7BF7F3E /* TGObject+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 042F3BB66250A32810C59DBEFDB0E44D /* TGObject+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6CD6E88245A51E2A00A5D08B0F9225F9 /* ExampleHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE683478CF5569F2510B6362ABC6FAE8 /* ExampleHooks.swift */; };
 		6FE8C202ABAA98B3103641F7B02D4881 /* NSString+QCKSelectorName.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F808081731665B1F27BD0A59F530B56 /* NSString+QCKSelectorName.m */; };
@@ -391,16 +393,16 @@
 		6527462185A04B827D6D63D7FF3E1B81 /* NimbleSnapshotsConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NimbleSnapshotsConfiguration.swift; sourceTree = "<group>"; };
 		652C454C1C72438000E48E92 /* UIImageView+UrlString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+UrlString.swift"; sourceTree = "<group>"; };
 		652C454E1C72462E00E48E92 /* UIImageView+TGUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+TGUser.swift"; sourceTree = "<group>"; };
+		65312D3C1C7338DF00491966 /* ConnectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConnectionCell.xib; sourceTree = "<group>"; };
+		65312D3E1C733BB300491966 /* ConnectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionCell.swift; sourceTree = "<group>"; };
 		653A918F1C68FE5B00DD7158 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		653A91911C69F5B700DD7158 /* TapglueUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapglueUI.swift; sourceTree = "<group>"; };
 		653A91941C69FE5200DD7158 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		657B36841C6CEB9200578E5E /* ProfileBiographyViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileBiographyViewDelegate.swift; sourceTree = "<group>"; };
 		657B36861C6CF5F500578E5E /* ConnectionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionsTableViewController.swift; sourceTree = "<group>"; };
-		65FB9B541C6A43C3001F4B72 /* ProfileBiographyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileBiographyView.swift; sourceTree = "<group>"; };
-		65FB9B5C1C6B40E2001F4B72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ProfileBiographyView.xib; sourceTree = "<group>"; };
 		65FB9B5D1C6B40E2001F4B72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ProfileStoryboard.storyboard; sourceTree = "<group>"; };
-		65FB9B5E1C6B40EF001F4B72 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/ProfileBiographyView.strings; sourceTree = "<group>"; };
-		65FB9B5F1C6B40EF001F4B72 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/ProfileStoryboard.strings; sourceTree = "<group>"; };
+		65FC51E11C733C2F007BC5D5 /* ProfileBiographyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileBiographyView.swift; sourceTree = "<group>"; };
+		65FC51E21C733C2F007BC5D5 /* ProfileBiographyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileBiographyView.xib; sourceTree = "<group>"; };
+		65FC51E31C733C2F007BC5D5 /* ProfileBiographyViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileBiographyViewDelegate.swift; sourceTree = "<group>"; };
 		66EED5AF86EA1E7C1B2A737C0EAB6165 /* TGPostsManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGPostsManager.m; path = Classes/TGPostsManager.m; sourceTree = "<group>"; };
 		66F10DB1C9DCA4A68441BD8F6C5C030F /* TGEventManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGEventManager.h; path = Classes/TGEventManager.h; sourceTree = "<group>"; };
 		66F8E965644B28F4BAEE6E1928EF1761 /* NSDictionary+TGUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+TGUtilities.h"; path = "Classes/Model/NSDictionary+TGUtilities.h"; sourceTree = "<group>"; };
@@ -827,17 +829,27 @@
 			path = extensions;
 			sourceTree = "<group>";
 		};
+		65312D3B1C73363300491966 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				65FC51E11C733C2F007BC5D5 /* ProfileBiographyView.swift */,
+				65FC51E21C733C2F007BC5D5 /* ProfileBiographyView.xib */,
+				65FC51E31C733C2F007BC5D5 /* ProfileBiographyViewDelegate.swift */,
+				65312D3C1C7338DF00491966 /* ConnectionCell.xib */,
+				65312D3E1C733BB300491966 /* ConnectionCell.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
 		653A34697446E5BC71E6714A7AB38D14 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				65312D3B1C73363300491966 /* views */,
 				652C454B1C72429500E48E92 /* extensions */,
-				65FB9B581C6B40C8001F4B72 /* ProfileBiographyView.xib */,
-				65FB9B541C6A43C3001F4B72 /* ProfileBiographyView.swift */,
 				65FB9B5B1C6B40D4001F4B72 /* ProfileStoryboard.storyboard */,
 				653A918F1C68FE5B00DD7158 /* ProfileViewController.swift */,
 				653A91941C69FE5200DD7158 /* Assets.xcassets */,
 				653A91911C69F5B700DD7158 /* TapglueUI.swift */,
-				657B36841C6CEB9200578E5E /* ProfileBiographyViewDelegate.swift */,
 				657B36861C6CF5F500578E5E /* ConnectionsTableViewController.swift */,
 			);
 			path = Classes;
@@ -1441,7 +1453,8 @@
 			files = (
 				5C41C28A563C394582CCE27D383B01F5 /* elements.bundle in Resources */,
 				65FB9B591C6B40D4001F4B72 /* ProfileStoryboard.storyboard in Resources */,
-				65FB9B561C6B40C8001F4B72 /* ProfileBiographyView.xib in Resources */,
+				65312D3D1C7338DF00491966 /* ConnectionCell.xib in Resources */,
+				65FC51E51C733C2F007BC5D5 /* ProfileBiographyView.xib in Resources */,
 				653A91951C69FE5200DD7158 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1572,11 +1585,12 @@
 			files = (
 				653A91901C68FE5B00DD7158 /* ProfileViewController.swift in Sources */,
 				8C1376791C212F5B1292B55D4F8BCDFB /* elements-dummy.m in Sources */,
-				657B36851C6CEB9200578E5E /* ProfileBiographyViewDelegate.swift in Sources */,
-				65FB9B551C6A43C3001F4B72 /* ProfileBiographyView.swift in Sources */,
+				65312D3F1C733BB300491966 /* ConnectionCell.swift in Sources */,
 				652C454F1C72462E00E48E92 /* UIImageView+TGUser.swift in Sources */,
 				652C454D1C72438000E48E92 /* UIImageView+UrlString.swift in Sources */,
+				65FC51E61C733C2F007BC5D5 /* ProfileBiographyViewDelegate.swift in Sources */,
 				657B36871C6CF5F500578E5E /* ConnectionsTableViewController.swift in Sources */,
+				65FC51E41C733C2F007BC5D5 /* ProfileBiographyView.swift in Sources */,
 				653A91921C69F5B700DD7158 /* TapglueUI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1701,20 +1715,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		65FB9B581C6B40C8001F4B72 /* ProfileBiographyView.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				65FB9B5C1C6B40E2001F4B72 /* Base */,
-				65FB9B5E1C6B40EF001F4B72 /* es */,
-			);
-			name = ProfileBiographyView.xib;
-			sourceTree = "<group>";
-		};
 		65FB9B5B1C6B40D4001F4B72 /* ProfileStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				65FB9B5D1C6B40E2001F4B72 /* Base */,
-				65FB9B5F1C6B40EF001F4B72 /* es */,
 			);
 			name = ProfileStoryboard.storyboard;
 			sourceTree = "<group>";

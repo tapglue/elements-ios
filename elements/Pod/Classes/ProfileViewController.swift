@@ -24,20 +24,27 @@ class ProfileViewController: UIViewController, ProfileBiographyDelegate {
     override func viewWillAppear(animated: Bool) {
         profileBiographyView.delegate = self
         if let userId = userId {
-            Tapglue.retrieveUserWithId(userId, withCompletionBlock:{(retrievedUser, error) -> Void in
-                if error != nil {
-                    print("could not retrieve user! Show error")
-                } else {
-                    dispatch_async(dispatch_get_main_queue(), {() -> Void in
-                        self.profileBiographyView.user = retrievedUser
-                        self.user = retrievedUser
-                    })
-                }
-            })
+            retrieveAndSetUserWithId(userId)
         } else if let currentUser = TGUser.currentUser() {
             user = currentUser
             profileBiographyView.user = currentUser
+            if let user = user {
+                retrieveAndSetUserWithId(user.userId)
+            }
         }
+    }
+    
+    func retrieveAndSetUserWithId(userId: String) {
+        Tapglue.retrieveUserWithId(userId, withCompletionBlock:{(retrievedUser, error) -> Void in
+            if error != nil {
+                print("could not retrieve user! Show error")
+            } else {
+                dispatch_async(dispatch_get_main_queue(), {() -> Void in
+                    self.profileBiographyView.user = retrievedUser
+                    self.user = retrievedUser
+                })
+            }
+        })
     }
     
     func profileBiographyViewFollowersSelected() {
