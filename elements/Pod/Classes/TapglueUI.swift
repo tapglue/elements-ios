@@ -27,7 +27,7 @@ public class TapglueUI {
         let s = UIStoryboard (
             name: "ProfileStoryboard", bundle: NSBundle(forClass: ProfileViewController.self)
         )
-        let connectionsVC = s.instantiateViewControllerWithIdentifier("ConnectionsViewController") as! ConnectionsTableViewController
+        let connectionsVC = s.instantiateViewControllerWithIdentifier("ConnectionsViewController") as! ConnectionsViewController
         
         connectionsVC.type = type
         connectionsVC.referenceUser = user

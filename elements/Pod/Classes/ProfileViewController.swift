@@ -61,10 +61,9 @@ class ProfileViewController: UIViewController, ProfileBiographyDelegate {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "toConnections" {
-            let connectionsVC = segue.destinationViewController as! ConnectionsTableViewController
+            let connectionsVC = segue.destinationViewController as! ConnectionsViewController
             connectionsVC.type = tapConnectionType
             connectionsVC.referenceUser = sender as? TGUser
         }
     }
-
 }
