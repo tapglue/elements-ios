@@ -19,6 +19,7 @@ import Tapglue
     @IBOutlet weak var followingCount: UILabel!
     @IBOutlet weak var followingLabel: UILabel!
     @IBOutlet weak var followerLabel: UILabel!
+    @IBOutlet weak var followButton: FollowButton!
     
     var delegate: ProfileBiographyDelegate?
     
@@ -28,6 +29,7 @@ import Tapglue
                 username.text = user.username
                 followerCount.text = String(user.followersCount)
                 followingCount.text = String(user.followingCount)
+                followButton.setStateForUser(user)
                 loadImage()
             }
         }

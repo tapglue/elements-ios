@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileBiographyView" customModule="elements" customModuleProvider="target">
             <connections>
+                <outlet property="followButton" destination="cPk-aQ-Z3c" id="41N-PZ-PCp"/>
                 <outlet property="followerCount" destination="DEq-7P-wcN" id="0cv-QQ-o8z"/>
                 <outlet property="followerLabel" destination="tmb-hi-RAt" id="GLQ-wE-FCu"/>
                 <outlet property="followingCount" destination="Rp4-OS-Ble" id="8s2-26-R86"/>
@@ -28,7 +29,7 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8g-xq-iJ6">
-                    <rect key="frame" x="83" y="44" width="370" height="21"/>
+                    <rect key="frame" x="83" y="44" width="282" height="21"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -65,18 +66,28 @@
                         </mask>
                     </variation>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPk-aQ-Z3c" customClass="FollowButton" customModule="elements" customModuleProvider="target">
+                    <rect key="frame" x="373" y="40" width="80" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="DbR-sg-pN1"/>
+                    </constraints>
+                    <state key="normal" title="Follow"/>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="DEq-7P-wcN" firstAttribute="leading" secondItem="Rp4-OS-Ble" secondAttribute="trailing" constant="15" id="0BI-fN-NYK"/>
                 <constraint firstItem="Rp4-OS-Ble" firstAttribute="centerX" secondItem="8He-mZ-6AK" secondAttribute="centerX" id="2i2-SM-imP"/>
                 <constraint firstItem="DEq-7P-wcN" firstAttribute="centerX" secondItem="tmb-hi-RAt" secondAttribute="centerX" id="2rT-fe-L5N"/>
+                <constraint firstItem="cPk-aQ-Z3c" firstAttribute="leading" secondItem="c8g-xq-iJ6" secondAttribute="trailing" constant="8" id="4Sa-4h-aIV"/>
                 <constraint firstItem="DEq-7P-wcN" firstAttribute="centerX" secondItem="tmb-hi-RAt" secondAttribute="centerX" constant="-19" id="Dvo-CW-cCw"/>
+                <constraint firstAttribute="trailing" secondItem="cPk-aQ-Z3c" secondAttribute="trailing" constant="8" id="EmD-RK-1g2"/>
                 <constraint firstItem="Rp4-OS-Ble" firstAttribute="width" secondItem="8He-mZ-6AK" secondAttribute="width" id="F3l-oS-jfI"/>
                 <constraint firstAttribute="trailing" secondItem="c8g-xq-iJ6" secondAttribute="trailing" constant="8" id="IUg-X3-tAQ"/>
                 <constraint firstItem="c8g-xq-iJ6" firstAttribute="centerY" secondItem="9Pi-iQ-nkL" secondAttribute="centerY" constant="-13.5" id="JLM-LZ-H0j"/>
                 <constraint firstItem="DEq-7P-wcN" firstAttribute="baseline" secondItem="Rp4-OS-Ble" secondAttribute="baseline" id="Jid-15-RRo"/>
                 <constraint firstItem="c8g-xq-iJ6" firstAttribute="centerY" secondItem="9Pi-iQ-nkL" secondAttribute="centerY" id="Kea-jJ-Z87"/>
+                <constraint firstItem="cPk-aQ-Z3c" firstAttribute="baseline" secondItem="c8g-xq-iJ6" secondAttribute="baseline" id="NY5-qd-HrQ"/>
                 <constraint firstItem="c8g-xq-iJ6" firstAttribute="leading" secondItem="9Pi-iQ-nkL" secondAttribute="trailing" constant="15" id="S5x-xZ-VGc"/>
                 <constraint firstItem="9Pi-iQ-nkL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="T1b-kN-F39"/>
                 <constraint firstItem="8He-mZ-6AK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="Tnt-XO-3mg"/>
@@ -95,7 +106,9 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <variation key="default">
                 <mask key="constraints">
+                    <exclude reference="IUg-X3-tAQ"/>
                     <exclude reference="JLM-LZ-H0j"/>
+                    <exclude reference="dTY-4o-9Oj"/>
                     <exclude reference="fYW-MI-Xs0"/>
                     <exclude reference="0BI-fN-NYK"/>
                     <exclude reference="Dvo-CW-cCw"/>
