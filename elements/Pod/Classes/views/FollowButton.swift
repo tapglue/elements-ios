@@ -9,26 +9,42 @@
 import UIKit
 import Tapglue
 
+enum FollowState{
+    case CurrentUser, Followed, Follow, None
+}
+
 class FollowButton: UIButton {
     
-    func setStateForUser(user: TGUser){
-        if user == TGUser.currentUser() {
-            hidden = true
-        }
-        else if user.isFollowed {
-            setToFollowed()
-        } else {
-            setToFollow()
+    var followState = FollowState.None {
+        didSet {
+            if followState == .CurrentUser {
+                hidden = true
+            } else if followState == .Followed {
+                setToFollowed()
+            } else if followState == .Follow {
+                setToFollow()
+            }
         }
     }
     
-    func setToFollowed() {
+    func setStateForUser(user: TGUser){
+        if user == TGUser.currentUser() {
+            followState = .CurrentUser
+        }
+        else if user.isFollowed {
+            followState = .Followed
+        } else {
+            followState = .Follow
+        }
+    }
+    
+    private func setToFollowed() {
         setTitle("Followed", forState: .Normal)
         backgroundColor = UIColor.blueColor()
         setTitleColor(UIColor.whiteColor(), forState: .Normal)
     }
     
-    func setToFollow() {
+    private func setToFollow() {
         setTitle("Follow", forState: .Normal)
         backgroundColor = UIColor.whiteColor()
         setTitleColor(UIColor.blueColor(), forState: .Normal)

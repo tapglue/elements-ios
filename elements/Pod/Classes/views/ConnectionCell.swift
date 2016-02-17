@@ -48,7 +48,7 @@ class ConnectionCell: UITableViewCell {
                     if success {
                         dispatch_async(dispatch_get_main_queue()) {() -> Void in
                             self.button.enabled = true
-                            self.button.setToFollowed()
+                            self.button.followState = .Followed
                             self.setButtonToFollowed()
                         }
                     } else {
@@ -67,7 +67,7 @@ class ConnectionCell: UITableViewCell {
                     if success {
                         dispatch_async(dispatch_get_main_queue()) {() -> Void in
                             self.button.enabled = true
-                            self.button.setToFollow()
+                            self.button.followState = .Follow
                             self.setButtonToFollow()
                         }
                     } else {
