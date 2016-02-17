@@ -24,6 +24,7 @@ class ViewController: UIViewController {
             } else {
                 print("\nUser logged in: \(success)")
                 self.elements.performSegueToProfile(self)
+//                self.elements.performSegueToConnections(self, forUser: TGUser.currentUser(), andForType: ConnectionType.Following)
             }
         })
     }

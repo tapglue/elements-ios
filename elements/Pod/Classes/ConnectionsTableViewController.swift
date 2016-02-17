@@ -10,11 +10,11 @@ import UIKit
 import Tapglue
 
 
-@objc enum ConnectionType: Int {
+@objc public enum ConnectionType: Int {
     case Followers, Following
 }
 
-class ConnectionsTableViewController: UITableViewController {
+class ConnectionsTableViewController: UITableViewController, ConnectionCellDelegate {
 
     var type: ConnectionType?
     var referenceUser: TGUser?
@@ -65,6 +65,7 @@ class ConnectionsTableViewController: UITableViewController {
         let connectionCell = tableView.dequeueReusableCellWithIdentifier("ConnectionCell", forIndexPath: indexPath) as! ConnectionCell
         let user = usersToDisplay[indexPath.row]
         connectionCell.user = user
+        connectionCell.delegate = self
 
         return connectionCell
     }
@@ -72,6 +73,15 @@ class ConnectionsTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         performSegueWithIdentifier("toProfile", sender: usersToDisplay[indexPath.row])
         tableView.deselectRowAtIndexPath(indexPath, animated:true)
+    }
+    
+    // MARK: - Connection cell 
+    
+    func connectionCellErrorOcurred() {
+        let alert = UIAlertController(title: "Something went wrong", message: "please try again later", preferredStyle: .Alert)
+        let action = UIAlertAction(title: "ok", style: .Default, handler: nil)
+        alert.addAction(action)
+        presentViewController(alert, animated:true, completion: nil)
     }
 
     // MARK: - Navigation

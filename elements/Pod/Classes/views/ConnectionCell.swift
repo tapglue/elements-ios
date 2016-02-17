@@ -14,6 +14,7 @@ class ConnectionCell: UITableViewCell {
     @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet weak var button: UIButton!
     
+    var delegate: ConnectionCellDelegate?
     var buttonAction: (() -> Void)?
     
     var user: TGUser? {
@@ -54,6 +55,8 @@ class ConnectionCell: UITableViewCell {
                             self.button.enabled = true
                             self.setButtonToFollowed()
                         }
+                    } else {
+                        self.handleError()
                     }
                 })
             }
@@ -73,6 +76,8 @@ class ConnectionCell: UITableViewCell {
                             self.button.enabled = true
                             self.setButtonToFollow()
                         }
+                    } else {
+                        self.handleError()
                     }
                 })
             }
@@ -84,4 +89,12 @@ class ConnectionCell: UITableViewCell {
             buttonAction()
         }
     }
+    
+    func handleError() {
+        delegate?.connectionCellErrorOcurred()
+    }
+}
+
+protocol ConnectionCellDelegate {
+    func connectionCellErrorOcurred()
 }
