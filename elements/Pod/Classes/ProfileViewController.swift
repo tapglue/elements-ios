@@ -9,19 +9,24 @@
 import UIKit
 import Tapglue
 
-class ProfileViewController: UIViewController, ProfileBiographyDelegate {
+public class ProfileViewController: UIViewController, ProfileBiographyDelegate {
 
     @IBOutlet weak var profileBiographyView: ProfileBiographyView!
     
     var tapConnectionType: ConnectionType?
     var userId: String?
     var user: TGUser?
+    public var delegate: ProfileViewDelegate? {
+        didSet {
+            user = delegate?.referenceUserInProfileViewController(self)
+        }
+    }
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override public func viewWillAppear(animated: Bool) {
         profileBiographyView.delegate = self
         if let userId = userId {
             retrieveAndSetUserWithId(userId)
@@ -51,12 +56,20 @@ class ProfileViewController: UIViewController, ProfileBiographyDelegate {
     
     func profileBiographyViewFollowersSelected() {
         tapConnectionType = ConnectionType.Followers
-        performSegueWithIdentifier("toConnections", sender: user)
+        if delegate?.defaultNavigationEnabledInProfileViewController(self) ?? true {
+            performSegueWithIdentifier("toConnections", sender: user)
+        } else {
+            delegate?.profileViewController(self, didSelectConnectionsOfType: .Followers, forUser: user!)
+        }
     }
     
     func profileBiographyViewFollowingSelected() {
         tapConnectionType = ConnectionType.Following
-        performSegueWithIdentifier("toConnections", sender: user)
+        if delegate?.defaultNavigationEnabledInProfileViewController(self) ?? true {
+            performSegueWithIdentifier("toConnections", sender: user)
+        } else {
+            delegate?.profileViewController(self, didSelectConnectionsOfType: .Following, forUser: user!)
+        }
     }
     
     func profileBiographyViewErrorOcurred(profileBiographyView: ProfileBiographyView) {
@@ -68,11 +81,17 @@ class ProfileViewController: UIViewController, ProfileBiographyDelegate {
 
     // MARK: - Navigation
 
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override public func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "toConnections" {
             let connectionsVC = segue.destinationViewController as! ConnectionsViewController
             connectionsVC.type = tapConnectionType
             connectionsVC.referenceUser = sender as? TGUser
         }
     }
+}
+
+public protocol ProfileViewDelegate {
+    func defaultNavigationEnabledInProfileViewController(profileViewController: ProfileViewController) -> Bool
+    func referenceUserInProfileViewController(profileViewController: ProfileViewController) -> TGUser
+    func profileViewController(profileViewController: ProfileViewController, didSelectConnectionsOfType: ConnectionType, forUser: TGUser)
 }

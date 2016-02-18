@@ -12,13 +12,11 @@ import Tapglue
 public class ConnectionsViewController: UITableViewController, ConnectionCellDelegate {
 
     var type: ConnectionType?
-    var navigationEnabled = true
     var referenceUser: TGUser?
     var usersToDisplay = [TGUser]()
     public var delegate: ConnectionsViewDelegate? {
         didSet {
             type = delegate?.connectionTypeInConnectionsViewController(self)
-            navigationEnabled = delegate?.defaultNavigationEnabledInConnectionsViewController(self) ?? true
             referenceUser = delegate?.referenceUserInConnectionsViewController(self)
         }
     }
@@ -75,7 +73,7 @@ public class ConnectionsViewController: UITableViewController, ConnectionCellDel
     }
     
     override public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if navigationEnabled {
+        if delegate?.defaultNavigationEnabledInConnectionsViewController(self) ?? true {
             performSegueWithIdentifier("toProfile", sender: usersToDisplay[indexPath.row])
             tableView.deselectRowAtIndexPath(indexPath, animated:true)
         } else {
