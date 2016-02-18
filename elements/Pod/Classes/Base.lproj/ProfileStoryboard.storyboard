@@ -78,11 +78,70 @@
                     </tableView>
                     <connections>
                         <segue destination="FMg-bq-Uls" kind="show" identifier="toProfile" id="O5e-Eq-xbw"/>
+                        <segue destination="64T-Y3-pN0" kind="show" identifier="toUserSearch" id="pw8-wo-WZr"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pVC-KZ-ygE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1967" y="14"/>
+        </scene>
+        <!--User Search View Controller-->
+        <scene sceneID="mLS-fb-xUO">
+            <objects>
+                <viewController id="64T-Y3-pN0" customClass="UserSearchViewController" customModule="elements" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2OR-r6-1H2"/>
+                        <viewControllerLayoutGuide type="bottom" id="pEr-Aj-jnW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wpc-IE-FOV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lEU-6T-uBy">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="64T-Y3-pN0" id="Fpx-S5-BIF"/>
+                                    <outlet property="delegate" destination="64T-Y3-pN0" id="ixC-9f-frJ"/>
+                                </connections>
+                            </tableView>
+                            <searchBar contentMode="redraw" placeholder="User name, name, email" translatesAutoresizingMaskIntoConstraints="NO" id="HC1-F6-OqO">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="64T-Y3-pN0" id="86B-my-7MH"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="HC1-F6-OqO" secondAttribute="trailing" id="UwU-Aj-bqt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HC1-F6-OqO" secondAttribute="trailing" id="Z9r-5B-pEH"/>
+                            <constraint firstItem="lEU-6T-uBy" firstAttribute="top" secondItem="Wpc-IE-FOV" secondAttribute="top" id="dEg-SK-1uc"/>
+                            <constraint firstItem="HC1-F6-OqO" firstAttribute="top" secondItem="2OR-r6-1H2" secondAttribute="bottom" constant="44" id="gIi-hV-okK"/>
+                            <constraint firstItem="pEr-Aj-jnW" firstAttribute="top" secondItem="lEU-6T-uBy" secondAttribute="bottom" id="hLq-6S-ppT"/>
+                            <constraint firstItem="HC1-F6-OqO" firstAttribute="top" secondItem="2OR-r6-1H2" secondAttribute="bottom" id="lQw-u5-JQX"/>
+                            <constraint firstAttribute="trailing" secondItem="lEU-6T-uBy" secondAttribute="trailing" id="mbk-2H-r1t"/>
+                            <constraint firstItem="HC1-F6-OqO" firstAttribute="leading" secondItem="Wpc-IE-FOV" secondAttribute="leading" id="ofP-38-Y2j"/>
+                            <constraint firstItem="lEU-6T-uBy" firstAttribute="leading" secondItem="Wpc-IE-FOV" secondAttribute="leading" id="wW6-yP-YQY"/>
+                            <constraint firstItem="HC1-F6-OqO" firstAttribute="leading" secondItem="Wpc-IE-FOV" secondAttribute="leadingMargin" id="xfg-KT-om4"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Z9r-5B-pEH"/>
+                                <exclude reference="gIi-hV-okK"/>
+                                <exclude reference="xfg-KT-om4"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="HC1-F6-OqO" id="zKU-U7-GOA"/>
+                        <outlet property="tableView" destination="lEU-6T-uBy" id="maR-Cx-0i7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ocO-5E-A4w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2889" y="14"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CoN-Z7-X3A">

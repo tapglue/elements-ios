@@ -24,6 +24,8 @@ public class ConnectionsViewController: UITableViewController, ConnectionCellDel
     
     override public func viewDidLoad() {
         super.viewDidLoad()
+        let search = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: "searchTapped")
+        navigationItem.rightBarButtonItem = search
     }
     
     override public func viewWillAppear(animated: Bool) {
@@ -55,6 +57,13 @@ public class ConnectionsViewController: UITableViewController, ConnectionCellDel
             self.usersToDisplay = users
             self.tableView.reloadData()
         })
+    }
+    
+    func searchTapped() {
+        print("tapped search")
+        if delegate?.defaultNavigationEnabledInConnectionsViewController(self) ?? true {
+            performSegueWithIdentifier("toUserSearch", sender: nil)
+        }
     }
 
     // MARK: - Table view data source
