@@ -29,7 +29,10 @@ import Tapglue
                 username.text = user.username
                 followerCount.text = String(user.followersCount)
                 followingCount.text = String(user.followingCount)
-                followButton.setStateForUser(user)
+                followButton.user = user
+                followButton.errorHandler = {() -> Void in
+                    self.handleError()
+                }
                 loadImage()
             }
         }
@@ -80,6 +83,10 @@ import Tapglue
         followerCount.userInteractionEnabled = true
     }
     
+    func handleError() {
+        delegate?.profileBiographyViewErrorOcurred(self)
+    }
+    
     func loadImage() {
         profilePicture.setUserPicture(user!)
     }
@@ -91,4 +98,10 @@ import Tapglue
     func handleFollowersTap() {
         delegate?.profileBiographyViewFollowersSelected()
     }
+}
+
+protocol ProfileBiographyDelegate {
+    func profileBiographyViewErrorOcurred(profileBiographyView: ProfileBiographyView)
+    func profileBiographyViewFollowersSelected()
+    func profileBiographyViewFollowingSelected()
 }

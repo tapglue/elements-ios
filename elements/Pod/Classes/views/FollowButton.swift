@@ -15,6 +15,13 @@ enum FollowState{
 
 class FollowButton: UIButton {
     
+    var user: TGUser? {
+        didSet {
+            setStateForUser()
+            addTarget(self, action: "followPressed", forControlEvents: .TouchUpInside)
+        }
+    }
+    
     var followState = FollowState.None {
         didSet {
             if followState == .CurrentUser {
@@ -26,15 +33,25 @@ class FollowButton: UIButton {
             }
         }
     }
+    var errorHandler: (() -> Void)?
+    private var buttonAction: (() -> Void)?
     
-    func setStateForUser(user: TGUser){
-        if user == TGUser.currentUser() {
-            followState = .CurrentUser
+    private func setStateForUser(){
+        if let user = user {
+            if user == TGUser.currentUser() {
+                followState = .CurrentUser
+            }
+            else if user.isFollowed {
+                followState = .Followed
+            } else {
+                followState = .Follow
+            }
         }
-        else if user.isFollowed {
-            followState = .Followed
-        } else {
-            followState = .Follow
+    }
+    
+    func followPressed() {
+        if let buttonAction = buttonAction {
+            buttonAction()
         }
     }
     
@@ -42,12 +59,39 @@ class FollowButton: UIButton {
         setTitle("Followed", forState: .Normal)
         backgroundColor = UIColor.blueColor()
         setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        buttonAction = {() -> Void in
+            self.enabled = false
+            Tapglue.unfollowUser(self.user, withCompletionBlock: { (success: Bool, error:NSError!) -> Void in
+                if success {
+                    dispatch_async(dispatch_get_main_queue()) {() -> Void in
+                        self.enabled = true
+                        self.followState = .Follow
+                        self.setToFollow()
+                    }
+                } else {
+                    self.errorHandler?()
+                }
+            })
+        }
     }
     
     private func setToFollow() {
         setTitle("Follow", forState: .Normal)
         backgroundColor = UIColor.whiteColor()
         setTitleColor(UIColor.blueColor(), forState: .Normal)
+        buttonAction = {() -> Void in
+            self.enabled = false
+            Tapglue.followUser(self.user, withCompletionBlock: { (success, error:NSError!) -> Void in
+                if success {
+                    dispatch_async(dispatch_get_main_queue()) {() -> Void in
+                        self.enabled = true
+                        self.followState = .Followed
+                        self.setToFollowed()
+                    }
+                } else {
+                   self.errorHandler?()
+                }
+            })
+        }
     }
-
 }

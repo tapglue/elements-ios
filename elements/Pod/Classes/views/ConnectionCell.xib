@@ -40,9 +40,6 @@
                                 <exclude reference="57j-IG-2Xn"/>
                             </mask>
                         </variation>
-                        <connections>
-                            <action selector="buttonTap" destination="fQd-Ra-xXC" eventType="touchUpInside" id="XGq-EW-wrd"/>
-                        </connections>
                     </button>
                 </subviews>
                 <constraints>

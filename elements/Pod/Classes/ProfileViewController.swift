@@ -47,6 +47,8 @@ class ProfileViewController: UIViewController, ProfileBiographyDelegate {
         })
     }
     
+    // MARK: - ProfileBiographyView
+    
     func profileBiographyViewFollowersSelected() {
         tapConnectionType = ConnectionType.Followers
         performSegueWithIdentifier("toConnections", sender: user)
@@ -55,6 +57,13 @@ class ProfileViewController: UIViewController, ProfileBiographyDelegate {
     func profileBiographyViewFollowingSelected() {
         tapConnectionType = ConnectionType.Following
         performSegueWithIdentifier("toConnections", sender: user)
+    }
+    
+    func profileBiographyViewErrorOcurred(profileBiographyView: ProfileBiographyView) {
+        let alert = UIAlertController(title: "Something went wrong", message: "please try again later", preferredStyle: .Alert)
+        let action = UIAlertAction(title: "ok", style: .Default, handler: nil)
+        alert.addAction(action)
+        presentViewController(alert, animated:true, completion: nil)
     }
 
     // MARK: - Navigation

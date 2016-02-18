@@ -9,11 +9,6 @@
 import UIKit
 import Tapglue
 
-
-@objc public enum ConnectionType: Int {
-    case Followers, Following
-}
-
 public class ConnectionsViewController: UITableViewController, ConnectionCellDelegate {
 
     var type: ConnectionType?
