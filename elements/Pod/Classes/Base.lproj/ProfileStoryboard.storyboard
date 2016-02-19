@@ -97,7 +97,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lEU-6T-uBy">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lEU-6T-uBy">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -137,11 +137,12 @@
                     <connections>
                         <outlet property="searchBar" destination="HC1-F6-OqO" id="zKU-U7-GOA"/>
                         <outlet property="tableView" destination="lEU-6T-uBy" id="maR-Cx-0i7"/>
+                        <segue destination="FMg-bq-Uls" kind="show" identifier="toProfile" id="4tP-Qn-QDA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ocO-5E-A4w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2889" y="14"/>
+            <point key="canvasLocation" x="1961" y="1030"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CoN-Z7-X3A">
@@ -163,6 +164,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="O5e-Eq-xbw"/>
+        <segue reference="4tP-Qn-QDA"/>
     </inferredMetricsTieBreakers>
 </document>

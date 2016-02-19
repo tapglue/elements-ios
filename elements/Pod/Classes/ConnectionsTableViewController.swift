@@ -38,13 +38,22 @@ public class ConnectionsViewController: UITableViewController, ConnectionCellDel
             case .Followers:
                 self.title = "Followers"
                 Tapglue.retrieveFollowersForUser(referenceUser, withCompletionBlock: { (followers: [AnyObject]!,error: NSError!) -> Void in
-                    self.setUsersAndReload(followers as! [TGUser])
+                    if error == nil {
+                        self.setUsersAndReload(followers as! [TGUser])
+                    } else {
+                        print("ERROR! \(error)")
+                    }
                     }
                 )
             case .Following:
                 self.title = "Following"
                 Tapglue.retrieveFollowsForUser(referenceUser, withCompletionBlock: { (follows: [AnyObject]!,error: NSError!) -> Void in
-                    self.setUsersAndReload(follows as! [TGUser])
+                    //TODO: add error handling
+                    if error == nil {
+                        self.setUsersAndReload(follows as! [TGUser])
+                    } else {
+                        print("ERROR! \(error)")
+                    }
                     }
                 )
                 
