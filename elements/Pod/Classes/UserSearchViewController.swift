@@ -33,7 +33,8 @@ public class UserSearchViewController: UIViewController {
         tableView.registerNib(connectionCellNib, forCellReuseIdentifier: cellConnectionReusableIdentifier)
         tableView.registerNib(nothingFoundCellNib, forCellReuseIdentifier: cellNothingFoundReusableIdentifier)
         tableView.registerNib(searchAddressBookCellNib, forCellReuseIdentifier: cellSearchAddressBookReusableIdentifier)
-        tableView.rowHeight = 80
+        tableView.estimatedRowHeight = 80
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
 
     // MARK: - Navigation
@@ -80,7 +81,16 @@ extension UserSearchViewController: UITableViewDataSource {
         return searchResult.count
     }
     
+    public func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0.1
+    }
+    
+    public func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return UIView()
+    }
+    
     public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
         if searchResult.count == 0 {
             if isSearching {
                 return tableView.dequeueReusableCellWithIdentifier(cellNothingFoundReusableIdentifier)!
@@ -95,6 +105,9 @@ extension UserSearchViewController: UITableViewDataSource {
         
         return connectionCell
     }
+}
+
+extension UserSearchViewController: UITableViewDelegate {
     public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let cell = tableView.cellForRowAtIndexPath(indexPath)
         if ((cell as? ConnectionCell) != nil) {
@@ -113,8 +126,6 @@ extension UserSearchViewController: UITableViewDataSource {
         tableView.deselectRowAtIndexPath(indexPath, animated:true)
     }
 }
-
-extension UserSearchViewController: UITableViewDelegate {}
 
 extension UserSearchViewController: ConnectionCellDelegate {
     func connectionCellErrorOcurred() {

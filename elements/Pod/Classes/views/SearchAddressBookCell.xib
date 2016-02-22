@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -15,29 +14,48 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="adress-book" translatesAutoresizingMaskIntoConstraints="NO" id="az0-XJ-yGp">
-                        <rect key="frame" x="8" y="8" width="63" height="63"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EZo-5d-VkT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="103"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search your Address book" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="viN-ul-ea1">
+                                <rect key="frame" x="91" y="20" width="209" height="63"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="adress-book" translatesAutoresizingMaskIntoConstraints="NO" id="az0-XJ-yGp">
+                                <rect key="frame" x="20" y="20" width="63" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="PGE-vx-VGe"/>
+                                    <constraint firstAttribute="width" constant="63" id="xTk-Lv-1ca"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="63" id="PGE-vx-VGe"/>
-                            <constraint firstAttribute="width" constant="63" id="xTk-Lv-1ca"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="az0-XJ-yGp" secondAttribute="bottom" constant="20" symbolic="YES" id="JWE-Ui-4Ss"/>
+                            <constraint firstItem="az0-XJ-yGp" firstAttribute="leading" secondItem="EZo-5d-VkT" secondAttribute="leading" constant="20" symbolic="YES" id="L31-FQ-h7T"/>
+                            <constraint firstItem="az0-XJ-yGp" firstAttribute="top" relation="greaterThanOrEqual" secondItem="EZo-5d-VkT" secondAttribute="top" constant="20" symbolic="YES" id="PJJ-OI-oIi"/>
+                            <constraint firstAttribute="trailing" secondItem="viN-ul-ea1" secondAttribute="trailing" constant="20" symbolic="YES" id="RwD-MP-fg3"/>
+                            <constraint firstItem="viN-ul-ea1" firstAttribute="top" secondItem="EZo-5d-VkT" secondAttribute="top" constant="20" symbolic="YES" id="VX5-VH-HSv"/>
+                            <constraint firstItem="az0-XJ-yGp" firstAttribute="centerY" secondItem="viN-ul-ea1" secondAttribute="centerY" id="ZFP-tz-Mse"/>
+                            <constraint firstItem="az0-XJ-yGp" firstAttribute="centerY" secondItem="EZo-5d-VkT" secondAttribute="centerY" id="hoa-Zy-Ipb"/>
+                            <constraint firstItem="viN-ul-ea1" firstAttribute="leading" secondItem="az0-XJ-yGp" secondAttribute="trailing" constant="8" symbolic="YES" id="iBK-af-KRI"/>
+                            <constraint firstAttribute="bottom" secondItem="viN-ul-ea1" secondAttribute="bottom" constant="20" symbolic="YES" id="sdz-up-TIc"/>
                         </constraints>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search your Address book" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="viN-ul-ea1">
-                        <rect key="frame" x="79" y="29" width="233" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="az0-XJ-yGp" firstAttribute="centerY" secondItem="2jY-mk-9NU" secondAttribute="centerY" id="DBP-rT-gtf"/>
-                    <constraint firstAttribute="leadingMargin" secondItem="az0-XJ-yGp" secondAttribute="leading" id="PFN-uC-JE2"/>
-                    <constraint firstItem="viN-ul-ea1" firstAttribute="centerY" secondItem="2jY-mk-9NU" secondAttribute="centerY" id="eHW-Kt-xfZ"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="viN-ul-ea1" secondAttribute="trailing" id="jBv-Ua-BSA"/>
-                    <constraint firstItem="viN-ul-ea1" firstAttribute="leading" secondItem="az0-XJ-yGp" secondAttribute="trailing" constant="8" id="rTe-Os-zAq"/>
+                    <constraint firstItem="EZo-5d-VkT" firstAttribute="leading" secondItem="2jY-mk-9NU" secondAttribute="leading" id="23l-gE-h5w"/>
+                    <constraint firstItem="EZo-5d-VkT" firstAttribute="top" secondItem="2jY-mk-9NU" secondAttribute="top" id="Chp-Q3-JnH"/>
+                    <constraint firstAttribute="bottom" secondItem="EZo-5d-VkT" secondAttribute="bottom" id="VVb-yg-5ps"/>
+                    <constraint firstAttribute="trailing" secondItem="EZo-5d-VkT" secondAttribute="trailing" id="gih-Qp-DgM"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="241" y="179"/>
+            <connections>
+                <outlet property="lbAddressBookSuggestion" destination="viN-ul-ea1" id="5ad-Yl-atL"/>
+            </connections>
+            <point key="canvasLocation" x="228" y="159"/>
         </tableViewCell>
     </objects>
     <resources>
