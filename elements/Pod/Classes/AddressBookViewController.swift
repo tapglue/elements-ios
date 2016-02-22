@@ -11,7 +11,9 @@ import Contacts
 import Tapglue
 
 @available(iOS 9.0, *)
-class AddressBookViewController: UIViewController {
+public class AddressBookViewController: UIViewController {
+    
+    public var delegate: AddressBookViewDelegate?
     
     let cellNothingFoundReusableIdentifier = "NothingFoundCell"
     let cellConnectionReusableIdentifier = "ConnectionCell"
@@ -25,7 +27,7 @@ class AddressBookViewController: UIViewController {
     var searchResult = [TGUser]()
     var isSearchFinished = false
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         let bundle = NSBundle(forClass: ProfileViewController.self)
         let connectionCellNib = UINib(nibName: cellConnectionReusableIdentifier, bundle: bundle)
@@ -80,15 +82,15 @@ class AddressBookViewController: UIViewController {
         }
     }
 
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override public func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "toProfile" {
+            let vc = segue.destinationViewController as! ProfileViewController
+            let user = sender as! TGUser
+            vc.userId = user.userId
+        }
     }
-    */
 }
 
 @available(iOS 9.0, *)
@@ -96,13 +98,13 @@ extension AddressBookViewController: UITableViewDelegate {}
 
 @available(iOS 9.0, *)
 extension AddressBookViewController: UITableViewDataSource {
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if isSearchFinished && searchResult.count == 0 {
             return 1
         }
         return searchResult.count
     }
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if searchResult.count == 0 && isSearchFinished {
             return tableView.dequeueReusableCellWithIdentifier(cellNothingFoundReusableIdentifier)!
         }
@@ -114,10 +116,14 @@ extension AddressBookViewController: UITableViewDataSource {
         return connectionCell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let cell = tableView.cellForRowAtIndexPath(indexPath)
         if ((cell as? ConnectionCell) != nil) {
-            performSegueWithIdentifier("toProfile", sender: searchResult[indexPath.row])
+            if delegate?.defaultNavigationEnabledInAddressBookViewController(self) ?? true {
+                performSegueWithIdentifier("toProfile", sender: searchResult[indexPath.row])
+            } else {
+                delegate?.addressBookViewController(self, didSelectUser: searchResult[indexPath.row])
+            }
         }
         tableView.deselectRowAtIndexPath(indexPath, animated:true)
     }
@@ -128,4 +134,10 @@ extension AddressBookViewController: ConnectionCellDelegate {
     func connectionCellErrorOcurred() {
         AlertFactory.defaultAlert(self)
     }
+}
+
+@available(iOS 9.0, *)
+public protocol AddressBookViewDelegate {
+    func defaultNavigationEnabledInAddressBookViewController(addressBookViewController: AddressBookViewController) -> Bool
+    func addressBookViewController(addressBookViewController: AddressBookViewController, didSelectUser: TGUser)
 }

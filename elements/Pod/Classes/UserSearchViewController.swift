@@ -9,8 +9,10 @@
 import UIKit
 import Tapglue
 
-class UserSearchViewController: UIViewController {
+public class UserSearchViewController: UIViewController {
 
+    public var delegate: UserSearchViewDelegate?
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     let cellNothingFoundReusableIdentifier = "NothingFoundCell"
@@ -20,7 +22,7 @@ class UserSearchViewController: UIViewController {
     var isSearching = false
     var searchResult = [TGUser]()
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         title = "Search"
         tableView.contentInset = UIEdgeInsets(top: 44, left: 0, bottom: 0, right: 0)
@@ -36,7 +38,7 @@ class UserSearchViewController: UIViewController {
 
     // MARK: - Navigation
 
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override public func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "toProfile" {
             let vc = segue.destinationViewController as! ProfileViewController
             let user = sender as! TGUser
@@ -47,7 +49,7 @@ class UserSearchViewController: UIViewController {
 }
 
 extension UserSearchViewController: UISearchBarDelegate {
-    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+    public func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         isSearching = true
         searchBar.resignFirstResponder()
         Tapglue.searchUsersWithTerm(searchBar.text!) { (users:[AnyObject]!, error:NSError!) -> Void in
@@ -64,21 +66,21 @@ extension UserSearchViewController: UISearchBarDelegate {
             }
         }
     }
-    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+    public func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
         isSearching = false
         tableView.reloadData()
     }
 }
 
 extension UserSearchViewController: UITableViewDataSource {
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if searchResult.count == 0 {
             return 1
         }
         return searchResult.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if searchResult.count == 0 {
             if isSearching {
                 return tableView.dequeueReusableCellWithIdentifier(cellNothingFoundReusableIdentifier)!
@@ -93,12 +95,20 @@ extension UserSearchViewController: UITableViewDataSource {
         
         return connectionCell
     }
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let cell = tableView.cellForRowAtIndexPath(indexPath)
         if ((cell as? ConnectionCell) != nil) {
-            performSegueWithIdentifier("toProfile", sender: searchResult[indexPath.row])
+            if delegate?.defaultNavigationEnabledInUserSearchViewController(self) ?? true {
+                performSegueWithIdentifier("toProfile", sender: searchResult[indexPath.row])
+            } else {
+                delegate?.userSearchViewController(self, didSelectUser: searchResult[indexPath.row])
+            }
         } else if (cell as? SearchAddressBookCell) != nil {
-            performSegueWithIdentifier("toAddressBook", sender: nil)
+            if delegate?.defaultNavigationEnabledInUserSearchViewController(self) ?? true {
+                performSegueWithIdentifier("toAddressBook", sender: nil)
+            } else {
+                delegate?.didTapAddressBookInUserSearchViewController(self)
+            }
         }
         tableView.deselectRowAtIndexPath(indexPath, animated:true)
     }
@@ -110,4 +120,10 @@ extension UserSearchViewController: ConnectionCellDelegate {
     func connectionCellErrorOcurred() {
         AlertFactory.defaultAlert(self)
     }
+}
+
+public protocol UserSearchViewDelegate {
+    func defaultNavigationEnabledInUserSearchViewController(connectionsViewController: UserSearchViewController) -> Bool
+    func userSearchViewController(userSearchViewController: UserSearchViewController, didSelectUser: TGUser)
+    func didTapAddressBookInUserSearchViewController(userSearchViewController: UserSearchViewController)
 }
