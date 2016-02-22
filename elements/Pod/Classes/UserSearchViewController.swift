@@ -26,13 +26,7 @@ public class UserSearchViewController: UIViewController {
         super.viewDidLoad()
         title = "Search"
         tableView.contentInset = UIEdgeInsets(top: 44, left: 0, bottom: 0, right: 0)
-        let bundle = NSBundle(forClass: ProfileViewController.self)
-        let connectionCellNib = UINib(nibName: cellConnectionReusableIdentifier, bundle: bundle)
-        let nothingFoundCellNib = UINib(nibName: cellNothingFoundReusableIdentifier, bundle: bundle)
-        let searchAddressBookCellNib = UINib(nibName: cellSearchAddressBookReusableIdentifier, bundle: bundle)
-        tableView.registerNib(connectionCellNib, forCellReuseIdentifier: cellConnectionReusableIdentifier)
-        tableView.registerNib(nothingFoundCellNib, forCellReuseIdentifier: cellNothingFoundReusableIdentifier)
-        tableView.registerNib(searchAddressBookCellNib, forCellReuseIdentifier: cellSearchAddressBookReusableIdentifier)
+        tableView.registerNibs(nibNames: [cellConnectionReusableIdentifier, cellNothingFoundReusableIdentifier, cellSearchAddressBookReusableIdentifier])
         tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableViewAutomaticDimension
     }

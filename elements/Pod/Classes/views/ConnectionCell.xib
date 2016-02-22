@@ -15,41 +15,62 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-user" translatesAutoresizingMaskIntoConstraints="NO" id="mzw-R6-QV5">
-                        <rect key="frame" x="8" y="8" width="63" height="63"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yjL-aJ-5fQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="103"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-user" translatesAutoresizingMaskIntoConstraints="NO" id="mzw-R6-QV5">
+                                <rect key="frame" x="20" y="20" width="63" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="63" id="Ygm-2l-tD7"/>
+                                    <constraint firstAttribute="height" constant="63" id="y8v-oH-8Ja"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fj4-op-aZU">
+                                <rect key="frame" x="91" y="41" width="129" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YAN-Jl-3Rh" customClass="FollowButton" customModule="elements" customModuleProvider="target">
+                                <rect key="frame" x="220" y="37" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="57j-IG-2Xn"/>
+                                    <constraint firstAttribute="width" constant="80" id="uUk-vQ-2ln"/>
+                                </constraints>
+                                <state key="normal" title="Follow"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="57j-IG-2Xn"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="63" id="Ygm-2l-tD7"/>
-                            <constraint firstAttribute="height" constant="63" id="y8v-oH-8Ja"/>
+                            <constraint firstItem="mzw-R6-QV5" firstAttribute="leading" secondItem="yjL-aJ-5fQ" secondAttribute="leading" constant="20" symbolic="YES" id="0Ub-b9-fbg"/>
+                            <constraint firstItem="mzw-R6-QV5" firstAttribute="centerY" secondItem="yjL-aJ-5fQ" secondAttribute="centerY" id="4lZ-d6-v9I"/>
+                            <constraint firstItem="mzw-R6-QV5" firstAttribute="top" secondItem="yjL-aJ-5fQ" secondAttribute="top" constant="20" symbolic="YES" id="DbJ-4T-EmA"/>
+                            <constraint firstItem="YAN-Jl-3Rh" firstAttribute="centerY" secondItem="yjL-aJ-5fQ" secondAttribute="centerY" id="O5b-yW-AWN"/>
+                            <constraint firstItem="YAN-Jl-3Rh" firstAttribute="leading" secondItem="fj4-op-aZU" secondAttribute="trailing" id="Yfq-lF-efh"/>
+                            <constraint firstAttribute="trailing" secondItem="YAN-Jl-3Rh" secondAttribute="trailing" constant="20" symbolic="YES" id="bcK-5l-tGw"/>
+                            <constraint firstItem="fj4-op-aZU" firstAttribute="centerY" secondItem="yjL-aJ-5fQ" secondAttribute="centerY" id="jDd-x3-CLY"/>
+                            <constraint firstItem="fj4-op-aZU" firstAttribute="leading" secondItem="mzw-R6-QV5" secondAttribute="trailing" constant="8" symbolic="YES" id="mqq-GE-FVi"/>
+                            <constraint firstAttribute="bottom" secondItem="mzw-R6-QV5" secondAttribute="bottom" constant="20" symbolic="YES" id="wGC-ib-PiD"/>
                         </constraints>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fj4-op-aZU">
-                        <rect key="frame" x="79" y="29" width="79" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YAN-Jl-3Rh" customClass="FollowButton" customModule="elements" customModuleProvider="target">
-                        <rect key="frame" x="232" y="25" width="80" height="30"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="60" id="57j-IG-2Xn"/>
-                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="uUk-vQ-2ln"/>
-                        </constraints>
-                        <state key="normal" title="Follow"/>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="57j-IG-2Xn"/>
-                            </mask>
-                        </variation>
-                    </button>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="fj4-op-aZU" firstAttribute="centerY" secondItem="gSO-te-Ykb" secondAttribute="centerY" id="QtD-hc-4hh"/>
-                    <constraint firstItem="YAN-Jl-3Rh" firstAttribute="centerY" secondItem="gSO-te-Ykb" secondAttribute="centerY" id="Xth-ij-2YH"/>
-                    <constraint firstItem="mzw-R6-QV5" firstAttribute="centerY" secondItem="gSO-te-Ykb" secondAttribute="centerY" id="aZj-Me-iyk"/>
-                    <constraint firstAttribute="leadingMargin" secondItem="mzw-R6-QV5" secondAttribute="leading" id="d2Q-pF-jme"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="YAN-Jl-3Rh" secondAttribute="trailing" id="jts-Jd-dOR"/>
-                    <constraint firstItem="fj4-op-aZU" firstAttribute="leading" secondItem="mzw-R6-QV5" secondAttribute="trailing" constant="8" id="nmy-U0-HjK"/>
+                    <constraint firstItem="yjL-aJ-5fQ" firstAttribute="top" secondItem="gSO-te-Ykb" secondAttribute="top" id="8Re-3s-gfG"/>
+                    <constraint firstItem="yjL-aJ-5fQ" firstAttribute="leading" secondItem="gSO-te-Ykb" secondAttribute="leading" id="IUo-tA-cv0"/>
+                    <constraint firstAttribute="bottom" secondItem="yjL-aJ-5fQ" secondAttribute="bottom" id="MNt-CJ-Yno"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="fj4-op-aZU" secondAttribute="trailing" constant="154" id="fad-2u-mIf"/>
+                    <constraint firstAttribute="trailing" secondItem="yjL-aJ-5fQ" secondAttribute="trailing" id="laA-4O-plU"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="fad-2u-mIf"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="button" destination="YAN-Jl-3Rh" id="aLN-xh-lww"/>

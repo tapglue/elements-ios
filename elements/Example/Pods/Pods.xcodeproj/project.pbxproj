@@ -102,6 +102,7 @@
 		65AF3D4F1C7B3CFB00AB83FB /* AddressBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AF3D4E1C7B3CFB00AB83FB /* AddressBookViewController.swift */; };
 		65AF3D511C7B594F00AB83FB /* AlertFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AF3D501C7B594F00AB83FB /* AlertFactory.swift */; };
 		65AF3D541C7B5B4300AB83FB /* AddressBook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65AF3D521C7B5B4300AB83FB /* AddressBook.storyboard */; };
+		65AF3D561C7B8EAF00AB83FB /* UITableView+NibLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AF3D551C7B8EAF00AB83FB /* UITableView+NibLoading.swift */; };
 		65FB9B591C6B40D4001F4B72 /* ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65FB9B5B1C6B40D4001F4B72 /* ProfileStoryboard.storyboard */; };
 		65FC51E41C733C2F007BC5D5 /* ProfileBiographyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FC51E11C733C2F007BC5D5 /* ProfileBiographyView.swift */; };
 		65FC51E51C733C2F007BC5D5 /* ProfileBiographyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65FC51E21C733C2F007BC5D5 /* ProfileBiographyView.xib */; };
@@ -416,6 +417,7 @@
 		65AF3D4E1C7B3CFB00AB83FB /* AddressBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressBookViewController.swift; sourceTree = "<group>"; };
 		65AF3D501C7B594F00AB83FB /* AlertFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertFactory.swift; sourceTree = "<group>"; };
 		65AF3D531C7B5B4300AB83FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AddressBook.storyboard; sourceTree = "<group>"; };
+		65AF3D551C7B8EAF00AB83FB /* UITableView+NibLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+NibLoading.swift"; sourceTree = "<group>"; };
 		65FB9B5D1C6B40E2001F4B72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ProfileStoryboard.storyboard; sourceTree = "<group>"; };
 		65FC51E11C733C2F007BC5D5 /* ProfileBiographyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileBiographyView.swift; sourceTree = "<group>"; };
 		65FC51E21C733C2F007BC5D5 /* ProfileBiographyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileBiographyView.xib; sourceTree = "<group>"; };
@@ -841,6 +843,7 @@
 			children = (
 				652C454C1C72438000E48E92 /* UIImageView+UrlString.swift */,
 				652C454E1C72462E00E48E92 /* UIImageView+TGUser.swift */,
+				65AF3D551C7B8EAF00AB83FB /* UITableView+NibLoading.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -1621,6 +1624,7 @@
 				65AF3D451C76007300AB83FB /* ConnectionType.swift in Sources */,
 				652C454D1C72438000E48E92 /* UIImageView+UrlString.swift in Sources */,
 				657B36871C6CF5F500578E5E /* ConnectionsTableViewController.swift in Sources */,
+				65AF3D561C7B8EAF00AB83FB /* UITableView+NibLoading.swift in Sources */,
 				65AF3D511C7B594F00AB83FB /* AlertFactory.swift in Sources */,
 				65FC51E41C733C2F007BC5D5 /* ProfileBiographyView.swift in Sources */,
 				653A91921C69F5B700DD7158 /* TapglueUI.swift in Sources */,

@@ -29,9 +29,9 @@ public class ConnectionsViewController: UITableViewController, ConnectionCellDel
     }
     
     override public func viewWillAppear(animated: Bool) {
-        let cellNib = UINib(nibName: "ConnectionCell", bundle: NSBundle(forClass: ProfileViewController.self))
-        tableView.registerNib(cellNib, forCellReuseIdentifier: "ConnectionCell")
-        tableView.rowHeight = 80
+        tableView.registerNibs(nibNames: ["ConnectionCell"])
+        tableView.estimatedRowHeight = 80
+        tableView.rowHeight = UITableViewAutomaticDimension
         
         if let type = type {
             switch type {
@@ -79,6 +79,14 @@ public class ConnectionsViewController: UITableViewController, ConnectionCellDel
 
     override public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return usersToDisplay.count
+    }
+    
+    override public func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0.1
+    }
+    
+    override public func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return UIView()
     }
 
     override public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
