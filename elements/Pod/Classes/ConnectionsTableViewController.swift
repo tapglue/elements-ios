@@ -102,10 +102,7 @@ public class ConnectionsViewController: UITableViewController, ConnectionCellDel
     // MARK: - Connection cell 
     
     func connectionCellErrorOcurred() {
-        let alert = UIAlertController(title: "Something went wrong", message: "please try again later", preferredStyle: .Alert)
-        let action = UIAlertAction(title: "ok", style: .Default, handler: nil)
-        alert.addAction(action)
-        presentViewController(alert, animated:true, completion: nil)
+        AlertFactory.defaultAlert(self)
     }
 
     // MARK: - Navigation

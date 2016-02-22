@@ -13,6 +13,10 @@ class UserSearchViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
+    let cellNothingFoundReusableIdentifier = "NothingFoundCell"
+    let cellSearchAddressBookReusableIdentifier = "SearchAddressBookCell"
+    let cellConnectionReusableIdentifier = "ConnectionCell"
+    
     var isSearching = false
     var searchResult = [TGUser]()
     
@@ -21,10 +25,12 @@ class UserSearchViewController: UIViewController {
         title = "Search"
         tableView.contentInset = UIEdgeInsets(top: 44, left: 0, bottom: 0, right: 0)
         let bundle = NSBundle(forClass: ProfileViewController.self)
-        let connectionCellNib = UINib(nibName: "ConnectionCell", bundle: bundle)
-        let nothingFoundCellNib = UINib(nibName: "NothingFoundCell", bundle: bundle)
-        tableView.registerNib(connectionCellNib, forCellReuseIdentifier: "ConnectionCell")
-        tableView.registerNib(nothingFoundCellNib, forCellReuseIdentifier: "NothingFoundCell")
+        let connectionCellNib = UINib(nibName: cellConnectionReusableIdentifier, bundle: bundle)
+        let nothingFoundCellNib = UINib(nibName: cellNothingFoundReusableIdentifier, bundle: bundle)
+        let searchAddressBookCellNib = UINib(nibName: cellSearchAddressBookReusableIdentifier, bundle: bundle)
+        tableView.registerNib(connectionCellNib, forCellReuseIdentifier: cellConnectionReusableIdentifier)
+        tableView.registerNib(nothingFoundCellNib, forCellReuseIdentifier: cellNothingFoundReusableIdentifier)
+        tableView.registerNib(searchAddressBookCellNib, forCellReuseIdentifier: cellSearchAddressBookReusableIdentifier)
         tableView.rowHeight = 80
     }
 
@@ -51,7 +57,10 @@ extension UserSearchViewController: UISearchBarDelegate {
                     self.tableView.reloadData()
                 }
             } else {
-                print("ERROR! \(error)")
+                let alert = UIAlertController(title: "Something went wrong", message: "please try again later", preferredStyle: .Alert)
+                let action = UIAlertAction(title: "ok", style: .Default, handler: nil)
+                alert.addAction(action)
+                self.presentViewController(alert, animated:true, completion: nil)
             }
         }
     }
@@ -63,7 +72,7 @@ extension UserSearchViewController: UISearchBarDelegate {
 
 extension UserSearchViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if isSearching && searchResult.count == 0 {
+        if searchResult.count == 0 {
             return 1
         }
         return searchResult.count
@@ -71,9 +80,13 @@ extension UserSearchViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if searchResult.count == 0 {
-            return tableView.dequeueReusableCellWithIdentifier("NothingFoundCell")!
+            if isSearching {
+                return tableView.dequeueReusableCellWithIdentifier(cellNothingFoundReusableIdentifier)!
+            } else {
+                return tableView.dequeueReusableCellWithIdentifier(cellSearchAddressBookReusableIdentifier)!
+            }
         }
-        let connectionCell = tableView.dequeueReusableCellWithIdentifier("ConnectionCell", forIndexPath: indexPath) as! ConnectionCell
+        let connectionCell = tableView.dequeueReusableCellWithIdentifier(cellConnectionReusableIdentifier, forIndexPath: indexPath) as! ConnectionCell
         let user = searchResult[indexPath.row]
         connectionCell.user = user
         connectionCell.delegate = self
@@ -81,12 +94,13 @@ extension UserSearchViewController: UITableViewDataSource {
         return connectionCell
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        if delegate?.defaultNavigationEnabledInConnectionsViewController(self) ?? true {
+        let cell = tableView.cellForRowAtIndexPath(indexPath)
+        if ((cell as? ConnectionCell) != nil) {
             performSegueWithIdentifier("toProfile", sender: searchResult[indexPath.row])
-            tableView.deselectRowAtIndexPath(indexPath, animated:true)
-//        } else {
-//            delegate?.connectionsViewController(self, didSelectUser: usersToDisplay[indexPath.row])
-//        }
+        } else if (cell as? SearchAddressBookCell) != nil {
+            performSegueWithIdentifier("toAddressBook", sender: nil)
+        }
+        tableView.deselectRowAtIndexPath(indexPath, animated:true)
     }
 }
 
@@ -94,6 +108,6 @@ extension UserSearchViewController: UITableViewDelegate {}
 
 extension UserSearchViewController: ConnectionCellDelegate {
     func connectionCellErrorOcurred() {
-    
+        AlertFactory.defaultAlert(self)
     }
 }
