@@ -101,6 +101,7 @@
 		65AF3D4D1C7B3B1500AB83FB /* SearchAddressBookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AF3D4C1C7B3B1500AB83FB /* SearchAddressBookCell.swift */; };
 		65AF3D4F1C7B3CFB00AB83FB /* AddressBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AF3D4E1C7B3CFB00AB83FB /* AddressBookViewController.swift */; };
 		65AF3D511C7B594F00AB83FB /* AlertFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AF3D501C7B594F00AB83FB /* AlertFactory.swift */; };
+		65AF3D541C7B5B4300AB83FB /* AddressBook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65AF3D521C7B5B4300AB83FB /* AddressBook.storyboard */; };
 		65FB9B591C6B40D4001F4B72 /* ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65FB9B5B1C6B40D4001F4B72 /* ProfileStoryboard.storyboard */; };
 		65FC51E41C733C2F007BC5D5 /* ProfileBiographyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FC51E11C733C2F007BC5D5 /* ProfileBiographyView.swift */; };
 		65FC51E51C733C2F007BC5D5 /* ProfileBiographyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65FC51E21C733C2F007BC5D5 /* ProfileBiographyView.xib */; };
@@ -414,6 +415,7 @@
 		65AF3D4C1C7B3B1500AB83FB /* SearchAddressBookCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchAddressBookCell.swift; sourceTree = "<group>"; };
 		65AF3D4E1C7B3CFB00AB83FB /* AddressBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressBookViewController.swift; sourceTree = "<group>"; };
 		65AF3D501C7B594F00AB83FB /* AlertFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertFactory.swift; sourceTree = "<group>"; };
+		65AF3D531C7B5B4300AB83FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AddressBook.storyboard; sourceTree = "<group>"; };
 		65FB9B5D1C6B40E2001F4B72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ProfileStoryboard.storyboard; sourceTree = "<group>"; };
 		65FC51E11C733C2F007BC5D5 /* ProfileBiographyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileBiographyView.swift; sourceTree = "<group>"; };
 		65FC51E21C733C2F007BC5D5 /* ProfileBiographyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileBiographyView.xib; sourceTree = "<group>"; };
@@ -864,6 +866,7 @@
 				65312D3B1C73363300491966 /* views */,
 				652C454B1C72429500E48E92 /* extensions */,
 				65FB9B5B1C6B40D4001F4B72 /* ProfileStoryboard.storyboard */,
+				65AF3D521C7B5B4300AB83FB /* AddressBook.storyboard */,
 				653A918F1C68FE5B00DD7158 /* ProfileViewController.swift */,
 				653A91941C69FE5200DD7158 /* Assets.xcassets */,
 				653A91911C69F5B700DD7158 /* TapglueUI.swift */,
@@ -1478,6 +1481,7 @@
 				65AF3D491C774A4B00AB83FB /* NothingFoundCell.xib in Resources */,
 				65312D3D1C7338DF00491966 /* ConnectionCell.xib in Resources */,
 				65FC51E51C733C2F007BC5D5 /* ProfileBiographyView.xib in Resources */,
+				65AF3D541C7B5B4300AB83FB /* AddressBook.storyboard in Resources */,
 				653A91951C69FE5200DD7158 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1743,6 +1747,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		65AF3D521C7B5B4300AB83FB /* AddressBook.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				65AF3D531C7B5B4300AB83FB /* Base */,
+			);
+			name = AddressBook.storyboard;
+			sourceTree = "<group>";
+		};
 		65FB9B5B1C6B40D4001F4B72 /* ProfileStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

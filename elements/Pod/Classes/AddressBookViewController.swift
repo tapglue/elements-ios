@@ -48,8 +48,7 @@ class AddressBookViewController: UIViewController {
             else {
                 print("\nSuccessful searchUsersWithEmails: \(users)")
                 self.isSearchFinished = true
-//                self.searchResult = users as! [TGUser]
-                self.searchResult = [TGUser.currentUser()]
+                self.searchResult = users as! [TGUser]
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     self.tableView.reloadData()
                 })
