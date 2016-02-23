@@ -29,6 +29,9 @@ public class ProfileViewController: UIViewController, ProfileBiographyDelegate {
         tableView.registerNibs(nibNames: [cellProfileBiographyReusableIdentifier])
         tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableViewAutomaticDimension
+        
+        let edit = UIBarButtonItem(barButtonSystemItem: .Edit, target: self, action: "editTapped")
+        navigationItem.rightBarButtonItem = edit
     }
     
     override public func viewWillAppear(animated: Bool) {
@@ -36,6 +39,7 @@ public class ProfileViewController: UIViewController, ProfileBiographyDelegate {
             retrieveAndSetUserWithId(userId)
         } else if let currentUser = TGUser.currentUser() {
             user = currentUser
+            tableView.reloadData()
             if let user = user {
                 retrieveAndSetUserWithId(user.userId)
             }
@@ -45,14 +49,30 @@ public class ProfileViewController: UIViewController, ProfileBiographyDelegate {
     func retrieveAndSetUserWithId(userId: String) {
         Tapglue.retrieveUserWithId(userId, withCompletionBlock:{(retrievedUser, error) -> Void in
             if error != nil {
-                print("could not retrieve user! Show error")
+                AlertFactory.defaultAlert(self)
             } else {
                 dispatch_async(dispatch_get_main_queue(), {() -> Void in
                     self.user = retrievedUser
+                    self.retrieveActivity()
                     self.tableView.reloadData()
                 })
             }
         })
+    }
+    
+    func editTapped() {
+        performSegueWithIdentifier("toEditProfile", sender: nil)
+    }
+    
+    func retrieveActivity() {
+        Tapglue.retrieveEventsForUser(user) { (events: [AnyObject]!, error: NSError!) -> Void in
+            if error == nil {
+                let events = events as! [TGEvent]
+                print("fetched events:  \(events)")
+            } else {
+                AlertFactory.defaultAlert(self)
+            }
+        }
     }
     
     // MARK: - ProfileBiographyView

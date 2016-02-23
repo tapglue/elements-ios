@@ -47,6 +47,7 @@
                     <connections>
                         <outlet property="tableView" destination="4A7-h1-bAL" id="70C-2a-aAj"/>
                         <segue destination="jcC-O2-5SY" kind="show" identifier="toConnections" id="47D-th-yX3"/>
+                        <segue destination="weD-gk-9VR" kind="show" identifier="toEditProfile" id="Wq8-TK-kBv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PTa-lM-L4l" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -160,6 +161,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4cl-T1-yPZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2835" y="1030"/>
+        </scene>
+        <!--EditProfile-->
+        <scene sceneID="uab-Pa-maF">
+            <objects>
+                <viewControllerPlaceholder storyboardName="EditProfile" id="weD-gk-9VR" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WxD-Gm-3dJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1715" y="-466"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
