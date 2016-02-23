@@ -11,7 +11,9 @@ import Tapglue
 
 public class ProfileViewController: UIViewController, ProfileBiographyDelegate {
 
-    @IBOutlet weak var profileBiographyView: ProfileBiographyView!
+    let cellProfileBiographyReusableIdentifier = "ProfileBiographyView"
+    
+    @IBOutlet weak var tableView: UITableView!
     
     var tapConnectionType: ConnectionType?
     var userId: String?
@@ -24,15 +26,16 @@ public class ProfileViewController: UIViewController, ProfileBiographyDelegate {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
+        tableView.registerNibs(nibNames: [cellProfileBiographyReusableIdentifier])
+        tableView.estimatedRowHeight = 80
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
     
     override public func viewWillAppear(animated: Bool) {
-        profileBiographyView.delegate = self
         if let userId = userId {
             retrieveAndSetUserWithId(userId)
         } else if let currentUser = TGUser.currentUser() {
             user = currentUser
-            profileBiographyView.user = currentUser
             if let user = user {
                 retrieveAndSetUserWithId(user.userId)
             }
@@ -45,8 +48,8 @@ public class ProfileViewController: UIViewController, ProfileBiographyDelegate {
                 print("could not retrieve user! Show error")
             } else {
                 dispatch_async(dispatch_get_main_queue(), {() -> Void in
-                    self.profileBiographyView.user = retrievedUser
                     self.user = retrievedUser
+                    self.tableView.reloadData()
                 })
             }
         })
@@ -88,6 +91,23 @@ public class ProfileViewController: UIViewController, ProfileBiographyDelegate {
             connectionsVC.referenceUser = sender as? TGUser
         }
     }
+}
+
+extension ProfileViewController: UITableViewDataSource {
+    public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return user != nil ? 1:0
+    }
+    
+    public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellProfileBiographyReusableIdentifier) as! ProfileBiographyView
+        cell.delegate = self
+        cell.user = user
+        return cell
+    }
+}
+
+extension ProfileViewController: UITableViewDelegate {
+    
 }
 
 public protocol ProfileViewDelegate {
