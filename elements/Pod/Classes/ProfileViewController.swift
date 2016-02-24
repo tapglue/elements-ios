@@ -12,9 +12,12 @@ import Tapglue
 public class ProfileViewController: UIViewController, ProfileBiographyDelegate {
 
     let cellProfileBiographyReusableIdentifier = "ProfileBiographyView"
+    let cellFollowEventReusableIdentifier = "FollowEventCell"
     
     @IBOutlet weak var tableView: UITableView!
+    var refreshControl = UIRefreshControl()
     
+    var events = [TGEvent]()
     var tapConnectionType: ConnectionType?
     var userId: String?
     var user: TGUser?
@@ -26,12 +29,15 @@ public class ProfileViewController: UIViewController, ProfileBiographyDelegate {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-        tableView.registerNibs(nibNames: [cellProfileBiographyReusableIdentifier])
+        tableView.registerNibs(nibNames: [cellProfileBiographyReusableIdentifier, cellFollowEventReusableIdentifier])
         tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableViewAutomaticDimension
         
         let edit = UIBarButtonItem(barButtonSystemItem: .Edit, target: self, action: "editTapped")
         navigationItem.rightBarButtonItem = edit
+        
+        refreshControl.addTarget(self, action: "refresh:", forControlEvents: .ValueChanged)
+        tableView.addSubview(refreshControl)
     }
     
     override public func viewWillAppear(animated: Bool) {
@@ -54,6 +60,7 @@ public class ProfileViewController: UIViewController, ProfileBiographyDelegate {
                 dispatch_async(dispatch_get_main_queue(), {() -> Void in
                     self.user = retrievedUser
                     self.retrieveActivity()
+                    self.refreshControl.endRefreshing()
                     self.tableView.reloadData()
                 })
             }
@@ -64,11 +71,24 @@ public class ProfileViewController: UIViewController, ProfileBiographyDelegate {
         performSegueWithIdentifier("toEditProfile", sender: nil)
     }
     
+    func refresh(refreshControl: UIRefreshControl) {
+        // Do your job, when done:
+        if let user = user {
+            retrieveAndSetUserWithId(user.userId)
+        } else {
+            refreshControl.endRefreshing()
+        }
+    }
+
+    
     func retrieveActivity() {
         Tapglue.retrieveEventsForUser(user) { (events: [AnyObject]!, error: NSError!) -> Void in
             if error == nil {
-                let events = events as! [TGEvent]
-                print("fetched events:  \(events)")
+                dispatch_async(dispatch_get_main_queue()) {() -> Void in
+                    self.events = events as! [TGEvent]
+                    self.tableView.reloadData()
+                    print("fetched events:  \(self.events)")
+                }
             } else {
                 AlertFactory.defaultAlert(self)
             }
@@ -115,14 +135,21 @@ public class ProfileViewController: UIViewController, ProfileBiographyDelegate {
 
 extension ProfileViewController: UITableViewDataSource {
     public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return user != nil ? 1:0
+        return user != nil ? 1:0 + events.count
     }
     
     public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellProfileBiographyReusableIdentifier) as! ProfileBiographyView
-        cell.delegate = self
-        cell.user = user
-        return cell
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCellWithIdentifier(cellProfileBiographyReusableIdentifier) as! ProfileBiographyView
+            cell.delegate = self
+            cell.user = user
+            return cell
+        }
+        if events[indexPath.row - 1].type == "tg_follow" {
+            let cell = tableView.dequeueReusableCellWithIdentifier(cellFollowEventReusableIdentifier) as! FollowEventCell
+            return cell
+        }
+        return UITableViewCell()
     }
 }
 
