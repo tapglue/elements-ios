@@ -41,7 +41,7 @@ public class ConnectionsViewController: UITableViewController, ConnectionCellDel
                     if error == nil {
                         self.setUsersAndReload(followers as! [TGUser])
                     } else {
-                        print("ERROR! \(error)")
+                        AlertFactory.defaultAlert(self)
                     }
                     }
                 )
@@ -52,7 +52,7 @@ public class ConnectionsViewController: UITableViewController, ConnectionCellDel
                     if error == nil {
                         self.setUsersAndReload(follows as! [TGUser])
                     } else {
-                        print("ERROR! \(error)")
+                        AlertFactory.defaultAlert(self)
                     }
                     }
                 )
