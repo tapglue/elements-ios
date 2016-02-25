@@ -20,7 +20,14 @@ public class ProfileViewController: UIViewController, ProfileBiographyDelegate {
     var events = [TGEvent]()
     var tapConnectionType: ConnectionType?
     var userId: String?
-    var user: TGUser?
+    var user: TGUser? {
+        didSet {
+            if user?.isCurrentUser ?? false {
+                let edit = UIBarButtonItem(barButtonSystemItem: .Edit, target: self, action: "editTapped")
+                navigationItem.rightBarButtonItem = edit
+            }
+        }
+    }
     public var delegate: ProfileViewDelegate? {
         didSet {
             user = delegate?.referenceUserInProfileViewController(self)
@@ -32,9 +39,6 @@ public class ProfileViewController: UIViewController, ProfileBiographyDelegate {
         tableView.registerNibs(nibNames: [cellProfileBiographyReusableIdentifier, cellFollowEventReusableIdentifier])
         tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableViewAutomaticDimension
-        
-        let edit = UIBarButtonItem(barButtonSystemItem: .Edit, target: self, action: "editTapped")
-        navigationItem.rightBarButtonItem = edit
         
         refreshControl.addTarget(self, action: "refresh:", forControlEvents: .ValueChanged)
         tableView.addSubview(refreshControl)
@@ -135,7 +139,7 @@ public class ProfileViewController: UIViewController, ProfileBiographyDelegate {
 
 extension ProfileViewController: UITableViewDataSource {
     public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return user != nil ? 1:0 + events.count
+        return (user != nil ? 1:0) + events.count
     }
     
     public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -147,6 +151,11 @@ extension ProfileViewController: UITableViewDataSource {
         }
         if events[indexPath.row - 1].type == "tg_follow" {
             let cell = tableView.dequeueReusableCellWithIdentifier(cellFollowEventReusableIdentifier) as! FollowEventCell
+            let event = events[indexPath.row - 1]
+            let followingUser = user
+            let followedUser = event.target.user
+            cell.followingUser = followingUser
+            cell.followedUser = followedUser
             return cell
         }
         return UITableViewCell()
