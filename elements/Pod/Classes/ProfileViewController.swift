@@ -13,6 +13,7 @@ public class ProfileViewController: UIViewController, ProfileBiographyDelegate {
 
     let cellProfileBiographyReusableIdentifier = "ProfileBiographyView"
     let cellFollowEventReusableIdentifier = "FollowEventCell"
+    let cellLikeEventReusableIdentifier = "LikeEventCell"
     
     @IBOutlet weak var tableView: UITableView!
     var refreshControl = UIRefreshControl()
@@ -36,7 +37,7 @@ public class ProfileViewController: UIViewController, ProfileBiographyDelegate {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-        tableView.registerNibs(nibNames: [cellProfileBiographyReusableIdentifier, cellFollowEventReusableIdentifier])
+        tableView.registerNibs(nibNames: [cellProfileBiographyReusableIdentifier, cellFollowEventReusableIdentifier, cellLikeEventReusableIdentifier])
         tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableViewAutomaticDimension
         
@@ -156,6 +157,11 @@ extension ProfileViewController: UITableViewDataSource {
             let followedUser = event.target.user
             cell.followingUser = followingUser
             cell.followedUser = followedUser
+            return cell
+        }
+        if events[indexPath.row-1].type == "tg_like" {
+            let cell = tableView.dequeueReusableCellWithIdentifier(cellLikeEventReusableIdentifier) as! LikeEventCell
+            cell.user = user
             return cell
         }
         return UITableViewCell()
