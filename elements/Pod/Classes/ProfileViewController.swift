@@ -152,16 +152,12 @@ extension ProfileViewController: UITableViewDataSource {
         }
         if events[indexPath.row - 1].type == "tg_follow" {
             let cell = tableView.dequeueReusableCellWithIdentifier(cellFollowEventReusableIdentifier) as! FollowEventCell
-            let event = events[indexPath.row - 1]
-            let followingUser = user
-            let followedUser = event.target.user
-            cell.followingUser = followingUser
-            cell.followedUser = followedUser
+            cell.event = events[indexPath.row - 1]
             return cell
         }
         if events[indexPath.row-1].type == "tg_like" {
             let cell = tableView.dequeueReusableCellWithIdentifier(cellLikeEventReusableIdentifier) as! LikeEventCell
-            cell.user = user
+            cell.event = events[indexPath.row - 1]
             return cell
         }
         return UITableViewCell()

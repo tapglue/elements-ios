@@ -64,22 +64,16 @@ extension NotificationFeedViewController: UITableViewDataSource {
         if events[indexPath.row ].type == "tg_follow" {
             if events[indexPath.row].target.user == TGUser.currentUser() {
                 let cell = tableView.dequeueReusableCellWithIdentifier(cellFollwedMeEventReusableIdentifier) as! FollowedMeEventCell
-                let event = events[indexPath.row]
-                cell.user = event.user
+                cell.event = events[indexPath.row]
                 return cell
             }
             let cell = tableView.dequeueReusableCellWithIdentifier(cellFollowEventReusableIdentifier) as! FollowEventCell
-            let event = events[indexPath.row]
-            let followingUser = event.user
-            let followedUser = event.target.user
-            cell.followingUser = followingUser
-            cell.followedUser = followedUser
+            cell.event = events[indexPath.row]
             return cell
         }
         if events[indexPath.row].type == "tg_like" {
             let cell = tableView.dequeueReusableCellWithIdentifier(cellLikeEventReusableIdentifier) as! LikeEventCell
-            let event = events[indexPath.row]
-            cell.user = event.user
+            cell.event = events[indexPath.row]
             return cell
         }
         return UITableViewCell()

@@ -14,7 +14,15 @@ class FollowedMeEventCell: UITableViewCell {
     @IBOutlet weak var userLabel: UILabel!
     @IBOutlet weak var userImage: UIImageView!
     
-    var user: TGUser? {
+    var event: TGEvent? {
+        didSet {
+            if let event = event {
+                user = event.user
+            }
+        }
+    }
+    
+    private(set) var user: TGUser? {
         didSet {
             if let user = user {
                 userLabel.text = user.username

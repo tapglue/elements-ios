@@ -13,7 +13,15 @@ class LikeEventCell: UITableViewCell {
 
     @IBOutlet weak var userNameLabel: UILabel!
     
-    var user: TGUser? {
+    var event: TGEvent? {
+        didSet {
+            if let event = event {
+                user = event.user
+            }
+        }
+    }
+    
+    private var user: TGUser? {
         didSet {
             if let user = user {
                 userNameLabel.text = user.username
