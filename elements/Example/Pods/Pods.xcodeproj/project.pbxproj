@@ -98,6 +98,10 @@
 		6561946D1C7CC082008C4FB6 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6561946C1C7CC082008C4FB6 /* EditProfileViewController.swift */; };
 		656B74CC1C7F6C52000D73F2 /* LikeEventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 656B74CB1C7F6C52000D73F2 /* LikeEventCell.xib */; };
 		656B74CE1C7F6EC9000D73F2 /* LikeEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656B74CD1C7F6EC9000D73F2 /* LikeEventCell.swift */; };
+		656B74D01C80780B000D73F2 /* NotificationStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 656B74CF1C80780A000D73F2 /* NotificationStoryboard.storyboard */; };
+		656B74D21C80786B000D73F2 /* NotificationFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656B74D11C80786B000D73F2 /* NotificationFeedViewController.swift */; };
+		656B74D41C80A9D6000D73F2 /* FollowedMeEventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 656B74D31C80A9D6000D73F2 /* FollowedMeEventCell.xib */; };
+		656B74D61C80AB7C000D73F2 /* FollowedMeEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656B74D51C80AB7C000D73F2 /* FollowedMeEventCell.swift */; };
 		657B36871C6CF5F500578E5E /* ConnectionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657B36861C6CF5F500578E5E /* ConnectionsTableViewController.swift */; };
 		65AF3D431C74DC6300AB83FB /* FollowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AF3D421C74DC6300AB83FB /* FollowButton.swift */; };
 		65AF3D451C76007300AB83FB /* ConnectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AF3D441C76007300AB83FB /* ConnectionType.swift */; };
@@ -419,6 +423,10 @@
 		6561946C1C7CC082008C4FB6 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		656B74CB1C7F6C52000D73F2 /* LikeEventCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LikeEventCell.xib; sourceTree = "<group>"; };
 		656B74CD1C7F6EC9000D73F2 /* LikeEventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeEventCell.swift; sourceTree = "<group>"; };
+		656B74CF1C80780A000D73F2 /* NotificationStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NotificationStoryboard.storyboard; sourceTree = "<group>"; };
+		656B74D11C80786B000D73F2 /* NotificationFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationFeedViewController.swift; sourceTree = "<group>"; };
+		656B74D31C80A9D6000D73F2 /* FollowedMeEventCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FollowedMeEventCell.xib; sourceTree = "<group>"; };
+		656B74D51C80AB7C000D73F2 /* FollowedMeEventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowedMeEventCell.swift; sourceTree = "<group>"; };
 		657B36861C6CF5F500578E5E /* ConnectionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionsTableViewController.swift; sourceTree = "<group>"; };
 		65AF3D421C74DC6300AB83FB /* FollowButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowButton.swift; sourceTree = "<group>"; };
 		65AF3D441C76007300AB83FB /* ConnectionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionType.swift; sourceTree = "<group>"; };
@@ -875,6 +883,8 @@
 				6553A69B1C7DFDA7005F3F1C /* FollowEventCell.swift */,
 				656B74CB1C7F6C52000D73F2 /* LikeEventCell.xib */,
 				656B74CD1C7F6EC9000D73F2 /* LikeEventCell.swift */,
+				656B74D31C80A9D6000D73F2 /* FollowedMeEventCell.xib */,
+				656B74D51C80AB7C000D73F2 /* FollowedMeEventCell.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -896,6 +906,8 @@
 				65AF3D4E1C7B3CFB00AB83FB /* AddressBookViewController.swift */,
 				65AF3D501C7B594F00AB83FB /* AlertFactory.swift */,
 				6561946C1C7CC082008C4FB6 /* EditProfileViewController.swift */,
+				656B74CF1C80780A000D73F2 /* NotificationStoryboard.storyboard */,
+				656B74D11C80786B000D73F2 /* NotificationFeedViewController.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1507,6 +1519,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				656B74D01C80780B000D73F2 /* NotificationStoryboard.storyboard in Resources */,
 				5C41C28A563C394582CCE27D383B01F5 /* elements.bundle in Resources */,
 				65AF3D4B1C7760A800AB83FB /* SearchAddressBookCell.xib in Resources */,
 				65FB9B591C6B40D4001F4B72 /* ProfileStoryboard.storyboard in Resources */,
@@ -1514,6 +1527,7 @@
 				656B74CC1C7F6C52000D73F2 /* LikeEventCell.xib in Resources */,
 				65312D3D1C7338DF00491966 /* ConnectionCell.xib in Resources */,
 				65FC51E51C733C2F007BC5D5 /* ProfileBiographyView.xib in Resources */,
+				656B74D41C80A9D6000D73F2 /* FollowedMeEventCell.xib in Resources */,
 				6561946B1C7CBE5F008C4FB6 /* EditProfile.storyboard in Resources */,
 				6553A69A1C7DF488005F3F1C /* FollowEventCell.xib in Resources */,
 				65AF3D541C7B5B4300AB83FB /* AddressBook.storyboard in Resources */,
@@ -1652,10 +1666,12 @@
 				6553A69C1C7DFDA7005F3F1C /* FollowEventCell.swift in Sources */,
 				8C1376791C212F5B1292B55D4F8BCDFB /* elements-dummy.m in Sources */,
 				65312D3F1C733BB300491966 /* ConnectionCell.swift in Sources */,
+				656B74D21C80786B000D73F2 /* NotificationFeedViewController.swift in Sources */,
 				656B74CE1C7F6EC9000D73F2 /* LikeEventCell.swift in Sources */,
 				65AF3D471C76240800AB83FB /* UserSearchViewController.swift in Sources */,
 				65AF3D4D1C7B3B1500AB83FB /* SearchAddressBookCell.swift in Sources */,
 				652C454F1C72462E00E48E92 /* UIImageView+TGUser.swift in Sources */,
+				656B74D61C80AB7C000D73F2 /* FollowedMeEventCell.swift in Sources */,
 				65AF3D451C76007300AB83FB /* ConnectionType.swift in Sources */,
 				652C454D1C72438000E48E92 /* UIImageView+UrlString.swift in Sources */,
 				657B36871C6CF5F500578E5E /* ConnectionsTableViewController.swift in Sources */,

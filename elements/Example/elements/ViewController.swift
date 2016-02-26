@@ -23,7 +23,8 @@ class ViewController: UIViewController {
                 print("\nError loginWithUsernameOrEmail: \(error)")
             } else {
                 print("\nUser logged in: \(success)")
-                self.elements.performSegueToProfile(self)
+//                self.elements.performSegueToProfile(self)
+                self.elements.performSegueToNotificationFeed(self)
 //                self.elements.performSegueToConnections(self, forUser: TGUser.currentUser(), andForType: ConnectionType.Following)
             }
         })

@@ -12,12 +12,22 @@ import Tapglue
 
 public class TapglueUI {
     
+    static let acceptedEventTypes = ["tg_follow", "tg_like"]
+    
     public init() {
     }
     
     public func performSegueToProfile(caller: UIViewController) {
         let s = UIStoryboard (
             name: "ProfileStoryboard", bundle: NSBundle(forClass: ProfileViewController.self)
+        )
+        let vc = s.instantiateInitialViewController()!
+        caller.presentViewController(vc, animated: true, completion: nil)
+    }
+    
+    public func performSegueToNotificationFeed(caller: UIViewController) {
+        let s = UIStoryboard (
+            name: "NotificationStoryboard", bundle: NSBundle(forClass: NotificationFeedViewController.self)
         )
         let vc = s.instantiateInitialViewController()!
         caller.presentViewController(vc, animated: true, completion: nil)
