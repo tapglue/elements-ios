@@ -897,6 +897,7 @@
 				65FB9B5B1C6B40D4001F4B72 /* ProfileStoryboard.storyboard */,
 				656194691C7CBE5F008C4FB6 /* EditProfile.storyboard */,
 				65AF3D521C7B5B4300AB83FB /* AddressBook.storyboard */,
+				656B74CF1C80780A000D73F2 /* NotificationStoryboard.storyboard */,
 				653A918F1C68FE5B00DD7158 /* ProfileViewController.swift */,
 				653A91941C69FE5200DD7158 /* Assets.xcassets */,
 				653A91911C69F5B700DD7158 /* TapglueUI.swift */,
@@ -906,7 +907,6 @@
 				65AF3D4E1C7B3CFB00AB83FB /* AddressBookViewController.swift */,
 				65AF3D501C7B594F00AB83FB /* AlertFactory.swift */,
 				6561946C1C7CC082008C4FB6 /* EditProfileViewController.swift */,
-				656B74CF1C80780A000D73F2 /* NotificationStoryboard.storyboard */,
 				656B74D11C80786B000D73F2 /* NotificationFeedViewController.swift */,
 			);
 			path = Classes;

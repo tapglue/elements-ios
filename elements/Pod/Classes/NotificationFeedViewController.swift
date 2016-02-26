@@ -14,6 +14,7 @@ class NotificationFeedViewController: UIViewController {
     let cellFollowEventReusableIdentifier = "FollowEventCell"
     let cellFollwedMeEventReusableIdentifier = "FollowedMeEventCell"
     let cellLikeEventReusableIdentifier = "LikeEventCell"
+    let profileSegueName = "toProfile"
 
     let acceptedTypes = TapglueUI.acceptedEventTypes
     var events = [TGEvent]()
@@ -35,8 +36,6 @@ class NotificationFeedViewController: UIViewController {
                 dispatch_async(dispatch_get_main_queue()) {() -> Void in
                     self.tableView.reloadData()
                 }
-                print("events: \(self.events)")
-                
             } else {
                 AlertFactory.defaultAlert(self)
             }
@@ -47,7 +46,7 @@ class NotificationFeedViewController: UIViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "toProfile" {
+        if segue.identifier == profileSegueName {
             let vc = segue.destinationViewController as! ProfileViewController
             let user = sender as! TGUser
             vc.userId = user.userId
@@ -86,11 +85,11 @@ extension NotificationFeedViewController: UITableViewDelegate {
         let cell = tableView.cellForRowAtIndexPath(indexPath)
         if cell as? FollowedMeEventCell != nil {
             let cell = cell as! FollowedMeEventCell
-            performSegueWithIdentifier("toProfile", sender: cell.user)
+            performSegueWithIdentifier(profileSegueName, sender: cell.user)
         }
         if cell as? FollowEventCell != nil {
             let cell = cell as! FollowEventCell
-            performSegueWithIdentifier("toProfile", sender: cell.followedUser)
+            performSegueWithIdentifier(profileSegueName, sender: cell.followedUser)
         }
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
