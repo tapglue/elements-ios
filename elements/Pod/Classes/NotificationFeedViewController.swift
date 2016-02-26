@@ -43,15 +43,16 @@ class NotificationFeedViewController: UIViewController {
         }
     }
     
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "toProfile" {
+            let vc = segue.destinationViewController as! ProfileViewController
+            let user = sender as! TGUser
+            vc.userId = user.userId
+        }
     }
-    */
 
 }
 
@@ -77,5 +78,20 @@ extension NotificationFeedViewController: UITableViewDataSource {
             return cell
         }
         return UITableViewCell()
+    }
+}
+
+extension NotificationFeedViewController: UITableViewDelegate {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = tableView.cellForRowAtIndexPath(indexPath)
+        if cell as? FollowedMeEventCell != nil {
+            let cell = cell as! FollowedMeEventCell
+            performSegueWithIdentifier("toProfile", sender: cell.user)
+        }
+        if cell as? FollowEventCell != nil {
+            let cell = cell as! FollowEventCell
+            performSegueWithIdentifier("toProfile", sender: cell.followedUser)
+        }
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 }

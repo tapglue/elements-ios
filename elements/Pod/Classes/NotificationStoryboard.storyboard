@@ -44,11 +44,20 @@
                     <navigationItem key="navigationItem" id="B2N-1l-dmK"/>
                     <connections>
                         <outlet property="tableView" destination="4eA-0c-abP" id="E7t-3x-t0j"/>
+                        <segue destination="6HW-A5-9gE" kind="show" identifier="toProfile" id="9wa-iH-lV1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hHT-JB-lpn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1049" y="117"/>
+            <point key="canvasLocation" x="1135" y="117"/>
+        </scene>
+        <!--ProfileViewController-->
+        <scene sceneID="0U5-Io-ThB">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ProfileStoryboard" referencedIdentifier="ProfileViewController" id="6HW-A5-9gE" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9gj-sm-JL2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1644" y="117"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aZx-BX-I21">
