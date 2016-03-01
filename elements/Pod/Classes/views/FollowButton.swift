@@ -38,7 +38,7 @@ class FollowButton: UIButton {
     
     private func setStateForUser(){
         if let user = user {
-            if user == TGUser.currentUser() {
+            if user.userId == TGUser.currentUser().userId {
                 followState = .CurrentUser
             }
             else if user.isFollowed {

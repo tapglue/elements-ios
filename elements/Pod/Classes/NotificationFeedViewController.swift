@@ -64,7 +64,7 @@ extension NotificationFeedViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if events[indexPath.row ].type == "tg_follow" {
-            if events[indexPath.row].target.user == TGUser.currentUser() {
+            if events[indexPath.row].target.user.userId == TGUser.currentUser().userId {
                 let cell = tableView.dequeueReusableCellWithIdentifier(cellFollwedMeEventReusableIdentifier) as! FollowedMeEventCell
                 cell.event = events[indexPath.row]
                 return cell
