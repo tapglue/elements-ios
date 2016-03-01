@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     
     let username = "john"
     let password = "qwert"
+    var isLoggedIn = false
     
     override func viewDidAppear(animated: Bool) {
         Tapglue.createAndLoginUserWithUsername(username, andPassword: password, withCompletionBlock:{ (success: Bool, error: NSError!) -> Void in
@@ -23,10 +24,18 @@ class ViewController: UIViewController {
                 print("\nError loginWithUsernameOrEmail: \(error)")
             } else {
                 print("\nUser logged in: \(success)")
-//                self.elements.performSegueToProfile(self)
-                self.elements.performSegueToNotificationFeed(self)
-//                self.elements.performSegueToConnections(self, forUser: TGUser.currentUser(), andForType: ConnectionType.Following)
+                self.isLoggedIn = true
             }
         })
+    }
+    @IBAction func notificationsTap(sender: AnyObject) {
+        if isLoggedIn {
+            elements.performSegueToNotificationFeed(self)
+        }
+    }
+    @IBAction func profileTap(sender: AnyObject) {
+        if isLoggedIn {
+            elements.performSegueToProfile(self)
+        }
     }
 }

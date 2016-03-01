@@ -25,6 +25,8 @@ class NotificationFeedViewController: UIViewController {
         tableView.registerNibs(nibNames: [cellFollowEventReusableIdentifier, cellFollwedMeEventReusableIdentifier, cellLikeEventReusableIdentifier])
         tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableViewAutomaticDimension
+        let backButton = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: "popViewController")
+        navigationItem.leftBarButtonItem = backButton
     }
     
     override func viewWillAppear(animated: Bool) {

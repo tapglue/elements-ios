@@ -84,6 +84,7 @@
 		5F3B38A493EC26AF577003B4E3D22CF0 /* TGConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 42A00919BBF5734752737ADF16FB02F3 /* TGConfiguration.m */; };
 		63F0EF2726AC4A9DED3287263F6BAEAC /* ExampleMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0842E642AC965E5A4D6C75527EC56A /* ExampleMetadata.swift */; };
 		642B2B053717A0AAD22BCE179D6A6C0F /* TGUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 84573EC30CB57ECB46179BC1B6D9D2CA /* TGUser.m */; };
+		651E95151C85E68D003601FE /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651E95141C85E68D003601FE /* UIViewController+Navigation.swift */; };
 		652C454D1C72438000E48E92 /* UIImageView+UrlString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C454C1C72438000E48E92 /* UIImageView+UrlString.swift */; };
 		652C454F1C72462E00E48E92 /* UIImageView+TGUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C454E1C72462E00E48E92 /* UIImageView+TGUser.swift */; };
 		65312D3D1C7338DF00491966 /* ConnectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65312D3C1C7338DF00491966 /* ConnectionCell.xib */; };
@@ -409,6 +410,7 @@
 		62734C0525D4B62DE3B398ECFF67E84E /* TGApiClient+TGObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TGApiClient+TGObject.h"; path = "Classes/RestClient/TGApiClient+TGObject.h"; sourceTree = "<group>"; };
 		62833963B59FB211CF09FBD23395EF5A /* TGPostLike.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGPostLike.m; path = Classes/Model/TGPostLike.m; sourceTree = "<group>"; };
 		6360CE9DD5E7E66FF0AC9B2599CC5160 /* TGImage+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TGImage+Private.h"; path = "Classes/Model/TGImage+Private.h"; sourceTree = "<group>"; };
+		651E95141C85E68D003601FE /* UIViewController+Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Navigation.swift"; sourceTree = "<group>"; };
 		6527462185A04B827D6D63D7FF3E1B81 /* NimbleSnapshotsConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NimbleSnapshotsConfiguration.swift; sourceTree = "<group>"; };
 		652C454C1C72438000E48E92 /* UIImageView+UrlString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+UrlString.swift"; sourceTree = "<group>"; };
 		652C454E1C72462E00E48E92 /* UIImageView+TGUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+TGUser.swift"; sourceTree = "<group>"; };
@@ -864,6 +866,7 @@
 				652C454C1C72438000E48E92 /* UIImageView+UrlString.swift */,
 				652C454E1C72462E00E48E92 /* UIImageView+TGUser.swift */,
 				65AF3D551C7B8EAF00AB83FB /* UITableView+NibLoading.swift */,
+				651E95141C85E68D003601FE /* UIViewController+Navigation.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -1674,6 +1677,7 @@
 				656B74D61C80AB7C000D73F2 /* FollowedMeEventCell.swift in Sources */,
 				65AF3D451C76007300AB83FB /* ConnectionType.swift in Sources */,
 				652C454D1C72438000E48E92 /* UIImageView+UrlString.swift in Sources */,
+				651E95151C85E68D003601FE /* UIViewController+Navigation.swift in Sources */,
 				657B36871C6CF5F500578E5E /* ConnectionsTableViewController.swift in Sources */,
 				65AF3D561C7B8EAF00AB83FB /* UITableView+NibLoading.swift in Sources */,
 				65AF3D511C7B594F00AB83FB /* AlertFactory.swift in Sources */,
