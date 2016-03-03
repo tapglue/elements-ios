@@ -15,6 +15,8 @@ public class ProfileViewController: UIViewController, ProfileBiographyDelegate {
     let cellFollowEventReusableIdentifier = "FollowEventCell"
     let cellLikeEventReusableIdentifier = "LikeEventCell"
     
+    let connectionsSegue = "toConnections"
+    
     @IBOutlet weak var tableView: UITableView!
     var refreshControl = UIRefreshControl()
     
@@ -96,7 +98,8 @@ public class ProfileViewController: UIViewController, ProfileBiographyDelegate {
         Tapglue.retrieveEventsForUser(user) { (events: [AnyObject]!, error: NSError!) -> Void in
             if error == nil {
                 dispatch_async(dispatch_get_main_queue()) {() -> Void in
-                    self.events = events as! [TGEvent]
+                    let events = events as! [TGEvent]
+                    self.events = events.filter({TapglueUI.acceptedEventTypes.contains($0.type)})
                     self.tableView.reloadData()
                     print("fetched events:  \(self.events)")
                 }
@@ -111,7 +114,7 @@ public class ProfileViewController: UIViewController, ProfileBiographyDelegate {
     func profileBiographyViewFollowersSelected() {
         tapConnectionType = ConnectionType.Followers
         if delegate?.defaultNavigationEnabledInProfileViewController(self) ?? true {
-            performSegueWithIdentifier("toConnections", sender: user)
+            performSegueWithIdentifier(connectionsSegue, sender: user)
         } else {
             delegate?.profileViewController(self, didSelectConnectionsOfType: .Followers, forUser: user!)
         }
@@ -120,7 +123,7 @@ public class ProfileViewController: UIViewController, ProfileBiographyDelegate {
     func profileBiographyViewFollowingSelected() {
         tapConnectionType = ConnectionType.Following
         if delegate?.defaultNavigationEnabledInProfileViewController(self) ?? true {
-            performSegueWithIdentifier("toConnections", sender: user)
+            performSegueWithIdentifier(connectionsSegue, sender: user)
         } else {
             delegate?.profileViewController(self, didSelectConnectionsOfType: .Following, forUser: user!)
         }
@@ -136,7 +139,7 @@ public class ProfileViewController: UIViewController, ProfileBiographyDelegate {
     // MARK: - Navigation
 
     override public func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "toConnections" {
+        if segue.identifier == connectionsSegue {
             let connectionsVC = segue.destinationViewController as! ConnectionsViewController
             connectionsVC.type = tapConnectionType
             connectionsVC.referenceUser = sender as? TGUser

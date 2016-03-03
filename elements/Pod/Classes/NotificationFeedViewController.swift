@@ -20,6 +20,8 @@ class NotificationFeedViewController: UIViewController {
     var events = [TGEvent]()
     
     @IBOutlet weak var tableView: UITableView!
+    var refreshControl = UIRefreshControl()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.registerNibs(nibNames: [cellFollowEventReusableIdentifier, cellFollwedMeEventReusableIdentifier, cellLikeEventReusableIdentifier])
@@ -27,10 +29,17 @@ class NotificationFeedViewController: UIViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         let backButton = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: "popViewController")
         navigationItem.leftBarButtonItem = backButton
+        
+        refreshControl.addTarget(self, action: "refresh", forControlEvents: .ValueChanged)
+        tableView.addSubview(refreshControl)
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        retrieveEventsForCurrentUser()
+    }
+    
+    func retrieveEventsForCurrentUser() {
         Tapglue.retrieveEventsFeedForCurrentUserForEventTypes(acceptedTypes) { (fetchedEvents: [AnyObject]!, error: NSError!) -> Void in
             if error == nil {
                 let fetchedEvents = fetchedEvents as! [TGEvent]
@@ -41,7 +50,12 @@ class NotificationFeedViewController: UIViewController {
             } else {
                 AlertFactory.defaultAlert(self)
             }
+            self.refreshControl.endRefreshing()
         }
+    }
+    
+    func refresh() {
+        retrieveEventsForCurrentUser()
     }
     
     // MARK: - Navigation
@@ -97,11 +111,11 @@ extension NotificationFeedViewController: UITableViewDelegate {
     }
     
     
-    public func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 0.1
     }
     
-    public func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+    func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         return UIView()
     }
 }
