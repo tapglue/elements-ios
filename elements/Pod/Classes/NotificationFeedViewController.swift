@@ -95,4 +95,13 @@ extension NotificationFeedViewController: UITableViewDelegate {
         }
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
+    
+    
+    public func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0.1
+    }
+    
+    public func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return UIView()
+    }
 }
