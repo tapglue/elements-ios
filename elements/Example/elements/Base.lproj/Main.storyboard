@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6gO-gT-txg">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -16,11 +16,61 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kkk-1P-ZBw" userLabel="notifications">
+                                <rect key="frame" x="257" y="285" width="87" height="30"/>
+                                <state key="normal" title="Notifications"/>
+                                <connections>
+                                    <action selector="notificationsTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2sR-Xs-loL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YEa-mN-IEt" userLabel="profile">
+                                <rect key="frame" x="278" y="318" width="44" height="30"/>
+                                <state key="normal" title="Profile"/>
+                                <connections>
+                                    <action selector="profileTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="TiZ-QW-ibn"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YEa-mN-IEt" firstAttribute="top" secondItem="Kkk-1P-ZBw" secondAttribute="bottom" constant="3" id="Gsf-80-Yge"/>
+                            <constraint firstItem="YEa-mN-IEt" firstAttribute="centerX" secondItem="Kkk-1P-ZBw" secondAttribute="centerX" id="OUr-bu-hXd"/>
+                            <constraint firstItem="YEa-mN-IEt" firstAttribute="baseline" secondItem="Kkk-1P-ZBw" secondAttribute="baseline" id="Q7x-t8-5iv"/>
+                            <constraint firstItem="Kkk-1P-ZBw" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="c2C-z5-F0X"/>
+                            <constraint firstItem="Kkk-1P-ZBw" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="qhd-6l-IRb"/>
+                            <constraint firstItem="YEa-mN-IEt" firstAttribute="leading" secondItem="Kkk-1P-ZBw" secondAttribute="trailing" constant="8" symbolic="YES" id="xPF-Ej-gcA"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Q7x-t8-5iv"/>
+                                <exclude reference="xPF-Ej-gcA"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="D2L-cq-h2q"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1043" y="-342"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="I3j-5N-cge">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6gO-gT-txg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xlS-FC-7VA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="VpU-fd-F7D"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q8h-Bs-ds6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="-342"/>
         </scene>
     </scenes>
 </document>

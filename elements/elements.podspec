@@ -20,6 +20,7 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Pod/Classes/**/*'
   s.resource_bundles = {
-    'elements' => ['Pod/Assets/*.png']
+    'elements' => ['Pod/Classes/**/*']
   }
+  s.dependency 'Tapglue', '1.1.0'
 end

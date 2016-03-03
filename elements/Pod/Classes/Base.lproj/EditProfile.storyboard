@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Gm0-zL-wpl">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Edit Profile View Controller-->
+        <scene sceneID="wyG-6a-SPJ">
+            <objects>
+                <viewController id="Gm0-zL-wpl" customClass="EditProfileViewController" customModule="elements" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="i1G-Uu-bkh"/>
+                        <viewControllerLayoutGuide type="bottom" id="rKQ-un-VLF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sVW-Hu-dhR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMV-Dl-zqZ" userLabel="userNameLabel">
+                                <rect key="frame" x="20" y="40" width="88" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bzx-Re-Lph" userLabel="userNameTextField">
+                                <rect key="frame" x="116" y="37" width="464" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VMV-Dl-zqZ" firstAttribute="leading" secondItem="sVW-Hu-dhR" secondAttribute="leadingMargin" id="4zx-vh-Yys"/>
+                            <constraint firstItem="bzx-Re-Lph" firstAttribute="baseline" secondItem="VMV-Dl-zqZ" secondAttribute="baseline" id="8dt-ws-VYf"/>
+                            <constraint firstItem="VMV-Dl-zqZ" firstAttribute="top" secondItem="i1G-Uu-bkh" secondAttribute="bottom" constant="20" id="Tnq-wu-y8l"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bzx-Re-Lph" secondAttribute="trailing" id="a95-gO-6Nk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VMV-Dl-zqZ" secondAttribute="trailing" id="ooY-jF-AGf"/>
+                            <constraint firstItem="bzx-Re-Lph" firstAttribute="leading" secondItem="VMV-Dl-zqZ" secondAttribute="trailing" constant="8" symbolic="YES" id="uhZ-z8-nIH"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ooY-jF-AGf"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="userNameTextField" destination="bzx-Re-Lph" id="Nzd-BJ-zTs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uDE-2G-Ocz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1967" y="-698"/>
+        </scene>
+    </scenes>
+</document>
