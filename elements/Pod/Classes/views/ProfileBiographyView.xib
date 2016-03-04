@@ -39,7 +39,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q1e-9q-Qjp" userLabel="followingCount">
                                 <rect key="frame" x="8" y="92" width="61" height="30"/>
                                 <state key="normal" title="0">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="followingTap" destination="xaa-1J-GSD" eventType="touchUpInside" id="SVp-Z3-F3F"/>
@@ -61,14 +61,13 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OrB-zJ-uaK" userLabel="followerCount">
                                 <rect key="frame" x="83" y="92" width="62" height="30"/>
                                 <state key="normal" title="0">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="followerTap" destination="xaa-1J-GSD" eventType="touchUpInside" id="6Yl-ie-gpH"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="OrB-zJ-uaK" firstAttribute="baseline" secondItem="q1e-9q-Qjp" secondAttribute="baseline" id="47Y-nX-Im6"/>
                             <constraint firstItem="OrB-zJ-uaK" firstAttribute="width" secondItem="tmb-hi-RAt" secondAttribute="width" id="4JX-nx-hrv"/>

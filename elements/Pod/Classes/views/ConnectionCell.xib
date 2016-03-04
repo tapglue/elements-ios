@@ -45,7 +45,6 @@
                                 </variation>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="mzw-R6-QV5" firstAttribute="leading" secondItem="yjL-aJ-5fQ" secondAttribute="leading" constant="20" symbolic="YES" id="0Ub-b9-fbg"/>
                             <constraint firstItem="mzw-R6-QV5" firstAttribute="centerY" secondItem="yjL-aJ-5fQ" secondAttribute="centerY" id="4lZ-d6-v9I"/>

@@ -31,7 +31,6 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="az0-XJ-yGp" secondAttribute="bottom" constant="20" symbolic="YES" id="JWE-Ui-4Ss"/>
                             <constraint firstItem="az0-XJ-yGp" firstAttribute="leading" secondItem="EZo-5d-VkT" secondAttribute="leading" constant="20" symbolic="YES" id="L31-FQ-h7T"/>
