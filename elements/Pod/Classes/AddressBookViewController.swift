@@ -20,8 +20,6 @@ public class AddressBookViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    let contactStore = CNContactStore()
-    
     var contactEmails: [String] = []
     var contacts: [[String:String]] = []
     var searchResult = [TGUser]()
@@ -41,25 +39,29 @@ public class AddressBookViewController: UIViewController {
     }
     
     func searchForUsersByEmail() {
-        readAddressBookByEmail()
-        
-        Tapglue.searchUsersWithEmails(contactEmails) { (users: [AnyObject]!, error: NSError!) -> Void in
-            if error != nil {
-                print("\nError searchUsersWithEmails: \(error)")
-            }
-            else {
-                print("\nSuccessful searchUsersWithEmails: \(users)")
-                self.isSearchFinished = true
-                self.searchResult = users as! [TGUser]
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    self.tableView.reloadData()
-                })
+        let addressBookQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
+        dispatch_async(addressBookQueue) {() -> Void in
+            self.readAddressBookByEmail()
+            
+            Tapglue.searchUsersWithEmails(self.contactEmails) { (users: [AnyObject]!, error: NSError!) -> Void in
+                if error != nil {
+                    print("\nError searchUsersWithEmails: \(error)")
+                }
+                else {
+                    print("\nSuccessful searchUsersWithEmails: \(users)")
+                    self.isSearchFinished = true
+                    self.searchResult = users as! [TGUser]
+                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        self.tableView.reloadData()
+                    })
+                }
             }
         }
     }
 
     func readAddressBookByEmail(){
         do {
+            let contactStore = CNContactStore()
             try contactStore.enumerateContactsWithFetchRequest(CNContactFetchRequest(keysToFetch: [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactEmailAddressesKey])) {
                 (contact, cursor) -> Void in
                 if (!contact.emailAddresses.isEmpty){
