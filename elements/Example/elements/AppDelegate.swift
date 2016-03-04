@@ -8,6 +8,7 @@
 
 import UIKit
 import Tapglue
+import elements
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,8 +19,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         let tgConfig = TGConfiguration.defaultConfiguration()
+        UILabel.appearance().fontName = "Avenir-LightOblique"
         tgConfig.loggingEnabled = true
         Tapglue.setUpWithAppToken(sampleToken, andConfig: tgConfig)
+        
+        if let path = NSBundle.mainBundle().pathForResource("config", ofType: "json"){
+            do {
+                let data = try NSData(contentsOfURL: NSURL(fileURLWithPath: path), options: NSDataReadingOptions.DataReadingMappedIfSafe)
+                try TapglueUI.setConfig(data)
+            } catch let error as NSError {
+                print("could not load config file! Error: \(error)")
+            }
+        }
+        
         return true
     }
 

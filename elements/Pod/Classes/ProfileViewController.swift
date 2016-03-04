@@ -45,6 +45,8 @@ public class ProfileViewController: UIViewController, ProfileBiographyDelegate {
         
         refreshControl.addTarget(self, action: "refresh:", forControlEvents: .ValueChanged)
         tableView.addSubview(refreshControl)
+        
+        applyConfiguration(TapglueUI.config)
     }
     
     override public func viewWillAppear(animated: Bool) {

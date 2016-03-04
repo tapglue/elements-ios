@@ -12,9 +12,17 @@ import Tapglue
 
 public class TapglueUI {
     
+    static let expectedConfigVersion = 1
+    
     static let acceptedEventTypes = ["tg_follow", "tg_like"]
     
+    static var config = Config()
+    
     public init() {
+    }
+    
+    public static func setConfig(config: NSData) throws {
+        TapglueUI.config = try ConfigParser().parse(config)
     }
     
     public func performSegueToProfile(caller: UIViewController) {

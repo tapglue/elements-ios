@@ -32,6 +32,8 @@ class NotificationFeedViewController: UIViewController {
         
         refreshControl.addTarget(self, action: "refresh", forControlEvents: .ValueChanged)
         tableView.addSubview(refreshControl)
+        
+        applyConfiguration(TapglueUI.config)
     }
     
     override func viewWillAppear(animated: Bool) {
