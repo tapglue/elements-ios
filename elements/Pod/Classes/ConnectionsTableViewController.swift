@@ -26,6 +26,8 @@ public class ConnectionsViewController: UITableViewController, ConnectionCellDel
         super.viewDidLoad()
         let search = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: "searchTapped")
         navigationItem.rightBarButtonItem = search
+        tableView.backgroundColor = UIColor.clearColor()
+        applyConfiguration(TapglueUI.config)
     }
     
     override public func viewWillAppear(animated: Bool) {
@@ -79,6 +81,10 @@ public class ConnectionsViewController: UITableViewController, ConnectionCellDel
 
     override public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return usersToDisplay.count
+    }
+    
+    override public func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        cell.backgroundColor = UIColor.clearColor()
     }
     
     override public func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {

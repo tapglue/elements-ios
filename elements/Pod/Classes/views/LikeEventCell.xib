@@ -30,8 +30,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="height" constant="43" id="9wW-Os-7sg"/>
                             <constraint firstItem="vmI-zh-hxQ" firstAttribute="leading" secondItem="4LC-bH-GXm" secondAttribute="leading" constant="20" symbolic="YES" id="FIO-Gb-zuI"/>
                             <constraint firstItem="8el-a7-IcY" firstAttribute="baseline" secondItem="vmI-zh-hxQ" secondAttribute="baseline" id="KOd-if-qr2"/>
                             <constraint firstItem="vmI-zh-hxQ" firstAttribute="centerY" secondItem="4LC-bH-GXm" secondAttribute="centerY" id="iKK-Gl-mwE"/>

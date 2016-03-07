@@ -32,7 +32,7 @@ class NotificationFeedViewController: UIViewController {
         
         refreshControl.addTarget(self, action: "refresh", forControlEvents: .ValueChanged)
         tableView.addSubview(refreshControl)
-        
+        tableView.backgroundColor = UIColor.clearColor()
         applyConfiguration(TapglueUI.config)
     }
     
@@ -119,5 +119,9 @@ extension NotificationFeedViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         return UIView()
+    }
+    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        cell.backgroundColor = UIColor.clearColor()
     }
 }

@@ -45,7 +45,7 @@ public class ProfileViewController: UIViewController, ProfileBiographyDelegate {
         
         refreshControl.addTarget(self, action: "refresh:", forControlEvents: .ValueChanged)
         tableView.addSubview(refreshControl)
-        
+        tableView.backgroundColor = UIColor.clearColor()
         applyConfiguration(TapglueUI.config)
     }
     
@@ -199,6 +199,10 @@ extension ProfileViewController: UITableViewDelegate {
     
     public func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         return UIView()
+    }
+    
+    public func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        cell.backgroundColor = UIColor.clearColor()
     }
 }
 

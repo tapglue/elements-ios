@@ -14,30 +14,31 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KFY-cQ-Yir" userLabel="ContainingView">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KFY-cQ-Yir">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-user" translatesAutoresizingMaskIntoConstraints="NO" id="Cgh-hl-nKd" userLabel="User2Image">
-                                <rect key="frame" x="255" y="17" width="45" height="45"/>
+                                <rect key="frame" x="255" y="20" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="3yM-LV-fJR"/>
-                                    <constraint firstAttribute="height" constant="45" id="sWH-VH-Yca"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="mAO-dw-5wp"/>
+                                    <constraint firstAttribute="height" priority="999" constant="45" id="sWH-VH-Yca"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="735" text="User 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ap-6c-inq" userLabel="User2">
-                                <rect key="frame" x="157" y="29" width="90" height="21"/>
+                                <rect key="frame" x="157" y="32" width="90" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="500" verticalHuggingPriority="251" horizontalCompressionResistancePriority="740" text="is following" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x50-J1-Gm5" userLabel="isFollowing">
-                                <rect key="frame" x="77" y="32" width="72" height="17"/>
+                                <rect key="frame" x="77" y="35" width="72" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWb-5K-QgJ" userLabel="User1">
-                                <rect key="frame" x="20" y="29" width="49" height="21"/>
+                                <rect key="frame" x="20" y="32" width="49" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -47,22 +48,15 @@
                             <constraint firstItem="5ap-6c-inq" firstAttribute="leading" secondItem="x50-J1-Gm5" secondAttribute="trailing" constant="8" symbolic="YES" id="1Ik-bM-Vrh"/>
                             <constraint firstAttribute="trailing" secondItem="Cgh-hl-nKd" secondAttribute="trailing" constant="20" symbolic="YES" id="4vR-fR-dle"/>
                             <constraint firstItem="x50-J1-Gm5" firstAttribute="baseline" secondItem="wWb-5K-QgJ" secondAttribute="baseline" id="DYe-Av-HWm"/>
-                            <constraint firstItem="Cgh-hl-nKd" firstAttribute="top" secondItem="KFY-cQ-Yir" secondAttribute="top" constant="20" symbolic="YES" id="P71-0T-CPq"/>
+                            <constraint firstItem="Cgh-hl-nKd" firstAttribute="top" secondItem="KFY-cQ-Yir" secondAttribute="top" constant="20" symbolic="YES" id="MfD-bo-xoE"/>
                             <constraint firstItem="Cgh-hl-nKd" firstAttribute="centerY" secondItem="KFY-cQ-Yir" secondAttribute="centerY" id="P7v-8f-QUJ"/>
-                            <constraint firstAttribute="bottom" secondItem="Cgh-hl-nKd" secondAttribute="bottom" constant="20" symbolic="YES" id="R9Q-ss-bTz"/>
                             <constraint firstItem="x50-J1-Gm5" firstAttribute="leading" secondItem="wWb-5K-QgJ" secondAttribute="trailing" constant="8" symbolic="YES" id="TTc-Ah-fJJ"/>
                             <constraint firstItem="Cgh-hl-nKd" firstAttribute="leading" secondItem="5ap-6c-inq" secondAttribute="trailing" constant="8" symbolic="YES" id="WC4-f0-p6N"/>
                             <constraint firstItem="5ap-6c-inq" firstAttribute="centerY" secondItem="KFY-cQ-Yir" secondAttribute="centerY" id="ZjK-2D-r5I"/>
                             <constraint firstItem="wWb-5K-QgJ" firstAttribute="leading" secondItem="KFY-cQ-Yir" secondAttribute="leading" constant="20" symbolic="YES" id="fbL-YE-R8M"/>
-                            <constraint firstAttribute="height" constant="79" id="ltG-ba-sXh"/>
+                            <constraint firstAttribute="bottom" secondItem="Cgh-hl-nKd" secondAttribute="bottom" constant="20" symbolic="YES" id="oCk-hp-c5e"/>
                             <constraint firstItem="wWb-5K-QgJ" firstAttribute="baseline" secondItem="5ap-6c-inq" secondAttribute="baseline" id="zxJ-Sv-tLI"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="P71-0T-CPq"/>
-                                <exclude reference="R9Q-ss-bTz"/>
-                            </mask>
-                        </variation>
                     </view>
                 </subviews>
                 <constraints>
