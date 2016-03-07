@@ -29,6 +29,8 @@ public class UserSearchViewController: UIViewController {
         tableView.registerNibs(nibNames: [cellConnectionReusableIdentifier, cellNothingFoundReusableIdentifier, cellSearchAddressBookReusableIdentifier])
         tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.backgroundColor = UIColor.clearColor()
+        applyConfiguration(TapglueUI.config)
     }
 
     // MARK: - Navigation
@@ -54,10 +56,12 @@ extension UserSearchViewController: UISearchBarDelegate {
                     self.tableView.reloadData()
                 }
             } else {
-                let alert = UIAlertController(title: "Something went wrong", message: "please try again later", preferredStyle: .Alert)
-                let action = UIAlertAction(title: "ok", style: .Default, handler: nil)
-                alert.addAction(action)
-                self.presentViewController(alert, animated:true, completion: nil)
+                dispatch_async(dispatch_get_main_queue()) {() -> Void in
+                    let alert = UIAlertController(title: "Something went wrong", message: "please try again later", preferredStyle: .Alert)
+                    let action = UIAlertAction(title: "ok", style: .Default, handler: nil)
+                    alert.addAction(action)
+                    self.presentViewController(alert, animated:true, completion: nil)
+                }
             }
         }
     }
@@ -119,6 +123,11 @@ extension UserSearchViewController: UITableViewDelegate {
         }
         tableView.deselectRowAtIndexPath(indexPath, animated:true)
     }
+    
+    public func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        cell.backgroundColor = UIColor.clearColor()
+    }
+
 }
 
 extension UserSearchViewController: ConnectionCellDelegate {
