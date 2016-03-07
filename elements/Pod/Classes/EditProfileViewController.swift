@@ -18,6 +18,8 @@ class EditProfileViewController: UIViewController {
         
         let save = UIBarButtonItem(barButtonSystemItem: .Save, target: self, action: "saveTapped")
         navigationItem.rightBarButtonItem = save
+        view.backgroundColor = UIColor.clearColor()
+        applyConfiguration(TapglueUI.config)
     }
     
     func saveTapped() {
