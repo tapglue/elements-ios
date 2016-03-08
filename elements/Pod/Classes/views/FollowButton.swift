@@ -15,8 +15,11 @@ enum FollowState{
 
 class FollowButton: UIButton {
     
+    var followConfig: FollowButtonConfig?
+    
     var user: TGUser? {
         didSet {
+            followConfig = TapglueUI.config.followButtonConfig
             setStateForUser()
             addTarget(self, action: "followPressed", forControlEvents: .TouchUpInside)
         }
@@ -57,8 +60,8 @@ class FollowButton: UIButton {
     
     private func setToFollowed() {
         setTitle("Followed", forState: .Normal)
-        backgroundColor = UIColor.blueColor()
-        setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        backgroundColor = followConfig!.followed
+        setTitleColor(followConfig!.followedText, forState: .Normal)
         buttonAction = {() -> Void in
             self.enabled = false
             Tapglue.unfollowUser(self.user, withCompletionBlock: { (success: Bool, error:NSError!) -> Void in
@@ -77,8 +80,8 @@ class FollowButton: UIButton {
     
     private func setToFollow() {
         setTitle("Follow", forState: .Normal)
-        backgroundColor = UIColor.whiteColor()
-        setTitleColor(UIColor.blueColor(), forState: .Normal)
+        backgroundColor = followConfig!.notFollowed
+        setTitleColor(followConfig!.notFollowedText, forState: .Normal)
         buttonAction = {() -> Void in
             self.enabled = false
             Tapglue.followUser(self.user, withCompletionBlock: { (success, error:NSError!) -> Void in

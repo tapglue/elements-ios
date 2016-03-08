@@ -99,6 +99,7 @@
 		653C3F1A1C89D74400A90BFD /* UIViewController+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653C3F191C89D74400A90BFD /* UIViewController+Config.swift */; };
 		6553A69A1C7DF488005F3F1C /* FollowEventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6553A6991C7DF488005F3F1C /* FollowEventCell.xib */; };
 		6553A69C1C7DFDA7005F3F1C /* FollowEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6553A69B1C7DFDA7005F3F1C /* FollowEventCell.swift */; };
+		65601A3E1C8E5DEC00E2A90C /* FollowButtonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65601A3D1C8E5DEC00E2A90C /* FollowButtonParser.swift */; };
 		6561946B1C7CBE5F008C4FB6 /* EditProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 656194691C7CBE5F008C4FB6 /* EditProfile.storyboard */; };
 		6561946D1C7CC082008C4FB6 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6561946C1C7CC082008C4FB6 /* EditProfileViewController.swift */; };
 		656B74CC1C7F6C52000D73F2 /* LikeEventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 656B74CB1C7F6C52000D73F2 /* LikeEventCell.xib */; };
@@ -429,6 +430,7 @@
 		653C3F191C89D74400A90BFD /* UIViewController+Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Config.swift"; sourceTree = "<group>"; };
 		6553A6991C7DF488005F3F1C /* FollowEventCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FollowEventCell.xib; sourceTree = "<group>"; };
 		6553A69B1C7DFDA7005F3F1C /* FollowEventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowEventCell.swift; sourceTree = "<group>"; };
+		65601A3D1C8E5DEC00E2A90C /* FollowButtonParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowButtonParser.swift; sourceTree = "<group>"; };
 		6561946A1C7CBE5F008C4FB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/EditProfile.storyboard; sourceTree = "<group>"; };
 		6561946C1C7CC082008C4FB6 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		656B74CB1C7F6C52000D73F2 /* LikeEventCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LikeEventCell.xib; sourceTree = "<group>"; };
@@ -931,6 +933,7 @@
 			children = (
 				653C3F131C88FF9C00A90BFD /* ConfigParser.swift */,
 				653C3F151C88FFE800A90BFD /* Config.swift */,
+				65601A3D1C8E5DEC00E2A90C /* FollowButtonParser.swift */,
 			);
 			path = internal;
 			sourceTree = "<group>";
@@ -1697,6 +1700,7 @@
 				65AF3D4D1C7B3B1500AB83FB /* SearchAddressBookCell.swift in Sources */,
 				652C454F1C72462E00E48E92 /* UIImageView+TGUser.swift in Sources */,
 				656B74D61C80AB7C000D73F2 /* FollowedMeEventCell.swift in Sources */,
+				65601A3E1C8E5DEC00E2A90C /* FollowButtonParser.swift in Sources */,
 				65AF3D451C76007300AB83FB /* ConnectionType.swift in Sources */,
 				652C454D1C72438000E48E92 /* UIImageView+UrlString.swift in Sources */,
 				653C3F1A1C89D74400A90BFD /* UIViewController+Config.swift in Sources */,

@@ -2,5 +2,11 @@
     "configVersion": 1,
     "navigationBarColor": "#de3163",
     "navigationBarTextColor": "#e37222",
-    "backgroundColor": "#22528b"
+    "backgroundColor": "#22528b",
+    "followButton": {
+        "notFollowedColor": "#00ffff",
+        "notFollowedTextColor": "#7d1e49",
+        "followedColor": "#008181",
+        "followedTextColor": "#eb8c00"
+    }
 }

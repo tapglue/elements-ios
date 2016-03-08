@@ -15,7 +15,9 @@ class ConfigParser {
         let navigationBarColor = UIColor.colorFromHexString(configDictionary["navigationBarColor"] as! String)
         let navigationBarTextColor = UIColor.colorFromHexString(configDictionary["navigationBarTextColor"] as! String)
         let backgroundColor = UIColor.colorFromHexString(configDictionary["backgroundColor"] as! String)
+        let followBtnDictionary = configDictionary["followButton"] as! [String: AnyObject]
+       let followButtonConfig = FollowButtonParser.parse(followBtnDictionary)
         
-        return Config(navigationBarColor: navigationBarColor, navigationBarTextColor: navigationBarTextColor, backgroundColor: backgroundColor)
+        return Config(navigationBarColor: navigationBarColor, navigationBarTextColor: navigationBarTextColor, backgroundColor: backgroundColor, followButtonConfig: followButtonConfig)
     }
 }
