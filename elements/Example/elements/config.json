@@ -3,6 +3,8 @@
     "navigationBarColor": "#de3163",
     "navigationBarTextColor": "#e37222",
     "backgroundColor": "#22528b",
+    "roundedImages": true,
+    
     "followButton": {
         "notFollowedColor": "#00ffff",
         "notFollowedTextColor": "#7d1e49",

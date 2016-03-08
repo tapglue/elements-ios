@@ -13,6 +13,7 @@ class Config {
     let navigationBarColor: UIColor
     let navigationBarTextColor: UIColor
     let backgroundColor: UIColor
+    let roundedImages: Bool
     let followButtonConfig: FollowButtonConfig
     
     init() {
@@ -20,13 +21,15 @@ class Config {
         navigationBarTextColor = UIColor.blackColor()
         backgroundColor = UIColor.whiteColor()
         followButtonConfig = FollowButtonConfig()
+        roundedImages = false
     }
     
-    init(navigationBarColor: UIColor, navigationBarTextColor: UIColor, backgroundColor: UIColor, followButtonConfig: FollowButtonConfig) {
+    init(navigationBarColor: UIColor, navigationBarTextColor: UIColor, backgroundColor: UIColor, followButtonConfig: FollowButtonConfig, roundedImages: Bool) {
         self.navigationBarColor = navigationBarColor
         self.navigationBarTextColor = navigationBarTextColor
         self.backgroundColor = backgroundColor
         self.followButtonConfig = followButtonConfig
+        self.roundedImages = roundedImages
     }
 }
 
