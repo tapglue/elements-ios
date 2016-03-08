@@ -6,7 +6,7 @@
 //
 //
 
-import Foundation
+import UIKit
 
 extension UIColor {
     static func colorFromHexString (hex:String) -> UIColor {

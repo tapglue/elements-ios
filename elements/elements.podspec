@@ -18,9 +18,9 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '8.0'
   s.requires_arc = true
 
-  s.source_files = 'Pod/Classes/**/*'
+  s.source_files = 'Pod/Classes/**/*{swift}'
   s.resource_bundles = {
-    'elements' => ['Pod/Classes/**/*']
+'elements' => ['Pod/Classes/**/*{lproj, storyboard, xib, xcassets, json, imageset, png}']
   }
   s.dependency 'Tapglue', '1.1.0'
 end
