@@ -180,17 +180,25 @@ extension ProfileViewController: UITableViewDelegate {
         let cell = tableView.cellForRowAtIndexPath(indexPath)
         if cell as? FollowedMeEventCell != nil {
             let cell = cell as! FollowedMeEventCell
-            let profileVC = self.storyboard?.instantiateViewControllerWithIdentifier("ProfileViewController") as! ProfileViewController
-            profileVC.userId = cell.user?.userId
-            self.navigationController?.pushViewController(profileVC, animated: true)
+            delegate?.profileViewController(self, didSelectEvent: cell.event!)
+            if delegate?.defaultNavigationEnabledInProfileViewController(self) ?? true {
+                navigateToProfile(cell.user!)
+            }
         }
         if cell as? FollowEventCell != nil {
             let cell = cell as! FollowEventCell
-            let profileVC = self.storyboard?.instantiateViewControllerWithIdentifier("ProfileViewController") as! ProfileViewController
-            profileVC.userId = cell.followedUser?.userId
-            self.navigationController?.pushViewController(profileVC, animated: true)
+            delegate?.profileViewController(self, didSelectEvent: cell.event!)
+            if delegate?.defaultNavigationEnabledInProfileViewController(self) ?? true {
+                navigateToProfile(cell.followedUser!)
+            }
         }
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+    
+    func navigateToProfile(user: TGUser) {
+        let profileVC = self.storyboard?.instantiateViewControllerWithIdentifier("ProfileViewController") as! ProfileViewController
+        profileVC.userId = user.userId
+        self.navigationController?.pushViewController(profileVC, animated: true)
     }
     
     public func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
@@ -210,4 +218,5 @@ public protocol ProfileViewDelegate {
     func defaultNavigationEnabledInProfileViewController(profileViewController: ProfileViewController) -> Bool
     func referenceUserInProfileViewController(profileViewController: ProfileViewController) -> TGUser
     func profileViewController(profileViewController: ProfileViewController, didSelectConnectionsOfType: ConnectionType, forUser: TGUser)
+    func profileViewController(profileViewcontroller: ProfileViewController, didSelectEvent event: TGEvent)
 }

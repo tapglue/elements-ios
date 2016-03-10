@@ -23,7 +23,7 @@ class DelegatedFeedViewController: UIViewController, NotificationFeedViewDelegat
     }
     
     func defaultNavigationEnabledInNotificationFeedViewController(notificationFeedViewController: NotificationFeedViewController) -> Bool {
-        return true
+        return false
     }
     
     func notificationFeedViewController(noticationFeedViewController: NotificationFeedViewController, didSelectEvent event: TGEvent) {
