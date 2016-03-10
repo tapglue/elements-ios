@@ -11,9 +11,6 @@ import elements
 import Tapglue
 
 class ViewController: UIViewController {
-    
-    let elements = TapglueUI()
-    
     let username = "john"
     let password = "qwert"
     var isLoggedIn = false
@@ -30,12 +27,12 @@ class ViewController: UIViewController {
     }
     @IBAction func notificationsTap(sender: AnyObject) {
         if isLoggedIn {
-            elements.performSegueToNotificationFeed(self)
+            TapglueUI.performSegueToNotificationFeed(self)
         }
     }
     @IBAction func profileTap(sender: AnyObject) {
         if isLoggedIn {
-            elements.performSegueToProfile(self)
+            TapglueUI.performSegueToProfile(self)
         }
     }
 }

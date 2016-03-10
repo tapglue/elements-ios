@@ -16,7 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let sampleToken = "1ecd50ce4700e0c8f501dee1fb271344"
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         let tgConfig = TGConfiguration.defaultConfiguration()
         UILabel.appearance().fontName = "Avenir-LightOblique"

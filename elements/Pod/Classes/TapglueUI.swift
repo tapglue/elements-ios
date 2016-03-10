@@ -25,43 +25,31 @@ public class TapglueUI {
         TapglueUI.config = try ConfigParser().parse(config)
     }
     
-    public func performSegueToProfile(caller: UIViewController) {
-        let s = UIStoryboard (
-            name: "ProfileStoryboard", bundle: NSBundle(forClass: ProfileViewController.self)
-        )
-        let vc = s.instantiateInitialViewController()!
+    public static func performSegueToProfile(caller: UIViewController) {
+        let vc = profileStoryboard().instantiateInitialViewController()!
         caller.presentViewController(vc, animated: true, completion: nil)
     }
     
-    public func performSegueToNotificationFeed(caller: UIViewController) {
-        let s = UIStoryboard (
-            name: "NotificationStoryboard", bundle: NSBundle(forClass: NotificationFeedViewController.self)
-        )
-        let vc = s.instantiateInitialViewController()!
+    public static func performSegueToNotificationFeed(caller: UIViewController) {
+        let vc = notificationStoryboard().instantiateInitialViewController()!
         caller.presentViewController(vc, animated: true, completion: nil)
-    }
-    
-    public func performSegueToConnections(caller: UIViewController, forUser user: TGUser, andForType type: ConnectionType) {
-        let s = UIStoryboard (
-            name: "ProfileStoryboard", bundle: NSBundle(forClass: ProfileViewController.self)
-        )
-        let connectionsVC = s.instantiateViewControllerWithIdentifier("ConnectionsViewController") as! ConnectionsViewController
-        
-        connectionsVC.type = type
-        connectionsVC.referenceUser = user
-        
-        caller.presentViewController(connectionsVC, animated: true, completion: nil)
     }
     
     public static func profileViewController() -> ProfileViewController {
-        let s = UIStoryboard (name: "ProfileStoryboard", bundle: NSBundle(forClass: ProfileViewController.self))
-        return s.instantiateViewControllerWithIdentifier("ProfileViewController") as! ProfileViewController
+        return profileStoryboard().instantiateViewControllerWithIdentifier("ProfileViewController") as! ProfileViewController
     }
     
     public static func notificationFeedViewController() -> NotificationFeedViewController {
-        let s = UIStoryboard (
+        return notificationStoryboard().instantiateViewControllerWithIdentifier("NotificationFeedViewController") as! NotificationFeedViewController
+    }
+    
+    private static func profileStoryboard() -> UIStoryboard {
+        return UIStoryboard (name: "ProfileStoryboard", bundle: NSBundle(forClass: ProfileViewController.self))
+    }
+    
+    private static func notificationStoryboard() -> UIStoryboard {
+        return UIStoryboard (
             name: "NotificationStoryboard", bundle: NSBundle(forClass: NotificationFeedViewController.self)
         )
-        return s.instantiateViewControllerWithIdentifier("NotificationFeedViewController") as! NotificationFeedViewController
     }
 }
