@@ -15,6 +15,8 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		65069FFB1C90DB2C00A54D25 /* ManualProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65069FFA1C90DB2C00A54D25 /* ManualProfileViewController.swift */; };
+		651504F81C9200B9003E402F /* DelegatedFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651504F71C9200B9003E402F /* DelegatedFeedViewController.swift */; };
 		6530A8831C88EDF300B1B96A /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 6530A8821C88EDF300B1B96A /* config.json */; };
 		653C3F1E1C89E40A00A90BFD /* UILabel+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653C3F1D1C89E40A00A90BFD /* UILabel+Font.swift */; };
 /* End PBXBuildFile section */
@@ -43,6 +45,8 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		62BC20E673750FF14072897A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		65069FFA1C90DB2C00A54D25 /* ManualProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualProfileViewController.swift; sourceTree = "<group>"; };
+		651504F71C9200B9003E402F /* DelegatedFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegatedFeedViewController.swift; sourceTree = "<group>"; };
 		6530A8821C88EDF300B1B96A /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = "<group>"; };
 		653C3F1D1C89E40A00A90BFD /* UILabel+Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Font.swift"; sourceTree = "<group>"; };
 		65FB9B601C6B4358001F4B72 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
@@ -110,6 +114,8 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				65069FFA1C90DB2C00A54D25 /* ManualProfileViewController.swift */,
+				651504F71C9200B9003E402F /* DelegatedFeedViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -371,6 +377,8 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				651504F81C9200B9003E402F /* DelegatedFeedViewController.swift in Sources */,
+				65069FFB1C90DB2C00A54D25 /* ManualProfileViewController.swift in Sources */,
 				653C3F1E1C89E40A00A90BFD /* UILabel+Font.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

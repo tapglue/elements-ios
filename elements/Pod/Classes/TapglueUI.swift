@@ -52,4 +52,16 @@ public class TapglueUI {
         
         caller.presentViewController(connectionsVC, animated: true, completion: nil)
     }
+    
+    public static func profileViewController() -> ProfileViewController {
+        let s = UIStoryboard (name: "ProfileStoryboard", bundle: NSBundle(forClass: ProfileViewController.self))
+        return s.instantiateViewControllerWithIdentifier("ProfileViewController") as! ProfileViewController
+    }
+    
+    public static func notificationFeedViewController() -> NotificationFeedViewController {
+        let s = UIStoryboard (
+            name: "NotificationStoryboard", bundle: NSBundle(forClass: NotificationFeedViewController.self)
+        )
+        return s.instantiateViewControllerWithIdentifier("NotificationFeedViewController") as! NotificationFeedViewController
+    }
 }

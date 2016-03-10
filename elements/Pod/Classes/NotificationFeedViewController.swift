@@ -9,7 +9,9 @@
 import UIKit
 import Tapglue
 
-class NotificationFeedViewController: UIViewController {
+public class NotificationFeedViewController: UIViewController {
+    
+    public var delegate: NotificationFeedViewDelegate?
     
     let cellFollowEventReusableIdentifier = "FollowEventCell"
     let cellFollwedMeEventReusableIdentifier = "FollowedMeEventCell"
@@ -22,7 +24,7 @@ class NotificationFeedViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var refreshControl = UIRefreshControl()
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         tableView.registerNibs(nibNames: [cellFollowEventReusableIdentifier, cellFollwedMeEventReusableIdentifier, cellLikeEventReusableIdentifier])
         tableView.estimatedRowHeight = 80
@@ -36,7 +38,7 @@ class NotificationFeedViewController: UIViewController {
         applyConfiguration(TapglueUI.config)
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override public func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         retrieveEventsForCurrentUser()
     }
@@ -63,7 +65,7 @@ class NotificationFeedViewController: UIViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override public func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == profileSegueName {
             let vc = segue.destinationViewController as! ProfileViewController
             let user = sender as! TGUser
@@ -74,11 +76,11 @@ class NotificationFeedViewController: UIViewController {
 }
 
 extension NotificationFeedViewController: UITableViewDataSource {
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return events.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if events[indexPath.row ].type == "tg_follow" {
             if events[indexPath.row].target.user.userId == TGUser.currentUser().userId {
                 let cell = tableView.dequeueReusableCellWithIdentifier(cellFollwedMeEventReusableIdentifier) as! FollowedMeEventCell
@@ -99,29 +101,40 @@ extension NotificationFeedViewController: UITableViewDataSource {
 }
 
 extension NotificationFeedViewController: UITableViewDelegate {
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let cell = tableView.cellForRowAtIndexPath(indexPath)
         if cell as? FollowedMeEventCell != nil {
             let cell = cell as! FollowedMeEventCell
-            performSegueWithIdentifier(profileSegueName, sender: cell.user)
+            delegate?.notificationFeedViewController(self, didSelectEvent: cell.event!)
+            if delegate?.defaultNavigationEnabledInNotificationFeedViewController(self) ?? true {
+                performSegueWithIdentifier(profileSegueName, sender: cell.user)
+            }
         }
         if cell as? FollowEventCell != nil {
             let cell = cell as! FollowEventCell
-            performSegueWithIdentifier(profileSegueName, sender: cell.followedUser)
+            delegate?.notificationFeedViewController(self, didSelectEvent: cell.event!)
+            if delegate?.defaultNavigationEnabledInNotificationFeedViewController(self) ?? true {
+                performSegueWithIdentifier(profileSegueName, sender: cell.followedUser)
+            }
         }
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
     
-    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    public func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 0.1
     }
     
-    func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+    public func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         return UIView()
     }
     
-    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+    public func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         cell.backgroundColor = UIColor.clearColor()
     }
+}
+
+public protocol NotificationFeedViewDelegate{
+    func defaultNavigationEnabledInNotificationFeedViewController(notificationFeedViewController: NotificationFeedViewController) -> Bool
+    func notificationFeedViewController(noticationFeedViewController: NotificationFeedViewController, didSelectEvent event: TGEvent)
 }
