@@ -121,10 +121,9 @@ extension AddressBookViewController: UITableViewDataSource {
     public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let cell = tableView.cellForRowAtIndexPath(indexPath)
         if ((cell as? ConnectionCell) != nil) {
+            delegate?.addressBookViewController(self, didSelectUser: searchResult[indexPath.row])
             if delegate?.defaultNavigationEnabledInAddressBookViewController(self) ?? true {
                 performSegueWithIdentifier("toProfile", sender: searchResult[indexPath.row])
-            } else {
-                delegate?.addressBookViewController(self, didSelectUser: searchResult[indexPath.row])
             }
         }
         tableView.deselectRowAtIndexPath(indexPath, animated:true)

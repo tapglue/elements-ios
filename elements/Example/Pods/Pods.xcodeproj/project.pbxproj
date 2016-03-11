@@ -886,8 +886,8 @@
 		65312D3B1C73363300491966 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				65FC51E11C733C2F007BC5D5 /* ProfileBiographyView.swift */,
 				65FC51E21C733C2F007BC5D5 /* ProfileBiographyView.xib */,
+				65FC51E11C733C2F007BC5D5 /* ProfileBiographyView.swift */,
 				65312D3C1C7338DF00491966 /* ConnectionCell.xib */,
 				65312D3E1C733BB300491966 /* ConnectionCell.swift */,
 				65AF3D421C74DC6300AB83FB /* FollowButton.swift */,
