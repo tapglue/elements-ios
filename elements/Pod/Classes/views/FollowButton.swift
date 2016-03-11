@@ -59,6 +59,7 @@ class FollowButton: UIButton {
     }
     
     private func setToFollowed() {
+        hidden = false
         setTitle("Followed", forState: .Normal)
         backgroundColor = followConfig!.followed
         setTitleColor(followConfig!.followedText, forState: .Normal)
@@ -79,6 +80,7 @@ class FollowButton: UIButton {
     }
     
     private func setToFollow() {
+        hidden = false
         setTitle("Follow", forState: .Normal)
         backgroundColor = followConfig!.notFollowed
         setTitleColor(followConfig!.notFollowedText, forState: .Normal)
