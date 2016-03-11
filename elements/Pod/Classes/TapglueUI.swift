@@ -43,6 +43,10 @@ public class TapglueUI {
         return notificationStoryboard().instantiateViewControllerWithIdentifier("NotificationFeedViewController") as! NotificationFeedViewController
     }
     
+    public static func connectionsViewController() -> ConnectionsViewController {
+        return profileStoryboard().instantiateViewControllerWithIdentifier("ConnectionsViewController") as! ConnectionsViewController
+    }
+    
     private static func profileStoryboard() -> UIStoryboard {
         return UIStoryboard (name: "ProfileStoryboard", bundle: NSBundle(forClass: ProfileViewController.self))
     }
