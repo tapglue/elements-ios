@@ -11,8 +11,8 @@ import Tapglue
 
 public class ConnectionsViewController: UITableViewController, ConnectionCellDelegate {
 
-    var type: ConnectionType?
-    var referenceUser: TGUser?
+    public var type: ConnectionType?
+    public var referenceUser: TGUser?
     var usersToDisplay = [TGUser]()
     public var delegate: ConnectionsViewDelegate? {
         didSet {

@@ -47,6 +47,10 @@ public class TapglueUI {
         return profileStoryboard().instantiateViewControllerWithIdentifier("ConnectionsViewController") as! ConnectionsViewController
     }
     
+    public static func userSearchViewController() -> UserSearchViewController {
+        return profileStoryboard().instantiateViewControllerWithIdentifier("UserSearchViewController") as! UserSearchViewController
+    }
+    
     private static func profileStoryboard() -> UIStoryboard {
         return UIStoryboard (name: "ProfileStoryboard", bundle: NSBundle(forClass: ProfileViewController.self))
     }

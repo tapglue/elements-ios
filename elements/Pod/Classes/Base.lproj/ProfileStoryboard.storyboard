@@ -78,7 +78,7 @@
         <!--User Search View Controller-->
         <scene sceneID="mLS-fb-xUO">
             <objects>
-                <viewController id="64T-Y3-pN0" customClass="UserSearchViewController" customModule="elements" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserSearchViewController" id="64T-Y3-pN0" customClass="UserSearchViewController" customModule="elements" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2OR-r6-1H2"/>
                         <viewControllerLayoutGuide type="bottom" id="pEr-Aj-jnW"/>
@@ -171,6 +171,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="O5e-Eq-xbw"/>
+        <segue reference="4tP-Qn-QDA"/>
     </inferredMetricsTieBreakers>
 </document>
