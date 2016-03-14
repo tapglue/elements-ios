@@ -1,1 +1,0 @@
-../../../Tapglue/Classes/TGEventManager+Private.h

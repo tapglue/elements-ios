@@ -1,1 +1,0 @@
-../../../Tapglue/Classes/Model/TGImage+Private.h

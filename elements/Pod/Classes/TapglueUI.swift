@@ -52,12 +52,19 @@ public class TapglueUI {
     }
     
     private static func profileStoryboard() -> UIStoryboard {
-        return UIStoryboard (name: "ProfileStoryboard", bundle: NSBundle(forClass: ProfileViewController.self))
+        return UIStoryboard (name: "ProfileStoryboard", bundle: getBundle())
     }
     
     private static func notificationStoryboard() -> UIStoryboard {
         return UIStoryboard (
-            name: "NotificationStoryboard", bundle: NSBundle(forClass: NotificationFeedViewController.self)
+            name: "NotificationStoryboard", bundle: getBundle()
         )
+    }
+    
+    static func getBundle() -> NSBundle {
+        let podBundle = NSBundle(forClass: ProfileViewController.self)
+        
+        let bundleURL = podBundle.URLForResource("elements", withExtension: "bundle")
+        return NSBundle(URL: bundleURL!)!
     }
 }

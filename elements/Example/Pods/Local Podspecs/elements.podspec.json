@@ -2,8 +2,6 @@
   "name": "elements",
   "version": "0.1.0",
   "summary": "A short description of elements.",
-  "description": "",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/elements",
   "license": "MIT",
   "authors": {
     "John Nilsen": "nilsen340@gmail.com"
@@ -12,14 +10,20 @@
     "git": "https://github.com/<GITHUB_USERNAME>/elements.git",
     "tag": "0.1.0"
   },
+  "homepage": "https://github.com/nilsen340/",
   "platforms": {
     "ios": "8.0"
   },
   "requires_arc": true,
-  "source_files": "Pod/Classes/**/*",
+  "source_files": "Pod/Classes/**/*{swift}",
   "resource_bundles": {
     "elements": [
-      "Pod/Assets/*.png"
+      "Pod/Classes/**/*.{lproj,storyboard,xib,xcassets,json,imageset,png}"
+    ]
+  },
+  "dependencies": {
+    "Tapglue": [
+      "1.1.0"
     ]
   }
 }

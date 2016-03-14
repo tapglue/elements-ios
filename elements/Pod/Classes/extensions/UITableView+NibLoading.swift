@@ -10,7 +10,7 @@ import UIKit
 
 extension UITableView {
     func registerNibs(nibNames nibs: [String]) {
-        let bundle = NSBundle(forClass: ProfileViewController.self)
+        let bundle = TapglueUI.getBundle()
         
         for nib in nibs {
             let cellNib = UINib(nibName: nib, bundle: bundle)
