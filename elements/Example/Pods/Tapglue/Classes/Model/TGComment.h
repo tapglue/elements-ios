@@ -1,5 +1,5 @@
 //
-//  TGPostLike.m
+//  TGComment.h
 //  Tapglue iOS SDK
 //
 //  Created by Martin Stemmle on 09/12/15.
@@ -17,9 +17,20 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 //
+//
 
-#import "TGPostLike.h"
+#import "TGReaction.h"
 
-@implementation TGPostLike
+@interface TGComment : TGReaction
+
+/*!
+ @abstract Content / text of the comment.
+ */
+@property (nonatomic, strong) NSString *content;
+
+/*!
+ @abstract Id of the external object.
+ */
+@property (nonatomic, strong) NSString *externalId;
 
 @end

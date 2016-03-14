@@ -20,7 +20,7 @@
 
 #import "TGPost.h"
 
-@class TGPostComment, TGPostLike;
+@class TGComment, TGLike;
 
 @interface TGPost (Reactions)
 
@@ -32,7 +32,7 @@
  
  @param commentContent This contains the comment.
  */
-- (TGPostComment*)commentWithContent:(NSString*)commentContent withCompletionBlock:(TGSucessCompletionBlock)completionBlock;
+- (TGComment*)commentWithContent:(NSString*)commentContent withCompletionBlock:(TGSucessCompletionBlock)completionBlock;
 
 #pragma mark - Likes
 
@@ -40,7 +40,7 @@
  @abstract Create a like on a post.
  @discussion Create a like on a post.
  */
-- (TGPostLike*)likeWithCompletionBlock:(TGSucessCompletionBlock)completionBlock;
+- (TGLike*)likeWithCompletionBlock:(TGSucessCompletionBlock)completionBlock;
 
 /*!
  @abstract Unlike a post.

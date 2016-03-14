@@ -56,23 +56,23 @@
 /*!
  @abstract The number of commets the post has.
  */
-@property (nonatomic, assign, readonly) NSInteger commentsCount;
+@property (nonatomic, assign) NSInteger commentsCount;
 
 /*!
  @abstract The number of likes the post has.
  */
-@property (nonatomic, assign, readonly) NSInteger likesCount;
+@property (nonatomic, assign) NSInteger likesCount;
 
 /*!
  @abstract The number of shares the post has.
  */
-@property (nonatomic, assign, readonly) NSInteger sharesCount;
+@property (nonatomic, assign) NSInteger sharesCount;
 
 #pragma mark Helper
 /*!
  @abstract The status if a post is liked or not.
  */
-@property (nonatomic, assign, readonly) BOOL isLiked;
+@property (nonatomic, assign) BOOL isLiked;
 
 
 @end

@@ -31,6 +31,7 @@
 #import "TGUserManager.h"
 #import "TGObjectCache.h"
 #import "TGConfiguration.h"
+#import "TGConstants.h"
 
 #import <UIKit/UIKit.h>
 
@@ -246,10 +247,18 @@ static Tapglue* sharedInstance = nil;
 }
 
 + (void)loginWithUsernameOrEmail:(NSString *)usernameOrEmail
-                     andPasswort:(NSString *)password
+                     andPassword:(NSString *)password
              withCompletionBlock:(TGSucessCompletionBlock)completionBlock {
     [[self sharedInstance].userManager loginWithUsernameOrEmail:usernameOrEmail
-                                                    andPasswort:password
+                                                    andPassword:password
+                                            withCompletionBlock:completionBlock];
+}
+
++ (void)loginWithUsernameOrEmail:(NSString *)usernameOrEmail
+                     andUnhashedPassword:(NSString *)password
+             withCompletionBlock:(TGSucessCompletionBlock)completionBlock {
+    [[self sharedInstance].userManager loginWithUsernameOrEmail:usernameOrEmail
+                                                    andUnhashedPassword:password
                                             withCompletionBlock:completionBlock];
 }
 
@@ -282,6 +291,16 @@ static Tapglue* sharedInstance = nil;
     [[self sharedInstance].userManager searchUsersOnSocialPlatform:socialPlatform withSocialUsersIds:socialUserIds andCompletionBlock:completionBlock];
 }
 
+#pragma mark - User Recommendations
+
++ (void)retrieveUserRecommendationsOfType:(NSString*)type forPeriod:(NSString*)period andCompletionBlock:(void (^)(NSArray *users, NSError *error))completionBlock {
+    [[self sharedInstance].userManager retrieveUserRecommendationsOfType:type forPeriod:period andCompletionBlock:completionBlock];
+}
+
++ (void)retrieveUserRecommendationsWithCompletionBlock:(void (^)(NSArray *users, NSError *error))completionBlock {
+    [[self sharedInstance].userManager retrieveUserRecommendationsOfType:TGUserRecommendationsTypeActive forPeriod:TGUserRecommendationsPeriodDay andCompletionBlock:completionBlock];
+}
+
 #pragma mark - Feed
 
 + (void)retrieveEventsFeedForCurrentUserWithCompletionBlock:(TGFeedCompletionBlock)completionBlock {
@@ -304,15 +323,15 @@ static Tapglue* sharedInstance = nil;
     [[self sharedInstance].eventManager retrieveFeedUnreadCountForCurrentWithCompletionBlock:completionBlock];
 }
 
-+ (NSArray*)cachedFeedForCurrentUser {
++ (NSArray*)cachedEventsFeedForCurrentUser {
     return [self sharedInstance].eventManager.cachedFeed;
 }
 
-+ (NSArray*)cachedUnreadFeedForCurrentUser {
++ (NSArray*)cachedUnreadEventsFeedForCurrentUser {
     return [self sharedInstance].eventManager.cachedUnreadFeed;
 }
 
-+ (NSInteger)cachedUnreadCountForCurrentUser {
++ (NSInteger)cachedUnreadEventsCountForCurrentUser {
     return [self sharedInstance].eventManager.unreadCount;
 }
 
@@ -590,6 +609,42 @@ static Tapglue* sharedInstance = nil;
     [[self sharedInstance].eventManager retrieveNewsFeedForCurrentUserWithQuery:query andCompletionBlock:completionBlock];
 }
 
+#pragma mark - Comments -
+
++ (TGComment*)createComment:(NSString*)comment
+      forObjectWithId:(NSString*)objectId
+  withCompletionBlock:(TGSucessCompletionBlock)completionBlock {
+    return [[self sharedInstance].eventManager createComment:(NSString*)comment forObjectWithId:objectId andCompletionBlock:completionBlock];
+}
+
++ (void)updateComment:(TGComment*)comment forObjectWithId:(NSString*)objectId andCompletionBlock:(TGSucessCompletionBlock)completionBlock {
+    [[self sharedInstance].eventManager updateComment:(TGComment*)comment forObjectWithId:(NSString*)objectId andCompletionBlock:completionBlock];
+}
+
++ (void)deleteComment:(TGComment*)comment forObjectWithId:(NSString*)objectId andCompletionBlock:(TGSucessCompletionBlock)completionBlock {
+    [[self sharedInstance].eventManager deleteComment:(TGComment*)comment forObjectWithId:(NSString*)objectId andCompletionBlock:completionBlock];
+}
+
++ (void)retrieveCommentsForObjectWithId:(NSString*)objectId
+                    withCompletionBlock:(void (^)(NSArray *comments, NSError *error))completionBlock {
+    [[self sharedInstance].eventManager retrieveCommentsForObjectWithId:objectId withCompletionBlock:completionBlock];
+}
+
+#pragma mark - Likes -
+
++ (void)createLikeForObjectWithId:(NSString*)objectId andCompletionBlock:(TGSucessCompletionBlock)completionBlock {
+    [[self sharedInstance].eventManager createLikeForObjectWithId:objectId andCompletionBlock:completionBlock];
+}
+
++ (void)deleteLikeForObjectWithId:(NSString*)objectId andCompletionBlock:(TGSucessCompletionBlock)completionBlock {
+    [[self sharedInstance].eventManager deleteLikeForObjectWithId:objectId andCompletionBlock:completionBlock];
+}
+
++ (void)retrieveLikesForObjectWithId:(NSString*)objectId
+                 withCompletionBlock:(void (^)(NSArray *likes, NSError *error))completionBlock {
+    [[self sharedInstance].eventManager retrieveLikesForObjectWithId:objectId andCompletionBlock:completionBlock];
+}
+
 #pragma mark - Raw Rest -
 
 + (NSURLSessionDataTask*) makeRestRequestWithHTTPMethod:(NSString*)method
@@ -623,7 +678,7 @@ static Tapglue* sharedInstance = nil;
 }
 
 + (NSString *)version {
-    return @"1.1.0";
+    return @"1.1.1";
 }
 
 

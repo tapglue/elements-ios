@@ -1,5 +1,5 @@
 //
-//  TGPostComment.h
+//  TGReaction.h
 //  Tapglue iOS SDK
 //
 //  Created by Martin Stemmle on 09/12/15.
@@ -17,15 +17,26 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 //
-//
 
-#import "TGPostReaction.h"
+#import "TGModelObject.h"
 
-@interface TGPostComment : TGPostReaction
+@class TGUser, TGPost;
 
 /*!
- @abstract Content / text of the comment.
+ @abstract The absract base class for reactions that the user can take on posts.
  */
-@property (nonatomic, strong) NSString *content;
+@interface TGReaction : TGModelObject
+
+/*!
+ @abstract User who performed the reaction on the post.
+ @discussion The user will be a TGUser object that contains the user who performed reaction on the post.
+ */
+@property (nonatomic, readonly) TGUser *user;
+
+/*!
+ @abstract The post the on which the is reaction performed on.
+ */
+@property (nonatomic, readonly) TGPost *post;
+
 
 @end

@@ -7,137 +7,137 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E9487155770135F93AAC024EE6A129 /* TGUser.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE028994BF411F08F28EEE38887FD8F /* TGUser.m */; };
+		00B234093238801AD23AA5C9A429F5C6 /* UIDevice+TGUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F83476B385B7AE4ECDA286AAA126BC /* UIDevice+TGUtilities.m */; };
+		0144D6CFE1A56B5EBE88D867C491173E /* TGAttachment.h in Headers */ = {isa = PBXBuildFile; fileRef = B94BED46FCE568467E6A12FF59EEB77D /* TGAttachment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0144E046E9B8EF514C33B8FC708FEFE6 /* TGEventObject.h in Headers */ = {isa = PBXBuildFile; fileRef = B508A9F2B1EC46E157DBF9824107ABD6 /* TGEventObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		050CBD1A688FCA47DC31632C82F85ADB /* FollowButtonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9BE863BB562A6235D8815D14EABED3 /* FollowButtonParser.swift */; };
-		06344172F74866C34BA7E07D3ED02A69 /* TGApiClient+TGObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 614F6385E28DEBD598C3B7032A34CA7A /* TGApiClient+TGObject.m */; };
 		06A24486D8B48B8968424956404CB057 /* elements.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 558AA33038C28435BAD05CDF6D5F1D5B /* elements.bundle */; };
-		0838A13D1927EB4098B4527AA652BB87 /* TGLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 42EAEBD7870B3E85DF6CBBEBB4295297 /* TGLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0C579D4F0459E93E460F7057E3318BC2 /* TGPostComment.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DECE830309A1B7CB73EA44CFC27968B /* TGPostComment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07C90DA8831B801530D6FA7241EB3E65 /* TGUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BABFCAA242D14093785D93A204BA96 /* TGUser.m */; };
+		07E526C8F29D9857B1BB81E6BB97C92E /* Tapglue.h in Headers */ = {isa = PBXBuildFile; fileRef = DAC032850BAD2C1FD8EC7CAC92836145 /* Tapglue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0AAFE7F68C31085C9B4C9D93BDF95F10 /* TGConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 23FCFACCE830D252B541538B5A16302F /* TGConnection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C0FFAD4EDFF3580010708736A6A6E46 /* TGEventManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D469AED9F84795FD95F52BD6BBBE299D /* TGEventManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0C9494CFCFF8D23CED54E78D3A77C769 /* NotificationStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3607AC2C2D56FEC86C07156EADB123 /* NotificationStoryboard.storyboard */; };
-		0E187725AAC62FD60AD6DF474EDFB8FE /* TGPostLike.m in Sources */ = {isa = PBXBuildFile; fileRef = 73F4FBE7C11CCAE67ACF9968F192FB70 /* TGPostLike.m */; };
-		10AE524D75EFF9BEBAE6B69CE1F44AEB /* NSError+TGError.h in Headers */ = {isa = PBXBuildFile; fileRef = E4E61DFBF42D1C24EDE530599EAF353A /* NSError+TGError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0ECFF56BF39255B0CDDA90A795890F58 /* TGUser+Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = 97452573AAE10ACEE4B6BDB4B1D4E3E8 /* TGUser+Networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		11DBE19762465E5BC79264DAE5D2F1E5 /* elements-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C697E26820FB401C3F111AA292AE8DE1 /* elements-dummy.m */; };
+		142BACC99C75B9BA2638F87C0B681A7F /* TGLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = C409E5451DD204A0FAEA0EC733C410D9 /* TGLogger.m */; };
+		154CB4EFB1F4E9E3ED7F7702C3B8FA36 /* TGReaction.h in Headers */ = {isa = PBXBuildFile; fileRef = FC09702D39C6DB4E60C03CBF692B095E /* TGReaction.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1743D577B01EE60D496B0FF1F6533C38 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47F3586B3066AC30E934B9DAABD32975 /* Foundation.framework */; };
+		17DD1BE602227D52627D616DCEE5641F /* TGUser.h in Headers */ = {isa = PBXBuildFile; fileRef = C71FB307C3504ED9B7D8CE07B6688FFE /* TGUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1832D3B9218B3B06DABF5F033AED9CB4 /* FollowedMeEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AE27747C56A19CA74960CE830D314F /* FollowedMeEventCell.swift */; };
-		2058558B774B47480F8B3B4CE27CD5FF /* NSString+TGUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 78FB7775B4EC73EC8E860034DC35EE62 /* NSString+TGUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		20F284D389A0395735AFC43CBD88914E /* TGLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = B5363F8B8F83CBE868FB21D5B58CD78D /* TGLogger.m */; };
-		21434961236D8DD39B08CAC03D710199 /* TGObjectCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A28D16F0AD01422DE9CAB768897A9E0 /* TGObjectCache.m */; };
-		21FFEE5C65BC174C09E683EDBE0F3507 /* Tapglue.h in Headers */ = {isa = PBXBuildFile; fileRef = 96FCB0E19A7044CDEA7F1EC66F370131 /* Tapglue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		293F6AC17E008CC65F88FED9754F3FEE /* TGEventManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B99A7AB07038E4561F5B3B342999B0B5 /* TGEventManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20C4B1C7C7D73E4472BF43D25F23EEC6 /* TGImage+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = D149BFC2C6A8820B59C0FBA796F550B7 /* TGImage+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21EF5AF5D02C51F235362E5135FDEF7A /* TGConnection+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = E0D9284BDAC31FBE0C462063A10F0C50 /* TGConnection+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		23E7CBDB34FC2BF1DC6B8CA4A6916608 /* TGLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = FB117916AB88EF55F881221634091085 /* TGLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24025DD84B9B695E75DC2509680A4ABA /* TGConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = A1D40CF105CCB3B7EADF9B44DB585358 /* TGConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		284303A3D20FB7351B172FD2C70591F3 /* TGApiRoutesBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = D3531762C47B94D83CCFE754C61CCCC9 /* TGApiRoutesBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2A6FDF70007F692F7ABEFEFDEE589E0F /* TGAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A395C041585EB8273FF6CA0F687640 /* TGAttachment.m */; };
 		2B13617A781210927573BB75BA1ABAC3 /* Pods-elements_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 43E6670AA101F53F4E1916648020AC0D /* Pods-elements_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C4079F7D9F9F7C6129EA0E00BBD3BA2 /* TGApiRoutesBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D0558BE07A755233F7A7CC85803950 /* TGApiRoutesBuilder.m */; };
+		2C7894DE2013D49374ED09B0C54F9928 /* Tapglue-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A35C3FF1CFAE6F3D61F3107B1BB314 /* Tapglue-dummy.m */; };
 		2D70C88768E5F2868F10ED628EFEA417 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DB8D646ACCB043D6B54947CACCC12B /* EditProfileViewController.swift */; };
-		2E65A1473D582C5ED5BD51EC9C9F7650 /* TGPostComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B104B4995A0CAAB1FA49A4F794AE8C0 /* TGPostComment.m */; };
-		3116638A49FA832DEF3424DB8A424BF5 /* TGQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EB2984EB1EE0276B5C19F6EE6DBFBB /* TGQuery.m */; };
-		3168A31195F14D216E73A7A39BD8B3A9 /* Tapglue+Posts.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5DB7267BB2D9FCA2114922DA79C807 /* Tapglue+Posts.m */; };
+		317F306B19B839276E285D140E0A40C6 /* TGUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DDE735159F1E897E8B59713169409BF /* TGUserManager.m */; };
 		322A9FC4B9A6DA6F9E4E0946C6693360 /* UIImageView+UrlString.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC35EA4491D09A54E95512DFF5C98A /* UIImageView+UrlString.swift */; };
-		32F5ADF5EAE2B43656944E9A5F57F236 /* TGConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 14A7DDCDBBEE7FFBAFF5385FE8B591CD /* TGConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		32E6F869C8247CAEEF5E9002F2894495 /* TGQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = A881DF435047A18AB13240E904F1E135 /* TGQuery.m */; };
 		338622F8590EAEF7E8C3C710437AA3CC /* FollowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC7820D28C56873B79C30F633DDBC6 /* FollowButton.swift */; };
-		3675D563CA00640D850BA1E3F92E0AF0 /* TGEventObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 52A77A6698C0E44B7456B4F39FC9F7FC /* TGEventObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		372373084E0640D23F4391DB501BE6DA /* TGBaseManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E926D400B4F77E6E5C1854E1FCA4264 /* TGBaseManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B3F75A5DF19D051FFBA915A408020D7 /* TGComment.m in Sources */ = {isa = PBXBuildFile; fileRef = F762CC90018B18AE445306ADF673AA50 /* TGComment.m */; };
 		3BF4B0845E0F51CF70313226866FABC1 /* AlertFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94487AB4A064F9E61B52E0A59A57833 /* AlertFactory.swift */; };
+		3BFBFA1BF4F06E57475DFB2B04E0AAFE /* TGPostsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B2305F8B823F10D2B8B0012937EB765 /* TGPostsManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3CF7FF6219329275972F27A183786E09 /* ProfileBiographyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD12346C677A4B8F4460F338C3ECB87 /* ProfileBiographyView.swift */; };
 		3F89E40C3D5ADC77073DF2A442EAF8E1 /* FollowEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599DB75CE6DBA994A3F7B9480FB841C9 /* FollowEventCell.swift */; };
-		412C2C9493760806497DD3BF1BB4F856 /* NSDateFormatter+TGISOFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EF8943CC77156BEC991DBE0A8E79A4 /* NSDateFormatter+TGISOFormatter.m */; };
-		43CA755B3C750D4376F16A45A1C46CF1 /* Tapglue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5E4AF0C80A7EBDE096AF4BAC13D7D /* Tapglue.m */; };
+		4297094356A5480795F2C24E2A346215 /* TGUserManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 92523919B9CD55DFF56394CC94E20C7B /* TGUserManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		454C2C5152D6C58BB07F52D9107C4EDC /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D37A5399CB51622D858DD5DAAAEDA9 /* Config.swift */; };
+		4588EECD759D09CA7FDD02BD7B57F60C /* TGModelObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E69592133E3E7D53A4F5483B4ADBB87 /* TGModelObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		459E899AA5742AC6A0DE45C0BE7DA0ED /* TGModelObject+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = FC6EC9DBC6B90CCCF16992FF505C5222 /* TGModelObject+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		466F311AA9D1868EA4A38B2C0DE252D7 /* TGBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 977937D8B780FDCBC1499C8D1FF3669D /* TGBaseManager.m */; };
 		476489F44E434C78B9D9EE89289FBE77 /* FollowEventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC2F82018D9538D2D48E36128C36483C /* FollowEventCell.xib */; };
 		47703D64BFD63B056802B923F25F30B3 /* SearchAddressBookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAC346369E690B6449FFCD1EB923BB5 /* SearchAddressBookCell.swift */; };
-		4789FD7E5633FC72BD8852ABA91A20F4 /* NSThread+TGEnsureMainThread.m in Sources */ = {isa = PBXBuildFile; fileRef = A54DE5BD7D802D874F1F7C47BAF3FE95 /* NSThread+TGEnsureMainThread.m */; };
-		47CCE72009354D595D0A4E53964D0F2B /* TGModelObject+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = C7973E2691FF2A0036E62EC10CD401C4 /* TGModelObject+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4D7F94FAF3ED8198B8044D8A02F94DD4 /* TGConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = D5EEE3A6A53C619FAACCD250B308D22D /* TGConnection.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4F4623BB45285FD0FE9640668D4405FE /* TGPost.h in Headers */ = {isa = PBXBuildFile; fileRef = E3FA2E5B6B707E5586C7327C9E29AB24 /* TGPost.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49DACB7E5B6055FE8E4B8A759C448007 /* TGEvent+Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = EEA6DB05B6D0520D84B2C3521963E492 /* TGEvent+Networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A31F421504E2091225CA02C94F8F705 /* NSDateFormatter+TGISOFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 98532C9AF66A3FE4856BE9D4953C7318 /* NSDateFormatter+TGISOFormatter.m */; };
+		4A68E2C28D14FA5A28400B71326288AB /* NSString+TGUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 6426D053CE8410E295A1E659A7D344A0 /* NSString+TGUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50AF82132BB87ADC58760BA22C39396D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA9BC05E268540BA01C1D062B0CD03B9 /* Assets.xcassets */; };
-		5217657BEDC3A7612D130308FF0BE0BD /* NSError+TGError.m in Sources */ = {isa = PBXBuildFile; fileRef = 7209D249A26591A201A40B6E12FF2126 /* NSError+TGError.m */; };
 		5556323587E62B061533B157FFEF6765 /* TapglueUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C1E6E16278ACFE9CE8942E3B68FE54 /* TapglueUI.swift */; };
+		57D701847E41045AD80B5FDDCBD0E305 /* TGLike.h in Headers */ = {isa = PBXBuildFile; fileRef = D5650F78A46B291871D23962994E131E /* TGLike.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		581E37A36B7B0F44DE4E577C8E1684AD /* FollowedMeEventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A9C79CB536BD685BDD424C87D32E054 /* FollowedMeEventCell.xib */; };
-		58F08ADBDCD65A45C764CFFDD1A740C9 /* Tapglue-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D0B580F7F4114C6E1B4AE7E8F941847B /* Tapglue-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5A3B8BB4101F26E78D1BCC32695319E0 /* TGEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 9ECF4BAED1E24CB4E1FBCCA1170B16AD /* TGEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5C8D33CA2DFBB63E387D4BA34CDFAC95 /* TGImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 81FC0A6A5A2298F29199557589514966 /* TGImage.m */; };
-		62424F6D9BD0F200E183D3FFCCF473AC /* TGApiClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A51FF45A61BB82EE2EEE43411E7B1DA /* TGApiClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6DB20E7BA892774DCD269157511EA66C /* TGEvent+Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CCB0F3876586799D2D1B4503CC420CF /* TGEvent+Networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5871068686767247B2BD80DA82C14241 /* Tapglue+Posts.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BE4AE7F0E1275685D13B303A167609 /* Tapglue+Posts.m */; };
+		59FC24AD042CE6192F50CAFE40AF9A07 /* NSThread+TGEnsureMainThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CF1D5E7B332BB82A77A8A8E5A33020 /* NSThread+TGEnsureMainThread.m */; };
+		5B0541EEA94979638DE0609908BB0266 /* TGAttachment+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 20A230965724331213ACCDA82936C359 /* TGAttachment+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BB8520DECE8DA053C796E17A88036A6 /* TGQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 58D38C733879A85F759FAAB3AF25ED34 /* TGQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F7EE39DA408D0D0285FF8B061711798 /* TGConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB33B22385C2C66B53A604EF6175D41 /* TGConfiguration.m */; };
+		65EE576991DE9568B4FBE5F19B55C243 /* TGEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BCDC7DDFE523A3420FEA7E2A8299589 /* TGEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		67D5DD20C025F4D2712EC1D90F77692E /* TGConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D573540D95B0672B143431397C62339 /* TGConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6AD531440FEB44FD5FEFE0166CC64339 /* TGEventManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 823B07140AB71D03D0ADCB4744C1194D /* TGEventManager.m */; };
+		6E46F5CA0C8F8C2A89C074929CF6458B /* NSDictionary+TGUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD1F83F292FD71C80F68B0D788ECC5C /* NSDictionary+TGUtilities.m */; };
 		6F07CC35EF3020EF0058F8953ACA6C6B /* ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94B874AF13654A9039355960C328856B /* ProfileStoryboard.storyboard */; };
-		7094C4FAE1E02F2256783BF6DEE2C692 /* TGEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FBF420CF2099CC431F7897EE98F35F /* TGEvent.m */; };
-		717DF87366D644A00F97743DAB5F23AA /* TGUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 31E3D54CC962ECA551ED863181B5E211 /* TGUserManager.m */; };
-		73A4AB2E96E3CF367E8100B090120449 /* TGConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1661E341E8CA227CAEAB9CA9705EC5 /* TGConfiguration.m */; };
+		742C887B92F68EC84945B096478453F2 /* TGBaseManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 49F3BF612E37894EB3C41D901B1B221D /* TGBaseManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7456912BAAD5F0B8AB228BF7605A3EF4 /* TGEvent+Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC97D31D05964102ABC58804E2EE2B1 /* TGEvent+Networking.m */; };
 		74E5FC65A96F60BA32FFF147D3C88D92 /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E92EEF7D39C74D98DD9E6D93B68B749 /* UIViewController+Navigation.swift */; };
 		761818EED62C246763647B7F449A3F47 /* ConnectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4CEA5F6935957D417CC2CA8BBD4F4EA /* ConnectionCell.xib */; };
-		765700C3B0B843E409AE95FD2B2E23BB /* TGConnection+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = A8C7EFA8CA6DA70269210133AD649155 /* TGConnection+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7708CE9146A1FFD8743988B43342ED9E /* UITableView+NibLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A244F93B5A9749E3EA18FD9C44CF36 /* UITableView+NibLoading.swift */; };
-		7C6195DB756F03A901C96BE9B30AE569 /* TGObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 8ADE12BCD1FA6F95FC6477AF2F6DCBD9 /* TGObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7D1B8CCBD840CE46EADE575269A8A74D /* TGImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D2F50FF7F505FE7B54283848D75011A /* TGImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7D495117EECDF6A3F832CDCDD8261126 /* TGEventManager+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = C1FC11BDA3EE6733B2AD75E9D64E3D8B /* TGEventManager+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8169D2F083ED811D258EB395B95542B1 /* TGEventObject.m in Sources */ = {isa = PBXBuildFile; fileRef = BD121D6B21DAFABD81EEA82C75BA0BB3 /* TGEventObject.m */; };
+		7D49AB77D382E6BF1BEFF5E9765AE6A0 /* TGConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = F651A0A3EE27917B09CE9EC992CB11FA /* TGConnection.m */; };
+		7F89A4E668FA56838126B93F66391505 /* TGApiClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AE34DD8AB42F05C170A6D9C9F1B2C57 /* TGApiClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		806B6C70265B4D2D8C78CF3EC84DD5B5 /* NSError+TGError.m in Sources */ = {isa = PBXBuildFile; fileRef = 4647EA15A2355EEDAE5EB29E89A5EB10 /* NSError+TGError.m */; };
+		83665536D04852CAE3D260D9E30181AB /* TGEventManager+Queries.h in Headers */ = {isa = PBXBuildFile; fileRef = 41F837362C424C0AC665FE0B507215AC /* TGEventManager+Queries.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		84838FD68188CF912913B082A63D85EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47F3586B3066AC30E934B9DAABD32975 /* Foundation.framework */; };
-		84ED5CAB09571DDE0C5B568515EB2705 /* TGEventManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DED5C5F27F3025D13A8ABF19569D91FF /* TGEventManager.m */; };
-		8792E53DBE24821A19CA2BD1EA47C4AF /* TGModelObject.h in Headers */ = {isa = PBXBuildFile; fileRef = A24762870530E84316BC3CF77A98152D /* TGModelObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		88052987A4F0CB43C9E24BCD55C13C11 /* TGApiClient+TGObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 5546CD8519D838CDAA909D46AD4098ED /* TGApiClient+TGObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8ADB8C2C4802EB04813F11C43A7039D0 /* TGQuery+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A531E0B423290F8A63743C8E7760F2A /* TGQuery+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8B839DFF89B95933B9EBBDB28BE61512 /* Tapglue+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 046F1D9BA96AA2CDF38233B68EA00D73 /* Tapglue+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8BBF3C8A36B34C123E36709B8199C030 /* TGConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 64433123618693F21D7FC3B6FE4489BC /* TGConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		860F4D4785A6143FF220EF4A279F36E2 /* TGQuery+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D2F909C2685041D4B80A6E3A1CD2A03 /* TGQuery+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		88E327C2FAB745FE9473239271E4F58F /* Tapglue+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = D7C9CA70BE0B65B17D50874D8421B36F /* Tapglue+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A9B3A8352638F74B8A9971FF8BB55B4 /* TGModelObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD43E3C73F3E586182FC9D12F618BC5 /* TGModelObject.m */; };
+		8B188721C6FC2FE5204DCEF0EB344CE5 /* TGObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DC65D23B88B929DF72B0A563827FBB /* TGObject.m */; };
 		8CD693AC832432D459AA258497528D74 /* NotificationFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0EEC68F43267F059343675F953FBCF /* NotificationFeedViewController.swift */; };
-		91C5BFB7D0901CF14F112724177979B0 /* TGUser+Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = CB75FD8D317BB565860B618E95798778 /* TGUser+Networking.m */; };
-		9305AD3E5569C866F3C09EDE25095AA0 /* TGObjectCache.h in Headers */ = {isa = PBXBuildFile; fileRef = B0B26F9CAD2B3E62434C8926370B6FAE /* TGObjectCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		935ADEE781D196297ADB9922401FEA64 /* TGPost.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BDF69305FB3C4D7E3FA0F1D7B395A /* TGPost.m */; };
-		94E69C0DC4AC6718DACD87EE95437267 /* TGPost+Reactions.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E11164E7FFAE5931810331E02CCFB0 /* TGPost+Reactions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		90BE243CFD6C28DE496381BF952E5364 /* Tapglue.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64BEF4C8E1ADE25D767011892FCCC8 /* Tapglue.m */; };
 		990FAB72AB6AFAFB645BF03B5F15DD3A /* UserSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB8D62A0B8B5DDD42319DE09ED88B8E /* UserSearchViewController.swift */; };
-		9A1E0960B6F972E12EFD07B90F556E7E /* TGApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B6D4FFE2E5A2A196D8D27A5ADD7346 /* TGApiClient.m */; };
-		9A37AC0394519BDAC1D1DE5C639BCD0F /* NSDictionary+TGUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6A908A01C2BD8B3DE2828057EB6CF3 /* NSDictionary+TGUtilities.m */; };
-		9A9981F28255A75A3C609B2934A52431 /* TGUser+Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B2EC6FFFE8A795D613C91B01FBDE91A /* TGUser+Networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9BBBB6A8D1FA08D8C82C755D36E851A1 /* TGPostLike.h in Headers */ = {isa = PBXBuildFile; fileRef = A361466329BB124E7937C687735B9244 /* TGPostLike.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B73B1E0B200DFB4683C1283F0B381C2 /* TGUser+Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D6FD20481F9FC14D841E539A9B41A1 /* TGUser+Networking.m */; };
 		9DFBBAF7AB76E32D4E5F2B9F92A6FF13 /* Pods-elements_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A821F41527BC147203D738FB2A694AC /* Pods-elements_Example-dummy.m */; };
 		9EA6BD84DD549CFF6CC3458B22AD1CFE /* SearchAddressBookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BFD78ED76BFE2E4306568E54A6F980C /* SearchAddressBookCell.xib */; };
-		A0A068EB5314EDAFF26F62B915F04EC8 /* TGPost+Reactions.m in Sources */ = {isa = PBXBuildFile; fileRef = 34DF4FD98FFE50E30BAB79D8E2E9806A /* TGPost+Reactions.m */; };
-		A0D6362CF455A5CB3582B1475E0D4F70 /* UIDevice+TGUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = CAD17BE8259CC74AD748B5A5C78221B8 /* UIDevice+TGUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A13173676F870E20435BC56630292FC9 /* TGConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6A588BC392905F9DEF13C4F724E6DE /* TGConnection.m */; };
-		A76121DB46D76B04DC27F7FFD0505F9F /* TGModelObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 86ECB798B2098E8C3527002D4F62B091 /* TGModelObject.m */; };
-		ABDF0C24925E9962F332F8048426E836 /* TGApiRoutesBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FB4EE86B79807FEEA0A294854437CF9 /* TGApiRoutesBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A2495B412AF57C1E80E0AABF04630EB1 /* TGObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 33538A626652F7C134CBFFE9F59F4FF7 /* TGObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A5F237B5D9057F178B8A39BEE015FF97 /* TGObject+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 2935766D65B6241237E62BDAD76F8A35 /* TGObject+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A721025A7B8B7D46C1E21C59C5AFBE98 /* TGPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 094E544D241B8DFA8B0B880C981B974E /* TGPost.m */; };
+		A8B1BAA0D5174DA4DB4E42775CD2E1F3 /* TGUser+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 87FB5BFD99553B7F01B67627E8B853BB /* TGUser+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B00F663F4D8EF5B214C2164FFC1B245C /* AddressBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573C10B8EF063A11D0ED388EEEB356BC /* AddressBookViewController.swift */; };
-		B0B1AAF4A170167ED034A11AB79AE991 /* NSDateFormatter+TGISOFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 147244B7D9A6F77E01D37C1196D0A9C2 /* NSDateFormatter+TGISOFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B0C1DB29966574909772D0D2BA082BE9 /* TGObject+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = D475EEDED7404ED57996A9068BD5CF5C /* TGObject+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B1BE0CD46E4B98C1BC8722E60E964F3F /* TGPostReaction.m in Sources */ = {isa = PBXBuildFile; fileRef = F752881057401C9AE342D71DF73D9088 /* TGPostReaction.m */; };
+		B05711EB04872B7AFCD14150147ECF69 /* Tapglue-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EB57F5B5336B9F882B3282D8AD66A31 /* Tapglue-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B2DC1C62C08400DD2322021CF6239076 /* ConnectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349DE0EAE25FA5F03C3A026D66187D4B /* ConnectionsViewController.swift */; };
+		B483A1F38BFB2903BE6334E715AE51A6 /* NSDateFormatter+TGISOFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = D38DDCE4CA6F8604CBD550BEADD362CF /* NSDateFormatter+TGISOFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B6B8617F46C1FE6216E6A2DA8D6D447D /* ConnectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F2DD1673622E9A1D6831D70EBDBE70 /* ConnectionCell.swift */; };
 		B78013F88851C98E884F4FB6D79ADCC6 /* Tapglue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A48CC6E2D48BB08880D42AAB45872DE7 /* Tapglue.framework */; };
-		BBC9C9CBB052B541E43B45791B6240EC /* Tapglue+Posts.h in Headers */ = {isa = PBXBuildFile; fileRef = BD6B788AF827B2C3A783231D08825824 /* Tapglue+Posts.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BCFA55BDBC092E612878ADE53A3EBF1B /* TGAttachment.h in Headers */ = {isa = PBXBuildFile; fileRef = 91BB995B54FF7D57ABE8BBC8E9D46592 /* TGAttachment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B824ECB940F8EE3167FE0A9A1E8A5884 /* TGApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2AC122F3D7EC522A7D28B173FC7889 /* TGApiClient.m */; };
+		B887CE79591430F6F07B9696F6D8D77D /* TGApiClient+TGObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BE7ADDADD6A43C61A1D6A7EB37328C3 /* TGApiClient+TGObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C1C1A4DAE6AB36DBFD0A9710C3662ACE /* EditProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17018C6407426481C7DC9B77D82C07A1 /* EditProfile.storyboard */; };
 		C1D659131C28860BED55E62820989FCA /* elements-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FCBFE8F0710B2A75C10A98D4D559FD40 /* elements-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C21DCA2D4294826D2637C3421AABD46E /* LikeEventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86588C24251FC8E17A8DCE65ED3736B7 /* LikeEventCell.xib */; };
-		C32369D1A27EC8BE098BEC2B5D856C97 /* TGApiRoutesBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = E08913DEC6850F9AC8D16C7259969CFD /* TGApiRoutesBuilder.m */; };
 		C38304476CC12EC7075191C5874325AA /* UIImageView+TGUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235749C92D764DBA23DF225931765267 /* UIImageView+TGUser.swift */; };
 		C413F79BCFFDCBDA8FA845C4B249A867 /* UIColor+HexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126105C8C6C04FDA1B503961B99FFD7B /* UIColor+HexString.swift */; };
 		C4604FD817747C7D576BB454E27D6C8E /* UIViewController+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF6D39BE5ADBA83C041E3FE4139152C /* UIViewController+Config.swift */; };
-		C577B38D92714C2C2464CF0329D01C90 /* NSURL+TGUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = D6A3BE782C9BD55C5B891E06A79ADC81 /* NSURL+TGUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C63508C59412CC113856376D46BF8B25 /* TGUser+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = C803193722AECC2D597C59B0DE6DE3D2 /* TGUser+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C69ED1E1BCE34BD608938435E60886EE /* NSThread+TGEnsureMainThread.h in Headers */ = {isa = PBXBuildFile; fileRef = 8916A8AA3A780E2AE4CCA5F22031E768 /* NSThread+TGEnsureMainThread.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4BFC9A6674108CD16D310E6CDBB0614 /* TGEventManager+Queries.m in Sources */ = {isa = PBXBuildFile; fileRef = 4262873EF291A47088A9149FDE2A928C /* TGEventManager+Queries.m */; };
+		C5B60B14C192E76477B72A29DA027B0E /* UIDevice+TGUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = CED85DF467E8EA27564C88FEDE4A6248 /* UIDevice+TGUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C6DBBDCBAF5FEC789FF7B2254465E84C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47F3586B3066AC30E934B9DAABD32975 /* Foundation.framework */; };
-		C79CCD293B18F3FF0B7CE031C6869D97 /* TGPostReaction.h in Headers */ = {isa = PBXBuildFile; fileRef = FE2936CAE28E5E18EDBAD83BBD09DEA0 /* TGPostReaction.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C8137566B1106C113073B8A86E703EC6 /* Tapglue-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 32874EC9416D6AA23E0BF6E01DFA8EFA /* Tapglue-dummy.m */; };
-		C8BEE07A923F6241CEFDD09AC34B972F /* TGEvent+Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0B4D84C0E698332747C3413B8158CD /* TGEvent+Networking.m */; };
-		CA0D71224D6BA0A46D30E259F76A136D /* TGPostReaction+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = A51048E442A873F1633442E8DEE4B328 /* TGPostReaction+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C776E93D38CA7B7F68C3FE6B5ECD5EDB /* NSThread+TGEnsureMainThread.h in Headers */ = {isa = PBXBuildFile; fileRef = 12DC32F3C6CB5BA4152AF1416A0E6BD5 /* NSThread+TGEnsureMainThread.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB4A5CB4F70023D2544D558F86B19178 /* ConnectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77EACF4ABEC6C9C926C737D6A1DF4B3 /* ConnectionType.swift */; };
+		CB939F19D6D6FC1C91A2CA1B2A2A5434 /* TGEventManager+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = E47D9081E0C697A601DA615D27D55114 /* TGEventManager+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBB34442ADD8CE09B60D94DBFF329967 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7A29827F45F2C840829ABE8C8399B9E /* NothingFoundCell.xib */; };
+		CCE0E404DFC7433CF07E095511DA46DF /* TGImage.h in Headers */ = {isa = PBXBuildFile; fileRef = ABC800EAE82D4823D4B1E411B7290A65 /* TGImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D211762BE3CF6EF659717153E90ADB77 /* Tapglue+Posts.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DB1A4884720EA35027E3DA8637F64BE /* Tapglue+Posts.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D46F44323D6BA22F7BFC33E8E1206165 /* LikeEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEBC01AC8411789772EE5B0D2BF0599 /* LikeEventCell.swift */; };
-		D8003BB011A5D5E3FB63885878E831D1 /* TGPostsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CE60D2FA26ABEF997EC38F32EF6EDF /* TGPostsManager.m */; };
-		E073A10ADCC3232E13DDFA1C7639432E /* NSURL+TGUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E317F27F5348FDE97780D8FB48EED1 /* NSURL+TGUtilities.m */; };
-		E075B3E0E4833FF5CF8978B36E695F30 /* TGUser.h in Headers */ = {isa = PBXBuildFile; fileRef = C30D09827085AB8636906F6C6B765A98 /* TGUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E0AC2B1C0D2EE2B0662AFCC0CD16F2B6 /* TGImage+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 09F27143D87890998322B6BB07637280 /* TGImage+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E1614EC5F933EEACA390E61AD277541D /* TGEventManager+Queries.h in Headers */ = {isa = PBXBuildFile; fileRef = 055FCEC0E54CE6B7FE4644752F894803 /* TGEventManager+Queries.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D51E49EDAF76C85F12D24ED9CCDE42EE /* NSURL+TGUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D8F988EA8BB3FC52040485FD94853A /* NSURL+TGUtilities.m */; };
+		D768E883846D74BCDDA0B9A2225E07F5 /* TGPost.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E3FB5E1042D71757635A421D50EBF81 /* TGPost.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D7B47A9F17CCAA8A8F984CCFA43CD7A0 /* TGPost+Reactions.m in Sources */ = {isa = PBXBuildFile; fileRef = F497AC7C4D5060A8DB09DAC447F9E4B3 /* TGPost+Reactions.m */; };
+		D7C02B785CEC52B849015BA9C19FA6A7 /* TGEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = E8EC931706A00804FEDA88A3D95A0F08 /* TGEvent.m */; };
+		D8249F2D1E71AE6C2D02D068FDCAA155 /* TGReaction.m in Sources */ = {isa = PBXBuildFile; fileRef = F301238B4B53CF0013B94233777406DF /* TGReaction.m */; };
+		D998DEE83F5475629A12DF8C666469CE /* NSDictionary+TGUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 46BE57709913113960B7DDC3C532EACF /* NSDictionary+TGUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DF6FE4BA5303AB9CA88A5D5E7C8C0EAE /* NSError+TGError.h in Headers */ = {isa = PBXBuildFile; fileRef = 27650A26575E8AC395417A70E82BF36C /* NSError+TGError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E0983D5293151FF254B0EFAE40B56B36 /* NSURL+TGUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = CEAD29D63F1634EC95033A468E5A2660 /* NSURL+TGUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E13841B31E7CE0E4D5A04B22D6A0AD82 /* TGImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A63016D654AFFAB902CF20AC977C0A6 /* TGImage.m */; };
+		E16606AB4991BA1B1EE5ED83E0ED151F /* TGObjectCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE4EA3B45ED37EFECED721057EA2401 /* TGObjectCache.m */; };
+		E1C88DC0AB89F6528526F49AFC532AE6 /* TGEventObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 157A1BF676D151081E7F2300DF10ACB4 /* TGEventObject.m */; };
+		E52984E6FAF66CB2FA0DC006FB156445 /* TGPost+Reactions.h in Headers */ = {isa = PBXBuildFile; fileRef = 64C340ED9E47A52AC776DC97E4DDA7FE /* TGPost+Reactions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E687BB6739D8B696F66473D4FF1AF3A1 /* ProfileBiographyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D4E060866570FAD1A2D550A1EC1F974 /* ProfileBiographyView.xib */; };
+		E6C773C224F2413A1DEAE861C754E77E /* TGReaction+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 479043F0A9E967607C25656FA19EA1B7 /* TGReaction+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E9A1320B9964927E8A046CFFDBD7311A /* ConfigParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE7D44DC6F1FEB5EBE1A7AF66FB652E /* ConfigParser.swift */; };
+		EB755F7EF1A93789CF7BAC079E9F9867 /* TGLike.m in Sources */ = {isa = PBXBuildFile; fileRef = AB467FDE28F41490CCB5B43898567893 /* TGLike.m */; };
 		EBA307BAB02932F1F18CD96ACCA5894E /* AddressBook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E4B9E290B5E42BCD0FF93DDE6E1EEE7 /* AddressBook.storyboard */; };
-		ED1D54E77A93DCD5318A8853DEDC433D /* TGUserManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 20C915FBA5E04CCBA099194AC53E8652 /* TGUserManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ED2CE6F8683C139247861E2999776C74 /* TGPostsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D9F91A273ACBF2487AAF8F271495D7FC /* TGPostsManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F031427AE26209961CFB10A917373386 /* NSDictionary+TGUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DC39C5BDF6395A8AD4E41916DD71AF0 /* NSDictionary+TGUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F20E017D1AA5BD68C3A1994835661051 /* TGEventManager+Queries.m in Sources */ = {isa = PBXBuildFile; fileRef = 4930B07372199744DDD0056DEE4CB5E4 /* TGEventManager+Queries.m */; };
-		F57300E82551F8538482CDD50590365D /* TGQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = CDFC7C2427704A4A971873A7CB6BFDF7 /* TGQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F8246196F28C6B70D9E3C2D2C18A6838 /* NSString+TGUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 65391813D74CC4383CAB68B4E7737777 /* NSString+TGUtilities.m */; };
-		FAC6A34A9DE7F5FC12A83138D7E40B62 /* UIDevice+TGUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 4551EA982C419F68EA1B9E3C5BEADF61 /* UIDevice+TGUtilities.m */; };
+		EC972E8D271E73D6714F610D88135E43 /* TGApiClient+TGObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFB5AEB773F49EE64099891F905B446 /* TGApiClient+TGObject.m */; };
+		EEA2053714A00C808501D84115C9F45B /* NSString+TGUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = BCDC5DA65CDE090ECD8E40895C987A13 /* NSString+TGUtilities.m */; };
+		F45E08588F5BD71251253BDC73B7245F /* TGObjectCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 78ADA62D3ABC2741127BB73A3782FA21 /* TGObjectCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FB61BA0E3A81469DCD0227640F7815C5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8AE3E7F348A6F5DE535E5A2A806E35 /* ProfileViewController.swift */; };
-		FB8080BCE716878801C020598B717696 /* TGAttachment+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 65FB44F8A298A6CBC2E6A91F8B631341 /* TGAttachment+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FD3CA0DFCBEC38FDEE0448F43A7FAE00 /* TGAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = C3BF4D2D895AE3FDE06A584CF858FAF6 /* TGAttachment.m */; };
-		FF1BE8A5E2DBB12196F9BF1587E686CC /* TGBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD12DDE1BD3EE28488A095E367538457 /* TGBaseManager.m */; };
-		FFC4241F1E59AC0E8B3B141B314C5AEC /* TGObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6852617E47CEEB832D4CD8018840E97C /* TGObject.m */; };
+		FCEA9EB28E13EAE09A186F2406E9315B /* TGPostsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EA8706480AD07EA3E6DD6EC41FFFFC /* TGPostsManager.m */; };
+		FD2B6532B49522F967DAD88078ED8C0E /* TGComment.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C5CE4E7176AEC7A35B8F45736912B0B /* TGComment.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,154 +173,154 @@
 
 /* Begin PBXFileReference section */
 		00D37A5399CB51622D858DD5DAAAEDA9 /* Config.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		046F1D9BA96AA2CDF38233B68EA00D73 /* Tapglue+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Tapglue+Private.h"; path = "Classes/Tapglue+Private.h"; sourceTree = "<group>"; };
-		055FCEC0E54CE6B7FE4644752F894803 /* TGEventManager+Queries.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TGEventManager+Queries.h"; path = "Classes/TGEventManager+Queries.h"; sourceTree = "<group>"; };
-		09F27143D87890998322B6BB07637280 /* TGImage+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TGImage+Private.h"; path = "Classes/Model/TGImage+Private.h"; sourceTree = "<group>"; };
-		0AE5E4AF0C80A7EBDE096AF4BAC13D7D /* Tapglue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Tapglue.m; path = Classes/Tapglue.m; sourceTree = "<group>"; };
-		0C6A588BC392905F9DEF13C4F724E6DE /* TGConnection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGConnection.m; path = Classes/Model/TGConnection.m; sourceTree = "<group>"; };
+		094E544D241B8DFA8B0B880C981B974E /* TGPost.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGPost.m; path = Classes/Model/TGPost.m; sourceTree = "<group>"; };
+		0C5CE4E7176AEC7A35B8F45736912B0B /* TGComment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGComment.h; path = Classes/Model/TGComment.h; sourceTree = "<group>"; };
+		0D573540D95B0672B143431397C62339 /* TGConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGConstants.h; path = Classes/TGConstants.h; sourceTree = "<group>"; };
+		0DB33B22385C2C66B53A604EF6175D41 /* TGConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGConfiguration.m; path = Classes/TGConfiguration.m; sourceTree = "<group>"; };
+		0DDE735159F1E897E8B59713169409BF /* TGUserManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGUserManager.m; path = Classes/TGUserManager.m; sourceTree = "<group>"; };
 		126105C8C6C04FDA1B503961B99FFD7B /* UIColor+HexString.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIColor+HexString.swift"; sourceTree = "<group>"; };
+		12A35C3FF1CFAE6F3D61F3107B1BB314 /* Tapglue-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Tapglue-dummy.m"; sourceTree = "<group>"; };
+		12DC32F3C6CB5BA4152AF1416A0E6BD5 /* NSThread+TGEnsureMainThread.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSThread+TGEnsureMainThread.h"; path = "Classes/NSThread+TGEnsureMainThread.h"; sourceTree = "<group>"; };
 		13C1E6E16278ACFE9CE8942E3B68FE54 /* TapglueUI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TapglueUI.swift; sourceTree = "<group>"; };
-		147244B7D9A6F77E01D37C1196D0A9C2 /* NSDateFormatter+TGISOFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDateFormatter+TGISOFormatter.h"; path = "Classes/NSDateFormatter+TGISOFormatter.h"; sourceTree = "<group>"; };
-		14A7DDCDBBEE7FFBAFF5385FE8B591CD /* TGConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGConstants.h; path = Classes/TGConstants.h; sourceTree = "<group>"; };
+		14CF1D5E7B332BB82A77A8A8E5A33020 /* NSThread+TGEnsureMainThread.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSThread+TGEnsureMainThread.m"; path = "Classes/NSThread+TGEnsureMainThread.m"; sourceTree = "<group>"; };
+		157A1BF676D151081E7F2300DF10ACB4 /* TGEventObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGEventObject.m; path = Classes/Model/TGEventObject.m; sourceTree = "<group>"; };
 		17983D833CD1B6C6F87977829B5E46AD /* Pods_elements_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_elements_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		18EB2984EB1EE0276B5C19F6EE6DBFBB /* TGQuery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGQuery.m; path = Classes/TGQuery.m; sourceTree = "<group>"; };
 		1D8AE3E7F348A6F5DE535E5A2A806E35 /* ProfileViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		1DC97D31D05964102ABC58804E2EE2B1 /* TGEvent+Networking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "TGEvent+Networking.m"; path = "Classes/TGEvent+Networking.m"; sourceTree = "<group>"; };
 		1E3A9A90D036DA15328D576FBB8FEDD7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1FB4EE86B79807FEEA0A294854437CF9 /* TGApiRoutesBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGApiRoutesBuilder.h; path = Classes/RestClient/TGApiRoutesBuilder.h; sourceTree = "<group>"; };
-		20C915FBA5E04CCBA099194AC53E8652 /* TGUserManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGUserManager.h; path = Classes/TGUserManager.h; sourceTree = "<group>"; };
+		20A230965724331213ACCDA82936C359 /* TGAttachment+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TGAttachment+Private.h"; path = "Classes/Model/TGAttachment+Private.h"; sourceTree = "<group>"; };
+		22F83476B385B7AE4ECDA286AAA126BC /* UIDevice+TGUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+TGUtilities.m"; path = "Classes/UIDevice+TGUtilities.m"; sourceTree = "<group>"; };
 		232DDCEA166360AB16C19E2D952C7FF5 /* ProfileStoryboard.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = ProfileStoryboard.storyboard; path = Base.lproj/ProfileStoryboard.storyboard; sourceTree = "<group>"; };
 		235749C92D764DBA23DF225931765267 /* UIImageView+TGUser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIImageView+TGUser.swift"; sourceTree = "<group>"; };
+		23FCFACCE830D252B541538B5A16302F /* TGConnection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGConnection.h; path = Classes/Model/TGConnection.h; sourceTree = "<group>"; };
+		27650A26575E8AC395417A70E82BF36C /* NSError+TGError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSError+TGError.h"; path = "Classes/NSError+TGError.h"; sourceTree = "<group>"; };
+		28D8F988EA8BB3FC52040485FD94853A /* NSURL+TGUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURL+TGUtilities.m"; path = "Classes/RestClient/NSURL+TGUtilities.m"; sourceTree = "<group>"; };
+		2935766D65B6241237E62BDAD76F8A35 /* TGObject+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TGObject+Private.h"; path = "Classes/Model/TGObject+Private.h"; sourceTree = "<group>"; };
 		2A9C79CB536BD685BDD424C87D32E054 /* FollowedMeEventCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = FollowedMeEventCell.xib; sourceTree = "<group>"; };
 		2BFD78ED76BFE2E4306568E54A6F980C /* SearchAddressBookCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = SearchAddressBookCell.xib; sourceTree = "<group>"; };
+		2DB1A4884720EA35027E3DA8637F64BE /* Tapglue+Posts.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Tapglue+Posts.h"; path = "Classes/Tapglue+Posts.h"; sourceTree = "<group>"; };
 		30EED53CCCFED58A6A558091E024F459 /* AddressBook.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = AddressBook.storyboard; path = Base.lproj/AddressBook.storyboard; sourceTree = "<group>"; };
-		31E3D54CC962ECA551ED863181B5E211 /* TGUserManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGUserManager.m; path = Classes/TGUserManager.m; sourceTree = "<group>"; };
-		32874EC9416D6AA23E0BF6E01DFA8EFA /* Tapglue-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Tapglue-dummy.m"; sourceTree = "<group>"; };
-		32FBF420CF2099CC431F7897EE98F35F /* TGEvent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGEvent.m; path = Classes/Model/TGEvent.m; sourceTree = "<group>"; };
+		33538A626652F7C134CBFFE9F59F4FF7 /* TGObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGObject.h; path = Classes/Model/TGObject.h; sourceTree = "<group>"; };
 		349DE0EAE25FA5F03C3A026D66187D4B /* ConnectionsViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConnectionsViewController.swift; sourceTree = "<group>"; };
-		34DF4FD98FFE50E30BAB79D8E2E9806A /* TGPost+Reactions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "TGPost+Reactions.m"; path = "Classes/Model/TGPost+Reactions.m"; sourceTree = "<group>"; };
 		35AE27747C56A19CA74960CE830D314F /* FollowedMeEventCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FollowedMeEventCell.swift; sourceTree = "<group>"; };
 		38DB8D646ACCB043D6B54947CACCC12B /* EditProfileViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
-		39EF8943CC77156BEC991DBE0A8E79A4 /* NSDateFormatter+TGISOFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDateFormatter+TGISOFormatter.m"; path = "Classes/NSDateFormatter+TGISOFormatter.m"; sourceTree = "<group>"; };
+		39CA4DAB8367244E8B42D2BE2896D0B7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A1B3D2B84EE1CC71E93BC41D45345B6 /* elements.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = elements.xcconfig; sourceTree = "<group>"; };
+		3BCDC7DDFE523A3420FEA7E2A8299589 /* TGEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGEvent.h; path = Classes/Model/TGEvent.h; sourceTree = "<group>"; };
 		3CCC7820D28C56873B79C30F633DDBC6 /* FollowButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FollowButton.swift; sourceTree = "<group>"; };
-		3E926D400B4F77E6E5C1854E1FCA4264 /* TGBaseManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGBaseManager.h; path = Classes/TGBaseManager.h; sourceTree = "<group>"; };
-		3F7C41C5A7C92B62C81297BD0AD288EF /* Tapglue-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Tapglue-prefix.pch"; sourceTree = "<group>"; };
-		42EAEBD7870B3E85DF6CBBEBB4295297 /* TGLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGLogger.h; path = Classes/TGLogger.h; sourceTree = "<group>"; };
+		41F837362C424C0AC665FE0B507215AC /* TGEventManager+Queries.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TGEventManager+Queries.h"; path = "Classes/TGEventManager+Queries.h"; sourceTree = "<group>"; };
+		4262873EF291A47088A9149FDE2A928C /* TGEventManager+Queries.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "TGEventManager+Queries.m"; path = "Classes/TGEventManager+Queries.m"; sourceTree = "<group>"; };
+		43DC65D23B88B929DF72B0A563827FBB /* TGObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGObject.m; path = Classes/Model/TGObject.m; sourceTree = "<group>"; };
 		43E6670AA101F53F4E1916648020AC0D /* Pods-elements_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-elements_Example-umbrella.h"; sourceTree = "<group>"; };
-		4551EA982C419F68EA1B9E3C5BEADF61 /* UIDevice+TGUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+TGUtilities.m"; path = "Classes/UIDevice+TGUtilities.m"; sourceTree = "<group>"; };
+		4647EA15A2355EEDAE5EB29E89A5EB10 /* NSError+TGError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSError+TGError.m"; path = "Classes/NSError+TGError.m"; sourceTree = "<group>"; };
+		46BE57709913113960B7DDC3C532EACF /* NSDictionary+TGUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+TGUtilities.h"; path = "Classes/Model/NSDictionary+TGUtilities.h"; sourceTree = "<group>"; };
+		479043F0A9E967607C25656FA19EA1B7 /* TGReaction+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TGReaction+Private.h"; path = "Classes/Model/TGReaction+Private.h"; sourceTree = "<group>"; };
 		47F3586B3066AC30E934B9DAABD32975 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		4930B07372199744DDD0056DEE4CB5E4 /* TGEventManager+Queries.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "TGEventManager+Queries.m"; path = "Classes/TGEventManager+Queries.m"; sourceTree = "<group>"; };
-		4A51FF45A61BB82EE2EEE43411E7B1DA /* TGApiClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGApiClient.h; path = Classes/RestClient/TGApiClient.h; sourceTree = "<group>"; };
+		481AF0808B61D642CFEEEBB5C3D3518A /* Tapglue.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Tapglue.xcconfig; sourceTree = "<group>"; };
+		49F3BF612E37894EB3C41D901B1B221D /* TGBaseManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGBaseManager.h; path = Classes/TGBaseManager.h; sourceTree = "<group>"; };
 		4AD12346C677A4B8F4460F338C3ECB87 /* ProfileBiographyView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileBiographyView.swift; sourceTree = "<group>"; };
-		4BB692B0CECEB139B1B56FD672737BFE /* Tapglue.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Tapglue.xcconfig; sourceTree = "<group>"; };
-		4C635C906EB6266254E6F2C55558C2FE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4DC39C5BDF6395A8AD4E41916DD71AF0 /* NSDictionary+TGUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+TGUtilities.h"; path = "Classes/Model/NSDictionary+TGUtilities.h"; sourceTree = "<group>"; };
-		4E5DB7267BB2D9FCA2114922DA79C807 /* Tapglue+Posts.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Tapglue+Posts.m"; path = "Classes/Tapglue+Posts.m"; sourceTree = "<group>"; };
-		52A77A6698C0E44B7456B4F39FC9F7FC /* TGEventObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGEventObject.h; path = Classes/Model/TGEventObject.h; sourceTree = "<group>"; };
-		5546CD8519D838CDAA909D46AD4098ED /* TGApiClient+TGObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TGApiClient+TGObject.h"; path = "Classes/RestClient/TGApiClient+TGObject.h"; sourceTree = "<group>"; };
+		4AE34DD8AB42F05C170A6D9C9F1B2C57 /* TGApiClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGApiClient.h; path = Classes/RestClient/TGApiClient.h; sourceTree = "<group>"; };
+		4E3FB5E1042D71757635A421D50EBF81 /* TGPost.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGPost.h; path = Classes/Model/TGPost.h; sourceTree = "<group>"; };
+		4E69592133E3E7D53A4F5483B4ADBB87 /* TGModelObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGModelObject.h; path = Classes/Model/TGModelObject.h; sourceTree = "<group>"; };
+		4EB57F5B5336B9F882B3282D8AD66A31 /* Tapglue-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Tapglue-umbrella.h"; sourceTree = "<group>"; };
+		51EA8706480AD07EA3E6DD6EC41FFFFC /* TGPostsManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGPostsManager.m; path = Classes/TGPostsManager.m; sourceTree = "<group>"; };
+		54D0558BE07A755233F7A7CC85803950 /* TGApiRoutesBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGApiRoutesBuilder.m; path = Classes/RestClient/TGApiRoutesBuilder.m; sourceTree = "<group>"; };
 		558AA33038C28435BAD05CDF6D5F1D5B /* elements.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = elements.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		55F2DD1673622E9A1D6831D70EBDBE70 /* ConnectionCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConnectionCell.swift; sourceTree = "<group>"; };
 		573C10B8EF063A11D0ED388EEEB356BC /* AddressBookViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddressBookViewController.swift; sourceTree = "<group>"; };
+		58D38C733879A85F759FAAB3AF25ED34 /* TGQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGQuery.h; path = Classes/TGQuery.h; sourceTree = "<group>"; };
 		599DB75CE6DBA994A3F7B9480FB841C9 /* FollowEventCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FollowEventCell.swift; sourceTree = "<group>"; };
-		5CCB0F3876586799D2D1B4503CC420CF /* TGEvent+Networking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TGEvent+Networking.h"; path = "Classes/TGEvent+Networking.h"; sourceTree = "<group>"; };
+		5CE4EA3B45ED37EFECED721057EA2401 /* TGObjectCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGObjectCache.m; path = Classes/Model/TGObjectCache.m; sourceTree = "<group>"; };
 		5E92EEF7D39C74D98DD9E6D93B68B749 /* UIViewController+Navigation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIViewController+Navigation.swift"; sourceTree = "<group>"; };
-		614F6385E28DEBD598C3B7032A34CA7A /* TGApiClient+TGObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "TGApiClient+TGObject.m"; path = "Classes/RestClient/TGApiClient+TGObject.m"; sourceTree = "<group>"; };
 		6241E4331A7087224C0D92784EA94F97 /* Pods-elements_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-elements_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		64433123618693F21D7FC3B6FE4489BC /* TGConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGConfiguration.h; path = Classes/TGConfiguration.h; sourceTree = "<group>"; };
-		65391813D74CC4383CAB68B4E7737777 /* NSString+TGUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+TGUtilities.m"; path = "Classes/Model/NSString+TGUtilities.m"; sourceTree = "<group>"; };
-		65FB44F8A298A6CBC2E6A91F8B631341 /* TGAttachment+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TGAttachment+Private.h"; path = "Classes/Model/TGAttachment+Private.h"; sourceTree = "<group>"; };
-		6852617E47CEEB832D4CD8018840E97C /* TGObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGObject.m; path = Classes/Model/TGObject.m; sourceTree = "<group>"; };
+		6426D053CE8410E295A1E659A7D344A0 /* NSString+TGUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+TGUtilities.h"; path = "Classes/Model/NSString+TGUtilities.h"; sourceTree = "<group>"; };
+		64C340ED9E47A52AC776DC97E4DDA7FE /* TGPost+Reactions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TGPost+Reactions.h"; path = "Classes/Model/TGPost+Reactions.h"; sourceTree = "<group>"; };
 		6A0EEC68F43267F059343675F953FBCF /* NotificationFeedViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NotificationFeedViewController.swift; sourceTree = "<group>"; };
-		6A531E0B423290F8A63743C8E7760F2A /* TGQuery+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TGQuery+Private.h"; path = "Classes/TGQuery+Private.h"; sourceTree = "<group>"; };
 		6A821F41527BC147203D738FB2A694AC /* Pods-elements_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-elements_Example-dummy.m"; sourceTree = "<group>"; };
 		6DEBC01AC8411789772EE5B0D2BF0599 /* LikeEventCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LikeEventCell.swift; sourceTree = "<group>"; };
-		6DECE830309A1B7CB73EA44CFC27968B /* TGPostComment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGPostComment.h; path = Classes/Model/TGPostComment.h; sourceTree = "<group>"; };
-		7209D249A26591A201A40B6E12FF2126 /* NSError+TGError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSError+TGError.m"; path = "Classes/NSError+TGError.m"; sourceTree = "<group>"; };
-		73F4FBE7C11CCAE67ACF9968F192FB70 /* TGPostLike.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGPostLike.m; path = Classes/Model/TGPostLike.m; sourceTree = "<group>"; };
+		6F2AC122F3D7EC522A7D28B173FC7889 /* TGApiClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGApiClient.m; path = Classes/RestClient/TGApiClient.m; sourceTree = "<group>"; };
 		77F68E52AFAA251B2BE0753CD47A0DFE /* Pods-elements_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-elements_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		78FB7775B4EC73EC8E860034DC35EE62 /* NSString+TGUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+TGUtilities.h"; path = "Classes/Model/NSString+TGUtilities.h"; sourceTree = "<group>"; };
+		78ADA62D3ABC2741127BB73A3782FA21 /* TGObjectCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGObjectCache.h; path = Classes/Model/TGObjectCache.h; sourceTree = "<group>"; };
 		796942625751B9C33D11F792B1852609 /* Pods-elements_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-elements_Example-resources.sh"; sourceTree = "<group>"; };
 		79BE48993EDE6E4DA60A7907E3DB1BAD /* Pods-elements_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-elements_Example-frameworks.sh"; sourceTree = "<group>"; };
-		7A28D16F0AD01422DE9CAB768897A9E0 /* TGObjectCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGObjectCache.m; path = Classes/Model/TGObjectCache.m; sourceTree = "<group>"; };
-		81B6D4FFE2E5A2A196D8D27A5ADD7346 /* TGApiClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGApiClient.m; path = Classes/RestClient/TGApiClient.m; sourceTree = "<group>"; };
-		81FC0A6A5A2298F29199557589514966 /* TGImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGImage.m; path = Classes/Model/TGImage.m; sourceTree = "<group>"; };
+		7B2305F8B823F10D2B8B0012937EB765 /* TGPostsManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGPostsManager.h; path = Classes/TGPostsManager.h; sourceTree = "<group>"; };
+		823B07140AB71D03D0ADCB4744C1194D /* TGEventManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGEventManager.m; path = Classes/TGEventManager.m; sourceTree = "<group>"; };
 		86588C24251FC8E17A8DCE65ED3736B7 /* LikeEventCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LikeEventCell.xib; sourceTree = "<group>"; };
-		86ECB798B2098E8C3527002D4F62B091 /* TGModelObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGModelObject.m; path = Classes/Model/TGModelObject.m; sourceTree = "<group>"; };
-		88E317F27F5348FDE97780D8FB48EED1 /* NSURL+TGUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURL+TGUtilities.m"; path = "Classes/RestClient/NSURL+TGUtilities.m"; sourceTree = "<group>"; };
-		8916A8AA3A780E2AE4CCA5F22031E768 /* NSThread+TGEnsureMainThread.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSThread+TGEnsureMainThread.h"; path = "Classes/NSThread+TGEnsureMainThread.h"; sourceTree = "<group>"; };
-		8ADE12BCD1FA6F95FC6477AF2F6DCBD9 /* TGObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGObject.h; path = Classes/Model/TGObject.h; sourceTree = "<group>"; };
-		8B2EC6FFFE8A795D613C91B01FBDE91A /* TGUser+Networking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TGUser+Networking.h"; path = "Classes/RestClient/TGUser+Networking.h"; sourceTree = "<group>"; };
-		8D2F50FF7F505FE7B54283848D75011A /* TGImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGImage.h; path = Classes/Model/TGImage.h; sourceTree = "<group>"; };
-		91BB995B54FF7D57ABE8BBC8E9D46592 /* TGAttachment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGAttachment.h; path = Classes/Model/TGAttachment.h; sourceTree = "<group>"; };
+		87FB5BFD99553B7F01B67627E8B853BB /* TGUser+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TGUser+Private.h"; path = "Classes/Model/TGUser+Private.h"; sourceTree = "<group>"; };
+		8D2F909C2685041D4B80A6E3A1CD2A03 /* TGQuery+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TGQuery+Private.h"; path = "Classes/TGQuery+Private.h"; sourceTree = "<group>"; };
+		92523919B9CD55DFF56394CC94E20C7B /* TGUserManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGUserManager.h; path = Classes/TGUserManager.h; sourceTree = "<group>"; };
 		9283A057803D0B04FBD1CD2E0CCAFBCF /* Tapglue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Tapglue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		96FCB0E19A7044CDEA7F1EC66F370131 /* Tapglue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Tapglue.h; path = Classes/Tapglue.h; sourceTree = "<group>"; };
-		9B104B4995A0CAAB1FA49A4F794AE8C0 /* TGPostComment.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGPostComment.m; path = Classes/Model/TGPostComment.m; sourceTree = "<group>"; };
-		9C1661E341E8CA227CAEAB9CA9705EC5 /* TGConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGConfiguration.m; path = Classes/TGConfiguration.m; sourceTree = "<group>"; };
+		97452573AAE10ACEE4B6BDB4B1D4E3E8 /* TGUser+Networking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TGUser+Networking.h"; path = "Classes/RestClient/TGUser+Networking.h"; sourceTree = "<group>"; };
+		977937D8B780FDCBC1499C8D1FF3669D /* TGBaseManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGBaseManager.m; path = Classes/TGBaseManager.m; sourceTree = "<group>"; };
+		98532C9AF66A3FE4856BE9D4953C7318 /* NSDateFormatter+TGISOFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDateFormatter+TGISOFormatter.m"; path = "Classes/NSDateFormatter+TGISOFormatter.m"; sourceTree = "<group>"; };
+		9A63016D654AFFAB902CF20AC977C0A6 /* TGImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGImage.m; path = Classes/Model/TGImage.m; sourceTree = "<group>"; };
+		9BE7ADDADD6A43C61A1D6A7EB37328C3 /* TGApiClient+TGObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TGApiClient+TGObject.h"; path = "Classes/RestClient/TGApiClient+TGObject.h"; sourceTree = "<group>"; };
 		9D4E060866570FAD1A2D550A1EC1F974 /* ProfileBiographyView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = ProfileBiographyView.xib; sourceTree = "<group>"; };
-		9ECF4BAED1E24CB4E1FBCCA1170B16AD /* TGEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGEvent.h; path = Classes/Model/TGEvent.h; sourceTree = "<group>"; };
-		A24762870530E84316BC3CF77A98152D /* TGModelObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGModelObject.h; path = Classes/Model/TGModelObject.h; sourceTree = "<group>"; };
-		A361466329BB124E7937C687735B9244 /* TGPostLike.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGPostLike.h; path = Classes/Model/TGPostLike.h; sourceTree = "<group>"; };
+		A1D40CF105CCB3B7EADF9B44DB585358 /* TGConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGConfiguration.h; path = Classes/TGConfiguration.h; sourceTree = "<group>"; };
 		A46F7FB6BDAF6FD7C62D520479128405 /* elements.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = elements.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A48CC6E2D48BB08880D42AAB45872DE7 /* Tapglue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Tapglue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A51048E442A873F1633442E8DEE4B328 /* TGPostReaction+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TGPostReaction+Private.h"; path = "Classes/Model/TGPostReaction+Private.h"; sourceTree = "<group>"; };
-		A54DE5BD7D802D874F1F7C47BAF3FE95 /* NSThread+TGEnsureMainThread.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSThread+TGEnsureMainThread.m"; path = "Classes/NSThread+TGEnsureMainThread.m"; sourceTree = "<group>"; };
 		A77EACF4ABEC6C9C926C737D6A1DF4B3 /* ConnectionType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConnectionType.swift; sourceTree = "<group>"; };
-		A8C7EFA8CA6DA70269210133AD649155 /* TGConnection+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TGConnection+Private.h"; path = "Classes/Model/TGConnection+Private.h"; sourceTree = "<group>"; };
+		A881DF435047A18AB13240E904F1E135 /* TGQuery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGQuery.m; path = Classes/TGQuery.m; sourceTree = "<group>"; };
 		A94487AB4A064F9E61B52E0A59A57833 /* AlertFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AlertFactory.swift; sourceTree = "<group>"; };
-		ADE028994BF411F08F28EEE38887FD8F /* TGUser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGUser.m; path = Classes/Model/TGUser.m; sourceTree = "<group>"; };
+		AB467FDE28F41490CCB5B43898567893 /* TGLike.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGLike.m; path = Classes/Model/TGLike.m; sourceTree = "<group>"; };
+		ABC800EAE82D4823D4B1E411B7290A65 /* TGImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGImage.h; path = Classes/Model/TGImage.h; sourceTree = "<group>"; };
+		ADBADB72399C88C6F5F2431BD13C91E0 /* Tapglue-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Tapglue-prefix.pch"; sourceTree = "<group>"; };
 		AFB8D62A0B8B5DDD42319DE09ED88B8E /* UserSearchViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserSearchViewController.swift; sourceTree = "<group>"; };
-		B0B26F9CAD2B3E62434C8926370B6FAE /* TGObjectCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGObjectCache.h; path = Classes/Model/TGObjectCache.h; sourceTree = "<group>"; };
-		B3E11164E7FFAE5931810331E02CCFB0 /* TGPost+Reactions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TGPost+Reactions.h"; path = "Classes/Model/TGPost+Reactions.h"; sourceTree = "<group>"; };
+		B4BE4AE7F0E1275685D13B303A167609 /* Tapglue+Posts.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Tapglue+Posts.m"; path = "Classes/Tapglue+Posts.m"; sourceTree = "<group>"; };
 		B4CEA5F6935957D417CC2CA8BBD4F4EA /* ConnectionCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = ConnectionCell.xib; sourceTree = "<group>"; };
-		B5363F8B8F83CBE868FB21D5B58CD78D /* TGLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGLogger.m; path = Classes/TGLogger.m; sourceTree = "<group>"; };
+		B4D6FD20481F9FC14D841E539A9B41A1 /* TGUser+Networking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "TGUser+Networking.m"; path = "Classes/RestClient/TGUser+Networking.m"; sourceTree = "<group>"; };
+		B508A9F2B1EC46E157DBF9824107ABD6 /* TGEventObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGEventObject.h; path = Classes/Model/TGEventObject.h; sourceTree = "<group>"; };
+		B6C00097A96CE903D5718624A5379089 /* Tapglue.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Tapglue.modulemap; sourceTree = "<group>"; };
 		B6C50F342E2D7A39162FA538B54B6C6B /* Pods-elements_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-elements_Example.release.xcconfig"; sourceTree = "<group>"; };
 		B7649D9A26ECEFFCB6D08CD1C094DAC2 /* EditProfile.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = EditProfile.storyboard; path = Base.lproj/EditProfile.storyboard; sourceTree = "<group>"; };
-		B99A7AB07038E4561F5B3B342999B0B5 /* TGEventManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGEventManager.h; path = Classes/TGEventManager.h; sourceTree = "<group>"; };
-		BD121D6B21DAFABD81EEA82C75BA0BB3 /* TGEventObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGEventObject.m; path = Classes/Model/TGEventObject.m; sourceTree = "<group>"; };
-		BD6B788AF827B2C3A783231D08825824 /* Tapglue+Posts.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Tapglue+Posts.h"; path = "Classes/Tapglue+Posts.h"; sourceTree = "<group>"; };
+		B94BED46FCE568467E6A12FF59EEB77D /* TGAttachment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGAttachment.h; path = Classes/Model/TGAttachment.h; sourceTree = "<group>"; };
+		BCDC5DA65CDE090ECD8E40895C987A13 /* NSString+TGUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+TGUtilities.m"; path = "Classes/Model/NSString+TGUtilities.m"; sourceTree = "<group>"; };
 		BEF6D39BE5ADBA83C041E3FE4139152C /* UIViewController+Config.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIViewController+Config.swift"; sourceTree = "<group>"; };
-		BF6A908A01C2BD8B3DE2828057EB6CF3 /* NSDictionary+TGUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+TGUtilities.m"; path = "Classes/Model/NSDictionary+TGUtilities.m"; sourceTree = "<group>"; };
-		C1CE60D2FA26ABEF997EC38F32EF6EDF /* TGPostsManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGPostsManager.m; path = Classes/TGPostsManager.m; sourceTree = "<group>"; };
-		C1FC11BDA3EE6733B2AD75E9D64E3D8B /* TGEventManager+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TGEventManager+Private.h"; path = "Classes/TGEventManager+Private.h"; sourceTree = "<group>"; };
-		C30D09827085AB8636906F6C6B765A98 /* TGUser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGUser.h; path = Classes/Model/TGUser.h; sourceTree = "<group>"; };
-		C3BF4D2D895AE3FDE06A584CF858FAF6 /* TGAttachment.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGAttachment.m; path = Classes/Model/TGAttachment.m; sourceTree = "<group>"; };
+		C409E5451DD204A0FAEA0EC733C410D9 /* TGLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGLogger.m; path = Classes/TGLogger.m; sourceTree = "<group>"; };
 		C697E26820FB401C3F111AA292AE8DE1 /* elements-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "elements-dummy.m"; sourceTree = "<group>"; };
-		C7973E2691FF2A0036E62EC10CD401C4 /* TGModelObject+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TGModelObject+Private.h"; path = "Classes/Model/TGModelObject+Private.h"; sourceTree = "<group>"; };
-		C803193722AECC2D597C59B0DE6DE3D2 /* TGUser+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TGUser+Private.h"; path = "Classes/Model/TGUser+Private.h"; sourceTree = "<group>"; };
+		C71FB307C3504ED9B7D8CE07B6688FFE /* TGUser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGUser.h; path = Classes/Model/TGUser.h; sourceTree = "<group>"; };
 		CA9BC05E268540BA01C1D062B0CD03B9 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CAD17BE8259CC74AD748B5A5C78221B8 /* UIDevice+TGUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIDevice+TGUtilities.h"; path = "Classes/UIDevice+TGUtilities.h"; sourceTree = "<group>"; };
-		CB75FD8D317BB565860B618E95798778 /* TGUser+Networking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "TGUser+Networking.m"; path = "Classes/RestClient/TGUser+Networking.m"; sourceTree = "<group>"; };
-		CDFC7C2427704A4A971873A7CB6BFDF7 /* TGQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGQuery.h; path = Classes/TGQuery.h; sourceTree = "<group>"; };
+		CE64BEF4C8E1ADE25D767011892FCCC8 /* Tapglue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Tapglue.m; path = Classes/Tapglue.m; sourceTree = "<group>"; };
+		CEAD29D63F1634EC95033A468E5A2660 /* NSURL+TGUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURL+TGUtilities.h"; path = "Classes/RestClient/NSURL+TGUtilities.h"; sourceTree = "<group>"; };
+		CED85DF467E8EA27564C88FEDE4A6248 /* UIDevice+TGUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIDevice+TGUtilities.h"; path = "Classes/UIDevice+TGUtilities.h"; sourceTree = "<group>"; };
 		CFBC35EA4491D09A54E95512DFF5C98A /* UIImageView+UrlString.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIImageView+UrlString.swift"; sourceTree = "<group>"; };
-		D0B580F7F4114C6E1B4AE7E8F941847B /* Tapglue-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Tapglue-umbrella.h"; sourceTree = "<group>"; };
-		D475EEDED7404ED57996A9068BD5CF5C /* TGObject+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TGObject+Private.h"; path = "Classes/Model/TGObject+Private.h"; sourceTree = "<group>"; };
-		D5EEE3A6A53C619FAACCD250B308D22D /* TGConnection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGConnection.h; path = Classes/Model/TGConnection.h; sourceTree = "<group>"; };
-		D6A3BE782C9BD55C5B891E06A79ADC81 /* NSURL+TGUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURL+TGUtilities.h"; path = "Classes/RestClient/NSURL+TGUtilities.h"; sourceTree = "<group>"; };
-		D6F0705B834D62F3691030629D2B6FC2 /* Tapglue.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Tapglue.modulemap; sourceTree = "<group>"; };
-		D9F91A273ACBF2487AAF8F271495D7FC /* TGPostsManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGPostsManager.h; path = Classes/TGPostsManager.h; sourceTree = "<group>"; };
-		DA8BDF69305FB3C4D7E3FA0F1D7B395A /* TGPost.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGPost.m; path = Classes/Model/TGPost.m; sourceTree = "<group>"; };
-		DD12DDE1BD3EE28488A095E367538457 /* TGBaseManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGBaseManager.m; path = Classes/TGBaseManager.m; sourceTree = "<group>"; };
+		D149BFC2C6A8820B59C0FBA796F550B7 /* TGImage+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TGImage+Private.h"; path = "Classes/Model/TGImage+Private.h"; sourceTree = "<group>"; };
+		D3531762C47B94D83CCFE754C61CCCC9 /* TGApiRoutesBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGApiRoutesBuilder.h; path = Classes/RestClient/TGApiRoutesBuilder.h; sourceTree = "<group>"; };
+		D38DDCE4CA6F8604CBD550BEADD362CF /* NSDateFormatter+TGISOFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDateFormatter+TGISOFormatter.h"; path = "Classes/NSDateFormatter+TGISOFormatter.h"; sourceTree = "<group>"; };
+		D469AED9F84795FD95F52BD6BBBE299D /* TGEventManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGEventManager.h; path = Classes/TGEventManager.h; sourceTree = "<group>"; };
+		D5650F78A46B291871D23962994E131E /* TGLike.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGLike.h; path = Classes/Model/TGLike.h; sourceTree = "<group>"; };
+		D7C9CA70BE0B65B17D50874D8421B36F /* Tapglue+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Tapglue+Private.h"; path = "Classes/Tapglue+Private.h"; sourceTree = "<group>"; };
+		DAC032850BAD2C1FD8EC7CAC92836145 /* Tapglue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Tapglue.h; path = Classes/Tapglue.h; sourceTree = "<group>"; };
+		DAD43E3C73F3E586182FC9D12F618BC5 /* TGModelObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGModelObject.m; path = Classes/Model/TGModelObject.m; sourceTree = "<group>"; };
 		DDAC346369E690B6449FFCD1EB923BB5 /* SearchAddressBookCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SearchAddressBookCell.swift; sourceTree = "<group>"; };
-		DED5C5F27F3025D13A8ABF19569D91FF /* TGEventManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGEventManager.m; path = Classes/TGEventManager.m; sourceTree = "<group>"; };
-		E08913DEC6850F9AC8D16C7259969CFD /* TGApiRoutesBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGApiRoutesBuilder.m; path = Classes/RestClient/TGApiRoutesBuilder.m; sourceTree = "<group>"; };
-		E3FA2E5B6B707E5586C7327C9E29AB24 /* TGPost.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGPost.h; path = Classes/Model/TGPost.h; sourceTree = "<group>"; };
-		E4E61DFBF42D1C24EDE530599EAF353A /* NSError+TGError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSError+TGError.h"; path = "Classes/NSError+TGError.h"; sourceTree = "<group>"; };
+		DEFB5AEB773F49EE64099891F905B446 /* TGApiClient+TGObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "TGApiClient+TGObject.m"; path = "Classes/RestClient/TGApiClient+TGObject.m"; sourceTree = "<group>"; };
+		E0D9284BDAC31FBE0C462063A10F0C50 /* TGConnection+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TGConnection+Private.h"; path = "Classes/Model/TGConnection+Private.h"; sourceTree = "<group>"; };
+		E47D9081E0C697A601DA615D27D55114 /* TGEventManager+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TGEventManager+Private.h"; path = "Classes/TGEventManager+Private.h"; sourceTree = "<group>"; };
 		E83AD9127AA2799CF576C1F39E2839C7 /* elements.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = elements.modulemap; sourceTree = "<group>"; };
+		E8EC931706A00804FEDA88A3D95A0F08 /* TGEvent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGEvent.m; path = Classes/Model/TGEvent.m; sourceTree = "<group>"; };
 		EBE7D44DC6F1FEB5EBE1A7AF66FB652E /* ConfigParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConfigParser.swift; sourceTree = "<group>"; };
-		EC0B4D84C0E698332747C3413B8158CD /* TGEvent+Networking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "TGEvent+Networking.m"; path = "Classes/TGEvent+Networking.m"; sourceTree = "<group>"; };
 		EC2F82018D9538D2D48E36128C36483C /* FollowEventCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = FollowEventCell.xib; sourceTree = "<group>"; };
+		EEA6DB05B6D0520D84B2C3521963E492 /* TGEvent+Networking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TGEvent+Networking.h"; path = "Classes/TGEvent+Networking.h"; sourceTree = "<group>"; };
 		EF3607AC2C2D56FEC86C07156EADB123 /* NotificationStoryboard.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = NotificationStoryboard.storyboard; sourceTree = "<group>"; };
 		F1865A4CEF1874FB1FEF203D8F87DDA0 /* Pods-elements_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-elements_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		F301238B4B53CF0013B94233777406DF /* TGReaction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGReaction.m; path = Classes/Model/TGReaction.m; sourceTree = "<group>"; };
+		F497AC7C4D5060A8DB09DAC447F9E4B3 /* TGPost+Reactions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "TGPost+Reactions.m"; path = "Classes/Model/TGPost+Reactions.m"; sourceTree = "<group>"; };
+		F4BABFCAA242D14093785D93A204BA96 /* TGUser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGUser.m; path = Classes/Model/TGUser.m; sourceTree = "<group>"; };
 		F4D02960FE13BC9568D72F0A6401180A /* Pods-elements_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-elements_Example.modulemap"; sourceTree = "<group>"; };
 		F59DCAB603FCCA46362572BCC8AE1457 /* ResourceBundle-elements-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-elements-Info.plist"; sourceTree = "<group>"; };
+		F651A0A3EE27917B09CE9EC992CB11FA /* TGConnection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGConnection.m; path = Classes/Model/TGConnection.m; sourceTree = "<group>"; };
 		F6E9243A033ED49126DE306B492E75C9 /* elements-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "elements-prefix.pch"; sourceTree = "<group>"; };
-		F752881057401C9AE342D71DF73D9088 /* TGPostReaction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGPostReaction.m; path = Classes/Model/TGPostReaction.m; sourceTree = "<group>"; };
+		F762CC90018B18AE445306ADF673AA50 /* TGComment.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGComment.m; path = Classes/Model/TGComment.m; sourceTree = "<group>"; };
 		F7A29827F45F2C840829ABE8C8399B9E /* NothingFoundCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
+		F7A395C041585EB8273FF6CA0F687640 /* TGAttachment.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGAttachment.m; path = Classes/Model/TGAttachment.m; sourceTree = "<group>"; };
 		F9A244F93B5A9749E3EA18FD9C44CF36 /* UITableView+NibLoading.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UITableView+NibLoading.swift"; sourceTree = "<group>"; };
+		FB117916AB88EF55F881221634091085 /* TGLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGLogger.h; path = Classes/TGLogger.h; sourceTree = "<group>"; };
+		FC09702D39C6DB4E60C03CBF692B095E /* TGReaction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGReaction.h; path = Classes/Model/TGReaction.h; sourceTree = "<group>"; };
+		FC6EC9DBC6B90CCCF16992FF505C5222 /* TGModelObject+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TGModelObject+Private.h"; path = "Classes/Model/TGModelObject+Private.h"; sourceTree = "<group>"; };
 		FCBFE8F0710B2A75C10A98D4D559FD40 /* elements-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "elements-umbrella.h"; sourceTree = "<group>"; };
+		FCD1F83F292FD71C80F68B0D788ECC5C /* NSDictionary+TGUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+TGUtilities.m"; path = "Classes/Model/NSDictionary+TGUtilities.m"; sourceTree = "<group>"; };
 		FD9BE863BB562A6235D8815D14EABED3 /* FollowButtonParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FollowButtonParser.swift; sourceTree = "<group>"; };
-		FE2936CAE28E5E18EDBAD83BBD09DEA0 /* TGPostReaction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGPostReaction.h; path = Classes/Model/TGPostReaction.h; sourceTree = "<group>"; };
 		FE8A493BAE4FB68B3713DE4D70F90FBF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -428,6 +428,97 @@
 			path = ../..;
 			sourceTree = "<group>";
 		};
+		2F0261B6175139E50B13368DFAA45819 /* Tapglue */ = {
+			isa = PBXGroup;
+			children = (
+				D38DDCE4CA6F8604CBD550BEADD362CF /* NSDateFormatter+TGISOFormatter.h */,
+				98532C9AF66A3FE4856BE9D4953C7318 /* NSDateFormatter+TGISOFormatter.m */,
+				46BE57709913113960B7DDC3C532EACF /* NSDictionary+TGUtilities.h */,
+				FCD1F83F292FD71C80F68B0D788ECC5C /* NSDictionary+TGUtilities.m */,
+				27650A26575E8AC395417A70E82BF36C /* NSError+TGError.h */,
+				4647EA15A2355EEDAE5EB29E89A5EB10 /* NSError+TGError.m */,
+				6426D053CE8410E295A1E659A7D344A0 /* NSString+TGUtilities.h */,
+				BCDC5DA65CDE090ECD8E40895C987A13 /* NSString+TGUtilities.m */,
+				12DC32F3C6CB5BA4152AF1416A0E6BD5 /* NSThread+TGEnsureMainThread.h */,
+				14CF1D5E7B332BB82A77A8A8E5A33020 /* NSThread+TGEnsureMainThread.m */,
+				CEAD29D63F1634EC95033A468E5A2660 /* NSURL+TGUtilities.h */,
+				28D8F988EA8BB3FC52040485FD94853A /* NSURL+TGUtilities.m */,
+				DAC032850BAD2C1FD8EC7CAC92836145 /* Tapglue.h */,
+				CE64BEF4C8E1ADE25D767011892FCCC8 /* Tapglue.m */,
+				2DB1A4884720EA35027E3DA8637F64BE /* Tapglue+Posts.h */,
+				B4BE4AE7F0E1275685D13B303A167609 /* Tapglue+Posts.m */,
+				D7C9CA70BE0B65B17D50874D8421B36F /* Tapglue+Private.h */,
+				4AE34DD8AB42F05C170A6D9C9F1B2C57 /* TGApiClient.h */,
+				6F2AC122F3D7EC522A7D28B173FC7889 /* TGApiClient.m */,
+				9BE7ADDADD6A43C61A1D6A7EB37328C3 /* TGApiClient+TGObject.h */,
+				DEFB5AEB773F49EE64099891F905B446 /* TGApiClient+TGObject.m */,
+				D3531762C47B94D83CCFE754C61CCCC9 /* TGApiRoutesBuilder.h */,
+				54D0558BE07A755233F7A7CC85803950 /* TGApiRoutesBuilder.m */,
+				B94BED46FCE568467E6A12FF59EEB77D /* TGAttachment.h */,
+				F7A395C041585EB8273FF6CA0F687640 /* TGAttachment.m */,
+				20A230965724331213ACCDA82936C359 /* TGAttachment+Private.h */,
+				49F3BF612E37894EB3C41D901B1B221D /* TGBaseManager.h */,
+				977937D8B780FDCBC1499C8D1FF3669D /* TGBaseManager.m */,
+				0C5CE4E7176AEC7A35B8F45736912B0B /* TGComment.h */,
+				F762CC90018B18AE445306ADF673AA50 /* TGComment.m */,
+				A1D40CF105CCB3B7EADF9B44DB585358 /* TGConfiguration.h */,
+				0DB33B22385C2C66B53A604EF6175D41 /* TGConfiguration.m */,
+				23FCFACCE830D252B541538B5A16302F /* TGConnection.h */,
+				F651A0A3EE27917B09CE9EC992CB11FA /* TGConnection.m */,
+				E0D9284BDAC31FBE0C462063A10F0C50 /* TGConnection+Private.h */,
+				0D573540D95B0672B143431397C62339 /* TGConstants.h */,
+				3BCDC7DDFE523A3420FEA7E2A8299589 /* TGEvent.h */,
+				E8EC931706A00804FEDA88A3D95A0F08 /* TGEvent.m */,
+				EEA6DB05B6D0520D84B2C3521963E492 /* TGEvent+Networking.h */,
+				1DC97D31D05964102ABC58804E2EE2B1 /* TGEvent+Networking.m */,
+				D469AED9F84795FD95F52BD6BBBE299D /* TGEventManager.h */,
+				823B07140AB71D03D0ADCB4744C1194D /* TGEventManager.m */,
+				E47D9081E0C697A601DA615D27D55114 /* TGEventManager+Private.h */,
+				41F837362C424C0AC665FE0B507215AC /* TGEventManager+Queries.h */,
+				4262873EF291A47088A9149FDE2A928C /* TGEventManager+Queries.m */,
+				B508A9F2B1EC46E157DBF9824107ABD6 /* TGEventObject.h */,
+				157A1BF676D151081E7F2300DF10ACB4 /* TGEventObject.m */,
+				ABC800EAE82D4823D4B1E411B7290A65 /* TGImage.h */,
+				9A63016D654AFFAB902CF20AC977C0A6 /* TGImage.m */,
+				D149BFC2C6A8820B59C0FBA796F550B7 /* TGImage+Private.h */,
+				D5650F78A46B291871D23962994E131E /* TGLike.h */,
+				AB467FDE28F41490CCB5B43898567893 /* TGLike.m */,
+				FB117916AB88EF55F881221634091085 /* TGLogger.h */,
+				C409E5451DD204A0FAEA0EC733C410D9 /* TGLogger.m */,
+				4E69592133E3E7D53A4F5483B4ADBB87 /* TGModelObject.h */,
+				DAD43E3C73F3E586182FC9D12F618BC5 /* TGModelObject.m */,
+				FC6EC9DBC6B90CCCF16992FF505C5222 /* TGModelObject+Private.h */,
+				33538A626652F7C134CBFFE9F59F4FF7 /* TGObject.h */,
+				43DC65D23B88B929DF72B0A563827FBB /* TGObject.m */,
+				2935766D65B6241237E62BDAD76F8A35 /* TGObject+Private.h */,
+				78ADA62D3ABC2741127BB73A3782FA21 /* TGObjectCache.h */,
+				5CE4EA3B45ED37EFECED721057EA2401 /* TGObjectCache.m */,
+				4E3FB5E1042D71757635A421D50EBF81 /* TGPost.h */,
+				094E544D241B8DFA8B0B880C981B974E /* TGPost.m */,
+				64C340ED9E47A52AC776DC97E4DDA7FE /* TGPost+Reactions.h */,
+				F497AC7C4D5060A8DB09DAC447F9E4B3 /* TGPost+Reactions.m */,
+				7B2305F8B823F10D2B8B0012937EB765 /* TGPostsManager.h */,
+				51EA8706480AD07EA3E6DD6EC41FFFFC /* TGPostsManager.m */,
+				58D38C733879A85F759FAAB3AF25ED34 /* TGQuery.h */,
+				A881DF435047A18AB13240E904F1E135 /* TGQuery.m */,
+				8D2F909C2685041D4B80A6E3A1CD2A03 /* TGQuery+Private.h */,
+				FC09702D39C6DB4E60C03CBF692B095E /* TGReaction.h */,
+				F301238B4B53CF0013B94233777406DF /* TGReaction.m */,
+				479043F0A9E967607C25656FA19EA1B7 /* TGReaction+Private.h */,
+				C71FB307C3504ED9B7D8CE07B6688FFE /* TGUser.h */,
+				F4BABFCAA242D14093785D93A204BA96 /* TGUser.m */,
+				97452573AAE10ACEE4B6BDB4B1D4E3E8 /* TGUser+Networking.h */,
+				B4D6FD20481F9FC14D841E539A9B41A1 /* TGUser+Networking.m */,
+				87FB5BFD99553B7F01B67627E8B853BB /* TGUser+Private.h */,
+				92523919B9CD55DFF56394CC94E20C7B /* TGUserManager.h */,
+				0DDE735159F1E897E8B59713169409BF /* TGUserManager.m */,
+				CED85DF467E8EA27564C88FEDE4A6248 /* UIDevice+TGUtilities.h */,
+				22F83476B385B7AE4ECDA286AAA126BC /* UIDevice+TGUtilities.m */,
+				89676B01010492CE93B9137FBD8A973F /* Support Files */,
+			);
+			path = Tapglue;
+			sourceTree = "<group>";
+		};
 		4947E7938133161F29C93397B6C00643 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -439,7 +530,7 @@
 		54900634C23EC82A693C8F6B175AD3BE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C450F573B6E8D8434948894DADB11964 /* Tapglue */,
+				2F0261B6175139E50B13368DFAA45819 /* Tapglue */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -456,20 +547,6 @@
 				DDAC346369E690B6449FFCD1EB923BB5 /* SearchAddressBookCell.swift */,
 			);
 			path = views;
-			sourceTree = "<group>";
-		};
-		6DD6D90674D61D200321E28F6CB19395 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				4C635C906EB6266254E6F2C55558C2FE /* Info.plist */,
-				D6F0705B834D62F3691030629D2B6FC2 /* Tapglue.modulemap */,
-				4BB692B0CECEB139B1B56FD672737BFE /* Tapglue.xcconfig */,
-				32874EC9416D6AA23E0BF6E01DFA8EFA /* Tapglue-dummy.m */,
-				3F7C41C5A7C92B62C81297BD0AD288EF /* Tapglue-prefix.pch */,
-				D0B580F7F4114C6E1B4AE7E8F941847B /* Tapglue-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Tapglue";
 			sourceTree = "<group>";
 		};
 		7A68A72B30B788F75CC6DD9179F101C0 /* Frameworks */ = {
@@ -491,6 +568,20 @@
 				DC39A170B73F3D9CBFB1232A78732C35 /* Products */,
 				BEA83348D0ABE175A60291C0E79F0991 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		89676B01010492CE93B9137FBD8A973F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				39CA4DAB8367244E8B42D2BE2896D0B7 /* Info.plist */,
+				B6C00097A96CE903D5718624A5379089 /* Tapglue.modulemap */,
+				481AF0808B61D642CFEEEBB5C3D3518A /* Tapglue.xcconfig */,
+				12A35C3FF1CFAE6F3D61F3107B1BB314 /* Tapglue-dummy.m */,
+				ADBADB72399C88C6F5F2431BD13C91E0 /* Tapglue-prefix.pch */,
+				4EB57F5B5336B9F882B3282D8AD66A31 /* Tapglue-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Tapglue";
 			sourceTree = "<group>";
 		};
 		8C4A65048029E70EB6EE0A9F1A06C1B9 /* internal */ = {
@@ -546,97 +637,6 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		C450F573B6E8D8434948894DADB11964 /* Tapglue */ = {
-			isa = PBXGroup;
-			children = (
-				147244B7D9A6F77E01D37C1196D0A9C2 /* NSDateFormatter+TGISOFormatter.h */,
-				39EF8943CC77156BEC991DBE0A8E79A4 /* NSDateFormatter+TGISOFormatter.m */,
-				4DC39C5BDF6395A8AD4E41916DD71AF0 /* NSDictionary+TGUtilities.h */,
-				BF6A908A01C2BD8B3DE2828057EB6CF3 /* NSDictionary+TGUtilities.m */,
-				E4E61DFBF42D1C24EDE530599EAF353A /* NSError+TGError.h */,
-				7209D249A26591A201A40B6E12FF2126 /* NSError+TGError.m */,
-				78FB7775B4EC73EC8E860034DC35EE62 /* NSString+TGUtilities.h */,
-				65391813D74CC4383CAB68B4E7737777 /* NSString+TGUtilities.m */,
-				8916A8AA3A780E2AE4CCA5F22031E768 /* NSThread+TGEnsureMainThread.h */,
-				A54DE5BD7D802D874F1F7C47BAF3FE95 /* NSThread+TGEnsureMainThread.m */,
-				D6A3BE782C9BD55C5B891E06A79ADC81 /* NSURL+TGUtilities.h */,
-				88E317F27F5348FDE97780D8FB48EED1 /* NSURL+TGUtilities.m */,
-				96FCB0E19A7044CDEA7F1EC66F370131 /* Tapglue.h */,
-				0AE5E4AF0C80A7EBDE096AF4BAC13D7D /* Tapglue.m */,
-				BD6B788AF827B2C3A783231D08825824 /* Tapglue+Posts.h */,
-				4E5DB7267BB2D9FCA2114922DA79C807 /* Tapglue+Posts.m */,
-				046F1D9BA96AA2CDF38233B68EA00D73 /* Tapglue+Private.h */,
-				4A51FF45A61BB82EE2EEE43411E7B1DA /* TGApiClient.h */,
-				81B6D4FFE2E5A2A196D8D27A5ADD7346 /* TGApiClient.m */,
-				5546CD8519D838CDAA909D46AD4098ED /* TGApiClient+TGObject.h */,
-				614F6385E28DEBD598C3B7032A34CA7A /* TGApiClient+TGObject.m */,
-				1FB4EE86B79807FEEA0A294854437CF9 /* TGApiRoutesBuilder.h */,
-				E08913DEC6850F9AC8D16C7259969CFD /* TGApiRoutesBuilder.m */,
-				91BB995B54FF7D57ABE8BBC8E9D46592 /* TGAttachment.h */,
-				C3BF4D2D895AE3FDE06A584CF858FAF6 /* TGAttachment.m */,
-				65FB44F8A298A6CBC2E6A91F8B631341 /* TGAttachment+Private.h */,
-				3E926D400B4F77E6E5C1854E1FCA4264 /* TGBaseManager.h */,
-				DD12DDE1BD3EE28488A095E367538457 /* TGBaseManager.m */,
-				64433123618693F21D7FC3B6FE4489BC /* TGConfiguration.h */,
-				9C1661E341E8CA227CAEAB9CA9705EC5 /* TGConfiguration.m */,
-				D5EEE3A6A53C619FAACCD250B308D22D /* TGConnection.h */,
-				0C6A588BC392905F9DEF13C4F724E6DE /* TGConnection.m */,
-				A8C7EFA8CA6DA70269210133AD649155 /* TGConnection+Private.h */,
-				14A7DDCDBBEE7FFBAFF5385FE8B591CD /* TGConstants.h */,
-				9ECF4BAED1E24CB4E1FBCCA1170B16AD /* TGEvent.h */,
-				32FBF420CF2099CC431F7897EE98F35F /* TGEvent.m */,
-				5CCB0F3876586799D2D1B4503CC420CF /* TGEvent+Networking.h */,
-				EC0B4D84C0E698332747C3413B8158CD /* TGEvent+Networking.m */,
-				B99A7AB07038E4561F5B3B342999B0B5 /* TGEventManager.h */,
-				DED5C5F27F3025D13A8ABF19569D91FF /* TGEventManager.m */,
-				C1FC11BDA3EE6733B2AD75E9D64E3D8B /* TGEventManager+Private.h */,
-				055FCEC0E54CE6B7FE4644752F894803 /* TGEventManager+Queries.h */,
-				4930B07372199744DDD0056DEE4CB5E4 /* TGEventManager+Queries.m */,
-				52A77A6698C0E44B7456B4F39FC9F7FC /* TGEventObject.h */,
-				BD121D6B21DAFABD81EEA82C75BA0BB3 /* TGEventObject.m */,
-				8D2F50FF7F505FE7B54283848D75011A /* TGImage.h */,
-				81FC0A6A5A2298F29199557589514966 /* TGImage.m */,
-				09F27143D87890998322B6BB07637280 /* TGImage+Private.h */,
-				42EAEBD7870B3E85DF6CBBEBB4295297 /* TGLogger.h */,
-				B5363F8B8F83CBE868FB21D5B58CD78D /* TGLogger.m */,
-				A24762870530E84316BC3CF77A98152D /* TGModelObject.h */,
-				86ECB798B2098E8C3527002D4F62B091 /* TGModelObject.m */,
-				C7973E2691FF2A0036E62EC10CD401C4 /* TGModelObject+Private.h */,
-				8ADE12BCD1FA6F95FC6477AF2F6DCBD9 /* TGObject.h */,
-				6852617E47CEEB832D4CD8018840E97C /* TGObject.m */,
-				D475EEDED7404ED57996A9068BD5CF5C /* TGObject+Private.h */,
-				B0B26F9CAD2B3E62434C8926370B6FAE /* TGObjectCache.h */,
-				7A28D16F0AD01422DE9CAB768897A9E0 /* TGObjectCache.m */,
-				E3FA2E5B6B707E5586C7327C9E29AB24 /* TGPost.h */,
-				DA8BDF69305FB3C4D7E3FA0F1D7B395A /* TGPost.m */,
-				B3E11164E7FFAE5931810331E02CCFB0 /* TGPost+Reactions.h */,
-				34DF4FD98FFE50E30BAB79D8E2E9806A /* TGPost+Reactions.m */,
-				6DECE830309A1B7CB73EA44CFC27968B /* TGPostComment.h */,
-				9B104B4995A0CAAB1FA49A4F794AE8C0 /* TGPostComment.m */,
-				A361466329BB124E7937C687735B9244 /* TGPostLike.h */,
-				73F4FBE7C11CCAE67ACF9968F192FB70 /* TGPostLike.m */,
-				FE2936CAE28E5E18EDBAD83BBD09DEA0 /* TGPostReaction.h */,
-				F752881057401C9AE342D71DF73D9088 /* TGPostReaction.m */,
-				A51048E442A873F1633442E8DEE4B328 /* TGPostReaction+Private.h */,
-				D9F91A273ACBF2487AAF8F271495D7FC /* TGPostsManager.h */,
-				C1CE60D2FA26ABEF997EC38F32EF6EDF /* TGPostsManager.m */,
-				CDFC7C2427704A4A971873A7CB6BFDF7 /* TGQuery.h */,
-				18EB2984EB1EE0276B5C19F6EE6DBFBB /* TGQuery.m */,
-				6A531E0B423290F8A63743C8E7760F2A /* TGQuery+Private.h */,
-				C30D09827085AB8636906F6C6B765A98 /* TGUser.h */,
-				ADE028994BF411F08F28EEE38887FD8F /* TGUser.m */,
-				8B2EC6FFFE8A795D613C91B01FBDE91A /* TGUser+Networking.h */,
-				CB75FD8D317BB565860B618E95798778 /* TGUser+Networking.m */,
-				C803193722AECC2D597C59B0DE6DE3D2 /* TGUser+Private.h */,
-				20C915FBA5E04CCBA099194AC53E8652 /* TGUserManager.h */,
-				31E3D54CC962ECA551ED863181B5E211 /* TGUserManager.m */,
-				CAD17BE8259CC74AD748B5A5C78221B8 /* UIDevice+TGUtilities.h */,
-				4551EA982C419F68EA1B9E3C5BEADF61 /* UIDevice+TGUtilities.m */,
-				6DD6D90674D61D200321E28F6CB19395 /* Support Files */,
-			);
-			path = Tapglue;
-			sourceTree = "<group>";
-		};
 		DC39A170B73F3D9CBFB1232A78732C35 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -683,58 +683,58 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		3A17873102F55C636048E184FEDDAC6B /* Headers */ = {
+		13D124E09F6153BA698023C88BE44A3C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0B1AAF4A170167ED034A11AB79AE991 /* NSDateFormatter+TGISOFormatter.h in Headers */,
-				F031427AE26209961CFB10A917373386 /* NSDictionary+TGUtilities.h in Headers */,
-				10AE524D75EFF9BEBAE6B69CE1F44AEB /* NSError+TGError.h in Headers */,
-				2058558B774B47480F8B3B4CE27CD5FF /* NSString+TGUtilities.h in Headers */,
-				C69ED1E1BCE34BD608938435E60886EE /* NSThread+TGEnsureMainThread.h in Headers */,
-				C577B38D92714C2C2464CF0329D01C90 /* NSURL+TGUtilities.h in Headers */,
-				BBC9C9CBB052B541E43B45791B6240EC /* Tapglue+Posts.h in Headers */,
-				8B839DFF89B95933B9EBBDB28BE61512 /* Tapglue+Private.h in Headers */,
-				58F08ADBDCD65A45C764CFFDD1A740C9 /* Tapglue-umbrella.h in Headers */,
-				21FFEE5C65BC174C09E683EDBE0F3507 /* Tapglue.h in Headers */,
-				88052987A4F0CB43C9E24BCD55C13C11 /* TGApiClient+TGObject.h in Headers */,
-				62424F6D9BD0F200E183D3FFCCF473AC /* TGApiClient.h in Headers */,
-				ABDF0C24925E9962F332F8048426E836 /* TGApiRoutesBuilder.h in Headers */,
-				FB8080BCE716878801C020598B717696 /* TGAttachment+Private.h in Headers */,
-				BCFA55BDBC092E612878ADE53A3EBF1B /* TGAttachment.h in Headers */,
-				372373084E0640D23F4391DB501BE6DA /* TGBaseManager.h in Headers */,
-				8BBF3C8A36B34C123E36709B8199C030 /* TGConfiguration.h in Headers */,
-				765700C3B0B843E409AE95FD2B2E23BB /* TGConnection+Private.h in Headers */,
-				4D7F94FAF3ED8198B8044D8A02F94DD4 /* TGConnection.h in Headers */,
-				32F5ADF5EAE2B43656944E9A5F57F236 /* TGConstants.h in Headers */,
-				6DB20E7BA892774DCD269157511EA66C /* TGEvent+Networking.h in Headers */,
-				5A3B8BB4101F26E78D1BCC32695319E0 /* TGEvent.h in Headers */,
-				7D495117EECDF6A3F832CDCDD8261126 /* TGEventManager+Private.h in Headers */,
-				E1614EC5F933EEACA390E61AD277541D /* TGEventManager+Queries.h in Headers */,
-				293F6AC17E008CC65F88FED9754F3FEE /* TGEventManager.h in Headers */,
-				3675D563CA00640D850BA1E3F92E0AF0 /* TGEventObject.h in Headers */,
-				E0AC2B1C0D2EE2B0662AFCC0CD16F2B6 /* TGImage+Private.h in Headers */,
-				7D1B8CCBD840CE46EADE575269A8A74D /* TGImage.h in Headers */,
-				0838A13D1927EB4098B4527AA652BB87 /* TGLogger.h in Headers */,
-				47CCE72009354D595D0A4E53964D0F2B /* TGModelObject+Private.h in Headers */,
-				8792E53DBE24821A19CA2BD1EA47C4AF /* TGModelObject.h in Headers */,
-				B0C1DB29966574909772D0D2BA082BE9 /* TGObject+Private.h in Headers */,
-				7C6195DB756F03A901C96BE9B30AE569 /* TGObject.h in Headers */,
-				9305AD3E5569C866F3C09EDE25095AA0 /* TGObjectCache.h in Headers */,
-				94E69C0DC4AC6718DACD87EE95437267 /* TGPost+Reactions.h in Headers */,
-				4F4623BB45285FD0FE9640668D4405FE /* TGPost.h in Headers */,
-				0C579D4F0459E93E460F7057E3318BC2 /* TGPostComment.h in Headers */,
-				9BBBB6A8D1FA08D8C82C755D36E851A1 /* TGPostLike.h in Headers */,
-				CA0D71224D6BA0A46D30E259F76A136D /* TGPostReaction+Private.h in Headers */,
-				C79CCD293B18F3FF0B7CE031C6869D97 /* TGPostReaction.h in Headers */,
-				ED2CE6F8683C139247861E2999776C74 /* TGPostsManager.h in Headers */,
-				8ADB8C2C4802EB04813F11C43A7039D0 /* TGQuery+Private.h in Headers */,
-				F57300E82551F8538482CDD50590365D /* TGQuery.h in Headers */,
-				9A9981F28255A75A3C609B2934A52431 /* TGUser+Networking.h in Headers */,
-				C63508C59412CC113856376D46BF8B25 /* TGUser+Private.h in Headers */,
-				E075B3E0E4833FF5CF8978B36E695F30 /* TGUser.h in Headers */,
-				ED1D54E77A93DCD5318A8853DEDC433D /* TGUserManager.h in Headers */,
-				A0D6362CF455A5CB3582B1475E0D4F70 /* UIDevice+TGUtilities.h in Headers */,
+				B483A1F38BFB2903BE6334E715AE51A6 /* NSDateFormatter+TGISOFormatter.h in Headers */,
+				D998DEE83F5475629A12DF8C666469CE /* NSDictionary+TGUtilities.h in Headers */,
+				DF6FE4BA5303AB9CA88A5D5E7C8C0EAE /* NSError+TGError.h in Headers */,
+				4A68E2C28D14FA5A28400B71326288AB /* NSString+TGUtilities.h in Headers */,
+				C776E93D38CA7B7F68C3FE6B5ECD5EDB /* NSThread+TGEnsureMainThread.h in Headers */,
+				E0983D5293151FF254B0EFAE40B56B36 /* NSURL+TGUtilities.h in Headers */,
+				D211762BE3CF6EF659717153E90ADB77 /* Tapglue+Posts.h in Headers */,
+				88E327C2FAB745FE9473239271E4F58F /* Tapglue+Private.h in Headers */,
+				B05711EB04872B7AFCD14150147ECF69 /* Tapglue-umbrella.h in Headers */,
+				07E526C8F29D9857B1BB81E6BB97C92E /* Tapglue.h in Headers */,
+				B887CE79591430F6F07B9696F6D8D77D /* TGApiClient+TGObject.h in Headers */,
+				7F89A4E668FA56838126B93F66391505 /* TGApiClient.h in Headers */,
+				284303A3D20FB7351B172FD2C70591F3 /* TGApiRoutesBuilder.h in Headers */,
+				5B0541EEA94979638DE0609908BB0266 /* TGAttachment+Private.h in Headers */,
+				0144D6CFE1A56B5EBE88D867C491173E /* TGAttachment.h in Headers */,
+				742C887B92F68EC84945B096478453F2 /* TGBaseManager.h in Headers */,
+				FD2B6532B49522F967DAD88078ED8C0E /* TGComment.h in Headers */,
+				24025DD84B9B695E75DC2509680A4ABA /* TGConfiguration.h in Headers */,
+				21EF5AF5D02C51F235362E5135FDEF7A /* TGConnection+Private.h in Headers */,
+				0AAFE7F68C31085C9B4C9D93BDF95F10 /* TGConnection.h in Headers */,
+				67D5DD20C025F4D2712EC1D90F77692E /* TGConstants.h in Headers */,
+				49DACB7E5B6055FE8E4B8A759C448007 /* TGEvent+Networking.h in Headers */,
+				65EE576991DE9568B4FBE5F19B55C243 /* TGEvent.h in Headers */,
+				CB939F19D6D6FC1C91A2CA1B2A2A5434 /* TGEventManager+Private.h in Headers */,
+				83665536D04852CAE3D260D9E30181AB /* TGEventManager+Queries.h in Headers */,
+				0C0FFAD4EDFF3580010708736A6A6E46 /* TGEventManager.h in Headers */,
+				0144E046E9B8EF514C33B8FC708FEFE6 /* TGEventObject.h in Headers */,
+				20C4B1C7C7D73E4472BF43D25F23EEC6 /* TGImage+Private.h in Headers */,
+				CCE0E404DFC7433CF07E095511DA46DF /* TGImage.h in Headers */,
+				57D701847E41045AD80B5FDDCBD0E305 /* TGLike.h in Headers */,
+				23E7CBDB34FC2BF1DC6B8CA4A6916608 /* TGLogger.h in Headers */,
+				459E899AA5742AC6A0DE45C0BE7DA0ED /* TGModelObject+Private.h in Headers */,
+				4588EECD759D09CA7FDD02BD7B57F60C /* TGModelObject.h in Headers */,
+				A5F237B5D9057F178B8A39BEE015FF97 /* TGObject+Private.h in Headers */,
+				A2495B412AF57C1E80E0AABF04630EB1 /* TGObject.h in Headers */,
+				F45E08588F5BD71251253BDC73B7245F /* TGObjectCache.h in Headers */,
+				E52984E6FAF66CB2FA0DC006FB156445 /* TGPost+Reactions.h in Headers */,
+				D768E883846D74BCDDA0B9A2225E07F5 /* TGPost.h in Headers */,
+				3BFBFA1BF4F06E57475DFB2B04E0AAFE /* TGPostsManager.h in Headers */,
+				860F4D4785A6143FF220EF4A279F36E2 /* TGQuery+Private.h in Headers */,
+				5BB8520DECE8DA053C796E17A88036A6 /* TGQuery.h in Headers */,
+				E6C773C224F2413A1DEAE861C754E77E /* TGReaction+Private.h in Headers */,
+				154CB4EFB1F4E9E3ED7F7702C3B8FA36 /* TGReaction.h in Headers */,
+				0ECFF56BF39255B0CDDA90A795890F58 /* TGUser+Networking.h in Headers */,
+				A8B1BAA0D5174DA4DB4E42775CD2E1F3 /* TGUser+Private.h in Headers */,
+				17DD1BE602227D52627D616DCEE5641F /* TGUser.h in Headers */,
+				4297094356A5480795F2C24E2A346215 /* TGUserManager.h in Headers */,
+				C5B60B14C192E76477B72A29DA027B0E /* UIDevice+TGUtilities.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -778,9 +778,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 275D7B0C828AAA8080951CB4120CC9A8 /* Build configuration list for PBXNativeTarget "Tapglue" */;
 			buildPhases = (
-				5FE590940C6047EB9DDA8773B2F2E8B1 /* Sources */,
+				4E6AE0AF2310FB69570022BA71C6A2D5 /* Sources */,
 				A46578938FB37CC65234471BEF3E055A /* Frameworks */,
-				3A17873102F55C636048E184FEDDAC6B /* Headers */,
+				13D124E09F6153BA698023C88BE44A3C /* Headers */,
 			);
 			buildRules = (
 			);
@@ -923,47 +923,47 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5FE590940C6047EB9DDA8773B2F2E8B1 /* Sources */ = {
+		4E6AE0AF2310FB69570022BA71C6A2D5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				412C2C9493760806497DD3BF1BB4F856 /* NSDateFormatter+TGISOFormatter.m in Sources */,
-				9A37AC0394519BDAC1D1DE5C639BCD0F /* NSDictionary+TGUtilities.m in Sources */,
-				5217657BEDC3A7612D130308FF0BE0BD /* NSError+TGError.m in Sources */,
-				F8246196F28C6B70D9E3C2D2C18A6838 /* NSString+TGUtilities.m in Sources */,
-				4789FD7E5633FC72BD8852ABA91A20F4 /* NSThread+TGEnsureMainThread.m in Sources */,
-				E073A10ADCC3232E13DDFA1C7639432E /* NSURL+TGUtilities.m in Sources */,
-				3168A31195F14D216E73A7A39BD8B3A9 /* Tapglue+Posts.m in Sources */,
-				C8137566B1106C113073B8A86E703EC6 /* Tapglue-dummy.m in Sources */,
-				43CA755B3C750D4376F16A45A1C46CF1 /* Tapglue.m in Sources */,
-				06344172F74866C34BA7E07D3ED02A69 /* TGApiClient+TGObject.m in Sources */,
-				9A1E0960B6F972E12EFD07B90F556E7E /* TGApiClient.m in Sources */,
-				C32369D1A27EC8BE098BEC2B5D856C97 /* TGApiRoutesBuilder.m in Sources */,
-				FD3CA0DFCBEC38FDEE0448F43A7FAE00 /* TGAttachment.m in Sources */,
-				FF1BE8A5E2DBB12196F9BF1587E686CC /* TGBaseManager.m in Sources */,
-				73A4AB2E96E3CF367E8100B090120449 /* TGConfiguration.m in Sources */,
-				A13173676F870E20435BC56630292FC9 /* TGConnection.m in Sources */,
-				C8BEE07A923F6241CEFDD09AC34B972F /* TGEvent+Networking.m in Sources */,
-				7094C4FAE1E02F2256783BF6DEE2C692 /* TGEvent.m in Sources */,
-				F20E017D1AA5BD68C3A1994835661051 /* TGEventManager+Queries.m in Sources */,
-				84ED5CAB09571DDE0C5B568515EB2705 /* TGEventManager.m in Sources */,
-				8169D2F083ED811D258EB395B95542B1 /* TGEventObject.m in Sources */,
-				5C8D33CA2DFBB63E387D4BA34CDFAC95 /* TGImage.m in Sources */,
-				20F284D389A0395735AFC43CBD88914E /* TGLogger.m in Sources */,
-				A76121DB46D76B04DC27F7FFD0505F9F /* TGModelObject.m in Sources */,
-				FFC4241F1E59AC0E8B3B141B314C5AEC /* TGObject.m in Sources */,
-				21434961236D8DD39B08CAC03D710199 /* TGObjectCache.m in Sources */,
-				A0A068EB5314EDAFF26F62B915F04EC8 /* TGPost+Reactions.m in Sources */,
-				935ADEE781D196297ADB9922401FEA64 /* TGPost.m in Sources */,
-				2E65A1473D582C5ED5BD51EC9C9F7650 /* TGPostComment.m in Sources */,
-				0E187725AAC62FD60AD6DF474EDFB8FE /* TGPostLike.m in Sources */,
-				B1BE0CD46E4B98C1BC8722E60E964F3F /* TGPostReaction.m in Sources */,
-				D8003BB011A5D5E3FB63885878E831D1 /* TGPostsManager.m in Sources */,
-				3116638A49FA832DEF3424DB8A424BF5 /* TGQuery.m in Sources */,
-				91C5BFB7D0901CF14F112724177979B0 /* TGUser+Networking.m in Sources */,
-				00E9487155770135F93AAC024EE6A129 /* TGUser.m in Sources */,
-				717DF87366D644A00F97743DAB5F23AA /* TGUserManager.m in Sources */,
-				FAC6A34A9DE7F5FC12A83138D7E40B62 /* UIDevice+TGUtilities.m in Sources */,
+				4A31F421504E2091225CA02C94F8F705 /* NSDateFormatter+TGISOFormatter.m in Sources */,
+				6E46F5CA0C8F8C2A89C074929CF6458B /* NSDictionary+TGUtilities.m in Sources */,
+				806B6C70265B4D2D8C78CF3EC84DD5B5 /* NSError+TGError.m in Sources */,
+				EEA2053714A00C808501D84115C9F45B /* NSString+TGUtilities.m in Sources */,
+				59FC24AD042CE6192F50CAFE40AF9A07 /* NSThread+TGEnsureMainThread.m in Sources */,
+				D51E49EDAF76C85F12D24ED9CCDE42EE /* NSURL+TGUtilities.m in Sources */,
+				5871068686767247B2BD80DA82C14241 /* Tapglue+Posts.m in Sources */,
+				2C7894DE2013D49374ED09B0C54F9928 /* Tapglue-dummy.m in Sources */,
+				90BE243CFD6C28DE496381BF952E5364 /* Tapglue.m in Sources */,
+				EC972E8D271E73D6714F610D88135E43 /* TGApiClient+TGObject.m in Sources */,
+				B824ECB940F8EE3167FE0A9A1E8A5884 /* TGApiClient.m in Sources */,
+				2C4079F7D9F9F7C6129EA0E00BBD3BA2 /* TGApiRoutesBuilder.m in Sources */,
+				2A6FDF70007F692F7ABEFEFDEE589E0F /* TGAttachment.m in Sources */,
+				466F311AA9D1868EA4A38B2C0DE252D7 /* TGBaseManager.m in Sources */,
+				3B3F75A5DF19D051FFBA915A408020D7 /* TGComment.m in Sources */,
+				5F7EE39DA408D0D0285FF8B061711798 /* TGConfiguration.m in Sources */,
+				7D49AB77D382E6BF1BEFF5E9765AE6A0 /* TGConnection.m in Sources */,
+				7456912BAAD5F0B8AB228BF7605A3EF4 /* TGEvent+Networking.m in Sources */,
+				D7C02B785CEC52B849015BA9C19FA6A7 /* TGEvent.m in Sources */,
+				C4BFC9A6674108CD16D310E6CDBB0614 /* TGEventManager+Queries.m in Sources */,
+				6AD531440FEB44FD5FEFE0166CC64339 /* TGEventManager.m in Sources */,
+				E1C88DC0AB89F6528526F49AFC532AE6 /* TGEventObject.m in Sources */,
+				E13841B31E7CE0E4D5A04B22D6A0AD82 /* TGImage.m in Sources */,
+				EB755F7EF1A93789CF7BAC079E9F9867 /* TGLike.m in Sources */,
+				142BACC99C75B9BA2638F87C0B681A7F /* TGLogger.m in Sources */,
+				8A9B3A8352638F74B8A9971FF8BB55B4 /* TGModelObject.m in Sources */,
+				8B188721C6FC2FE5204DCEF0EB344CE5 /* TGObject.m in Sources */,
+				E16606AB4991BA1B1EE5ED83E0ED151F /* TGObjectCache.m in Sources */,
+				D7B47A9F17CCAA8A8F984CCFA43CD7A0 /* TGPost+Reactions.m in Sources */,
+				A721025A7B8B7D46C1E21C59C5AFBE98 /* TGPost.m in Sources */,
+				FCEA9EB28E13EAE09A186F2406E9315B /* TGPostsManager.m in Sources */,
+				32E6F869C8247CAEEF5E9002F2894495 /* TGQuery.m in Sources */,
+				D8249F2D1E71AE6C2D02D068FDCAA155 /* TGReaction.m in Sources */,
+				9B73B1E0B200DFB4683C1283F0B381C2 /* TGUser+Networking.m in Sources */,
+				07C90DA8831B801530D6FA7241EB3E65 /* TGUser.m in Sources */,
+				317F306B19B839276E285D140E0A40C6 /* TGUserManager.m in Sources */,
+				00B234093238801AD23AA5C9A429F5C6 /* UIDevice+TGUtilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1167,7 +1167,7 @@
 		};
 		7779131BE41FDEC6EE1BFF0064FDCEF8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4BB692B0CECEB139B1B56FD672737BFE /* Tapglue.xcconfig */;
+			baseConfigurationReference = 481AF0808B61D642CFEEEBB5C3D3518A /* Tapglue.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1245,7 +1245,7 @@
 		};
 		8C1D0E9FE0C0BD2AB2AEF37B93C3D961 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4BB692B0CECEB139B1B56FD672737BFE /* Tapglue.xcconfig */;
+			baseConfigurationReference = 481AF0808B61D642CFEEEBB5C3D3518A /* Tapglue.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;

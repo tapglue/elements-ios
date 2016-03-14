@@ -23,6 +23,7 @@
 #import "TGUser+Networking.h"
 #import "TGEvent+Networking.h"
 #import "TGEventObject.h"
+#import "TGComment.h"
 #import "TGConnection.h"
 #import "TGConfiguration.h"
 #import "TGQuery.h"
@@ -123,7 +124,18 @@
  @param password The password of the user will be hashed with PBKDF2 by default.
  */
 + (void)loginWithUsernameOrEmail:(NSString*)usernameOrEmail
-                     andPasswort:(NSString*)password
+                     andPassword:(NSString*)password
+             withCompletionBlock:(TGSucessCompletionBlock)completionBlock;
+
+/*!
+ @abstract Login a user with username or email an unhashed password.
+ @discussion This will login a user by providing a username or email adress and a password and create a currentUser.
+ 
+ @param usernameOrEmail The username or email of the user.
+ @param password The password of the user will be plain text without any hashing.
+ */
++ (void)loginWithUsernameOrEmail:(NSString*)usernameOrEmail
+                     andUnhashedPassword:(NSString*)password
              withCompletionBlock:(TGSucessCompletionBlock)completionBlock;
 
 /*!
@@ -402,7 +414,23 @@
  */
 + (void)retrieveEventsForCurrentUserWithCompletionBlock:(void (^)(NSArray *events, NSError *error))completionBlock;
 
+#pragma mark - User Recommendations
 
+/*!
+ @abstract Retrieve user recommendations.
+ @discussion This will retrieve recommended users for the current user.
+ 
+ @param type The type of the user recommendation (latest, trending, active, random).
+ @param period The period the user recommendations are fetched for.
+ */
++ (void)retrieveUserRecommendationsOfType:(NSString*)type forPeriod:(NSString*)period andCompletionBlock:(void (^)(NSArray *users, NSError *error))completionBlock;
+
+/*!
+ @abstract Retrieve user recommendations.
+ @discussion This will retrieve recommended active users for the current user for a period day.
+ */
++ (void)retrieveUserRecommendationsWithCompletionBlock:(void (^)(NSArray *users, NSError *error))completionBlock;
+ 
 #pragma mark - Feeds
 
 /*!
@@ -429,9 +457,9 @@
  */
 + (void)retrieveUnreadCountForCurrentWithCompletionBlock:(void (^)(NSInteger unreadCount, NSError *error))completionBlock;
 
-+ (NSArray*)cachedFeedForCurrentUser;
-+ (NSArray*)cachedUnreadFeedForCurrentUser;
-+ (NSInteger)cachedUnreadCountForCurrentUser;
++ (NSArray*)cachedEventsFeedForCurrentUser;
++ (NSArray*)cachedUnreadEventsFeedForCurrentUser;
++ (NSInteger)cachedUnreadEventsCountForCurrentUser;
 
 #pragma mark - Queries -
 
@@ -544,6 +572,71 @@
  @discussion This will retrieve a news feed for a set of event types.
  */
 + (void)retrieveNewsFeedForCurrentUserForEventTypes:(NSArray*)types withCompletionBlock:(TGGetNewsFeedCompletionBlock)completionBlock;
+
+#pragma mark Comments
+
+/*!
+ @abstract Creates a comment on a custom objectId.
+ @discussion This will create a comment on an objectId.
+ 
+ @param comment The content of the comment.
+ @param post The Post object that is being commented.
+ */
++ (TGComment*)createComment:(NSString*)comment
+                                   forObjectWithId:(NSString*)objectId
+                       withCompletionBlock:(TGSucessCompletionBlock)completionBlock;
+
+/*!
+ @abstract Updates a comment on an objectId.
+ @discussion This will update a comment on a objectId.
+ 
+ @param comment The comment object that is being updated.
+ */
++ (void)updateComment:(TGComment*)comment forObjectWithId:(NSString*)objectId andCompletionBlock:(TGSucessCompletionBlock)completionBlock;
+
+/*!
+ @abstract Deletes a comment for an objectId.
+ @discussion This will delete a comment for an objectId.
+ 
+ @param objectId The objectId for which a comment is being deleted.
+ */
++ (void)deleteComment:(TGComment*)comment forObjectWithId:(NSString*)objectId andCompletionBlock:(TGSucessCompletionBlock)completionBlock;
+
+/*!
+ @abstract Retrieve comments for an objectId.
+ @discussion This will retrieve all comments for an objectId.
+ 
+ @param objectId The objectId for which comments are retrieved.
+ */
++ (void)retrieveCommentsForObjectWithId:(NSString*)objectId
+                  withCompletionBlock:(void (^)(NSArray *comments, NSError *error))completionBlock;
+
+#pragma mark Likes
+
+/*!
+ @abstract Create a like for an objectId.
+ @discussion This will create a like for an objectId.
+ 
+ @param objectId The objectId for which a like is being created.
+ */
++ (void)createLikeForObjectWithId:(NSString*)objectId andCompletionBlock:(TGSucessCompletionBlock)completionBlock;
+
+/*!
+ @abstract Deletes a like for an objectId.
+ @discussion This will delete a like for an objectId.
+ 
+ @param objectId The objectId for which a like is being deleted.
+ */
++ (void)deleteLikeForObjectWithId:(NSString*)objectId andCompletionBlock:(TGSucessCompletionBlock)completionBlock;
+
+/*!
+ @abstract Retrieve likes for an objectId.
+ @discussion This will retrieve all likes for a objectId.
+ 
+ @param objectI The objectId for which likes are retrieved.
+ */
++ (void)retrieveLikesForObjectWithId:(NSString*)objectId
+               withCompletionBlock:(void (^)(NSArray *likes, NSError *error))completionBlock;
 
 #pragma mark - Raw Rest -
 

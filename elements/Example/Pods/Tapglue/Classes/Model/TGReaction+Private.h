@@ -1,5 +1,5 @@
 //
-//  TGPostReaction.h
+//  TGReaction+Private.h
 //  Tapglue iOS SDK
 //
 //  Created by Martin Stemmle on 09/12/15.
@@ -19,9 +19,9 @@
 //
 
 
-#import "TGPostReaction.h"
+#import "TGReaction.h"
 
-@interface TGPostReaction (Private)
+@interface TGReaction (Private)
 
 @property (nonatomic, strong) TGUser *user;
 

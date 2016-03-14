@@ -20,16 +20,18 @@
 
 #import "TGApiRoutesBuilder.h"
 #import "TGPost.h"
-#import "TGPostComment.h"
-#import "TGPostLike.h"
+#import "TGComment.h"
+#import "TGLike.h"
 
 static NSString * const TGApiRouteUsers = @"users";
 static NSString * const TGApiRouteCurrentUser = @"me";
 static NSString * const TGApiRouteFeed = @"feed";
 static NSString * const TGApiRoutePosts = @"posts";
 static NSString * const TGApiRouteEvents = @"events";
+static NSString * const TGApiRouteExternals = @"externals";
 static NSString * const TGApiRouteComments = @"comments";
 static NSString * const TGApiRouteLikes = @"likes";
+static NSString * const TGApiRouteRecommendations = @"recommendations";
 
 @implementation TGApiRoutesBuilder
 
@@ -78,16 +80,16 @@ static NSString * const TGApiRouteLikes = @"likes";
     return [[self routeForPostWithId:postId] stringByAppendingPathComponent:TGApiRouteComments];
 }
 
-+ (NSString*)routeForComment:(TGPostComment *)comment {
++ (NSString*)routeForComment:(TGComment *)comment {
     return [self routeForCommentWithId:comment.objectId onPostWithId:comment.post.objectId];
 }
-            
+
 + (NSString*)routeForCommentWithId:(NSString*)commentId onPostWithId:(NSString*)postId {
     NSParameterAssert(commentId);
     return [[self routeForCommentsOnPostWithId:postId] stringByAppendingPathComponent:commentId];
 }
 
-+ (NSString*)routeForLike:(TGPostLike *)like {
++ (NSString*)routeForLike:(TGLike *)like {
     return [self routeForLikeWithId:like.objectId onPostWithId:like.post.objectId];
 }
 
@@ -100,7 +102,34 @@ static NSString * const TGApiRouteLikes = @"likes";
     return [[self routeForLikesOnPostWithId:postId] stringByAppendingPathComponent:likeId];
 }
 
-#pragma mark - Helper 
+#pragma mark - Comments -
+
++ (NSString*)routeForCommentOnObjectId:(NSString *)objectId {
+    return [[TGApiRouteExternals stringByAppendingPathComponent:objectId] stringByAppendingPathComponent:TGApiRouteComments];
+}
+
++ (NSString*)routeForCommentWithId:(NSString*)commentId onObjectWithId:(NSString*)objectId {
+    return [[[TGApiRouteExternals stringByAppendingPathComponent:objectId] stringByAppendingPathComponent:TGApiRouteComments] stringByAppendingPathComponent:commentId];
+}
+#pragma mark - Likes -
+
++ (NSString*)routeForLikeOnObjectId:(NSString *)objectId {
+    return [[TGApiRouteExternals stringByAppendingPathComponent:objectId] stringByAppendingPathComponent:TGApiRouteLikes];
+}
+
+#pragma mark - User recommendations
+
++ (NSString*)routeForUserRecommendationsOfType:(NSString*)type andPeriod:(NSString*)period {
+    //TODO: Rewrite to Switch-Case
+    if (type == TGUserRecommendationsTypeActive) {
+        return [[[TGApiRouteRecommendations stringByAppendingPathComponent:TGApiRouteUsers] stringByAppendingPathComponent:type] stringByAppendingPathComponent:period];
+    } else {
+        // Default behaviour is to retrieve the most active users
+        return [[[TGApiRouteRecommendations stringByAppendingPathComponent:TGApiRouteUsers] stringByAppendingPathComponent:type] stringByAppendingPathComponent:period];
+    }
+}
+
+#pragma mark - Helper
 
 /*!
  @param userId The userId for aonther user or `nil` for the current user.

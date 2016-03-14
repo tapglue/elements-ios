@@ -100,7 +100,18 @@ typedef NS_ENUM(NSUInteger, TGConnectionType) {
  @param usernameOrEmail The password of the user.
  */
 - (void)loginWithUsernameOrEmail:(NSString*)usernameOrEmail
-                     andPasswort:(NSString*)password
+                     andPassword:(NSString*)password
+             withCompletionBlock:(TGSucessCompletionBlock)completionBlock;
+
+/*!
+ @abstract Login a user.
+ @discussion This will login a user with a username or an email adress.
+ 
+ @param usernameOrEmail The username or email of the user.
+ @param usernameOrEmail The password of the user.
+ */
+- (void)loginWithUsernameOrEmail:(NSString*)usernameOrEmail
+                     andUnhashedPassword:(NSString*)password
              withCompletionBlock:(TGSucessCompletionBlock)completionBlock;
 
 /*!
@@ -203,5 +214,15 @@ typedef NS_ENUM(NSUInteger, TGConnectionType) {
                                                                 ofType:(TGConnectionType)connectionType
                                                       toSocialUsersIds:(NSArray*)toSocialUsersIds
                                                    withCompletionBlock:(TGSucessCompletionBlock)completionBlock;
+#pragma mark - Recommendations
+
+/*!
+ @abstract Retrieve user recommendatons.
+ @discussion This will retrieve user recommendations based on a type and period.
+ 
+ @param type Type of user recommendation that is being retrieved.
+ @param period Period of user recommendations.
+ */
+- (void)retrieveUserRecommendationsOfType:(NSString*)type forPeriod:(NSString*)period andCompletionBlock:(TGGetUserListCompletionBlock)completionBlock;
 
 @end

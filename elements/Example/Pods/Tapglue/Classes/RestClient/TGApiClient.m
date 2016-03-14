@@ -202,11 +202,11 @@ static NSString *const TGApiClientAppAndDeviceInfoCarrier = @"carrier";
             [self setNetworkActivityIndicatorVisible:NO];
 
             NSInteger httpStatusCode = ((NSHTTPURLResponse*)response).statusCode;
+            NSString *responsePayload = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
             if (httpStatusCode < 400) {
-                TGLog(@"backend request finished with HTTP %ld on %@", httpStatusCode, response.URL);
+                TGLog(@"backend request finished with HTTP %ld on %@ \n\t\n%@\n", httpStatusCode, response.URL, responsePayload);
             }
             else {
-                NSString *responsePayload = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
                 TGLog(@"backend request finished with HTTP %ld on %@ \n\t\n%@\n", httpStatusCode, response.URL, responsePayload);
             }
 

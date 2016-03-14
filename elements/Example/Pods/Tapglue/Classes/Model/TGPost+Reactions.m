@@ -26,13 +26,13 @@
 
 #pragma mark - Comments
 
-- (TGPostComment*)commentWithContent:(NSString*)commentContent withCompletionBlock:(TGSucessCompletionBlock)completionBlock {
+- (TGComment*)commentWithContent:(NSString*)commentContent withCompletionBlock:(TGSucessCompletionBlock)completionBlock {
     return [[Tapglue sharedInstance].postsManager createCommentWithContent:commentContent forPost:self withCompletionBlock:completionBlock];
 }
 
 #pragma mark - Likes
 
-- (TGPostLike*)likeWithCompletionBlock:(TGSucessCompletionBlock)completionBlock {
+- (TGLike*)likeWithCompletionBlock:(TGSucessCompletionBlock)completionBlock {
     return [[Tapglue sharedInstance].postsManager createLikeForPost:self withCompletionBlock:completionBlock];
 }
 

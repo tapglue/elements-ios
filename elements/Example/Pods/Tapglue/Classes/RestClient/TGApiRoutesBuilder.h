@@ -21,7 +21,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class TGPostComment, TGPostLike;
+@class TGComment, TGLike;
 
 @interface TGApiRoutesBuilder : NSObject
 
@@ -75,12 +75,25 @@
 
 + (NSString*)routeForCommentsOnPostWithId:(NSString*)postId;
 
-+ (NSString*)routeForComment:(TGPostComment*)comment;
++ (NSString*)routeForComment:(TGComment*)comment;
 + (NSString*)routeForCommentWithId:(NSString*)commentId onPostWithId:(NSString*)postId;
 
-+ (NSString*)routeForLike:(TGPostLike*)like;
++ (NSString*)routeForLike:(TGLike*)like;
 + (NSString*)routeForLikesOnPostWithId:(NSString*)postId;
 
 + (NSString*)routeForLikeWithId:(NSString*)likeId onPostWithId:(NSString*)postId;
+
+#pragma mark - Comments -
+
++ (NSString*)routeForCommentOnObjectId:(NSString *)objectId;
++ (NSString*)routeForCommentWithId:(NSString*)commentId onObjectWithId:(NSString*)objectId;
+
+#pragma mark - Likes -
+
++ (NSString*)routeForLikeOnObjectId:(NSString *)objectId;
+
+#pragma mark - User recommendations
+
++ (NSString*)routeForUserRecommendationsOfType:(NSString*)type andPeriod:(NSString*)period;
 
 @end

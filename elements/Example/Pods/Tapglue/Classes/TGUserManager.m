@@ -27,6 +27,7 @@
 #import "NSError+TGError.h"
 #import "TGObjectCache.h"
 #import "TGConnection+Private.h"
+#import "TGAPIRoutesBuilder.h"
 
 NSString *const TapglueUserDefaultsKeySessionToken = @"sessionToken";
 NSString *const TGUserManagerAPIEndpointCurrentUser = @"me";
@@ -70,12 +71,29 @@ static NSString *const TGUserManagerAPIEndpointConnections = @"me/connections";
 
 
 - (void)loginWithUsernameOrEmail:(NSString *)usernameOrEmail
-                     andPasswort:(NSString *)password
+                     andPassword:(NSString *)password
              withCompletionBlock:(TGSucessCompletionBlock)completionBlock {
 
     NSDictionary *loginData = @{@"username": usernameOrEmail,
                                 @"password": [TGUser hashPassword:password]};
 
+    NSString *route = [TGUserManagerAPIEndpointCurrentUser stringByAppendingPathComponent:@"login"];
+    
+    [self.client POST:route withURLParameters:nil andPayload:loginData andCompletionBlock:^(NSDictionary *jsonResponse, NSError *error) {
+        [self handleLoginResponse:jsonResponse
+                        withError:error
+                      requestUser:nil
+               andCompletionBlock:completionBlock];
+    }];
+}
+
+- (void)loginWithUsernameOrEmail:(NSString *)usernameOrEmail
+                     andUnhashedPassword:(NSString *)password
+             withCompletionBlock:(TGSucessCompletionBlock)completionBlock {
+    
+    NSDictionary *loginData = @{@"username": usernameOrEmail,
+                                @"password": password};
+    
     NSString *route = [TGUserManagerAPIEndpointCurrentUser stringByAppendingPathComponent:@"login"];
     
     [self.client POST:route withURLParameters:nil andPayload:loginData andCompletionBlock:^(NSDictionary *jsonResponse, NSError *error) {
@@ -116,8 +134,10 @@ static NSString *const TGUserManagerAPIEndpointConnections = @"me/connections";
 }
 
 - (void)searchUsersWithEmails:(NSArray*)emails andCompletionBlock:(TGGetUserListCompletionBlock)completionBlock {
-    NSString *queryString = [emails componentsJoinedByString:@"&email="];
-    [self.client GET:TGUserManagerAPIEndpointSearch withURLParameters:@{@"email" : queryString} andCompletionBlock:^(NSDictionary *jsonResponse, NSError *error) {
+    NSDictionary *payload = @{
+                              @"emails" : emails
+                              };
+    [self.client POST:[TGUserManagerAPIEndpointSearch stringByAppendingPathComponent:@"emails"] withURLParameters: nil andPayload: payload andCompletionBlock:^(NSDictionary *jsonResponse, NSError *error) {
         [self handleUserListResponse:jsonResponse withError:error andCompletionBlock:completionBlock];
     }];
 }
@@ -174,16 +194,11 @@ static NSString *const TGUserManagerAPIEndpointConnections = @"me/connections";
 }
 
 - (void)handleLogoutResponse:(BOOL)success withError:(NSError*)responseError andCompletionBlock:(TGSucessCompletionBlock)completionBlock {
-    if (success) {
-        [TGUser setCurrentUser:nil];
-        NSUserDefaults *tgUserDefaults = [Tapglue sharedInstance].userDefaults;
-        [tgUserDefaults removeObjectForKey:TapglueUserDefaultsKeySessionToken];
-        [tgUserDefaults synchronize];
+    if (!success) {
+        TGLog(@"Logout from server failed");
     }
-    else {
-        TGLog(@"Logout failed");
-        //TODO: improve error handling: e.g. if the backend returns a 404 also remove current user and tread it as success
-    }
+    
+    [self clearCurrentUserData];
 
     if (completionBlock) {
         completionBlock(success, responseError);
@@ -356,8 +371,26 @@ static NSString *const TGUserManagerAPIEndpointConnections = @"me/connections";
     [self.client DELETE:route withURLParameters:nil andCompletionBlock:completionBlock];
 }
 
+#pragma mark - Recommendations
+
+- (void)retrieveUserRecommendationsOfType:(NSString*)type forPeriod:(NSString*)period andCompletionBlock:(TGGetUserListCompletionBlock)completionBlock {
+    NSString *route = [TGApiRoutesBuilder routeForUserRecommendationsOfType:type andPeriod:period];
+    [self.client GET:route withCompletionBlock:^(NSDictionary *jsonResponse, NSError *error) {
+        [self handleUserListResponse:jsonResponse withError:error andCompletionBlock:completionBlock];
+    }];
+}
+
+#pragma mark - Helper
+
 - (NSString*)stringFromConnectionType:(TGConnectionType)connectionType {
     return connectionType == TGConnectionTypeFriend ? @"friend" : @"follow";
+}
+
+- (void)clearCurrentUserData {
+    [TGUser setCurrentUser:nil];
+    NSUserDefaults *tgUserDefaults = [Tapglue sharedInstance].userDefaults;
+    [tgUserDefaults removeObjectForKey:TapglueUserDefaultsKeySessionToken];
+    [tgUserDefaults synchronize];
 }
 
 @end

@@ -108,6 +108,10 @@ static NSString *const TGUserIsFollowedJsonKey = @"is_followed";
     _hashedPassword = [self.class hashPassword:password];
 }
 
+- (void)setUnhashedPassword:(NSString *)password {
+    _hashedPassword = password;
+}
+
 + (NSString*)hashPassword:(NSString *)password {
     return [password tg_stringHashedViaPBKDF2];
 }

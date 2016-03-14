@@ -59,6 +59,33 @@ static NSString *const TGPlatformKeyGoogle = @"google";
  */
 static NSString *const TGPlatformKeyCustom = @"custom";
 
+#pragma mark - Recommendation Types
+
+/*!
+ @abstract Defines the Type of the Active User Recommendation.
+ @constant TGUserRecommendationsTypeActive holds the key for recommending active users.
+ */
+static NSString *const TGUserRecommendationsTypeActive = @"active";
+
+#pragma mark - Recommendation periods
+
+/*!
+ @abstract Defines the Period of the User Recommendation for a day.
+ @constant TGUserRecommendationsPeriodDay holds the key for user recommendations for a day.
+ */
+static NSString *const TGUserRecommendationsPeriodDay = @"day";
+
+/*!
+ @abstract Defines the Period of the User Recommendation for a week.
+ @constant TGUserRecommendationsPeriodWeek holds the key for user recommendations for a week.
+ */
+static NSString *const TGUserRecommendationsPeriodWeek = @"week";
+
+/*!
+ @abstract Defines the Type of the Active User Recommendation.
+ @constant TGUserRecommendationsPeriodMonth holds the key for user recommendations for a month.
+ */
+static NSString *const TGUserRecommendationsPeriodMonth = @"month";
 
 #pragma mark - Errors
 

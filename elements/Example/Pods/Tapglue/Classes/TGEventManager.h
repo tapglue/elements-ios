@@ -168,4 +168,52 @@ extern NSString *const TGEventManagerAPIEndpointEvents;
  */
 - (void)retrieveFeedUnreadCountForCurrentWithCompletionBlock:(void (^)(NSInteger, NSError *))completionBlock;
 
+#pragma mark - Comments -
+
+/*!
+ @abstract Creates a comment on a custom object.
+ @discussion This will create a comment on a custom object.
+ */
+- (TGComment*)createComment:(NSString*)comment forObjectWithId:objectId andCompletionBlock:(TGSucessCompletionBlock)completionBlock;
+
+/*!
+ @abstract Updates a comment on an objectId.
+ @discussion This will update a comment on an objectId.
+ 
+ @param comment The comment object that is being updated.
+ */
+- (void)updateComment:(TGComment*)comment forObjectWithId:(NSString*)objectId andCompletionBlock:(TGSucessCompletionBlock)completionBlock;
+
+/*!
+ @abstract Deletes a comment on a custom object.
+ @discussion This will delete a comment on a custom object.
+ */
+- (void)deleteComment:(TGComment*)comment forObjectWithId:(NSString*)objectId andCompletionBlock:(TGSucessCompletionBlock)completionBlock;
+
+/*!
+ @abstract Retrieve all comment on an objectId.
+ @discussion This will retrieve all comments on an objectId.
+ */
+- (void)retrieveCommentsForObjectWithId:objectId withCompletionBlock:(void (^)(NSArray *comments, NSError *error))completionBlock;
+
+#pragma mark - Likes -
+
+/*!
+ @abstract Create a like event on a custom object.
+ @discussion This will create a like event on a custom object.
+ */
+- (void)createLikeForObjectWithId:(NSString*)objectId andCompletionBlock:(TGSucessCompletionBlock)completionBlock;
+
+/*!
+ @abstract Delete a like event on a custom object.
+ @discussion This will delete a like event on a custom object.
+ */
+- (void)deleteLikeForObjectWithId:(NSString*)objectId andCompletionBlock:(TGSucessCompletionBlock)completionBlock;
+
+/*!
+ @abstract Retrieves like events on a custom object.
+ @discussion This will retrieve like events on a custom object.
+ */
+- (void)retrieveLikesForObjectWithId:(NSString*)objectId andCompletionBlock:(void (^)(NSArray *Likes, NSError *error))completionBlock;
+
 @end

@@ -1,5 +1,5 @@
 //
-//  TGPostLike.h
+//  TGLike.h
 //  Tapglue iOS SDK
 //
 //  Created by Martin Stemmle on 09/12/15.
@@ -18,8 +18,8 @@
 //  limitations under the License.
 //
 
-#import "TGPostReaction.h"
+#import "TGReaction.h"
 
-@interface TGPostLike : TGPostReaction
+@interface TGLike : TGReaction
 
 @end

@@ -26,9 +26,9 @@
 #import "NSError+TGError.h"
 #import "TGObjectCache.h"
 #import "TGApiRoutesBuilder.h"
-#import "TGPostReaction+Private.h"
-#import "TGPostComment.h"
-#import "TGPostLike.h"
+#import "TGReaction+Private.h"
+#import "TGComment.h"
+#import "TGLike.h"
 
 @implementation TGPostsManager
 
@@ -121,11 +121,11 @@
 
 #pragma mark - Comments -
 
-- (TGPostComment*)createCommentWithContent:(NSString*)commentContent
+- (TGComment*)createCommentWithContent:(NSString*)commentContent
                                    forPost:(TGPost*)post
                        withCompletionBlock:(TGSucessCompletionBlock)completionBlock {
     
-    TGPostComment *comment = [[TGPostComment alloc] init];
+    TGComment *comment = [[TGComment alloc] init];
     comment.content = commentContent;
     comment.post = post;
     comment.user = [TGUser currentUser];
@@ -137,13 +137,13 @@
     return comment;
 }
 
-- (void)updateComment:(TGPostComment*)comment withCompletionBlock:(TGSucessCompletionBlock)completionBlock {
+- (void)updateComment:(TGComment*)comment withCompletionBlock:(TGSucessCompletionBlock)completionBlock {
     [self.client updateObject:comment
                       atRoute:[TGApiRoutesBuilder routeForComment:comment]
           withCompletionBlock:completionBlock];
 }
 
-- (void)deleteComment:(TGPostComment*)comment withCompletionBlock:(TGSucessCompletionBlock)completionBlock {
+- (void)deleteComment:(TGComment*)comment withCompletionBlock:(TGSucessCompletionBlock)completionBlock {
     [self.client DELETE:[TGApiRoutesBuilder routeForComment:comment] withCompletionBlock:completionBlock];
 }
 
@@ -158,7 +158,7 @@
             NSArray *commentDictionaries = [jsonResponse objectForKey:@"comments"];
             NSMutableArray *comments = [NSMutableArray arrayWithCapacity:commentDictionaries.count];
             for (NSDictionary *data in commentDictionaries) {
-                [comments addObject:[[TGPostComment alloc] initWithDictionary:data]];
+                [comments addObject:[[TGComment alloc] initWithDictionary:data]];
             }
 
             if (completionBlock) {
@@ -173,8 +173,8 @@
 
 #pragma mark - Likes -
 
-- (TGPostLike*)createLikeForPost:(TGPost*)post withCompletionBlock:(TGSucessCompletionBlock)completionBlock {
-    TGPostLike *like = [[TGPostLike alloc] init];
+- (TGLike*)createLikeForPost:(TGPost*)post withCompletionBlock:(TGSucessCompletionBlock)completionBlock {
+    TGLike *like = [[TGLike alloc] init];
     like.post = post;
     like.user = [TGUser currentUser];
     
@@ -207,7 +207,7 @@
             NSArray *likeDictionaries = [jsonResponse objectForKey:@"likes"];
             NSMutableArray *likes = [NSMutableArray arrayWithCapacity:likeDictionaries.count];
             for (NSDictionary *data in likeDictionaries) {
-                [likes addObject:[[TGPostLike alloc] initWithDictionary:data]];
+                [likes addObject:[[TGLike alloc] initWithDictionary:data]];
             }
             
             if (completionBlock) {

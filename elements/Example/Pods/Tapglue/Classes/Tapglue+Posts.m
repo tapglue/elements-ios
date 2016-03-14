@@ -82,17 +82,17 @@
 
 #pragma mark - Comments -
 
-+ (TGPostComment*)createCommentWithContent:(NSString*)commentContent
++ (TGComment*)createCommentWithContent:(NSString*)commentContent
                                    forPost:(TGPost*)post
                        withCompletionBlock:(TGSucessCompletionBlock)completionBlock {
     return [[self postsManager] createCommentWithContent:commentContent forPost:post withCompletionBlock:completionBlock];
 }
 
-+ (void)updateComment:(TGPostComment*)comment withCompletionBlock:(TGSucessCompletionBlock)completionBlock {
++ (void)updateComment:(TGComment*)comment withCompletionBlock:(TGSucessCompletionBlock)completionBlock {
     [[self postsManager] updateComment:comment withCompletionBlock:completionBlock];
 }
 
-+ (void)deleteComment:(TGPostComment*)comment withCompletionBlock:(TGSucessCompletionBlock)completionBlock {
++ (void)deleteComment:(TGComment*)comment withCompletionBlock:(TGSucessCompletionBlock)completionBlock {
     [[self postsManager] deleteComment:comment withCompletionBlock:completionBlock];
 }
 
@@ -109,7 +109,7 @@
 
 #pragma mark - Likes -
 
-+ (TGPostLike*)createLikeForPost:(TGPost*)post withCompletionBlock:(TGSucessCompletionBlock)completionBlock {
++ (TGLike*)createLikeForPost:(TGPost*)post withCompletionBlock:(TGSucessCompletionBlock)completionBlock {
     return [[self postsManager] createLikeForPost:post withCompletionBlock:completionBlock];
 }
 

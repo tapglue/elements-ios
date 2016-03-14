@@ -27,11 +27,7 @@ public class AddressBookViewController: UIViewController {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-        let bundle = NSBundle(forClass: ProfileViewController.self)
-        let connectionCellNib = UINib(nibName: cellConnectionReusableIdentifier, bundle: bundle)
-        let nothingFoundCellNib = UINib(nibName: cellNothingFoundReusableIdentifier, bundle: bundle)
-        tableView.registerNib(connectionCellNib, forCellReuseIdentifier: cellConnectionReusableIdentifier)
-        tableView.registerNib(nothingFoundCellNib, forCellReuseIdentifier: cellNothingFoundReusableIdentifier)
+        tableView.registerNibs(nibNames: [cellNothingFoundReusableIdentifier, cellConnectionReusableIdentifier])
         tableView.rowHeight = 80
         
         print("address book view!")

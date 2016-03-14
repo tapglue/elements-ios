@@ -1,5 +1,5 @@
 //
-//  TGPostComment.m
+//  TGComment.m
 //  Tapglue iOS SDK
 //
 //  Created by Martin Stemmle on 09/12/15.
@@ -18,14 +18,17 @@
 //  limitations under the License.
 //
 
-#import "TGPostComment.h"
+#import "TGComment.h"
 #import "TGObject+Private.h"
 
-@implementation TGPostComment
+@implementation TGComment
 
 - (NSDictionary*)jsonMapping {
     // left side: json attribute name , right side: model property name
-    return @{ @"content" : @"content" };
+    return @{
+             @"content" : @"content",
+             @"external_id" : @"externalId"
+             };
 }
 
 - (NSDictionary*)jsonMappingForWriting {

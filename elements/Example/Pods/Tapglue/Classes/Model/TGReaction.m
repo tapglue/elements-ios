@@ -1,5 +1,5 @@
 //
-//  TGPostReaction.h
+//  TGReaction.m
 //  Tapglue iOS SDK
 //
 //  Created by Martin Stemmle on 09/12/15.
@@ -18,28 +18,28 @@
 //  limitations under the License.
 //
 
-#import "TGPostReaction.h"
+#import "TGReaction.h"
 #import "TGUser+Private.h"
 #import "TGPost.h"
 #import "TGModelObject+Private.h"
 #import "NSDictionary+TGUtilities.h"
 
-static NSString *const TGPostReactionUserIdJsonKey = @"user_id";
-static NSString *const TGPostReactionPostIdJsonKey = @"post_id";
+static NSString *const TGReactionUserIdJsonKey = @"user_id";
+static NSString *const TGReactionPostIdJsonKey = @"post_id";
 
-@interface TGPostReaction ()
+@interface TGReaction ()
 @property (nonatomic, strong) TGUser *user;
 @property (nonatomic, strong) TGPost *post;
 @end
 
-@implementation TGPostReaction
+@implementation TGReaction
 
 #pragma mark - JSON Parsing
 
 - (void)loadDataFromDictionary:(NSDictionary *)data withMapping:(NSDictionary *)mapping {
     [super loadDataFromDictionary:data withMapping:mapping];
-    _user = [TGUser objectWithId:[data tg_stringValueForKey:TGPostReactionUserIdJsonKey]];
-    _post = [TGPost objectWithId:[data tg_stringValueForKey:TGPostReactionPostIdJsonKey]];
+    _user = [TGUser objectWithId:[data tg_stringValueForKey:TGReactionUserIdJsonKey]];
+    _post = [TGPost objectWithId:[data tg_stringValueForKey:TGReactionPostIdJsonKey]];
 }
 
 - (NSDictionary*)jsonMapping {

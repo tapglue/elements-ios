@@ -27,6 +27,8 @@
 #import "TGLogger.h"
 #import "Tapglue+Private.h"
 #import "TGUserManager.h"
+#import "TGReaction+Private.h"
+#import "TGComment.h"
 #import "TGApiRoutesBuilder.h"
 
 NSString *const TGEventManagerAPIEndpointEvents = @"events";
@@ -257,7 +259,116 @@ NSString *const TGEventManagerAPIEndpointEvents = @"events";
     [self retrieveEventWithId:eventId forUserWithID:nil withCompletionBlock:completionBlock];
 }
 
+#pragma mark - Comments -
 
+- (TGComment*)createComment:(NSString*)comment forObjectWithId:objectId andCompletionBlock:(TGSucessCompletionBlock)completionBlock {
+    NSString *route = [TGApiRoutesBuilder routeForCommentOnObjectId:objectId];
+    TGComment *objectComment = [[TGComment alloc] init];
+    objectComment.content = comment;
+    objectComment.user = [TGUser currentUser];
+    
+    [self.client POST:route withURLParameters:nil andPayload:objectComment.jsonDictionary andCompletionBlock:^(NSDictionary *jsonResponse, NSError *error) {
+        [objectComment loadDataFromDictionary:jsonResponse]; // update the data
+        if (!error) {
+            if (completionBlock) {
+                completionBlock(YES, nil);
+            }
+        } else if (completionBlock) {
+            completionBlock(NO, error);
+        }
+    }];
+    
+    return objectComment;
+}
+
+- (void)updateComment:(TGComment*)comment forObjectWithId:(NSString*)objectId andCompletionBlock:(TGSucessCompletionBlock)completionBlock {
+    NSString *route = [TGApiRoutesBuilder routeForCommentWithId:comment.objectId onObjectWithId:objectId];
+    [self.client PUT:route withURLParameters:nil andPayload:comment.jsonDictionary andCompletionBlock:^(NSDictionary *jsonResponse, NSError *error) {
+        if (completionBlock) {
+            completionBlock(error == nil, error);
+        }
+    }];
+}
+
+- (void)deleteComment:(TGComment*)comment forObjectWithId:(NSString*)objectId andCompletionBlock:(TGSucessCompletionBlock)completionBlock {
+    NSString *route = [TGApiRoutesBuilder routeForCommentWithId:comment.objectId onObjectWithId:objectId];
+    [self.client DELETE:route withCompletionBlock:completionBlock];
+}
+
+- (void)retrieveCommentsForObjectWithId:objectId withCompletionBlock:(void (^)(NSArray *comments, NSError *error))completionBlock {
+    [self.client GET:[TGApiRoutesBuilder routeForCommentOnObjectId:objectId] withURLParameters:nil andCompletionBlock:^(NSDictionary *jsonResponse, NSError *error) {
+        
+        if (!error) {
+            NSArray *userDictionaries = [[jsonResponse objectForKey:@"users"] allValues];
+            [TGUser createAndCacheObjectsFromDictionaries:userDictionaries];
+            
+            NSArray *commentDictionaries = [jsonResponse objectForKey:@"comments"];
+            NSMutableArray *comments = [NSMutableArray arrayWithCapacity:commentDictionaries.count];
+            for (NSDictionary *data in commentDictionaries) {
+                [comments addObject:[[TGComment alloc] initWithDictionary:data]];
+            }
+            
+            if (completionBlock) {
+                completionBlock(comments, nil);
+            }
+        }
+        else if(completionBlock) {
+            completionBlock(nil, error);
+        }
+    }];
+}
+
+#pragma mark - Likes -
+
+- (void)createLikeForObjectWithId:(NSString*)objectId andCompletionBlock:(TGSucessCompletionBlock)completionBlock {
+    NSString *route = [TGApiRoutesBuilder routeForLikeOnObjectId:objectId];
+    [self.client POST:route withURLParameters:nil andPayload:nil andCompletionBlock:^(NSDictionary *jsonResponse, NSError *error) {
+        if (!error) {
+            if (completionBlock) {
+                completionBlock(YES, nil);
+            }
+        } else if (completionBlock) {
+            completionBlock(NO, error);
+        }
+    }];
+}
+
+- (void)deleteLikeForObjectWithId:(NSString*)objectId andCompletionBlock:(TGSucessCompletionBlock)completionBlock {
+    NSString *route = [TGApiRoutesBuilder routeForLikeOnObjectId:objectId];
+    [self.client DELETE:route withCompletionBlock:^(BOOL success, NSError *error) {
+        if (!error) {
+            if (completionBlock) {
+                completionBlock(YES, nil);
+            }
+        } else if (completionBlock) {
+            completionBlock(NO, error);
+        }
+    }];
+}
+
+- (void)retrieveLikesForObjectWithId:(NSString*)objectId andCompletionBlock:(void (^)(NSArray *Likes, NSError *error))completionBlock {
+    NSString *route = [TGApiRoutesBuilder routeForLikeOnObjectId:objectId];
+    [self.client GET:route withURLParameters:nil andCompletionBlock:^(NSDictionary *jsonResponse, NSError *error) {
+        
+        if (!error) {
+            NSArray *userDictionaries = [[jsonResponse objectForKey:@"users"] allValues];
+            [TGUser createAndCacheObjectsFromDictionaries:userDictionaries];
+            
+            NSArray *likeDictionaries = [jsonResponse objectForKey:@"likes"];
+            NSMutableArray *likes = [NSMutableArray arrayWithCapacity:likeDictionaries.count];
+            for (NSDictionary *data in likeDictionaries) {
+                [likes addObject:[[TGLike alloc] initWithDictionary:data]];
+            }
+            
+            if (completionBlock) {
+                completionBlock(likes, nil);
+            }
+        }
+        else if(completionBlock) {
+            completionBlock(nil, error);
+        }
+    }];
+}
 
 #pragma mark collection
 
