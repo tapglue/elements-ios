@@ -32,6 +32,8 @@ public class AddressBookViewController: UIViewController {
         
         print("address book view!")
         searchForUsersByEmail()
+        tableView.backgroundColor = UIColor.clearColor()
+        applyConfiguration(TapglueUI.config)
     }
     
     func searchForUsersByEmail() {
@@ -92,7 +94,11 @@ public class AddressBookViewController: UIViewController {
 }
 
 @available(iOS 9.0, *)
-extension AddressBookViewController: UITableViewDelegate {}
+extension AddressBookViewController: UITableViewDelegate {
+    public func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        cell.backgroundColor = UIColor.clearColor()
+    }
+}
 
 @available(iOS 9.0, *)
 extension AddressBookViewController: UITableViewDataSource {
