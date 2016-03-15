@@ -25,28 +25,52 @@ public class TapglueUI {
         TapglueUI.config = try ConfigParser().parse(config)
     }
     
+    /**
+     performs segue to elements profile screen
+     - Parameter caller: calling UIViewController
+    */
     public static func performSegueToProfile(caller: UIViewController) {
         let vc = profileStoryboard().instantiateInitialViewController()!
         caller.presentViewController(vc, animated: true, completion: nil)
     }
     
+    /**
+     performs segue to elements notification screen
+     - Parameter caller: calling UIViewController
+     */
     public static func performSegueToNotificationFeed(caller: UIViewController) {
         let vc = notificationStoryboard().instantiateInitialViewController()!
         caller.presentViewController(vc, animated: true, completion: nil)
     }
     
+    /**
+     instantiates a profile view controller from elements
+     - Returns: elements profile view controller
+     */
     public static func profileViewController() -> ProfileViewController {
         return profileStoryboard().instantiateViewControllerWithIdentifier("ProfileViewController") as! ProfileViewController
     }
-    
+
+    /**
+     instantiates a notification feed view controller from elements
+     - Returns: elements notification feed view controller
+     */
     public static func notificationFeedViewController() -> NotificationFeedViewController {
         return notificationStoryboard().instantiateViewControllerWithIdentifier("NotificationFeedViewController") as! NotificationFeedViewController
     }
     
+    /**
+     instantiates a connections view controller from elements
+     - Returns: elements connections view controller
+     */
     public static func connectionsViewController() -> ConnectionsViewController {
         return profileStoryboard().instantiateViewControllerWithIdentifier("ConnectionsViewController") as! ConnectionsViewController
     }
-    
+
+    /**
+     instantiates a user search view controller from elements
+     - Returns: elements user search view controller
+     */
     public static func userSearchViewController() -> UserSearchViewController {
         return profileStoryboard().instantiateViewControllerWithIdentifier("UserSearchViewController") as! UserSearchViewController
     }

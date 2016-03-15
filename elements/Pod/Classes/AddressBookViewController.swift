@@ -141,6 +141,19 @@ extension AddressBookViewController: ConnectionCellDelegate {
 
 @available(iOS 9.0, *)
 public protocol AddressBookViewDelegate {
+    
+    /**
+     Asks delegate if the calling view controller should handle its own navigation
+     - Parameter addressBookViewController: address book view controller object asking the delegate
+     - Returns: boolean value to indicate if navigation should be handled or not
+     */
     func defaultNavigationEnabledInAddressBookViewController(addressBookViewController: AddressBookViewController) -> Bool
-    func addressBookViewController(addressBookViewController: AddressBookViewController, didSelectUser: TGUser)
+    
+    /**
+     Tells delegate that a user was selected
+     - Parameters:
+        - addressBookViewController: address book view controller object informing the delegate
+        - user: user selected
+     */
+    func addressBookViewController(addressBookViewController: AddressBookViewController, didSelectUser user: TGUser)
 }

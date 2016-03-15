@@ -215,8 +215,35 @@ extension ProfileViewController: UITableViewDelegate {
 }
 
 public protocol ProfileViewDelegate {
+    
+    /**
+     Asks delegate if the calling view controller should handle its own navigation
+     - Parameter profileViewController: profile view controller object asking the delegate
+     - Returns: boolean value to indicate if navigation should be handled or not
+     */
     func defaultNavigationEnabledInProfileViewController(profileViewController: ProfileViewController) -> Bool
+    
+    /**
+     Asks delegate which is the user to be displayed in the profile view controller
+     - Parameter profileViewController: profile view controller object asking the delegate
+     - Returns: user whos profile is to be displayed by the profile view controller
+    */
     func referenceUserInProfileViewController(profileViewController: ProfileViewController) -> TGUser
-    func profileViewController(profileViewController: ProfileViewController, didSelectConnectionsOfType: ConnectionType, forUser: TGUser)
+    
+    /**
+     Tells delegate that a `ConnectionType` was selected
+     - Parameters:
+        - profileViewController: profile view controller object asking the delegate
+        - connectionType: the selected connection type
+        - user: the user for which the `ConnectionType` was selected
+     */
+    func profileViewController(profileViewController: ProfileViewController, didSelectConnectionsOfType connectionType: ConnectionType, forUser user: TGUser)
+    
+    /**
+     Tells delegate that an event was selected
+     - Parameters:
+        - profileViewController: profile view controller object asking the delegate
+        - event: the event that was selected
+    */
     func profileViewController(profileViewcontroller: ProfileViewController, didSelectEvent event: TGEvent)
 }

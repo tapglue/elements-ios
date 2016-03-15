@@ -137,7 +137,25 @@ extension UserSearchViewController: ConnectionCellDelegate {
 }
 
 public protocol UserSearchViewDelegate {
-    func defaultNavigationEnabledInUserSearchViewController(connectionsViewController: UserSearchViewController) -> Bool
-    func userSearchViewController(userSearchViewController: UserSearchViewController, didSelectUser: TGUser)
+    
+    /**
+     Asks delegate if the calling view controller should handle its own navigation
+     - Parameter userSearchViewController: user search view controller object asking the delegate
+     - Returns: boolean value to indicate if navigation should be handled or not
+     */
+    func defaultNavigationEnabledInUserSearchViewController(userSearchViewController: UserSearchViewController) -> Bool
+    
+    /**
+     Tells delegate that a user was selected
+     - Parameters:
+        - userSearchViewController: user search view controller object informing the delegate
+        - user: user selected
+     */
+    func userSearchViewController(userSearchViewController: UserSearchViewController, didSelectUser user: TGUser)
+    
+    /**
+     Tell delegate address book search was selected
+     - Parameter userSearchViewController: user search view controller informing the delegate
+    */
     func didTapAddressBookInUserSearchViewController(userSearchViewController: UserSearchViewController)
 }

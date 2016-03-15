@@ -131,8 +131,33 @@ public class ConnectionsViewController: UITableViewController, ConnectionCellDel
 }
 
 public protocol ConnectionsViewDelegate {
-    func connectionTypeInConnectionsViewController(connectionsViewController: ConnectionsViewController) -> ConnectionType
+    
+    /**
+     Asks delegate if the calling view controller should handle its own navigation
+     - Parameter connectionsViewController: connections view controller object asking the delegate
+     - Returns: boolean value to indicate if navigation should be handled or not
+     */
     func defaultNavigationEnabledInConnectionsViewController(connectionsViewController: ConnectionsViewController) -> Bool
+    
+    /**
+     Asks delegate which users connections should be displayed
+     - Parameter connectionsViewController: connections view controller object asking the delegate
+     - Returns: user whos connections are to be displayed
+    */
     func referenceUserInConnectionsViewController(connectionsViewController: ConnectionsViewController) -> TGUser
-    func connectionsViewController(connectionsViewController: ConnectionsViewController, didSelectUser: TGUser)
+    
+    /**
+     Asks delegate which `ConnectionType` should be displayed 
+     - Parameter connectionsViewController: connections view controller object asking the delegate
+     - Returns: `ConnectionType` to be returned
+     */
+    func connectionTypeInConnectionsViewController(connectionsViewController: ConnectionsViewController) -> ConnectionType
+    
+     /**
+     Tells delegate that a user was selected
+     - Parameters:
+        - connectionsViewController: connections view controller object informing the delegate
+        - user: user selected
+    */
+    func connectionsViewController(connectionsViewController: ConnectionsViewController, didSelectUser user: TGUser)
 }

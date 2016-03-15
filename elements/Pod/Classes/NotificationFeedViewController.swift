@@ -135,6 +135,19 @@ extension NotificationFeedViewController: UITableViewDelegate {
 }
 
 public protocol NotificationFeedViewDelegate{
+    
+    /**
+     Asks delegate if the calling view controller should handle its own navigation
+     - Parameter notificationFeedViewController: notification feed view controller object asking the delegate
+     - Returns: boolean value to indicate if navigation should be handled or not
+     */
     func defaultNavigationEnabledInNotificationFeedViewController(notificationFeedViewController: NotificationFeedViewController) -> Bool
+    
+    /**
+     Tells delegate that an event was selected
+     - Parameters:
+        - notificationFeedViewController: notification feed view controller object asking the delegate
+        - event: the event that was selected
+     */
     func notificationFeedViewController(noticationFeedViewController: NotificationFeedViewController, didSelectEvent event: TGEvent)
 }
