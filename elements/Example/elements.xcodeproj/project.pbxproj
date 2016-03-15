@@ -15,8 +15,9 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		65069FFB1C90DB2C00A54D25 /* ManualProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65069FFA1C90DB2C00A54D25 /* ManualProfileViewController.swift */; };
 		651504F81C9200B9003E402F /* DelegatedFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651504F71C9200B9003E402F /* DelegatedFeedViewController.swift */; };
-		6530A8831C88EDF300B1B96A /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 6530A8821C88EDF300B1B96A /* config.json */; };
+		6530A8831C88EDF300B1B96A /* config-alt.json in Resources */ = {isa = PBXBuildFile; fileRef = 6530A8821C88EDF300B1B96A /* config-alt.json */; };
 		653C3F1E1C89E40A00A90BFD /* UILabel+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653C3F1D1C89E40A00A90BFD /* UILabel+Font.swift */; };
+		6549E55D1C98A40C002D6CC1 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 6549E55C1C98A40C002D6CC1 /* config.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +35,9 @@
 		62BC20E673750FF14072897A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		65069FFA1C90DB2C00A54D25 /* ManualProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualProfileViewController.swift; sourceTree = "<group>"; };
 		651504F71C9200B9003E402F /* DelegatedFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegatedFeedViewController.swift; sourceTree = "<group>"; };
-		6530A8821C88EDF300B1B96A /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = "<group>"; };
+		6530A8821C88EDF300B1B96A /* config-alt.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "config-alt.json"; sourceTree = "<group>"; };
 		653C3F1D1C89E40A00A90BFD /* UILabel+Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Font.swift"; sourceTree = "<group>"; };
+		6549E55C1C98A40C002D6CC1 /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = config.json; path = ../config.json; sourceTree = "<group>"; };
 		65FB9B601C6B4358001F4B72 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		65FB9B611C6B4358001F4B72 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		8A418C7196F7B7D56B3C5639 /* Pods-elements_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-elements_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-elements_Example/Pods-elements_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -87,7 +89,8 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
-				6530A8821C88EDF300B1B96A /* config.json */,
+				6530A8821C88EDF300B1B96A /* config-alt.json */,
+				6549E55C1C98A40C002D6CC1 /* config.json */,
 				653C3F1D1C89E40A00A90BFD /* UILabel+Font.swift */,
 			);
 			name = "Example for elements";
@@ -210,7 +213,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
-				6530A8831C88EDF300B1B96A /* config.json in Resources */,
+				6530A8831C88EDF300B1B96A /* config-alt.json in Resources */,
+				6549E55D1C98A40C002D6CC1 /* config.json in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);

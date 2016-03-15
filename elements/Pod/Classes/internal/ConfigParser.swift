@@ -25,12 +25,22 @@ class ConfigParser {
     func parse(data: NSData) throws  -> Config{
         let defaultConfig = Config()
         
-        let configDictionary: NSDictionary = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
-        let navigationBarColor = UIColor.colorFromHexString(configDictionary["navigationBarColor"] as! String) ?? defaultConfig.navigationBarColor
-        let navigationBarTextColor = UIColor.colorFromHexString(configDictionary["navigationBarTextColor"] as! String) ?? defaultConfig.navigationBarTextColor
-        let backgroundColor = UIColor.colorFromHexString(configDictionary["backgroundColor"] as! String) ?? defaultConfig.backgroundColor
-        let followBtnDictionary = configDictionary["followButton"] as! [String: AnyObject]
-        let followButtonConfig = FollowButtonParser.parse(followBtnDictionary) ?? FollowButtonConfig()
+        let configDictionary: NSDictionary = try NSJSONSerialization.JSONObjectWithData(data,
+            options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
+        let navigationBarColor = ColorUtil.configColorFromHex(configDictionary["navigationBarColor"] as? String,
+            orDefault: defaultConfig.navigationBarColor)
+        let navigationBarTextColor = ColorUtil.configColorFromHex(configDictionary["navigationBarTextColor"] as? String,
+            orDefault: defaultConfig.navigationBarTextColor)
+        let backgroundColor = ColorUtil.configColorFromHex(configDictionary["backgroundColor"] as? String,
+            orDefault: defaultConfig.backgroundColor)
+        let followBtnDictionary = configDictionary["followButton"] as? [String: AnyObject]
+        
+        let followButtonConfig: FollowButtonConfig
+        if let followBtnDictionary = followBtnDictionary {
+            followButtonConfig = FollowButtonParser.parse(followBtnDictionary)
+        } else {
+            followButtonConfig = FollowButtonConfig()
+        }
         
         let roundedImages = configDictionary["roundedImages"] as? Bool ?? defaultConfig.roundedImages
         return Config(navigationBarColor: navigationBarColor, navigationBarTextColor: navigationBarTextColor, backgroundColor: backgroundColor, followButtonConfig: followButtonConfig, roundedImages: roundedImages)

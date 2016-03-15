@@ -62,6 +62,7 @@
 		5B0541EEA94979638DE0609908BB0266 /* TGAttachment+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 20A230965724331213ACCDA82936C359 /* TGAttachment+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5BB8520DECE8DA053C796E17A88036A6 /* TGQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 58D38C733879A85F759FAAB3AF25ED34 /* TGQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5F7EE39DA408D0D0285FF8B061711798 /* TGConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB33B22385C2C66B53A604EF6175D41 /* TGConfiguration.m */; };
+		6549E55B1C98A0FE002D6CC1 /* ColorUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6549E55A1C98A0FE002D6CC1 /* ColorUtil.swift */; };
 		65EE576991DE9568B4FBE5F19B55C243 /* TGEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BCDC7DDFE523A3420FEA7E2A8299589 /* TGEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		67D5DD20C025F4D2712EC1D90F77692E /* TGConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D573540D95B0672B143431397C62339 /* TGConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6AD531440FEB44FD5FEFE0166CC64339 /* TGEventManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 823B07140AB71D03D0ADCB4744C1194D /* TGEventManager.m */; };
@@ -235,6 +236,7 @@
 		6241E4331A7087224C0D92784EA94F97 /* Pods-elements_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-elements_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6426D053CE8410E295A1E659A7D344A0 /* NSString+TGUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+TGUtilities.h"; path = "Classes/Model/NSString+TGUtilities.h"; sourceTree = "<group>"; };
 		64C340ED9E47A52AC776DC97E4DDA7FE /* TGPost+Reactions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TGPost+Reactions.h"; path = "Classes/Model/TGPost+Reactions.h"; sourceTree = "<group>"; };
+		6549E55A1C98A0FE002D6CC1 /* ColorUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorUtil.swift; sourceTree = "<group>"; };
 		6A0EEC68F43267F059343675F953FBCF /* NotificationFeedViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NotificationFeedViewController.swift; sourceTree = "<group>"; };
 		6A821F41527BC147203D738FB2A694AC /* Pods-elements_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-elements_Example-dummy.m"; sourceTree = "<group>"; };
 		6DEBC01AC8411789772EE5B0D2BF0599 /* LikeEventCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LikeEventCell.swift; sourceTree = "<group>"; };
@@ -590,6 +592,7 @@
 				00D37A5399CB51622D858DD5DAAAEDA9 /* Config.swift */,
 				EBE7D44DC6F1FEB5EBE1A7AF66FB652E /* ConfigParser.swift */,
 				FD9BE863BB562A6235D8815D14EABED3 /* FollowButtonParser.swift */,
+				6549E55A1C98A0FE002D6CC1 /* ColorUtil.swift */,
 			);
 			path = internal;
 			sourceTree = "<group>";
@@ -912,6 +915,7 @@
 				3CF7FF6219329275972F27A183786E09 /* ProfileBiographyView.swift in Sources */,
 				FB61BA0E3A81469DCD0227640F7815C5 /* ProfileViewController.swift in Sources */,
 				47703D64BFD63B056802B923F25F30B3 /* SearchAddressBookCell.swift in Sources */,
+				6549E55B1C98A0FE002D6CC1 /* ColorUtil.swift in Sources */,
 				5556323587E62B061533B157FFEF6765 /* TapglueUI.swift in Sources */,
 				C413F79BCFFDCBDA8FA845C4B249A867 /* UIColor+HexString.swift in Sources */,
 				C38304476CC12EC7075191C5874325AA /* UIImageView+TGUser.swift in Sources */,

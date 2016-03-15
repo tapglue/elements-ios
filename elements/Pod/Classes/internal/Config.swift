@@ -33,7 +33,7 @@ class Config {
         navigationBarTextColor = UIColor.blackColor()
         backgroundColor = UIColor.whiteColor()
         followButtonConfig = FollowButtonConfig()
-        roundedImages = false
+        roundedImages = true
     }
     
     init(navigationBarColor: UIColor, navigationBarTextColor: UIColor, backgroundColor: UIColor, followButtonConfig: FollowButtonConfig, roundedImages: Bool) {
@@ -50,18 +50,21 @@ class FollowButtonConfig {
     let notFollowedText: UIColor
     let followed: UIColor
     let followedText: UIColor
+    let border: UIColor
     
     init() {
         notFollowed = UIColor.whiteColor()
         notFollowedText = UIColor.blackColor()
         followed = UIColor.colorFromHexString("#4A4A4A")
         followedText = UIColor.whiteColor()
+        border = UIColor.colorFromHexString("#979797")
     }
     
-    init(notFollowed: UIColor, notFollowedText: UIColor, followed: UIColor, followedText: UIColor) {
+    init(notFollowed: UIColor, notFollowedText: UIColor, followed: UIColor, followedText: UIColor, border: UIColor) {
         self.notFollowed = notFollowed
         self.notFollowedText = notFollowedText
         self.followed = followed
         self.followedText = followedText
+        self.border = border
     }
 }

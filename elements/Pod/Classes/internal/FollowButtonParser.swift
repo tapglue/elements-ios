@@ -24,12 +24,18 @@ class FollowButtonParser {
     static func parse(followBtnDictionary: [String: AnyObject]) -> FollowButtonConfig {
         let defaultFollowButton = FollowButtonConfig()
         
-        let notFollowedColor = UIColor.colorFromHexString(followBtnDictionary["notFollowedColor"] as! String) ?? defaultFollowButton.notFollowed
-        let notFollowedTextColor = UIColor.colorFromHexString(followBtnDictionary["notFollowedTextColor"] as! String) ?? defaultFollowButton.notFollowedText
-        let followedColor = UIColor.colorFromHexString(followBtnDictionary["followedColor"] as! String) ?? defaultFollowButton.followed
-        let followedTextColor = UIColor.colorFromHexString(followBtnDictionary["followedTextColor"] as! String) ?? defaultFollowButton.followedText
+        let notFollowedColor = ColorUtil.configColorFromHex(followBtnDictionary["notFollowedColor"] as? String,
+            orDefault: defaultFollowButton.notFollowed)
+        let notFollowedTextColor = ColorUtil.configColorFromHex(followBtnDictionary["notFollowedTextColor"] as? String,
+            orDefault: defaultFollowButton.notFollowedText)
+        let followedColor = ColorUtil.configColorFromHex(followBtnDictionary["followedColor"] as? String,
+            orDefault: defaultFollowButton.followed)
+        let followedTextColor = ColorUtil.configColorFromHex(followBtnDictionary["followedTextColor"] as? String,
+            orDefault: defaultFollowButton.followedText)
+        let border = ColorUtil.configColorFromHex(followBtnDictionary["borderColor"] as? String,
+            orDefault: defaultFollowButton.border)
         
-        
-        return FollowButtonConfig(notFollowed: notFollowedColor, notFollowedText: notFollowedTextColor, followed: followedColor, followedText: followedTextColor)
+        return FollowButtonConfig(notFollowed: notFollowedColor, notFollowedText: notFollowedTextColor,
+            followed: followedColor, followedText: followedTextColor, border: border)
     }
 }
