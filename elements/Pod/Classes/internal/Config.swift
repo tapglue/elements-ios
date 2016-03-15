@@ -53,8 +53,8 @@ class FollowButtonConfig {
     
     init() {
         notFollowed = UIColor.whiteColor()
-        notFollowedText = UIColor.blueColor()
-        followed = UIColor.blueColor()
+        notFollowedText = UIColor.blackColor()
+        followed = UIColor.colorFromHexString("#4A4A4A")
         followedText = UIColor.whiteColor()
     }
     

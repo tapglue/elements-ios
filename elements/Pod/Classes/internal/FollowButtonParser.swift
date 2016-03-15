@@ -22,10 +22,12 @@ import UIKit
 
 class FollowButtonParser {
     static func parse(followBtnDictionary: [String: AnyObject]) -> FollowButtonConfig {
-        let notFollowedColor = UIColor.colorFromHexString(followBtnDictionary["notFollowedColor"] as! String)
-        let notFollowedTextColor = UIColor.colorFromHexString(followBtnDictionary["notFollowedTextColor"] as! String)
-        let followedColor = UIColor.colorFromHexString(followBtnDictionary["followedColor"] as! String)
-        let followedTextColor = UIColor.colorFromHexString(followBtnDictionary["followedTextColor"] as! String)
+        let defaultFollowButton = FollowButtonConfig()
+        
+        let notFollowedColor = UIColor.colorFromHexString(followBtnDictionary["notFollowedColor"] as! String) ?? defaultFollowButton.notFollowed
+        let notFollowedTextColor = UIColor.colorFromHexString(followBtnDictionary["notFollowedTextColor"] as! String) ?? defaultFollowButton.notFollowedText
+        let followedColor = UIColor.colorFromHexString(followBtnDictionary["followedColor"] as! String) ?? defaultFollowButton.followed
+        let followedTextColor = UIColor.colorFromHexString(followBtnDictionary["followedTextColor"] as! String) ?? defaultFollowButton.followedText
         
         
         return FollowButtonConfig(notFollowed: notFollowedColor, notFollowedText: notFollowedTextColor, followed: followedColor, followedText: followedTextColor)
