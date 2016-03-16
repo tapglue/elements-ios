@@ -22,9 +22,9 @@ import UIKit
 import Tapglue
 
 class LikeEventCell: UITableViewCell {
-
-    @IBOutlet weak var userNameLabel: UILabel!
     
+    @IBOutlet weak var likeEventImage: UIImageView!
+    @IBOutlet weak var likeEventLabel: UILabel!
     var event: TGEvent? {
         didSet {
             if let event = event {
@@ -36,7 +36,8 @@ class LikeEventCell: UITableViewCell {
     private var user: TGUser? {
         didSet {
             if let user = user {
-                userNameLabel.text = user.username
+                likeEventImage.setUserPicture(user)
+                likeEventLabel.text = user.username + " liked a post"
             }
         }
     }

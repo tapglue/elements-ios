@@ -15,46 +15,38 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ht4-pJ-dD0">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="112"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lg9-J3-o2A" userLabel="User">
-                                <rect key="frame" x="20" y="46" width="37" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="740" text="started following you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5XS-9A-Hxg" userLabel="startedFollowingYou">
-                                <rect key="frame" x="65" y="46" width="160" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="500" verticalHuggingPriority="251" horizontalCompressionResistancePriority="800" translatesAutoresizingMaskIntoConstraints="NO" id="If6-bA-aft">
-                                <rect key="frame" x="255" y="20" width="45" height="72"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="500" verticalHuggingPriority="251" horizontalCompressionResistancePriority="800" image="default-user" translatesAutoresizingMaskIntoConstraints="NO" id="If6-bA-aft">
+                                <rect key="frame" x="20" y="20" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="7Ix-fk-R66"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="kLM-9c-9kl"/>
-                                    <constraint firstAttribute="height" priority="999" constant="45" id="unR-3b-rVW"/>
+                                    <constraint firstAttribute="height" constant="45" id="kLM-9c-9kl"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="740" text="started following you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5XS-9A-Hxg" userLabel="startedFollowingYou">
+                                <rect key="frame" x="119" y="32" width="160" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6W-37-BhG" userLabel="User">
+                                <rect key="frame" x="73" y="32" width="37" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="If6-bA-aft" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5XS-9A-Hxg" secondAttribute="trailing" constant="8" symbolic="YES" id="90y-oz-6FF"/>
-                            <constraint firstItem="5XS-9A-Hxg" firstAttribute="leading" secondItem="Lg9-J3-o2A" secondAttribute="trailing" constant="8" symbolic="YES" id="94U-1r-muG"/>
-                            <constraint firstAttribute="trailing" secondItem="If6-bA-aft" secondAttribute="trailing" constant="20" symbolic="YES" id="Bud-xm-8V1"/>
-                            <constraint firstAttribute="bottom" secondItem="If6-bA-aft" secondAttribute="bottom" constant="47" id="YKT-Mt-jFd"/>
-                            <constraint firstItem="Lg9-J3-o2A" firstAttribute="leading" secondItem="Ht4-pJ-dD0" secondAttribute="leading" constant="20" symbolic="YES" id="boh-dX-bHC"/>
+                            <constraint firstItem="5XS-9A-Hxg" firstAttribute="leading" secondItem="a6W-37-BhG" secondAttribute="trailing" constant="9" id="DVv-B7-AqM"/>
+                            <constraint firstItem="If6-bA-aft" firstAttribute="leading" secondItem="Ht4-pJ-dD0" secondAttribute="leading" constant="20" symbolic="YES" id="F8x-fM-9s5"/>
+                            <constraint firstItem="a6W-37-BhG" firstAttribute="centerY" secondItem="If6-bA-aft" secondAttribute="centerY" id="VLa-aY-o4v"/>
                             <constraint firstAttribute="bottom" secondItem="If6-bA-aft" secondAttribute="bottom" constant="20" symbolic="YES" id="cIk-0B-bUA"/>
                             <constraint firstItem="5XS-9A-Hxg" firstAttribute="centerY" secondItem="Ht4-pJ-dD0" secondAttribute="centerY" id="dcM-ds-Qa9"/>
+                            <constraint firstItem="a6W-37-BhG" firstAttribute="leading" secondItem="If6-bA-aft" secondAttribute="trailing" constant="8" symbolic="YES" id="mk3-TE-gor"/>
                             <constraint firstItem="If6-bA-aft" firstAttribute="centerY" secondItem="Ht4-pJ-dD0" secondAttribute="centerY" id="nWI-zt-pqz"/>
-                            <constraint firstItem="Lg9-J3-o2A" firstAttribute="centerY" secondItem="5XS-9A-Hxg" secondAttribute="centerY" id="q6O-9r-fcm"/>
                             <constraint firstItem="If6-bA-aft" firstAttribute="top" secondItem="Ht4-pJ-dD0" secondAttribute="top" constant="20" symbolic="YES" id="rno-UR-aGc"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="YKT-Mt-jFd"/>
-                            </mask>
-                        </variation>
                     </view>
                 </subviews>
                 <constraints>
@@ -66,9 +58,12 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="userImage" destination="If6-bA-aft" id="gwT-jt-VTA"/>
-                <outlet property="userLabel" destination="Lg9-J3-o2A" id="fpD-pS-SwE"/>
+                <outlet property="userLabel" destination="a6W-37-BhG" id="Nmd-hk-95B"/>
             </connections>
             <point key="canvasLocation" x="242" y="254.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="default-user" width="80" height="80"/>
+    </resources>
 </document>
