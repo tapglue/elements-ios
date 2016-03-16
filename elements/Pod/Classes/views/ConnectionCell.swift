@@ -23,6 +23,7 @@ import Tapglue
 
 class ConnectionCell: UITableViewCell {
     @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var fullName: UILabel!
     @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet weak var button: FollowButton!
     
@@ -41,6 +42,7 @@ class ConnectionCell: UITableViewCell {
     func updateUser() {
         if let user = user {
             userName.text = user.username
+            fullName.text = user.firstName + " " + user.lastName
             profilePicture.setUserPicture(user)
             button.user = user
             button.errorHandler = {() -> Void in
