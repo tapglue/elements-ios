@@ -1,0 +1,20 @@
+PODS:
+  - elements (0.1.0):
+    - Tapglue (= 1.1.2)
+  - Tapglue (1.1.2)
+
+DEPENDENCIES:
+  - elements (from `../`)
+  - Tapglue (= 1.1.2)
+
+EXTERNAL SOURCES:
+  elements:
+    :path: ../
+
+SPEC CHECKSUMS:
+  elements: 164995fb054d8cd1bc20a106817a76796e635588
+  Tapglue: aa76fc91a9f26d645ec2e7872b985cf3b5acb702
+
+PODFILE CHECKSUM: 4efdc8cf14d6aa4ac3d04428f4c140587f99e922
+
+COCOAPODS: 1.0.0.beta.5

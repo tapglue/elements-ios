@@ -1,0 +1,15 @@
+{
+    "configVersion": 1,
+    "navigationBarColor": "#de3163",
+    "navigationBarTextColor": "#e37222",
+    "backgroundColor": "#22528b",
+    "roundedImages": true,
+    
+    "followButton": {
+        "notFollowedColor": "#00ffff",
+        "notFollowedTextColor": "#7d1e49",
+        "followedColor": "#008181",
+        "followedTextColor": "#eb8c00",
+        "borderColor": "#e6e6fa"
+    }
+}
