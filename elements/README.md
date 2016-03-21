@@ -13,9 +13,7 @@ A more detailed documentation can be found on our [documentation](https://develo
 
 Create User Profiles, Followers & Following Lists, Notifications Feeds & User Search.
 
-![Profiles](https://www.tapglue.com/elements/img/elements/profile.png)
-![Followers](https://www.tapglue.com/elements/img/elements/followers.png)
-![Notifications](https://www.tapglue.com/elements/img/elements/notifications.png)
+![Elements](https://www.filepicker.io/api/file/WN6w8kOiQbeMVtQj2uCe)
 
 ## Get started
 
