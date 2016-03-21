@@ -30,15 +30,10 @@ class LikeEventCell: UITableViewCell {
             if let event = event {
                 likeEventLabel.text = event.user!.username + " liked " + event.post.user.username + "'s post"
                 user = event.user
+                likeEventImage.setUserPicture(event.post.user)
             }
         }
     }
     
-    private var user: TGUser? {
-        didSet {
-            if let user = user {
-                likeEventImage.setUserPicture(user)
-            }
-        }
-    }
+    private var user: TGUser?
 }
