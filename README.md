@@ -24,11 +24,11 @@ To start using the Tapglue API you need an `APP_TOKEN`. Visit our [Dashboard](ht
 In this section we'll explain how to integrate Tapglue Elements into your iOS app.
 Tapglue Elements goes one step beyond the SDK and includes a full set of screens and navigations. 
 
-Elements is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
+To install elements first install tapglue as explained in the ios sdk documentation, and then add elements as a submodule to your project by executing:
 
-```ruby
-pod "tapglue-elements"
-```
+`git submodule add https://github.com/tapglue/elements-ios.git externals/elements`
+
+then in your project add the elements folder to your project checking the targets you need.
 
 ## Usage
 
