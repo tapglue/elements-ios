@@ -9,6 +9,14 @@ This will help you get started with Tapglue Elements on iOS step by step guide.
 
 A more detailed documentation can be found on our [documentation](https://developers.tapglue.com/docs/elements-ios-installation) website.
 
+## Components
+
+Create User Profiles, Followers & Following Lists, Notifications Feeds & User Search.
+
+![Profiles](https://www.tapglue.com/elements/img/elements/profile.png)
+![Followers](https://www.tapglue.com/elements/img/elements/followers.png)
+![Notifications](https://www.tapglue.com/elements/img/elements/notifications.png)
+
 ## Get started
 
 To start using the Tapglue API you need an `APP_TOKEN`. Visit our [Dashboard](https://dashboard.tapglue.com) and login with your credentials or create a new account.
