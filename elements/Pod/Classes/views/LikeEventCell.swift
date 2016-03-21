@@ -28,6 +28,7 @@ class LikeEventCell: UITableViewCell {
     var event: TGEvent? {
         didSet {
             if let event = event {
+                likeEventLabel.text = event.user!.username + " liked " + event.post.user.username + "'s post"
                 user = event.user
             }
         }
@@ -37,7 +38,6 @@ class LikeEventCell: UITableViewCell {
         didSet {
             if let user = user {
                 likeEventImage.setUserPicture(user)
-                likeEventLabel.text = user.username + " liked a post"
             }
         }
     }

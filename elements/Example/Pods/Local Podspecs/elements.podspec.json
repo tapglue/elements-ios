@@ -1,16 +1,16 @@
 {
   "name": "elements",
   "version": "0.1.0",
-  "summary": "A short description of elements.",
-  "license": "MIT",
+  "summary": "elements provides a full UX on top of Tapglue",
+  "license": "Apache License, Version 2.0",
   "authors": {
-    "John Nilsen": "nilsen340@gmail.com"
+    "Tapglue": "devs@tapglue.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/elements.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/tapglue/elements-ios.git",
+    "tag": "v0.1.0"
   },
-  "homepage": "https://github.com/nilsen340/",
+  "homepage": "https://developers.tapglue.com/docs/ios",
   "platforms": {
     "ios": "8.0"
   },
@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "Tapglue": [
-      "1.1.1"
+      "1.1.2"
     ]
   }
 }

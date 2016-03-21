@@ -107,5 +107,7 @@
  */
 @property (nonatomic, strong) NSString *tgObjectId;
 
+@property (nonatomic, strong) TGPost* post;
+
 
 @end

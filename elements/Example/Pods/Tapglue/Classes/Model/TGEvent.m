@@ -45,6 +45,8 @@ static NSString *const TGEventTargetKey = @"target";
         if (event) { // user will be nil if the userData is invalid
             [cache addObject:event];
         }
+    } else {
+        [event loadDataFromDictionary:eventData];
     }
     return event;
 }
