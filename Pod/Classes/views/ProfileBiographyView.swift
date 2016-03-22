@@ -24,6 +24,7 @@ import Tapglue
 @IBDesignable class ProfileBiographyView: UITableViewCell {
     
     @IBOutlet weak var profilePicture: UIImageView!
+    @IBOutlet weak var fullname: UILabel!
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var followerCount: UIButton!
     @IBOutlet weak var followingCount: UIButton!
@@ -37,6 +38,7 @@ import Tapglue
     var user: TGUser? {
         didSet{
             if let user = user {
+                fullname.text = user.firstName + " " + user.lastName
                 username.text = user.username
                 followerCount.setTitle(String(user.followersCount), forState: .Normal)
                 followingCount.setTitle(String(user.followingCount), forState: .Normal)

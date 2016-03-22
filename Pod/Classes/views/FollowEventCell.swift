@@ -23,8 +23,7 @@ import Tapglue
 
 class FollowEventCell: UITableViewCell {
 
-    @IBOutlet weak var followingUserLabel: UILabel!
-    @IBOutlet weak var followedUserLabel: UILabel!
+    @IBOutlet weak var followTextLabel: UILabel!
     @IBOutlet weak var followedUserImageView: UIImageView!
     
     var event: TGEvent? {
@@ -32,6 +31,15 @@ class FollowEventCell: UITableViewCell {
             if let event = event {
                 followingUser = event.user
                 followedUser = event.target.user
+                var userNameAttributes = [NSFontAttributeName : UIFont.boldSystemFontOfSize(16)]
+                let followingUserName = followingUser!.firstName + " " + followingUser!.lastName
+                
+                var followText = NSMutableAttributedString(string:followingUserName, attributes:userNameAttributes)
+                followText.appendAttributedString(NSMutableAttributedString(string:" started following "))
+                let followedUserName = followedUser!.firstName + " " + followedUser!.lastName
+                followText.appendAttributedString(NSMutableAttributedString(string:followedUserName, attributes: userNameAttributes))
+                followTextLabel.attributedText = followText
+                
             }
         }
     }
@@ -39,14 +47,13 @@ class FollowEventCell: UITableViewCell {
     private(set) var followingUser: TGUser? {
         didSet {
             if let user = followingUser {
-                followingUserLabel.text = user.username
+                followTextLabel.text = user.username
             }
         }
     }
     private(set) var followedUser: TGUser? {
         didSet {
             if let user = followedUser {
-                followedUserLabel.text = user.username
                 followedUserImageView.setUserPicture(user)
             }
         }
