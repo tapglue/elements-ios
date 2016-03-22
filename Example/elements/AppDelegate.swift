@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         let tgConfig = TGConfiguration.defaultConfiguration()
-        UILabel.appearance().fontName = "Avenir-LightOblique"
+//        UILabel.appearance().fontName = "Avenir-LightOblique"
         tgConfig.loggingEnabled = true
         Tapglue.setUpWithAppToken(sampleToken, andConfig: tgConfig)
         
