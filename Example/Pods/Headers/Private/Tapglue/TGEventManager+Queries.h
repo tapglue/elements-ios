@@ -1,0 +1,1 @@
+../../../Tapglue/Classes/TGEventManager+Queries.h

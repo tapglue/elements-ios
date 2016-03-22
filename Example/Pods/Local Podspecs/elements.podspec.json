@@ -15,7 +15,7 @@
     "ios": "8.0"
   },
   "requires_arc": true,
-  "source_files": "Pod/Classes/**/*{swift}",
+  "source_files": "Pod/Classes/**/*.{swift}",
   "resource_bundles": {
     "elements": [
       "Pod/Classes/**/*.{lproj,storyboard,xib,xcassets,json,imageset,png}"
@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "Tapglue": [
-      "1.1.2"
+      "1.1.3"
     ]
   }
 }
