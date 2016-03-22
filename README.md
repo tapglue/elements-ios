@@ -1,10 +1,5 @@
 # Tapglue Elements
 
-[![CI Status](http://img.shields.io/travis/John Nilsen/elements.svg?style=flat)](https://travis-ci.org/John Nilsen/elements)
-[![Version](https://img.shields.io/cocoapods/v/elements.svg?style=flat)](http://cocoapods.org/pods/elements)
-[![License](https://img.shields.io/cocoapods/l/elements.svg?style=flat)](http://cocoapods.org/pods/elements)
-[![Platform](https://img.shields.io/cocoapods/p/elements.svg?style=flat)](http://cocoapods.org/pods/elements)
-
 This will help you get started with Tapglue Elements on iOS step by step guide.
 
 A more detailed documentation can be found on our [documentation](https://developers.tapglue.com/docs/elements-ios-installation) website.
