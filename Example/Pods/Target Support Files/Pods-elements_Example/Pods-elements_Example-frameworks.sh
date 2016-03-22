@@ -84,10 +84,10 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "$CONFIGURATION_BUILD_DIR/Tapglue/Tapglue.framework"
-  install_framework "$CONFIGURATION_BUILD_DIR/elements/elements.framework"
+  install_framework "Pods-elements_Example/Tapglue.framework"
+  install_framework "Pods-elements_Example/elements.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "$CONFIGURATION_BUILD_DIR/Tapglue/Tapglue.framework"
-  install_framework "$CONFIGURATION_BUILD_DIR/elements/elements.framework"
+  install_framework "Pods-elements_Example/Tapglue.framework"
+  install_framework "Pods-elements_Example/elements.framework"
 fi

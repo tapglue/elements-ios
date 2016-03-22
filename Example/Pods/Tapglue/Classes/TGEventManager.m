@@ -506,15 +506,15 @@ NSDictionary* typesWithPost;
 }
 
 - (NSArray*)eventsFromJsonResponse:(NSDictionary*)jsonResponse {
-    NSDictionary *postDictionaries = [jsonResponse objectForKey:@"post_map"];
-    
-    for(NSDictionary *postData in postDictionaries) {
-        [TGPost createOrLoadWithDictionary:postDictionaries[postData]];
-    }
     
     NSDictionary *userDictionaries = [jsonResponse objectForKey:@"users"];
     for(NSDictionary *userData in userDictionaries) {
         [TGUser createOrLoadWithDictionary:userDictionaries[userData]];
+    }
+    
+    NSDictionary *postDictionaries = [jsonResponse objectForKey:@"post_map"];
+    for(NSDictionary *postData in postDictionaries) {
+        [TGPost createOrLoadWithDictionary:postDictionaries[postData]];
     }
     
     NSArray *eventDictionaries = [jsonResponse objectForKey:@"events"];

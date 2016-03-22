@@ -22,5 +22,5 @@ Pod::Spec.new do |s|
   s.resource_bundles = {
      'elements' => ['Pod/Classes/**/*.{lproj,storyboard,xib,xcassets,json,imageset,png}']
   }
-  s.dependency 'Tapglue', '1.1.2'
+  s.dependency 'Tapglue', '1.1.3'
 end
