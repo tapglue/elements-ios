@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/tapglue/elements-ios.git', :tag => "v#{s.version}" }
 
   s.homepage = 'https://developers.tapglue.com/docs/ios'
-  s.platform     = :ios, '9.0'
+  s.platform     = :ios, '8.0'
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*.{swift}'
