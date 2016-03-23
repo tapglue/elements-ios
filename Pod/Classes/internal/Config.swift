@@ -54,10 +54,10 @@ class FollowButtonConfig {
     
     init() {
         notFollowed = UIColor.whiteColor()
-        notFollowedText = UIColor.blackColor()
-        followed = UIColor.colorFromHexString("#4A4A4A")
+        notFollowedText = UIColor.colorFromHexString("#007AFF")
+        followed = UIColor.colorFromHexString("#007AFF")
         followedText = UIColor.whiteColor()
-        border = UIColor.colorFromHexString("#979797")
+        border = UIColor.colorFromHexString("#007AFF")
     }
     
     init(notFollowed: UIColor, notFollowedText: UIColor, followed: UIColor, followedText: UIColor, border: UIColor) {
