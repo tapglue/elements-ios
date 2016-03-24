@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Elements
+import TapglueElements
 import Tapglue
 
 class ViewController: UIViewController {
