@@ -77,7 +77,7 @@ public class AddressBookViewController: UIViewController {
                 if (!contact.emailAddresses.isEmpty){
                     var itemCount = 0
                     for item in contact.emailAddresses {
-                        itemCount++
+                        itemCount += 1
                         if itemCount <= 1 {
                             self.contacts.append(["givenName": contact.givenName, "email" : String(item.value)])
                             self.contactEmails.append(String(item.value))

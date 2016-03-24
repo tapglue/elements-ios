@@ -8,7 +8,7 @@
 
 import UIKit
 import Tapglue
-import elements
+import Elements
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

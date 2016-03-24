@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import elements
+import Elements
 
 class ManualProfileViewController: UIViewController {
     @IBOutlet weak var containerView: UIView!

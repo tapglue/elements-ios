@@ -100,7 +100,7 @@ public class TapglueUI {
     static func getBundle() -> NSBundle {
         let podBundle = NSBundle(forClass: ProfileViewController.self)
         
-        let bundleURL = podBundle.URLForResource("elements", withExtension: "bundle")
+        let bundleURL = podBundle.URLForResource("Elements", withExtension: "bundle")
         return NSBundle(URL: bundleURL!)!
     }
 }

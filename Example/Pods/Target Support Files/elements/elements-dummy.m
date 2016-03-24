@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
-@interface PodsDummy_elements : NSObject
+@interface PodsDummy_Elements : NSObject
 @end
-@implementation PodsDummy_elements
+@implementation PodsDummy_Elements
 @end

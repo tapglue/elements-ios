@@ -1,18 +1,18 @@
 PODS:
-  - elements (0.1.0):
+  - Elements (0.1.2):
     - Tapglue (= 1.1.3)
   - Tapglue (1.1.3)
 
 DEPENDENCIES:
-  - elements (from `../`)
+  - Elements (from `../`)
   - Tapglue (= 1.1.3)
 
 EXTERNAL SOURCES:
-  elements:
+  Elements:
     :path: ../
 
 SPEC CHECKSUMS:
-  elements: f757ea561dececfc41c4cd54a40690e7fb17d747
+  Elements: 92c29bff4c0e9ddb4f80119968f2dfa2cee18f36
   Tapglue: 11ed889d2eef525155686bf173173e52f2d57e28
 
 COCOAPODS: 0.39.0

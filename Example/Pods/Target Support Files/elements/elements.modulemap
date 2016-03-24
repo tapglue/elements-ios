@@ -1,5 +1,5 @@
-framework module elements {
-  umbrella header "elements-umbrella.h"
+framework module Elements {
+  umbrella header "Elements-umbrella.h"
 
   export *
   module * { export * }

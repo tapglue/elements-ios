@@ -42,7 +42,7 @@
 		8D01A1C2C568263228CB60D1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		9A44B95B220A16B6C387F781 /* Pods-elements_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-elements_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-elements_Example/Pods-elements_Example.release.xcconfig"; sourceTree = "<group>"; };
 		A1883DC9D6442A0F10A5960E /* Pods-elements_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-elements_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-elements_Example/Pods-elements_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		C44E0F706EFA7337EB8EAE49 /* TapglueElements.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TapglueElements.podspec; path = ../TapglueElements.podspec; sourceTree = "<group>"; };
+		C44E0F706EFA7337EB8EAE49 /* Elements.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Elements.podspec; path = ../Elements.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +133,7 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				C44E0F706EFA7337EB8EAE49 /* TapglueElements.podspec */,
+				C44E0F706EFA7337EB8EAE49 /* Elements.podspec */,
 				62BC20E673750FF14072897A /* README.md */,
 				8D01A1C2C568263228CB60D1 /* LICENSE */,
 			);

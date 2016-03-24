@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import elements
+import Elements
 import Tapglue
 
 class DelegatedFeedViewController: UIViewController, NotificationFeedViewDelegate {
