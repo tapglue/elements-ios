@@ -33,7 +33,7 @@ class FollowButton: UIButton {
         didSet {
             followConfig = TapglueUI.config.followButtonConfig
             setStateForUser()
-            addTarget(self, action: "followPressed", forControlEvents: .TouchUpInside)
+            addTarget(self, action: #selector(FollowButton.followPressed), forControlEvents: .TouchUpInside)
         }
     }
     

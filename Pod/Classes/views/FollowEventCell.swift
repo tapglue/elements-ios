@@ -31,10 +31,10 @@ class FollowEventCell: UITableViewCell {
             if let event = event {
                 followingUser = event.user
                 followedUser = event.target.user
-                var userNameAttributes = [NSFontAttributeName : UIFont.boldSystemFontOfSize(16)]
+                let userNameAttributes = [NSFontAttributeName : UIFont.boldSystemFontOfSize(16)]
                 let followingUserName = followingUser!.firstName + " " + followingUser!.lastName
                 
-                var followText = NSMutableAttributedString(string:followingUserName, attributes:userNameAttributes)
+                let followText = NSMutableAttributedString(string:followingUserName, attributes:userNameAttributes)
                 followText.appendAttributedString(NSMutableAttributedString(string:" started following "))
                 let followedUserName = followedUser!.firstName + " " + followedUser!.lastName
                 followText.appendAttributedString(NSMutableAttributedString(string:followedUserName, attributes: userNameAttributes))
