@@ -74,7 +74,7 @@ public class ProfileViewController: UIViewController, ProfileBiographyDelegate {
         
         let n = self.navigationController!.viewControllers.count - 2
         if n < 0 {
-            let backButton = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: Selector("popViewController"))
+            let backButton = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: #selector(ProfileViewController.popViewController))
             navigationItem.leftBarButtonItem = backButton
         }
     }
