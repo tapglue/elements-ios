@@ -1,5 +1,5 @@
 {
-  "name": "Elements",
+  "name": "TapglueElements",
   "version": "0.1.2",
   "summary": "elements provides a full UX on top of Tapglue",
   "license": "Apache License, Version 2.0",
@@ -17,7 +17,7 @@
   "requires_arc": true,
   "source_files": "Pod/Classes/**/*.{swift}",
   "resource_bundles": {
-    "Elements": [
+    "TapglueElements": [
       "Pod/Classes/**/*.{lproj,storyboard,xib,xcassets,json,imageset,png}"
     ]
   },

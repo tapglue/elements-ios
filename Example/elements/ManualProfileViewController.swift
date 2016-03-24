@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import elements
+import TapglueElements
 
 class ManualProfileViewController: UIViewController {
     @IBOutlet weak var containerView: UIView!

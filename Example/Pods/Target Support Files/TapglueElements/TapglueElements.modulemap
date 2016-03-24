@@ -1,0 +1,6 @@
+framework module TapglueElements {
+  umbrella header "TapglueElements-umbrella.h"
+
+  export *
+  module * { export * }
+}

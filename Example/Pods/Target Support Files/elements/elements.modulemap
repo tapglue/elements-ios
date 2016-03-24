@@ -1,6 +1,0 @@
-framework module elements {
-  umbrella header "elements-umbrella.h"
-
-  export *
-  module * { export * }
-}

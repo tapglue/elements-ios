@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'D2A13F59D8E9C6029372590E'
-               BlueprintName = 'Elements'
+               BlueprintIdentifier = '61AED34B71211D3A9B6DBAD7'
+               BlueprintName = 'TapglueElements'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Elements.framework'>
+               BuildableName = 'TapglueElements.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

@@ -179,7 +179,7 @@ This application makes use of the following third party libraries:
       of your accepting any such warranty or additional liability.
 
 
-## elements
+## TapglueElements
 
 Copyright (c) 2016 John Nilsen <nilsen340@gmail.com>
 
