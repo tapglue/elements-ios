@@ -28,8 +28,8 @@ class LikeEventCell: UITableViewCell {
     var event: TGEvent? {
         didSet {
             if let event = event {
-                var userNameAttributes = [NSFontAttributeName : UIFont.boldSystemFontOfSize(16)]
-                var likeEventText = NSMutableAttributedString(string:event.user.firstName + " " + event.user.lastName, attributes:userNameAttributes)
+                let userNameAttributes = [NSFontAttributeName : UIFont.boldSystemFontOfSize(16)]
+                let likeEventText = NSMutableAttributedString(string:event.user.firstName + " " + event.user.lastName, attributes:userNameAttributes)
                 likeEventText.appendAttributedString(NSMutableAttributedString(string: " liked "))
                 let authorName = event.post.user.firstName + " " + event.post.user.lastName
                 likeEventText.appendAttributedString(NSMutableAttributedString(string:authorName, attributes:userNameAttributes))

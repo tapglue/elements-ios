@@ -41,10 +41,10 @@ public class NotificationFeedViewController: UIViewController {
         tableView.registerNibs(nibNames: [cellFollowEventReusableIdentifier, cellFollwedMeEventReusableIdentifier, cellLikeEventReusableIdentifier])
         tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableViewAutomaticDimension
-        let backButton = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: "popViewController")
+        let backButton = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: Selector("popViewController"))
         navigationItem.leftBarButtonItem = backButton
         
-        refreshControl.addTarget(self, action: "refresh", forControlEvents: .ValueChanged)
+        refreshControl.addTarget(self, action: #selector(NotificationFeedViewController.refresh), forControlEvents: .ValueChanged)
         tableView.addSubview(refreshControl)
         tableView.backgroundColor = UIColor.clearColor()
         applyConfiguration(TapglueUI.config)

@@ -36,7 +36,7 @@ public class ConnectionsViewController: UITableViewController, ConnectionCellDel
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-        let search = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: "searchTapped")
+        let search = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: #selector(ConnectionsViewController.searchTapped))
         navigationItem.rightBarButtonItem = search
         tableView.backgroundColor = UIColor.clearColor()
         applyConfiguration(TapglueUI.config)

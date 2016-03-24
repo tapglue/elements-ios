@@ -28,7 +28,7 @@ class EditProfileViewController: UIViewController {
         super.viewDidLoad()
         userNameTextField.text = TGUser.currentUser().username
         
-        let save = UIBarButtonItem(barButtonSystemItem: .Save, target: self, action: "saveTapped")
+        let save = UIBarButtonItem(barButtonSystemItem: .Save, target: self, action: #selector(EditProfileViewController.saveTapped))
         navigationItem.rightBarButtonItem = save
         view.backgroundColor = UIColor.clearColor()
         applyConfiguration(TapglueUI.config)

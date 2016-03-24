@@ -37,8 +37,8 @@ class FollowedMeEventCell: UITableViewCell {
     private(set) var user: TGUser? {
         didSet {
             if let user = user {
-                var userNameAttributes = [NSFontAttributeName : UIFont.boldSystemFontOfSize(16)]
-                var followingMeText = NSMutableAttributedString(string:user.firstName + " " + user.lastName, attributes:userNameAttributes)
+                let userNameAttributes = [NSFontAttributeName : UIFont.boldSystemFontOfSize(16)]
+                let followingMeText = NSMutableAttributedString(string:user.firstName + " " + user.lastName, attributes:userNameAttributes)
                 followingMeText.appendAttributedString(NSMutableAttributedString(string:" started following you"))
                 userLabel.attributedText  = followingMeText
                 userImage.setUserPicture(user)

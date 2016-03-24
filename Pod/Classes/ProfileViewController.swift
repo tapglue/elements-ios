@@ -38,7 +38,7 @@ public class ProfileViewController: UIViewController, ProfileBiographyDelegate {
     var user: TGUser? {
         didSet {
             if user?.isCurrentUser ?? false {
-                let edit = UIBarButtonItem(barButtonSystemItem: .Edit, target: self, action: "editTapped")
+                let edit = UIBarButtonItem(barButtonSystemItem: .Edit, target: self, action: #selector(ProfileViewController.editTapped))
                 navigationItem.rightBarButtonItem = edit
             }
         }
@@ -55,7 +55,7 @@ public class ProfileViewController: UIViewController, ProfileBiographyDelegate {
         tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableViewAutomaticDimension
         
-        refreshControl.addTarget(self, action: "refresh:", forControlEvents: .ValueChanged)
+        refreshControl.addTarget(self, action: #selector(ProfileViewController.refresh(_:)), forControlEvents: .ValueChanged)
         tableView.addSubview(refreshControl)
         tableView.backgroundColor = UIColor.clearColor()
         applyConfiguration(TapglueUI.config)
@@ -74,7 +74,7 @@ public class ProfileViewController: UIViewController, ProfileBiographyDelegate {
         
         let n = self.navigationController!.viewControllers.count - 2
         if n < 0 {
-            let backButton = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: "popViewController")
+            let backButton = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: Selector("popViewController"))
             navigationItem.leftBarButtonItem = backButton
         }
     }
