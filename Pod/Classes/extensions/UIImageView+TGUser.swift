@@ -25,15 +25,17 @@ extension UIImageView {
     func setUserPicture(user: TGUser) {
         
         var userImage = TGImage()
-        userImage = user.images.valueForKey("profilePic") as! TGImage
-        
-        if let imageUrl = userImage.url {
-            if TapglueUI.config.roundedImages {
-                layer.masksToBounds = false
-                layer.cornerRadius = frame.height / 2
-                clipsToBounds = true
+        if user.images.valueForKey("profilePic") != nil {
+            userImage = user.images.valueForKey("profilePic") as! TGImage
+            
+            if let imageUrl = userImage.url {
+                if TapglueUI.config.roundedImages {
+                    layer.masksToBounds = false
+                    layer.cornerRadius = frame.height / 2
+                    clipsToBounds = true
+                }
+                self.setUrlImage(imageUrl)
             }
-            self.setUrlImage(imageUrl)
         }
     }
 }
