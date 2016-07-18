@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TapglueElements'
-  s.version          = '0.1.3'
+  s.version          = '0.1.4'
   s.summary          = 'elements provides a full UX on top of Tapglue'
   s.license          = 'Apache License, Version 2.0'
   s.author           = { 'Tapglue' => 'devs@tapglue.com' }
@@ -22,5 +22,5 @@ Pod::Spec.new do |s|
   s.resource_bundles = {
      'TapglueElements' => ['Pod/Classes/**/*.{lproj,storyboard,xib,xcassets,json,imageset,png}']
   }
-  s.dependency 'Tapglue', '1.1.3'
+  s.dependency 'Tapglue', '1.1.8'
 end

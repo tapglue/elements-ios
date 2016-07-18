@@ -1,6 +1,6 @@
 {
   "name": "TapglueElements",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "summary": "elements provides a full UX on top of Tapglue",
   "license": "Apache License, Version 2.0",
   "authors": {
@@ -8,7 +8,7 @@
   },
   "source": {
     "git": "https://github.com/tapglue/elements-ios.git",
-    "tag": "v0.1.2"
+    "tag": "v0.1.3"
   },
   "homepage": "https://developers.tapglue.com/docs/ios",
   "platforms": {
@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "Tapglue": [
-      "1.1.3"
+      "1.1.8"
     ]
   }
 }

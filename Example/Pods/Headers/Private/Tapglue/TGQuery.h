@@ -1,1 +1,0 @@
-../../../Tapglue/Classes/TGQuery.h

@@ -174,7 +174,7 @@ extern NSString *const TGEventManagerAPIEndpointEvents;
  @abstract Creates a comment on a custom object.
  @discussion This will create a comment on a custom object.
  */
-- (TGComment*)createComment:(NSString*)comment forObjectWithId:objectId andCompletionBlock:(TGSucessCompletionBlock)completionBlock;
+- (TGComment*)createComment:(NSDictionary*)comment forObjectWithId:objectId andCompletionBlock:(TGSucessCompletionBlock)completionBlock;
 
 /*!
  @abstract Updates a comment on an objectId.

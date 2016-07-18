@@ -32,7 +32,7 @@
  
  @param commentContent This contains the comment.
  */
-- (TGComment*)commentWithContent:(NSString*)commentContent withCompletionBlock:(TGSucessCompletionBlock)completionBlock;
+- (TGComment*)commentWithContent:(NSDictionary*)commentContent withCompletionBlock:(TGSucessCompletionBlock)completionBlock;
 
 #pragma mark - Likes
 

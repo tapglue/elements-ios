@@ -26,7 +26,7 @@
 /*!
  @abstract Content / text of the comment.
  */
-@property (nonatomic, strong) NSString *content;
+@property (nonatomic, strong) NSDictionary *contents;
 
 /*!
  @abstract Id of the external object.

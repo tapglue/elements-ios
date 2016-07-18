@@ -21,12 +21,33 @@
 #import "TGComment.h"
 #import "TGObject+Private.h"
 
+@interface TGComment ()
+@property (nonatomic, strong) NSMutableDictionary *mutableContents;
+@end
+
 @implementation TGComment
 
+- (void)loadDataFromDictionary:(NSDictionary *)data withMapping:(NSDictionary *)mapping {
+    [super loadDataFromDictionary:data withMapping:mapping];
+    [self loadContentsFromDictionary:data];
+}
+
+- (void)loadContentsFromDictionary:(NSDictionary *)data {
+    if([data objectForKey:@"contents"] == nil) {
+        return;
+    }
+    _mutableContents = [NSMutableDictionary new];
+    [data[@"contents"] enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        NSString *languageTag = key;
+        NSString *content = obj;
+        [_mutableContents setObject:content forKey:languageTag];
+    }];
+    _contents = _mutableContents;
+}
 - (NSDictionary*)jsonMapping {
     // left side: json attribute name , right side: model property name
     return @{
-             @"content" : @"content",
+             @"contents" : @"contents",
              @"external_id" : @"externalId"
              };
 }

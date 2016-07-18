@@ -54,7 +54,7 @@ static NSString *const TGUserManagerAPIEndpointConnections = @"me/connections";
     [self.client PUT:TGUserManagerAPIEndpointCurrentUser withURLParameters:nil andPayload:user.jsonDictionary andCompletionBlock:^(NSDictionary *jsonResponse, NSError *error) {
 
         if (jsonResponse && !error) {
-            [user loadDataFromDictionary:jsonResponse];
+            [TGUser setCurrentUser:[TGUser createOrLoadWithDictionary:jsonResponse]];
         }
 
         if (completionBlock) {
@@ -178,6 +178,7 @@ static NSString *const TGUserManagerAPIEndpointConnections = @"me/connections";
         NSAssert(sessionToken, @"Login should return a session token.");  // ToDo: proper error handling if no session token was returned
 
         [[Tapglue sharedInstance].userDefaults setObject:sessionToken forKey:TapglueUserDefaultsKeySessionToken];
+        [_notifier sessionTokenSet:sessionToken];
         self.client.sessionToken = sessionToken;
 
         [TGUser setCurrentUser:currentUser];
@@ -391,6 +392,12 @@ static NSString *const TGUserManagerAPIEndpointConnections = @"me/connections";
     NSUserDefaults *tgUserDefaults = [Tapglue sharedInstance].userDefaults;
     [tgUserDefaults removeObjectForKey:TapglueUserDefaultsKeySessionToken];
     [tgUserDefaults synchronize];
+}
+
+#pragma mark - session token notifier
+
+- (void)setSessionTokenNotifier:(id<TGSessionTokenNotifier>)notifier {
+    self.notifier = notifier;
 }
 
 @end

@@ -60,6 +60,8 @@ typedef NS_ENUM(NSUInteger, TGConnectionType) {
  */
 @interface TGUserManager : TGBaseManager
 
+@property(nonatomic) id<TGSessionTokenNotifier> notifier;
+
 #pragma mark - User
 
 /*!
@@ -224,5 +226,9 @@ typedef NS_ENUM(NSUInteger, TGConnectionType) {
  @param period Period of user recommendations.
  */
 - (void)retrieveUserRecommendationsOfType:(NSString*)type forPeriod:(NSString*)period andCompletionBlock:(TGGetUserListCompletionBlock)completionBlock;
+
+#pragma mark - sessiontoken notifier
+
+- (void)setSessionTokenNotifier:(id<TGSessionTokenNotifier>)notifier;
 
 @end

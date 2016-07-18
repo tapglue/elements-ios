@@ -32,7 +32,7 @@
 
 #pragma mark CRUD
 
-+ (void)createPostWithText:(NSString*)attachmentText
++ (void)createPostWithText:(NSDictionary*)attachmentText
                      named:(NSString*)attachmentName
        withCompletionBlock:(TGSucessCompletionBlock)completionBlock {
 
@@ -82,7 +82,7 @@
 
 #pragma mark - Comments -
 
-+ (TGComment*)createCommentWithContent:(NSString*)commentContent
++ (TGComment*)createCommentWithContent:(NSDictionary*)commentContent
                                    forPost:(TGPost*)post
                        withCompletionBlock:(TGSucessCompletionBlock)completionBlock {
     return [[self postsManager] createCommentWithContent:commentContent forPost:post withCompletionBlock:completionBlock];
@@ -113,8 +113,16 @@
     return [[self postsManager] createLikeForPost:post withCompletionBlock:completionBlock];
 }
 
++ (void)createLikeForPostWithId:(NSString*)postId withCompletionBlock:(TGSucessCompletionBlock)completionBlock {
+    return [[self postsManager] createLikeForPostWithId:postId withCompletionBlock:completionBlock];
+}
+
 + (void)deleteLike:(TGPost*)post withCompletionBlock:(TGSucessCompletionBlock)completionBlock {
     [[self postsManager] deleteLike:post withCompletionBlock:completionBlock];
+}
+
++ (void)deleteLikeForPostWithId:(NSString*)postId withCompletionBlock:(TGSucessCompletionBlock)completionBlock {
+    [[self postsManager] deleteLikeForPostWithId:postId withCompletionBlock:completionBlock];
 }
 
 + (void)retrieveLikesForPost:(TGPost*)post

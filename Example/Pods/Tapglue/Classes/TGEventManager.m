@@ -263,10 +263,10 @@ NSDictionary* typesWithPost;
 
 #pragma mark - Comments -
 
-- (TGComment*)createComment:(NSString*)comment forObjectWithId:objectId andCompletionBlock:(TGSucessCompletionBlock)completionBlock {
+- (TGComment*)createComment:(NSDictionary*)comment forObjectWithId:objectId andCompletionBlock:(TGSucessCompletionBlock)completionBlock {
     NSString *route = [TGApiRoutesBuilder routeForCommentOnObjectId:objectId];
     TGComment *objectComment = [[TGComment alloc] init];
-    objectComment.content = comment;
+    objectComment.contents = comment;
     objectComment.user = [TGUser currentUser];
     
     [self.client POST:route withURLParameters:nil andPayload:objectComment.jsonDictionary andCompletionBlock:^(NSDictionary *jsonResponse, NSError *error) {

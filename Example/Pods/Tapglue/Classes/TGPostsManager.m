@@ -38,7 +38,7 @@
 
 - (void)createPost:(TGPost*)post withCompletionBlock:(TGSucessCompletionBlock)completionBlock {
     [self.client POST:[TGApiRoutesBuilder routeForAllPosts] withURLParameters:nil andPayload:post.jsonDictionary andCompletionBlock:^(NSDictionary *jsonResponse, NSError *error) {
-
+        
         [post loadDataFromDictionary:jsonResponse];
         [[TGPost cache] addObject:post];
         
@@ -50,7 +50,7 @@
             completionBlock(NO, error);
         }
     }];
-
+    
 }
 
 - (void)updatePost:(TGPost*)post withCompletionBlock:(TGSucessCompletionBlock)completionBlock {
@@ -121,15 +121,15 @@
 
 #pragma mark - Comments -
 
-- (TGComment*)createCommentWithContent:(NSString*)commentContent
-                                   forPost:(TGPost*)post
-                       withCompletionBlock:(TGSucessCompletionBlock)completionBlock {
+- (TGComment*)createCommentWithContent:(NSDictionary*)commentContent
+                               forPost:(TGPost*)post
+                   withCompletionBlock:(TGSucessCompletionBlock)completionBlock {
     
     TGComment *comment = [[TGComment alloc] init];
-    comment.content = commentContent;
+    comment.contents = commentContent;
     comment.post = post;
     comment.user = [TGUser currentUser];
-
+    
     [self.client createObject:comment
                       atRoute:[TGApiRoutesBuilder routeForCommentsOnPostWithId:post.objectId]
           withCompletionBlock:completionBlock];
@@ -160,7 +160,7 @@
             for (NSDictionary *data in commentDictionaries) {
                 [comments addObject:[[TGComment alloc] initWithDictionary:data]];
             }
-
+            
             if (completionBlock) {
                 completionBlock(comments, nil);
             }
@@ -192,18 +192,35 @@
     return like;
 }
 
+- (void)createLikeForPostWithId:(NSString*)postId withCompletionBlock:(TGSucessCompletionBlock)completionBlock {
+    
+    [self.client POST:[TGApiRoutesBuilder routeForLikesOnPostWithId:postId] withURLParameters:nil andPayload:nil andCompletionBlock:^(NSDictionary *jsonResponse, NSError *error) {
+        if (!error) {
+            if (completionBlock) {
+                completionBlock(YES, nil);
+            }
+        } else if (completionBlock) {
+            completionBlock(NO, error);
+        }
+    }];
+}
+
 - (void)deleteLike:(TGPost*)post withCompletionBlock:(TGSucessCompletionBlock)completionBlock {
     [self.client DELETE:[TGApiRoutesBuilder routeForLikesOnPostWithId:post.objectId] withCompletionBlock:completionBlock];
 }
 
+- (void)deleteLikeForPostWithId:(NSString*)postId withCompletionBlock:(TGSucessCompletionBlock)completionBlock {
+    [self.client DELETE:[TGApiRoutesBuilder routeForLikesOnPostWithId:postId] withCompletionBlock:completionBlock];
+}
+
 - (void)retrieveLikesForPostWithId:(NSString*)postId
-                  withCompletionBlock:(void (^)(NSArray *Likes, NSError *error))completionBlock {
+               withCompletionBlock:(void (^)(NSArray *Likes, NSError *error))completionBlock {
     [self.client GET:[TGApiRoutesBuilder routeForLikesOnPostWithId:postId] withURLParameters:nil andCompletionBlock:^(NSDictionary *jsonResponse, NSError *error) {
         
         if (!error) {
             NSArray *userDictionaries = [[jsonResponse objectForKey:@"users"] allValues];
             [TGUser createAndCacheObjectsFromDictionaries:userDictionaries];
-    
+            
             NSArray *likeDictionaries = [jsonResponse objectForKey:@"likes"];
             NSMutableArray *likes = [NSMutableArray arrayWithCapacity:likeDictionaries.count];
             for (NSDictionary *data in likeDictionaries) {
@@ -231,19 +248,4 @@
     }
     return posts;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @end

@@ -47,7 +47,7 @@
  @param text The text that the post contains.
  @param name The name of the post.
  */
-+ (void)createPostWithText:(NSString*)attachmentText named:(NSString*)attachmentName withCompletionBlock:(TGSucessCompletionBlock)completionBlock;
++ (void)createPostWithText:(NSDictionary*)attachmentText named:(NSString*)attachmentName withCompletionBlock:(TGSucessCompletionBlock)completionBlock;
 
 /*!
  @abstract Update a post.
@@ -113,7 +113,7 @@
  @param commentContent The content of the comment.
  @param post The Post object that is being commented.
  */
-+ (TGComment*)createCommentWithContent:(NSString*)commentContent
++ (TGComment*)createCommentWithContent:(NSDictionary*)commentContent
                                    forPost:(TGPost*)post
                        withCompletionBlock:(TGSucessCompletionBlock)completionBlock;
 
@@ -162,12 +162,28 @@
 + (TGLike*)createLikeForPost:(TGPost*)post withCompletionBlock:(TGSucessCompletionBlock)completionBlock;
 
 /*!
+ @abstract Create a like for a post.
+ @discussion This will create a like for a post.
+ 
+ @param postId The post object id for which a like is being created.
+ */
++ (void)createLikeForPostWithId:(NSString*)postId withCompletionBlock:(TGSucessCompletionBlock)completionBlock;
+
+/*!
  @abstract Delete a like for a post.
  @discussion This will delete a like for a post.
  
  @param post The post object that is being unliked.
  */
 + (void)deleteLike:(TGPost*)post withCompletionBlock:(TGSucessCompletionBlock)completionBlock;
+
+/*!
+ @abstract Delete a like for a post.
+ @discussion This will delete a like for a post with an id.
+ 
+ @param postId The post object id that is being unliked.
+ */
++ (void)deleteLikeForPostWithId:(NSString*)postId withCompletionBlock:(TGSucessCompletionBlock)completionBlock;
 
 
 /*!

@@ -26,7 +26,7 @@
 
 #pragma mark - Comments
 
-- (TGComment*)commentWithContent:(NSString*)commentContent withCompletionBlock:(TGSucessCompletionBlock)completionBlock {
+- (TGComment*)commentWithContent:(NSDictionary*)commentContent withCompletionBlock:(TGSucessCompletionBlock)completionBlock {
     return [[Tapglue sharedInstance].postsManager createCommentWithContent:commentContent forPost:self withCompletionBlock:completionBlock];
 }
 

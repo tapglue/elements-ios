@@ -45,6 +45,7 @@
 #import "TGPostsManager.h"
 #import "TGQuery+Private.h"
 #import "TGQuery.h"
+#import "TGSessionTokenNotifier.h"
 #import "TGUserManager.h"
 #import "UIDevice+TGUtilities.h"
 

@@ -21,25 +21,25 @@
 #import "TGAttachment.h"
 #import "TGModelObject+Private.h"
 
+@interface TGAttachment ()
+@property (nonatomic, strong) NSMutableDictionary *mutableContents;
+@end
+
 @implementation TGAttachment
 
-+ (instancetype) attachmentWithText:(NSString*)text andName:(NSString*)name {
++ (instancetype) attachmentWithText:(NSDictionary *)text andName:(NSString*)name {
     return [[TGAttachment alloc] initWithType:@"text" content:text andName:name];
 }
 
-+ (instancetype) attachmentWithNSURL:(NSURL*)url andName:(NSString*)name {
-    return [self attachmentWithURL:url.absoluteString andName:name];
++ (instancetype) attachmentWithURL:(NSDictionary *)urlStrings andName:(NSString*)name {
+    return [[TGAttachment alloc] initWithType:@"url" content:urlStrings andName:name];
 }
 
-+ (instancetype) attachmentWithURL:(NSString*)urlString andName:(NSString*)name {
-    return [[TGAttachment alloc] initWithType:@"url" content:urlString andName:name];
-}
-
-- (instancetype) initWithType:(NSString*)type content:(NSString*)content andName:(NSString*)name {
+- (instancetype) initWithType:(NSString*)type content:(NSDictionary*)contents andName:(NSString*)name {
     self = [super init];
     if (self) {
+        _contents = contents;
         _type = type;
-        _content = content;
         _name = name;
     }
     return self;
@@ -47,9 +47,28 @@
 
 #pragma mark - JSON Parsing
 
+- (void)loadDataFromDictionary:(NSDictionary *)data withMapping:(NSDictionary *)mapping {
+    [super loadDataFromDictionary:data withMapping:mapping];
+    [self loadContentsFromDictionary:data];
+}
+
+- (void)loadContentsFromDictionary:(NSDictionary *)data {
+    if([data objectForKey:@"contents"] == nil) {
+        return;
+    }
+    _mutableContents = [NSMutableDictionary new];
+    [data[@"contents"] enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        NSString *languageTag = key;
+        NSString *content = obj;
+        [_mutableContents setObject:content forKey:languageTag];
+    }];
+    _contents = _mutableContents;
+    
+}
+
 - (NSDictionary*)jsonMapping {
     return @{
-             @"content" : @"content",
+             @"contents": @"contents",
              @"type" : @"type",
              @"name" : @"name"
              };

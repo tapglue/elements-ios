@@ -1,1 +1,0 @@
-../../../Tapglue/Classes/TGBaseManager.h

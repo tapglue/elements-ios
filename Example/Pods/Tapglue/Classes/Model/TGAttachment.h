@@ -27,19 +27,13 @@
  @abstract Creates an attachment of type text with a name.
  @discussion This will create an attachment of type text with a name.
  */
-+ (instancetype) attachmentWithText:(NSString*)text andName:(NSString*)name;
-
-/*!
- @abstract Creates an attachment of type URL with a name.
- @discussion This will create an attachment of URL (from a NSURL) with a name.
- */
-+ (instancetype) attachmentWithNSURL:(NSURL*)url andName:(NSString*)name;
++ (instancetype) attachmentWithText:(NSDictionary *)text andName:(NSString*)name;
 
 /*!
  @abstract Creates an attachment of type URL with a name.
  @discussion This will create an attachment of URL with a name.
  */
-+ (instancetype) attachmentWithURL:(NSString*)urlString andName:(NSString*)name;
++ (instancetype) attachmentWithURL:(NSDictionary *)urlStrings andName:(NSString*)name;
 
 /*!
  @abstract The type of an attachment.
@@ -54,9 +48,9 @@
 @property (nonatomic, strong) NSString *name;
 
 /*!
- @abstract The content of an attachment.
- @discussion This property contains type of an attachment.
+ @abstract The contents of an attachment.
+ @discussion This property contains the BCP 47 content of the attachment.
  */
-@property (nonatomic, strong) NSString *content;
+@property (nonatomic, strong) NSDictionary *contents;
 
 @end
